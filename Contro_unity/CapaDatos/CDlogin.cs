@@ -16,7 +16,7 @@ namespace CapaDatos
 
         public SqlDataAdapter IniciarSesion(string user, string pass)
         {
-            string sql = "SELECT * FROM users WHERE cc_user=" + user + "AND password_user=" + pass;
+            string sql = "select * from users where cc_user=" + user + "and password_user=" + pass;
             SqlCommand comando = new SqlCommand();
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = sql;
