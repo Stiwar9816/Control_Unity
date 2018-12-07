@@ -68,7 +68,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(21, 38);
+            this.pictureBox1.Location = new System.Drawing.Point(9, 38);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(320, 99);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -124,7 +124,7 @@
             this.txtpass.BackColor = System.Drawing.SystemColors.Menu;
             this.txtpass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtpass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpass.Location = new System.Drawing.Point(83, 280);
+            this.txtpass.Location = new System.Drawing.Point(81, 287);
             this.txtpass.Name = "txtpass";
             this.txtpass.Size = new System.Drawing.Size(229, 20);
             this.txtpass.TabIndex = 2;
@@ -150,8 +150,8 @@
             this.lineShape2.Name = "lineShape2";
             this.lineShape2.X1 = 82;
             this.lineShape2.X2 = 307;
-            this.lineShape2.Y1 = 301;
-            this.lineShape2.Y2 = 301;
+            this.lineShape2.Y1 = 308;
+            this.lineShape2.Y2 = 308;
             // 
             // lineShape1
             // 
@@ -205,7 +205,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(53, 275);
+            this.pictureBox3.Location = new System.Drawing.Point(53, 282);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(27, 27);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

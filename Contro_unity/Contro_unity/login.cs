@@ -34,7 +34,7 @@ namespace Contro_unity
             if(txtuser.Text == "Usuario")
             {
                 txtuser.Text = "";
-                txtuser.ForeColor = Color.LightGray;
+                txtuser.ForeColor = Color.Black;
             }
 
         }
@@ -52,7 +52,7 @@ namespace Contro_unity
             if(txtpass.Text == "Contraseña")
             {
                 txtpass.Text = "";
-                txtpass.ForeColor = Color.LightGray;
+                txtpass.ForeColor = Color.Black;
                 txtpass.UseSystemPasswordChar = true;
             }
         }
