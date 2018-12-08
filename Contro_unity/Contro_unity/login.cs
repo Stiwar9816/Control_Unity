@@ -98,42 +98,11 @@ namespace Contro_unity
         private void btnlogin_Click(object sender, EventArgs e)
         {
             CNusuarios objUsers = new CNusuarios();
-            SqlDataReader Loguear;
+            
             objUsers.cc_user = txtuser.Text;
             objUsers.pass_user = txtpass.Text;
-            if (objUsers.cc_user = txtuser.Text)
-            {
-                lblErrorUser.Visible = false;
+           
 
-                if (objUsers.pass_user = txtpass.Text)
-                {
-                    lblErrorPass.Visible = false;
-
-                    Loguear = objUsers.IniciarSesion();
-                    if (Loguear.Read() == true)
-                    {
-                        this.Hide();
-                        MenuPrincipal obMP = new MenuPrincipal();
-                        obMP.Show();
-                    }
-                    else
-                    {
-                        lblErrorLogin.Text = "Usuario O Contraseña Incorrectos, Intente De Nuevo";
-                        lblErrorLogin.Visible = true;
-                        txtpass.Text = "";
-                        txtpass_Leave(null, e);
-                        txtuser.Focus();
-                    }
-
-                }
-                else
-                    lblErrorPass.Text = objUsers.pass_user;
-                    lblErrorPass.Visible = true;
-
-            }
-            else
-                lblErrorUser.Text = objUsers.cc_user;
-                lblErrorUser.Visible = true;
             }
        }
     }
