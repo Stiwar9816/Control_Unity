@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
+
 namespace Contro_unity
 {
     public partial class MenuPrincipal : Form
@@ -84,5 +85,6 @@ namespace Contro_unity
         {
             AbrirFormInPanel(new MenuInventario());
         }
+
     }
 }
