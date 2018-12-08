@@ -11,15 +11,16 @@ namespace CapaDatos
     
     public class CDlogin
     {
-        private CDconexion conexion = new CDconexion();
-        private SqlDataAdapter leer;
+        private CDconexion Conexion = new CDconexion();
+        private SqlDataReader leer;
 
-        public SqlDataAdapter IniciarSesion(string user, string pass)
+        public SqlDataReader IniciarSesion(string user, string pass)
         {
-            string sql = "select * from users where cc_user=" + user + "and password_user=" + pass;
-            SqlCommand comando = new SqlCommand();
-            comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = sql;
+            
+            SqlCommand comando = new SqlCommand("SPIniciarSesion",Conexion.AbrirConexion());
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@Usuario", user);
+            comando.Parameters.AddWithValue("@Password", pass);
             leer = comando.ExecuteReader();
             return leer;
         }

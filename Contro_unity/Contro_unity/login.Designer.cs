@@ -43,6 +43,9 @@
             this.linkpass = new System.Windows.Forms.LinkLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.lblErrorUser = new System.Windows.Forms.Label();
+            this.lblErrorPass = new System.Windows.Forms.Label();
+            this.lblErrorLogin = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).BeginInit();
@@ -178,6 +181,7 @@
             this.btnlogin.TabIndex = 3;
             this.btnlogin.Text = "INGRESAR";
             this.btnlogin.UseVisualStyleBackColor = false;
+            this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
             // linkpass
             // 
@@ -212,12 +216,45 @@
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
             // 
+            // lblErrorUser
+            // 
+            this.lblErrorUser.AutoSize = true;
+            this.lblErrorUser.Location = new System.Drawing.Point(81, 254);
+            this.lblErrorUser.Name = "lblErrorUser";
+            this.lblErrorUser.Size = new System.Drawing.Size(43, 13);
+            this.lblErrorUser.TabIndex = 8;
+            this.lblErrorUser.Text = "Usuario";
+            this.lblErrorUser.Visible = false;
+            // 
+            // lblErrorPass
+            // 
+            this.lblErrorPass.AutoSize = true;
+            this.lblErrorPass.Location = new System.Drawing.Point(80, 312);
+            this.lblErrorPass.Name = "lblErrorPass";
+            this.lblErrorPass.Size = new System.Drawing.Size(30, 13);
+            this.lblErrorPass.TabIndex = 9;
+            this.lblErrorPass.Text = "Pass";
+            this.lblErrorPass.Visible = false;
+            // 
+            // lblErrorLogin
+            // 
+            this.lblErrorLogin.AutoSize = true;
+            this.lblErrorLogin.Location = new System.Drawing.Point(160, 344);
+            this.lblErrorLogin.Name = "lblErrorLogin";
+            this.lblErrorLogin.Size = new System.Drawing.Size(35, 13);
+            this.lblErrorLogin.TabIndex = 10;
+            this.lblErrorLogin.Text = "login?";
+            this.lblErrorLogin.Visible = false;
+            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(367, 441);
+            this.Controls.Add(this.lblErrorLogin);
+            this.Controls.Add(this.lblErrorPass);
+            this.Controls.Add(this.lblErrorUser);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.linkpass);
@@ -260,6 +297,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label lblErrorUser;
+        private System.Windows.Forms.Label lblErrorPass;
+        private System.Windows.Forms.Label lblErrorLogin;
     }
 }
 
