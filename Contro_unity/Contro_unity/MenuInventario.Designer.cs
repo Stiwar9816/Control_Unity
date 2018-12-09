@@ -74,7 +74,7 @@
             this.btnEliminarInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarInventario.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarInventario.Image")));
             this.btnEliminarInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminarInventario.Location = new System.Drawing.Point(289, 345);
+            this.btnEliminarInventario.Location = new System.Drawing.Point(294, 350);
             this.btnEliminarInventario.Name = "btnEliminarInventario";
             this.btnEliminarInventario.Size = new System.Drawing.Size(133, 47);
             this.btnEliminarInventario.TabIndex = 16;
@@ -90,7 +90,7 @@
             this.btnEditInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditInventario.Image = ((System.Drawing.Image)(resources.GetObject("btnEditInventario.Image")));
             this.btnEditInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditInventario.Location = new System.Drawing.Point(150, 345);
+            this.btnEditInventario.Location = new System.Drawing.Point(155, 350);
             this.btnEditInventario.Name = "btnEditInventario";
             this.btnEditInventario.Size = new System.Drawing.Size(133, 47);
             this.btnEditInventario.TabIndex = 15;
@@ -106,7 +106,7 @@
             this.btnAgregarInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarInventario.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarInventario.Image")));
             this.btnAgregarInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarInventario.Location = new System.Drawing.Point(11, 345);
+            this.btnAgregarInventario.Location = new System.Drawing.Point(16, 350);
             this.btnAgregarInventario.Name = "btnAgregarInventario";
             this.btnAgregarInventario.Size = new System.Drawing.Size(133, 47);
             this.btnAgregarInventario.TabIndex = 14;
@@ -244,7 +244,7 @@
             this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(834, 345);
+            this.btnAgregar.Location = new System.Drawing.Point(854, 349);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(146, 48);
             this.btnAgregar.TabIndex = 11;
@@ -266,7 +266,7 @@
             this.gbEditInventario.Controls.Add(this.lblMarca);
             this.gbEditInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbEditInventario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbEditInventario.Location = new System.Drawing.Point(719, 66);
+            this.gbEditInventario.Location = new System.Drawing.Point(723, 56);
             this.gbEditInventario.Name = "gbEditInventario";
             this.gbEditInventario.Size = new System.Drawing.Size(361, 273);
             this.gbEditInventario.TabIndex = 17;
@@ -382,7 +382,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
-            this.ClientSize = new System.Drawing.Size(1096, 408);
+            this.ClientSize = new System.Drawing.Size(1096, 409);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.gbEditInventario);
             this.Controls.Add(this.btnCerrar);
