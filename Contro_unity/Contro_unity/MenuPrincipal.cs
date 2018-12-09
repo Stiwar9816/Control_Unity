@@ -86,5 +86,10 @@ namespace Contro_unity
             AbrirFormInPanel(new MenuInventario());
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            //lbHora.Text = DateTime.Now.ToString("hh:mm:ss tt");
+            //lbFecha.Text = DateTime.Now.ToLongDateString();
+        }
     }
 }

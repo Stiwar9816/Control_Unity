@@ -22,6 +22,18 @@ namespace Contro_unity
             this.Close();
         }
 
-       
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AggInventario AggInventario = new AggInventario();
+            AggInventario.Show();
+        }
+
+        private void btnEditInventario_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            EditInventario EditInventario = new EditInventario();
+            EditInventario.Show();
+        }
     }
 }

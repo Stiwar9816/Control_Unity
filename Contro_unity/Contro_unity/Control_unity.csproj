@@ -55,6 +55,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AggInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AggInventario.Designer.cs">
+      <DependentUpon>AggInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditInventario.Designer.cs">
+      <DependentUpon>EditInventario.cs</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +87,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AggInventario.resx">
+      <DependentUpon>AggInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditInventario.resx">
+      <DependentUpon>EditInventario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
