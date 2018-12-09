@@ -61,6 +61,12 @@
     <Compile Include="AggInventario.Designer.cs">
       <DependentUpon>AggInventario.cs</DependentUpon>
     </Compile>
+    <Compile Include="AggUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AggUsers.Designer.cs">
+      <DependentUpon>AggUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditInventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AggInventario.resx">
       <DependentUpon>AggInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AggUsers.resx">
+      <DependentUpon>AggUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditInventario.resx">
       <DependentUpon>EditInventario.cs</DependentUpon>

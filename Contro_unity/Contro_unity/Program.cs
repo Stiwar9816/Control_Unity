@@ -16,7 +16,7 @@ namespace Contro_unity
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MenuPrincipal());
+            Application.Run(new AggUsers());
         }
     }
 }
