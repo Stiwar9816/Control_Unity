@@ -52,8 +52,8 @@
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnSlide = new System.Windows.Forms.PictureBox();
             this.PanelContenedor = new System.Windows.Forms.Panel();
-            this.lbHora = new System.Windows.Forms.Label();
             this.lbFecha = new System.Windows.Forms.Label();
+            this.lbHora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuVertical.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -133,7 +133,8 @@
             // 
             this.btnConfiguracion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConfiguracion.FlatAppearance.BorderSize = 0;
-            this.btnConfiguracion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnConfiguracion.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Menu;
+            this.btnConfiguracion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Khaki;
             this.btnConfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfiguracion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfiguracion.Image = ((System.Drawing.Image)(resources.GetObject("btnConfiguracion.Image")));
@@ -149,7 +150,8 @@
             // 
             this.btnUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUsuarios.FlatAppearance.BorderSize = 0;
-            this.btnUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnUsuarios.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Menu;
+            this.btnUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Khaki;
             this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsuarios.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuarios.Image")));
@@ -165,7 +167,8 @@
             // 
             this.btnEstudiantes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEstudiantes.FlatAppearance.BorderSize = 0;
-            this.btnEstudiantes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnEstudiantes.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Menu;
+            this.btnEstudiantes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Khaki;
             this.btnEstudiantes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEstudiantes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEstudiantes.Image = ((System.Drawing.Image)(resources.GetObject("btnEstudiantes.Image")));
@@ -181,7 +184,8 @@
             // 
             this.btnProfesores.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnProfesores.FlatAppearance.BorderSize = 0;
-            this.btnProfesores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnProfesores.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Menu;
+            this.btnProfesores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Khaki;
             this.btnProfesores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProfesores.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfesores.Image = ((System.Drawing.Image)(resources.GetObject("btnProfesores.Image")));
@@ -197,7 +201,8 @@
             // 
             this.btnReportes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReportes.FlatAppearance.BorderSize = 0;
-            this.btnReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnReportes.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Menu;
+            this.btnReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Khaki;
             this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReportes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportes.Image = ((System.Drawing.Image)(resources.GetObject("btnReportes.Image")));
@@ -213,7 +218,8 @@
             // 
             this.btnSalones.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalones.FlatAppearance.BorderSize = 0;
-            this.btnSalones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnSalones.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Menu;
+            this.btnSalones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Khaki;
             this.btnSalones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalones.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalones.Image = ((System.Drawing.Image)(resources.GetObject("btnSalones.Image")));
@@ -229,7 +235,8 @@
             // 
             this.btnInventario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInventario.FlatAppearance.BorderSize = 0;
-            this.btnInventario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnInventario.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Menu;
+            this.btnInventario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Khaki;
             this.btnInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInventario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventario.Image = ((System.Drawing.Image)(resources.GetObject("btnInventario.Image")));
@@ -246,7 +253,8 @@
             // 
             this.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInicio.FlatAppearance.BorderSize = 0;
-            this.btnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnInicio.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Menu;
+            this.btnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Khaki;
             this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInicio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInicio.Image = ((System.Drawing.Image)(resources.GetObject("btnInicio.Image")));
@@ -307,6 +315,7 @@
             this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnRestaurar.TabIndex = 3;
             this.btnRestaurar.TabStop = false;
+            this.btnRestaurar.Visible = false;
             this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
             // 
             // btnMaximizar
@@ -370,17 +379,6 @@
             this.PanelContenedor.Size = new System.Drawing.Size(793, 661);
             this.PanelContenedor.TabIndex = 2;
             // 
-            // lbHora
-            // 
-            this.lbHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbHora.AutoSize = true;
-            this.lbHora.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHora.Location = new System.Drawing.Point(626, 591);
-            this.lbHora.Name = "lbHora";
-            this.lbHora.Size = new System.Drawing.Size(82, 28);
-            this.lbHora.TabIndex = 0;
-            this.lbHora.Text = "HORA";
-            // 
             // lbFecha
             // 
             this.lbFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -392,6 +390,17 @@
             this.lbFecha.TabIndex = 1;
             this.lbFecha.Text = "FECHA";
             this.lbFecha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbHora
+            // 
+            this.lbHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbHora.AutoSize = true;
+            this.lbHora.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHora.Location = new System.Drawing.Point(611, 591);
+            this.lbHora.Name = "lbHora";
+            this.lbHora.Size = new System.Drawing.Size(82, 28);
+            this.lbHora.TabIndex = 0;
+            this.lbHora.Text = "HORA";
             // 
             // timer1
             // 

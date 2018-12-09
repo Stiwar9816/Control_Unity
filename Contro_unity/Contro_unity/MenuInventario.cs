@@ -17,23 +17,9 @@ namespace Contro_unity
             InitializeComponent();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            AggInventario AggInventario = new AggInventario();
-            AggInventario.Show();
-        }
-
-        private void btnEditInventario_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            EditInventario EditInventario = new EditInventario();
-            EditInventario.Show();
         }
     }
 }

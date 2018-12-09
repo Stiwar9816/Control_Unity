@@ -88,8 +88,8 @@ namespace Contro_unity
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            //lbHora.Text = DateTime.Now.ToString("hh:mm:ss tt");
-            //lbFecha.Text = DateTime.Now.ToLongDateString();
+            lbHora.Text = DateTime.Now.ToString("hh:mm:ss tt");
+            lbFecha.Text = DateTime.Now.ToLongDateString();
         }
     }
 }
