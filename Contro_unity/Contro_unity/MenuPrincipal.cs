@@ -96,5 +96,10 @@ namespace Contro_unity
         {
             AbrirFormInPanel(new MenuSalones());
         }
+
+        private void btnProfesores_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new MenuProfesores());
+        }
     }
 }

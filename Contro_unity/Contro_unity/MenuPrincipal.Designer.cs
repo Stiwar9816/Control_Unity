@@ -142,7 +142,7 @@
             this.btnConfiguracion.Location = new System.Drawing.Point(8, 437);
             this.btnConfiguracion.Name = "btnConfiguracion";
             this.btnConfiguracion.Size = new System.Drawing.Size(192, 45);
-            this.btnConfiguracion.TabIndex = 11;
+            this.btnConfiguracion.TabIndex = 8;
             this.btnConfiguracion.Text = "    Configuración";
             this.btnConfiguracion.UseVisualStyleBackColor = true;
             // 
@@ -177,7 +177,7 @@
             this.btnEstudiantes.Name = "btnEstudiantes";
             this.btnEstudiantes.Size = new System.Drawing.Size(192, 45);
             this.btnEstudiantes.TabIndex = 6;
-            this.btnEstudiantes.Text = "Estudiantes";
+            this.btnEstudiantes.Text = "Reservas";
             this.btnEstudiantes.UseVisualStyleBackColor = true;
             // 
             // btnProfesores
@@ -196,6 +196,7 @@
             this.btnProfesores.TabIndex = 5;
             this.btnProfesores.Text = "Profesores";
             this.btnProfesores.UseVisualStyleBackColor = true;
+            this.btnProfesores.Click += new System.EventHandler(this.btnProfesores_Click);
             // 
             // btnReportes
             // 
