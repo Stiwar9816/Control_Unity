@@ -48,6 +48,9 @@ namespace CapaNegocio
             return Loguear;
         }
 
-    
+        private SqlDataReader IniciarSesion(string cc_user, string pass_user)
+        {
+            throw new NotImplementedException();
+        }
     } 
 }
