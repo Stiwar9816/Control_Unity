@@ -91,5 +91,10 @@ namespace Contro_unity
             lbHora.Text = DateTime.Now.ToString("hh:mm:ss tt");
             lbFecha.Text = DateTime.Now.ToLongDateString();
         }
+
+        private void btnSalones_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new MenuSalones());
+        }
     }
 }

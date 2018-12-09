@@ -230,6 +230,7 @@
             this.btnSalones.TabIndex = 3;
             this.btnSalones.Text = "Salones";
             this.btnSalones.UseVisualStyleBackColor = true;
+            this.btnSalones.Click += new System.EventHandler(this.btnSalones_Click);
             // 
             // btnInventario
             // 
