@@ -176,7 +176,7 @@
             this.btnEstudiantes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEstudiantes.Location = new System.Drawing.Point(8, 335);
             this.btnEstudiantes.Name = "btnEstudiantes";
-            this.btnEstudiantes.Size = new System.Drawing.Size(192, 45);
+            this.btnEstudiantes.Size = new System.Drawing.Size(186, 45);
             this.btnEstudiantes.TabIndex = 6;
             this.btnEstudiantes.Text = "Reservas";
             this.btnEstudiantes.UseVisualStyleBackColor = true;
