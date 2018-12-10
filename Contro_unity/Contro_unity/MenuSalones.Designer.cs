@@ -205,6 +205,8 @@
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -262,16 +264,19 @@
             // 
             this.Id.HeaderText = "ID";
             this.Id.Name = "Id";
+            this.Id.Width = 43;
             // 
             // Nom_salon
             // 
             this.Nom_salon.HeaderText = "Nombre Salon";
             this.Nom_salon.Name = "Nom_salon";
+            this.Nom_salon.Width = 105;
             // 
             // description_salon
             // 
             this.description_salon.HeaderText = "Descripción";
             this.description_salon.Name = "description_salon";
+            this.description_salon.Width = 102;
             // 
             // MenuSalones
             // 
