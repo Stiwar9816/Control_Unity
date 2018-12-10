@@ -88,7 +88,7 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.BackColor = System.Drawing.SystemColors.Info;
+            this.txtDescripcion.BackColor = System.Drawing.SystemColors.Window;
             this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDescripcion.Location = new System.Drawing.Point(131, 67);
             this.txtDescripcion.Multiline = true;
@@ -118,7 +118,7 @@
             // 
             // txtCod_serie
             // 
-            this.txtCod_serie.BackColor = System.Drawing.SystemColors.Info;
+            this.txtCod_serie.BackColor = System.Drawing.SystemColors.Window;
             this.txtCod_serie.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCod_serie.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCod_serie.Location = new System.Drawing.Point(176, 25);

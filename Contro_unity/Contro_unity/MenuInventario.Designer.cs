@@ -284,7 +284,7 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.BackColor = System.Drawing.SystemColors.Info;
+            this.txtDescripcion.BackColor = System.Drawing.SystemColors.Window;
             this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDescripcion.Location = new System.Drawing.Point(150, 162);
             this.txtDescripcion.Multiline = true;
@@ -305,7 +305,7 @@
             // 
             // txtMarca
             // 
-            this.txtMarca.BackColor = System.Drawing.SystemColors.Info;
+            this.txtMarca.BackColor = System.Drawing.SystemColors.Window;
             this.txtMarca.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMarca.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMarca.Location = new System.Drawing.Point(150, 127);
@@ -345,7 +345,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.BackColor = System.Drawing.SystemColors.Info;
+            this.txtNombre.BackColor = System.Drawing.SystemColors.Window;
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(150, 62);
@@ -365,7 +365,7 @@
             // 
             // txtCod_serie
             // 
-            this.txtCod_serie.BackColor = System.Drawing.SystemColors.Info;
+            this.txtCod_serie.BackColor = System.Drawing.SystemColors.Window;
             this.txtCod_serie.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCod_serie.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCod_serie.Location = new System.Drawing.Point(150, 26);

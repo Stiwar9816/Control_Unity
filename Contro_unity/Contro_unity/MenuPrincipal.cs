@@ -106,5 +106,10 @@ namespace Contro_unity
         {
             AbrirFormInPanel(new MenuUsuarios());
         }
+
+        private void btnConfiguracion_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new MenuConfig());
+        }
     }
 }
