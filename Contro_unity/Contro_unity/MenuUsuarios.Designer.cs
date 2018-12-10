@@ -56,7 +56,6 @@
             this.email_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datetime_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rol_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.gbUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -64,6 +63,7 @@
             // 
             // btnAgregar
             // 
+            this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregar.FlatAppearance.BorderSize = 0;
             this.btnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Menu;
             this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumAquamarine;
@@ -100,7 +100,7 @@
             // 
             // txtRol
             // 
-            this.txtRol.BackColor = System.Drawing.SystemColors.Info;
+            this.txtRol.BackColor = System.Drawing.SystemColors.Window;
             this.txtRol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.txtRol.FormattingEnabled = true;
             this.txtRol.Items.AddRange(new object[] {
@@ -114,7 +114,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.BackColor = System.Drawing.SystemColors.Info;
+            this.txtEmail.BackColor = System.Drawing.SystemColors.Window;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(150, 97);
@@ -144,7 +144,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.BackColor = System.Drawing.SystemColors.Info;
+            this.txtNombre.BackColor = System.Drawing.SystemColors.Window;
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(150, 62);
@@ -164,7 +164,7 @@
             // 
             // txtCod_serie
             // 
-            this.txtCod_serie.BackColor = System.Drawing.SystemColors.Info;
+            this.txtCod_serie.BackColor = System.Drawing.SystemColors.Window;
             this.txtCod_serie.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCod_serie.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCod_serie.Location = new System.Drawing.Point(150, 26);
@@ -187,7 +187,7 @@
             this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(1064, 8);
+            this.btnCerrar.Location = new System.Drawing.Point(1076, -1);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(21, 23);
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -354,19 +354,12 @@
             this.rol_user.Name = "rol_user";
             this.rol_user.Width = 48;
             // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.Location = new System.Drawing.Point(466, 98);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 26;
-            // 
             // MenuUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(1096, 409);
-            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.gbUser);
             this.Controls.Add(this.btnCerrar);
@@ -412,6 +405,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn rol_user;
         private System.Windows.Forms.ComboBox txtRol;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
     }
 }

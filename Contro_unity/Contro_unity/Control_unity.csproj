@@ -40,10 +40,13 @@
     <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -85,6 +88,12 @@
     <Compile Include="MenuProfesores.Designer.cs">
       <DependentUpon>MenuProfesores.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuReportes.Designer.cs">
+      <DependentUpon>MenuReportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuSalones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuProfesores.resx">
       <DependentUpon>MenuProfesores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuReportes.resx">
+      <DependentUpon>MenuReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuSalones.resx">
       <DependentUpon>MenuSalones.cs</DependentUpon>

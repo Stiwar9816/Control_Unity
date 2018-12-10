@@ -111,5 +111,10 @@ namespace Contro_unity
         {
             AbrirFormInPanel(new MenuConfig());
         }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new MenuReportes());
+        }
     }
 }
