@@ -64,7 +64,7 @@
             this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(588, 232);
+            this.btnAgregar.Location = new System.Drawing.Point(758, 243);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(146, 48);
             this.btnAgregar.TabIndex = 10;
@@ -80,7 +80,7 @@
             this.gbEditInventario.Controls.Add(this.txtCod_serie);
             this.gbEditInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbEditInventario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbEditInventario.Location = new System.Drawing.Point(470, 40);
+            this.gbEditInventario.Location = new System.Drawing.Point(640, 40);
             this.gbEditInventario.Name = "gbEditInventario";
             this.gbEditInventario.Size = new System.Drawing.Size(361, 186);
             this.gbEditInventario.TabIndex = 7;
@@ -133,7 +133,7 @@
             this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(821, -2);
+            this.btnCerrar.Location = new System.Drawing.Point(1000, -2);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(21, 23);
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -150,7 +150,7 @@
             this.btnEliminarInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarInventario.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarInventario.Image")));
             this.btnEliminarInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminarInventario.Location = new System.Drawing.Point(288, 284);
+            this.btnEliminarInventario.Location = new System.Drawing.Point(288, 448);
             this.btnEliminarInventario.Name = "btnEliminarInventario";
             this.btnEliminarInventario.Size = new System.Drawing.Size(133, 47);
             this.btnEliminarInventario.TabIndex = 6;
@@ -166,7 +166,7 @@
             this.btnEditInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditInventario.Image = ((System.Drawing.Image)(resources.GetObject("btnEditInventario.Image")));
             this.btnEditInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditInventario.Location = new System.Drawing.Point(149, 284);
+            this.btnEditInventario.Location = new System.Drawing.Point(149, 448);
             this.btnEditInventario.Name = "btnEditInventario";
             this.btnEditInventario.Size = new System.Drawing.Size(133, 47);
             this.btnEditInventario.TabIndex = 5;
@@ -182,7 +182,7 @@
             this.btnAgregarInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarInventario.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarInventario.Image")));
             this.btnAgregarInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarInventario.Location = new System.Drawing.Point(12, 284);
+            this.btnAgregarInventario.Location = new System.Drawing.Point(12, 448);
             this.btnAgregarInventario.Name = "btnAgregarInventario";
             this.btnAgregarInventario.Size = new System.Drawing.Size(133, 47);
             this.btnAgregarInventario.TabIndex = 4;
@@ -258,7 +258,7 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(452, 242);
+            this.dataGridView1.Size = new System.Drawing.Size(592, 402);
             this.dataGridView1.TabIndex = 3;
             // 
             // Id
@@ -284,7 +284,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
-            this.ClientSize = new System.Drawing.Size(842, 344);
+            this.ClientSize = new System.Drawing.Size(1024, 630);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.gbEditInventario);
             this.Controls.Add(this.btnCerrar);
