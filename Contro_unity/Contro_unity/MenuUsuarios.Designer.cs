@@ -36,8 +36,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.gbUser = new System.Windows.Forms.GroupBox();
-            this.txtRol = new System.Windows.Forms.ComboBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
             this.lbCC_User = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -56,7 +54,8 @@
             this.email_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datetime_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rol_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtRol = new System.Windows.Forms.ComboBox();
             this.gbUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -97,30 +96,6 @@
             this.gbUser.TabIndex = 25;
             this.gbUser.TabStop = false;
             this.gbUser.Text = "DATOS DEL USUARIO";
-            // 
-            // txtRol
-            // 
-            this.txtRol.BackColor = System.Drawing.SystemColors.Info;
-            this.txtRol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.txtRol.FormattingEnabled = true;
-            this.txtRol.Items.AddRange(new object[] {
-            "Recepcion",
-            "Biblioteca"});
-            this.txtRol.Location = new System.Drawing.Point(150, 126);
-            this.txtRol.Name = "txtRol";
-            this.txtRol.Size = new System.Drawing.Size(200, 24);
-            this.txtRol.TabIndex = 26;
-            this.txtRol.Text = "Elige Un Rol";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.BackColor = System.Drawing.SystemColors.Info;
-            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(150, 97);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(200, 16);
-            this.txtEmail.TabIndex = 11;
             // 
             // lbCC_User
             // 
@@ -354,11 +329,29 @@
             this.rol_user.Name = "rol_user";
             this.rol_user.Width = 48;
             // 
-            // monthCalendar1
+            // txtEmail
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(466, 69);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 26;
+            this.txtEmail.BackColor = System.Drawing.SystemColors.Info;
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(150, 97);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(200, 16);
+            this.txtEmail.TabIndex = 11;
+            // 
+            // txtRol
+            // 
+            this.txtRol.BackColor = System.Drawing.SystemColors.Info;
+            this.txtRol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.txtRol.FormattingEnabled = true;
+            this.txtRol.Items.AddRange(new object[] {
+            "Recepcion",
+            "Biblioteca"});
+            this.txtRol.Location = new System.Drawing.Point(150, 126);
+            this.txtRol.Name = "txtRol";
+            this.txtRol.Size = new System.Drawing.Size(200, 24);
+            this.txtRol.TabIndex = 26;
+            this.txtRol.Text = "Elige Un Rol";
             // 
             // MenuUsuarios
             // 
@@ -366,7 +359,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(1096, 409);
-            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.gbUser);
             this.Controls.Add(this.btnCerrar);
@@ -412,6 +404,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn rol_user;
         private System.Windows.Forms.ComboBox txtRol;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
     }
 }
