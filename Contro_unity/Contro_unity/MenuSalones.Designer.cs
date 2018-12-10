@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuSalones));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -36,7 +37,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.gbEditInventario = new System.Windows.Forms.GroupBox();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.lbCod_serie = new System.Windows.Forms.Label();
             this.LblDescripcion = new System.Windows.Forms.Label();
             this.txtCod_serie = new System.Windows.Forms.TextBox();
@@ -49,6 +49,8 @@
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nom_salon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.description_salon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.gbEditInventario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -69,12 +71,13 @@
             this.btnAgregar.Size = new System.Drawing.Size(146, 48);
             this.btnAgregar.TabIndex = 10;
             this.btnAgregar.Text = "      CONFIRMAR";
+            this.toolTip1.SetToolTip(this.btnAgregar, "Confirmar");
             this.btnAgregar.UseVisualStyleBackColor = true;
             // 
             // gbEditInventario
             // 
             this.gbEditInventario.BackColor = System.Drawing.SystemColors.Menu;
-            this.gbEditInventario.Controls.Add(this.txtDescripcion);
+            this.gbEditInventario.Controls.Add(this.richTextBox1);
             this.gbEditInventario.Controls.Add(this.lbCod_serie);
             this.gbEditInventario.Controls.Add(this.LblDescripcion);
             this.gbEditInventario.Controls.Add(this.txtCod_serie);
@@ -86,16 +89,6 @@
             this.gbEditInventario.TabIndex = 7;
             this.gbEditInventario.TabStop = false;
             this.gbEditInventario.Text = "DATOS DEL SALON";
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.BackColor = System.Drawing.SystemColors.Window;
-            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDescripcion.Location = new System.Drawing.Point(131, 67);
-            this.txtDescripcion.Multiline = true;
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(222, 100);
-            this.txtDescripcion.TabIndex = 9;
             // 
             // lbCod_serie
             // 
@@ -139,6 +132,7 @@
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCerrar.TabIndex = 18;
             this.btnCerrar.TabStop = false;
+            this.toolTip1.SetToolTip(this.btnCerrar, "Cerrar Ventana");
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnEliminarInventario
@@ -155,6 +149,7 @@
             this.btnEliminarInventario.Size = new System.Drawing.Size(133, 47);
             this.btnEliminarInventario.TabIndex = 6;
             this.btnEliminarInventario.Text = "       ELIMINAR";
+            this.toolTip1.SetToolTip(this.btnEliminarInventario, "Eliminar");
             this.btnEliminarInventario.UseVisualStyleBackColor = true;
             // 
             // btnEditInventario
@@ -171,6 +166,7 @@
             this.btnEditInventario.Size = new System.Drawing.Size(133, 47);
             this.btnEditInventario.TabIndex = 5;
             this.btnEditInventario.Text = "       EDITAR";
+            this.toolTip1.SetToolTip(this.btnEditInventario, "Editar");
             this.btnEditInventario.UseVisualStyleBackColor = true;
             // 
             // btnAgregarInventario
@@ -187,6 +183,7 @@
             this.btnAgregarInventario.Size = new System.Drawing.Size(133, 47);
             this.btnAgregarInventario.TabIndex = 4;
             this.btnAgregarInventario.Text = "       AGREGAR";
+            this.toolTip1.SetToolTip(this.btnAgregarInventario, "Agregar");
             this.btnAgregarInventario.UseVisualStyleBackColor = true;
             // 
             // label1
@@ -279,6 +276,16 @@
             this.description_salon.Name = "description_salon";
             this.description_salon.Width = 102;
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Location = new System.Drawing.Point(131, 70);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(222, 100);
+            this.richTextBox1.TabIndex = 9;
+            this.richTextBox1.Text = "";
+            // 
             // MenuSalones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -310,7 +317,6 @@
 
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.GroupBox gbEditInventario;
-        public System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label lbCod_serie;
         private System.Windows.Forms.Label LblDescripcion;
         private System.Windows.Forms.TextBox txtCod_serie;
@@ -323,5 +329,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nom_salon;
         private System.Windows.Forms.DataGridViewTextBoxColumn description_salon;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

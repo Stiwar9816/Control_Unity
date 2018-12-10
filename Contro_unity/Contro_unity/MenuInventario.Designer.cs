@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuInventario));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -49,7 +50,6 @@
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.gbEditInventario = new System.Windows.Forms.GroupBox();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.txtStock = new System.Windows.Forms.NumericUpDown();
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.lbCod_serie = new System.Windows.Forms.Label();
@@ -59,6 +59,8 @@
             this.lblStock = new System.Windows.Forms.Label();
             this.txtCod_serie = new System.Windows.Forms.TextBox();
             this.lblMarca = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.txtDescripcion = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.gbEditInventario.SuspendLayout();
@@ -79,6 +81,7 @@
             this.btnEliminarInventario.Size = new System.Drawing.Size(133, 47);
             this.btnEliminarInventario.TabIndex = 16;
             this.btnEliminarInventario.Text = "       ELIMINAR";
+            this.toolTip1.SetToolTip(this.btnEliminarInventario, "Eliminar");
             this.btnEliminarInventario.UseVisualStyleBackColor = true;
             // 
             // btnEditInventario
@@ -95,6 +98,7 @@
             this.btnEditInventario.Size = new System.Drawing.Size(133, 47);
             this.btnEditInventario.TabIndex = 15;
             this.btnEditInventario.Text = "       EDITAR";
+            this.toolTip1.SetToolTip(this.btnEditInventario, "Editar");
             this.btnEditInventario.UseVisualStyleBackColor = true;
             // 
             // btnAgregarInventario
@@ -111,6 +115,7 @@
             this.btnAgregarInventario.Size = new System.Drawing.Size(133, 47);
             this.btnAgregarInventario.TabIndex = 14;
             this.btnAgregarInventario.Text = "       AGREGAR";
+            this.toolTip1.SetToolTip(this.btnAgregarInventario, "Agregar");
             this.btnAgregarInventario.UseVisualStyleBackColor = true;
             // 
             // label1
@@ -242,6 +247,7 @@
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCerrar.TabIndex = 0;
             this.btnCerrar.TabStop = false;
+            this.toolTip1.SetToolTip(this.btnCerrar, "Cerrar");
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnAgregar
@@ -259,6 +265,7 @@
             this.btnAgregar.Size = new System.Drawing.Size(146, 48);
             this.btnAgregar.TabIndex = 11;
             this.btnAgregar.Text = "      CONFIRMAR";
+            this.toolTip1.SetToolTip(this.btnAgregar, "Confirmar");
             this.btnAgregar.UseVisualStyleBackColor = true;
             // 
             // gbEditInventario
@@ -282,16 +289,6 @@
             this.gbEditInventario.TabIndex = 17;
             this.gbEditInventario.TabStop = false;
             this.gbEditInventario.Text = "DATOS DEL IMPLEMENTO";
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.BackColor = System.Drawing.SystemColors.Window;
-            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDescripcion.Location = new System.Drawing.Point(150, 162);
-            this.txtDescripcion.Multiline = true;
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(200, 100);
-            this.txtDescripcion.TabIndex = 10;
             // 
             // txtStock
             // 
@@ -384,6 +381,16 @@
             this.lblMarca.TabIndex = 3;
             this.lblMarca.Text = "Marca: ";
             // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.BackColor = System.Drawing.SystemColors.Window;
+            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescripcion.Location = new System.Drawing.Point(150, 160);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(200, 100);
+            this.txtDescripcion.TabIndex = 18;
+            this.txtDescripcion.Text = "";
+            // 
             // MenuInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -429,7 +436,6 @@
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.GroupBox gbEditInventario;
-        public System.Windows.Forms.TextBox txtDescripcion;
         public System.Windows.Forms.NumericUpDown txtStock;
         private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.Label lbCod_serie;
@@ -439,5 +445,7 @@
         private System.Windows.Forms.Label lblStock;
         private System.Windows.Forms.TextBox txtCod_serie;
         private System.Windows.Forms.Label lblMarca;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.RichTextBox txtDescripcion;
     }
 }

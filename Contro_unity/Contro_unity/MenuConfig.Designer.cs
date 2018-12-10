@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuConfig));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -39,6 +40,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.SuspendLayout();
@@ -86,6 +88,7 @@
             this.btnConfirmar.Size = new System.Drawing.Size(143, 46);
             this.btnConfirmar.TabIndex = 6;
             this.btnConfirmar.Text = "       Confirmar";
+            this.toolTip1.SetToolTip(this.btnConfirmar, "Confirmar");
             this.btnConfirmar.UseVisualStyleBackColor = false;
             // 
             // txtPassConf
@@ -153,6 +156,7 @@
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCerrar.TabIndex = 2;
             this.btnCerrar.TabStop = false;
+            this.toolTip1.SetToolTip(this.btnCerrar, "Cerrar");
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // MenuConfig
@@ -188,5 +192,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnConfirmar;
         private System.Windows.Forms.PictureBox btnCerrar;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

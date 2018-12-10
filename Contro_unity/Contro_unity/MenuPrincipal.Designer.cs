@@ -55,6 +55,7 @@
             this.lbFecha = new System.Windows.Forms.Label();
             this.lbHora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.menuVertical.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -143,7 +144,8 @@
             this.btnConfiguracion.Name = "btnConfiguracion";
             this.btnConfiguracion.Size = new System.Drawing.Size(192, 45);
             this.btnConfiguracion.TabIndex = 8;
-            this.btnConfiguracion.Text = "    Configuración";
+            this.btnConfiguracion.Text = "        Configuraciónes";
+            this.toolTip1.SetToolTip(this.btnConfiguracion, "Configuraciones");
             this.btnConfiguracion.UseVisualStyleBackColor = true;
             this.btnConfiguracion.Click += new System.EventHandler(this.btnConfiguracion_Click);
             // 
@@ -162,6 +164,7 @@
             this.btnUsuarios.Size = new System.Drawing.Size(192, 45);
             this.btnUsuarios.TabIndex = 7;
             this.btnUsuarios.Text = "Usuarios";
+            this.toolTip1.SetToolTip(this.btnUsuarios, "Usuarios");
             this.btnUsuarios.UseVisualStyleBackColor = true;
             this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
@@ -180,6 +183,7 @@
             this.btnEstudiantes.Size = new System.Drawing.Size(192, 45);
             this.btnEstudiantes.TabIndex = 6;
             this.btnEstudiantes.Text = "Reservas";
+            this.toolTip1.SetToolTip(this.btnEstudiantes, "Reservas");
             this.btnEstudiantes.UseVisualStyleBackColor = true;
             // 
             // btnProfesores
@@ -197,6 +201,7 @@
             this.btnProfesores.Size = new System.Drawing.Size(192, 45);
             this.btnProfesores.TabIndex = 5;
             this.btnProfesores.Text = "Profesores";
+            this.toolTip1.SetToolTip(this.btnProfesores, "Profesores");
             this.btnProfesores.UseVisualStyleBackColor = true;
             this.btnProfesores.Click += new System.EventHandler(this.btnProfesores_Click);
             // 
@@ -215,6 +220,7 @@
             this.btnReportes.Size = new System.Drawing.Size(192, 45);
             this.btnReportes.TabIndex = 4;
             this.btnReportes.Text = "Reportes";
+            this.toolTip1.SetToolTip(this.btnReportes, "Reportes");
             this.btnReportes.UseVisualStyleBackColor = true;
             this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
@@ -233,6 +239,7 @@
             this.btnSalones.Size = new System.Drawing.Size(192, 45);
             this.btnSalones.TabIndex = 3;
             this.btnSalones.Text = "Salones";
+            this.toolTip1.SetToolTip(this.btnSalones, "Salones");
             this.btnSalones.UseVisualStyleBackColor = true;
             this.btnSalones.Click += new System.EventHandler(this.btnSalones_Click);
             // 
@@ -251,6 +258,7 @@
             this.btnInventario.Size = new System.Drawing.Size(192, 45);
             this.btnInventario.TabIndex = 2;
             this.btnInventario.Text = "Inventario";
+            this.toolTip1.SetToolTip(this.btnInventario, "Inventario");
             this.btnInventario.UseVisualStyleBackColor = true;
             this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
             // 
@@ -269,6 +277,7 @@
             this.btnInicio.Size = new System.Drawing.Size(192, 45);
             this.btnInicio.TabIndex = 1;
             this.btnInicio.Text = "Inicio";
+            this.toolTip1.SetToolTip(this.btnInicio, "Inicio");
             this.btnInicio.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
@@ -308,6 +317,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox3, "Notificaciones");
             // 
             // btnRestaurar
             // 
@@ -320,6 +330,7 @@
             this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnRestaurar.TabIndex = 3;
             this.btnRestaurar.TabStop = false;
+            this.toolTip1.SetToolTip(this.btnRestaurar, "Restaurar");
             this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
             // 
             // btnMaximizar
@@ -333,6 +344,7 @@
             this.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMaximizar.TabIndex = 2;
             this.btnMaximizar.TabStop = false;
+            this.toolTip1.SetToolTip(this.btnMaximizar, "Maximizar");
             this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
             // 
             // btnMinimizar
@@ -346,6 +358,7 @@
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMinimizar.TabIndex = 1;
             this.btnMinimizar.TabStop = false;
+            this.toolTip1.SetToolTip(this.btnMinimizar, "Minimizar");
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
             // btnCerrar
@@ -359,6 +372,7 @@
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCerrar.TabIndex = 0;
             this.btnCerrar.TabStop = false;
+            this.toolTip1.SetToolTip(this.btnCerrar, "Cerrar");
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnSlide
@@ -367,10 +381,11 @@
             this.btnSlide.Image = ((System.Drawing.Image)(resources.GetObject("btnSlide.Image")));
             this.btnSlide.Location = new System.Drawing.Point(3, 3);
             this.btnSlide.Name = "btnSlide";
-            this.btnSlide.Size = new System.Drawing.Size(35, 35);
+            this.btnSlide.Size = new System.Drawing.Size(31, 32);
             this.btnSlide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnSlide.TabIndex = 0;
             this.btnSlide.TabStop = false;
+            this.toolTip1.SetToolTip(this.btnSlide, "Ocultar Menù");
             this.btnSlide.Click += new System.EventHandler(this.btnSlide_Click);
             // 
             // PanelContenedor
@@ -471,5 +486,6 @@
         private System.Windows.Forms.Label lbFecha;
         private System.Windows.Forms.Label lbHora;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

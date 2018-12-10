@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -45,6 +46,7 @@
             this.lblErrorUser = new System.Windows.Forms.Label();
             this.lblErrorPass = new System.Windows.Forms.Label();
             this.lblErrorLogin = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).BeginInit();
@@ -85,6 +87,7 @@
             this.btnminimizar.Size = new System.Drawing.Size(20, 19);
             this.btnminimizar.TabIndex = 6;
             this.btnminimizar.TabStop = false;
+            this.toolTip1.SetToolTip(this.btnminimizar, "Minimizar");
             this.btnminimizar.Click += new System.EventHandler(this.btnminimizar_Click);
             // 
             // btncerrar
@@ -95,6 +98,7 @@
             this.btncerrar.Size = new System.Drawing.Size(17, 17);
             this.btncerrar.TabIndex = 5;
             this.btncerrar.TabStop = false;
+            this.toolTip1.SetToolTip(this.btncerrar, "Cerrar");
             this.btncerrar.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // txtuser
@@ -168,6 +172,7 @@
             this.btnlogin.Size = new System.Drawing.Size(255, 28);
             this.btnlogin.TabIndex = 3;
             this.btnlogin.Text = "INGRESAR";
+            this.toolTip1.SetToolTip(this.btnlogin, "Ingresar");
             this.btnlogin.UseVisualStyleBackColor = false;
             this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
@@ -183,6 +188,7 @@
             this.linkpass.TabIndex = 0;
             this.linkpass.TabStop = true;
             this.linkpass.Text = "¿Has olvidado tu contraseña?";
+            this.toolTip1.SetToolTip(this.linkpass, "¿Has olvidado tu contraseña?");
             // 
             // pictureBox2
             // 
@@ -286,6 +292,7 @@
         private System.Windows.Forms.Label lblErrorUser;
         private System.Windows.Forms.Label lblErrorPass;
         private System.Windows.Forms.Label lblErrorLogin;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 

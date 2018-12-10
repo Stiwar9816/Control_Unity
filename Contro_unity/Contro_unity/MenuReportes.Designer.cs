@@ -28,14 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuReportes));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.implementosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reservasProfesoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reservasParticularesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.salonesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.profesoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.particularesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.SuspendLayout();
@@ -56,8 +61,9 @@
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.implementosToolStripMenuItem,
-            this.reservasProfesoresToolStripMenuItem,
-            this.reservasParticularesToolStripMenuItem});
+            this.salonesToolStripMenuItem,
+            this.reservasParticularesToolStripMenuItem,
+            this.usuariosToolStripMenuItem});
             this.toolStripMenuItem1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(76, 20);
@@ -66,20 +72,17 @@
             // implementosToolStripMenuItem
             // 
             this.implementosToolStripMenuItem.Name = "implementosToolStripMenuItem";
-            this.implementosToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.implementosToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.implementosToolStripMenuItem.Text = "Implementos";
-            // 
-            // reservasProfesoresToolStripMenuItem
-            // 
-            this.reservasProfesoresToolStripMenuItem.Name = "reservasProfesoresToolStripMenuItem";
-            this.reservasProfesoresToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
-            this.reservasProfesoresToolStripMenuItem.Text = "Reservas Profesores";
             // 
             // reservasParticularesToolStripMenuItem
             // 
+            this.reservasParticularesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.profesoresToolStripMenuItem,
+            this.particularesToolStripMenuItem});
             this.reservasParticularesToolStripMenuItem.Name = "reservasParticularesToolStripMenuItem";
-            this.reservasParticularesToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
-            this.reservasParticularesToolStripMenuItem.Text = "Reservas Particulares";
+            this.reservasParticularesToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.reservasParticularesToolStripMenuItem.Text = "Reservas";
             // 
             // btnCerrar
             // 
@@ -92,6 +95,7 @@
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCerrar.TabIndex = 1;
             this.btnCerrar.TabStop = false;
+            this.toolTip1.SetToolTip(this.btnCerrar, "Cerrar");
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // reportViewer1
@@ -104,6 +108,30 @@
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.Size = new System.Drawing.Size(1024, 450);
             this.reportViewer1.TabIndex = 2;
+            // 
+            // salonesToolStripMenuItem
+            // 
+            this.salonesToolStripMenuItem.Name = "salonesToolStripMenuItem";
+            this.salonesToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.salonesToolStripMenuItem.Text = "Salones";
+            // 
+            // profesoresToolStripMenuItem
+            // 
+            this.profesoresToolStripMenuItem.Name = "profesoresToolStripMenuItem";
+            this.profesoresToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.profesoresToolStripMenuItem.Text = "Profesores";
+            // 
+            // particularesToolStripMenuItem
+            // 
+            this.particularesToolStripMenuItem.Name = "particularesToolStripMenuItem";
+            this.particularesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.particularesToolStripMenuItem.Text = "Particulares";
+            // 
+            // usuariosToolStripMenuItem
+            // 
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
             // 
             // MenuReportes
             // 
@@ -132,9 +160,13 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem implementosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reservasProfesoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reservasParticularesToolStripMenuItem;
         private System.Windows.Forms.PictureBox btnCerrar;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.ToolStripMenuItem salonesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem profesoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem particularesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

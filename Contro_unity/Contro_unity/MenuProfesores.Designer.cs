@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuProfesores));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -52,6 +53,7 @@
             this.nom_teacher = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.program_teacher = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.gbEditInventario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
@@ -72,6 +74,7 @@
             this.btnAgregar.Size = new System.Drawing.Size(146, 48);
             this.btnAgregar.TabIndex = 10;
             this.btnAgregar.Text = "      CONFIRMAR";
+            this.toolTip1.SetToolTip(this.btnAgregar, "Confirmar");
             this.btnAgregar.UseVisualStyleBackColor = true;
             // 
             // gbEditInventario
@@ -176,6 +179,7 @@
             this.btnEliminarInventario.Size = new System.Drawing.Size(133, 47);
             this.btnEliminarInventario.TabIndex = 4;
             this.btnEliminarInventario.Text = "       ELIMINAR";
+            this.toolTip1.SetToolTip(this.btnEliminarInventario, "Eliminar");
             this.btnEliminarInventario.UseVisualStyleBackColor = true;
             // 
             // btnEditInventario
@@ -187,11 +191,12 @@
             this.btnEditInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditInventario.Image = ((System.Drawing.Image)(resources.GetObject("btnEditInventario.Image")));
             this.btnEditInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditInventario.Location = new System.Drawing.Point(151, 455);
+            this.btnEditInventario.Location = new System.Drawing.Point(142, 455);
             this.btnEditInventario.Name = "btnEditInventario";
             this.btnEditInventario.Size = new System.Drawing.Size(133, 47);
             this.btnEditInventario.TabIndex = 3;
             this.btnEditInventario.Text = "       EDITAR";
+            this.toolTip1.SetToolTip(this.btnEditInventario, "Editar");
             this.btnEditInventario.UseVisualStyleBackColor = true;
             // 
             // btnAgregarInventario
@@ -208,6 +213,7 @@
             this.btnAgregarInventario.Size = new System.Drawing.Size(133, 47);
             this.btnAgregarInventario.TabIndex = 2;
             this.btnAgregarInventario.Text = "       AGREGAR";
+            this.toolTip1.SetToolTip(this.btnAgregarInventario, "Agregar");
             this.btnAgregarInventario.UseVisualStyleBackColor = true;
             // 
             // label1
@@ -318,6 +324,7 @@
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCerrar.TabIndex = 25;
             this.btnCerrar.TabStop = false;
+            this.toolTip1.SetToolTip(this.btnCerrar, "Cerrar");
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // MenuProfesores
@@ -366,5 +373,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn program_teacher;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
