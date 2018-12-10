@@ -309,9 +309,8 @@
             this.txtMarca.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMarca.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMarca.Location = new System.Drawing.Point(150, 127);
-            this.txtMarca.Multiline = true;
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(200, 20);
+            this.txtMarca.Size = new System.Drawing.Size(200, 16);
             this.txtMarca.TabIndex = 9;
             // 
             // lbCod_serie
@@ -350,9 +349,8 @@
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(150, 62);
-            this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(200, 25);
+            this.txtNombre.Size = new System.Drawing.Size(200, 16);
             this.txtNombre.TabIndex = 7;
             // 
             // lblStock
@@ -371,9 +369,8 @@
             this.txtCod_serie.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCod_serie.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCod_serie.Location = new System.Drawing.Point(150, 26);
-            this.txtCod_serie.Multiline = true;
             this.txtCod_serie.Name = "txtCod_serie";
-            this.txtCod_serie.Size = new System.Drawing.Size(200, 22);
+            this.txtCod_serie.Size = new System.Drawing.Size(200, 16);
             this.txtCod_serie.TabIndex = 6;
             // 
             // lblMarca

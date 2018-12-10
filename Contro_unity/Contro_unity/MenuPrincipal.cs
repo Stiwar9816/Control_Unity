@@ -101,5 +101,10 @@ namespace Contro_unity
         {
             AbrirFormInPanel(new MenuProfesores());
         }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new MenuUsuarios());
+        }
     }
 }
