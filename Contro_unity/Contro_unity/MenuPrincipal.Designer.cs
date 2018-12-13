@@ -404,7 +404,7 @@
             this.lbFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lbFecha.AutoSize = true;
             this.lbFecha.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbFecha.Location = new System.Drawing.Point(623, 587);
+            this.lbFecha.Location = new System.Drawing.Point(584, 587);
             this.lbFecha.Name = "lbFecha";
             this.lbFecha.Size = new System.Drawing.Size(91, 28);
             this.lbFecha.TabIndex = 1;
@@ -416,7 +416,7 @@
             this.lbHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lbHora.AutoSize = true;
             this.lbHora.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHora.Location = new System.Drawing.Point(842, 560);
+            this.lbHora.Location = new System.Drawing.Point(844, 560);
             this.lbHora.Name = "lbHora";
             this.lbHora.Size = new System.Drawing.Size(82, 28);
             this.lbHora.TabIndex = 0;

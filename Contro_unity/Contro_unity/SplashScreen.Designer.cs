@@ -81,9 +81,9 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(560, 159);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 19);
+            this.label3.Size = new System.Drawing.Size(32, 19);
             this.label3.TabIndex = 2;
-            this.label3.Text = "1.0.0";
+            this.label3.Text = "1.0";
             // 
             // timer1
             // 
@@ -138,6 +138,7 @@
             // rectangleShape1
             // 
             this.rectangleShape1.BorderColor = System.Drawing.Color.DarkGoldenrod;
+            this.rectangleShape1.BorderWidth = 2;
             this.rectangleShape1.CornerRadius = 3;
             this.rectangleShape1.Location = new System.Drawing.Point(3, 362);
             this.rectangleShape1.Name = "rectangleShape1";
