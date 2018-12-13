@@ -32,10 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuConfig));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtPassActual = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtPassNew = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtPassConf = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.btnConfirmar = new System.Windows.Forms.Button();
-            this.txtPassConf = new System.Windows.Forms.TextBox();
-            this.txtPassNew = new System.Windows.Forms.TextBox();
-            this.txtPassActual = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,10 +57,10 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnConfirmar);
-            this.groupBox1.Controls.Add(this.txtPassConf);
-            this.groupBox1.Controls.Add(this.txtPassNew);
             this.groupBox1.Controls.Add(this.txtPassActual);
+            this.groupBox1.Controls.Add(this.txtPassNew);
+            this.groupBox1.Controls.Add(this.txtPassConf);
+            this.groupBox1.Controls.Add(this.btnConfirmar);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -72,6 +72,66 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CONTRASEÑA";
+            // 
+            // txtPassActual
+            // 
+            this.txtPassActual.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtPassActual.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPassActual.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtPassActual.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPassActual.HintForeColor = System.Drawing.Color.Empty;
+            this.txtPassActual.HintText = "";
+            this.txtPassActual.isPassword = false;
+            this.txtPassActual.LineFocusedColor = System.Drawing.Color.Khaki;
+            this.txtPassActual.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtPassActual.LineMouseHoverColor = System.Drawing.Color.Khaki;
+            this.txtPassActual.LineThickness = 2;
+            this.txtPassActual.Location = new System.Drawing.Point(189, 19);
+            this.txtPassActual.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassActual.Name = "txtPassActual";
+            this.txtPassActual.Size = new System.Drawing.Size(197, 30);
+            this.txtPassActual.TabIndex = 4;
+            this.txtPassActual.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txtPassNew
+            // 
+            this.txtPassNew.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtPassNew.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPassNew.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtPassNew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPassNew.HintForeColor = System.Drawing.Color.Empty;
+            this.txtPassNew.HintText = "";
+            this.txtPassNew.isPassword = false;
+            this.txtPassNew.LineFocusedColor = System.Drawing.Color.Khaki;
+            this.txtPassNew.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtPassNew.LineMouseHoverColor = System.Drawing.Color.Khaki;
+            this.txtPassNew.LineThickness = 2;
+            this.txtPassNew.Location = new System.Drawing.Point(189, 51);
+            this.txtPassNew.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassNew.Name = "txtPassNew";
+            this.txtPassNew.Size = new System.Drawing.Size(197, 30);
+            this.txtPassNew.TabIndex = 5;
+            this.txtPassNew.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txtPassConf
+            // 
+            this.txtPassConf.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtPassConf.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPassConf.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtPassConf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPassConf.HintForeColor = System.Drawing.Color.Empty;
+            this.txtPassConf.HintText = "";
+            this.txtPassConf.isPassword = false;
+            this.txtPassConf.LineFocusedColor = System.Drawing.Color.Khaki;
+            this.txtPassConf.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtPassConf.LineMouseHoverColor = System.Drawing.Color.Khaki;
+            this.txtPassConf.LineThickness = 2;
+            this.txtPassConf.Location = new System.Drawing.Point(189, 88);
+            this.txtPassConf.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassConf.Name = "txtPassConf";
+            this.txtPassConf.Size = new System.Drawing.Size(197, 30);
+            this.txtPassConf.TabIndex = 3;
+            this.txtPassConf.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // btnConfirmar
             // 
@@ -90,33 +150,6 @@
             this.btnConfirmar.Text = "       Confirmar";
             this.toolTip1.SetToolTip(this.btnConfirmar, "Confirmar");
             this.btnConfirmar.UseVisualStyleBackColor = false;
-            // 
-            // txtPassConf
-            // 
-            this.txtPassConf.BackColor = System.Drawing.SystemColors.Window;
-            this.txtPassConf.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassConf.Location = new System.Drawing.Point(182, 99);
-            this.txtPassConf.Name = "txtPassConf";
-            this.txtPassConf.Size = new System.Drawing.Size(197, 19);
-            this.txtPassConf.TabIndex = 5;
-            // 
-            // txtPassNew
-            // 
-            this.txtPassNew.BackColor = System.Drawing.SystemColors.Window;
-            this.txtPassNew.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassNew.Location = new System.Drawing.Point(182, 62);
-            this.txtPassNew.Name = "txtPassNew";
-            this.txtPassNew.Size = new System.Drawing.Size(197, 19);
-            this.txtPassNew.TabIndex = 4;
-            // 
-            // txtPassActual
-            // 
-            this.txtPassActual.BackColor = System.Drawing.SystemColors.Window;
-            this.txtPassActual.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassActual.Location = new System.Drawing.Point(182, 25);
-            this.txtPassActual.Name = "txtPassActual";
-            this.txtPassActual.Size = new System.Drawing.Size(197, 19);
-            this.txtPassActual.TabIndex = 3;
             // 
             // label4
             // 
@@ -184,14 +217,14 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtPassConf;
-        private System.Windows.Forms.TextBox txtPassNew;
-        private System.Windows.Forms.TextBox txtPassActual;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnConfirmar;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.ToolTip toolTip1;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtPassConf;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtPassActual;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtPassNew;
     }
 }

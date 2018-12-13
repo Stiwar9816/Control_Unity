@@ -38,12 +38,9 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.gbUser = new System.Windows.Forms.GroupBox();
             this.txtRol = new System.Windows.Forms.ComboBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
             this.lbCC_User = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblStock = new System.Windows.Forms.Label();
-            this.txtCod_serie = new System.Windows.Forms.TextBox();
             this.lblMarca = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -58,6 +55,9 @@
             this.datetime_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rol_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.txtCC = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtNombre = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtEmail = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.gbUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -73,10 +73,10 @@
             this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(770, 237);
+            this.btnAgregar.Location = new System.Drawing.Point(766, 252);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(146, 48);
-            this.btnAgregar.TabIndex = 19;
+            this.btnAgregar.TabIndex = 29;
             this.btnAgregar.Text = "      CONFIRMAR";
             this.toolTip1.SetToolTip(this.btnAgregar, "Confirmar");
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -84,52 +84,42 @@
             // gbUser
             // 
             this.gbUser.BackColor = System.Drawing.SystemColors.Menu;
-            this.gbUser.Controls.Add(this.txtRol);
             this.gbUser.Controls.Add(this.txtEmail);
+            this.gbUser.Controls.Add(this.txtNombre);
+            this.gbUser.Controls.Add(this.txtCC);
+            this.gbUser.Controls.Add(this.txtRol);
             this.gbUser.Controls.Add(this.lbCC_User);
             this.gbUser.Controls.Add(this.lblNombre);
-            this.gbUser.Controls.Add(this.txtNombre);
             this.gbUser.Controls.Add(this.lblStock);
-            this.gbUser.Controls.Add(this.txtCod_serie);
             this.gbUser.Controls.Add(this.lblMarca);
             this.gbUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbUser.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbUser.Location = new System.Drawing.Point(642, 69);
             this.gbUser.Name = "gbUser";
-            this.gbUser.Size = new System.Drawing.Size(361, 162);
-            this.gbUser.TabIndex = 25;
+            this.gbUser.Size = new System.Drawing.Size(361, 177);
+            this.gbUser.TabIndex = 24;
             this.gbUser.TabStop = false;
             this.gbUser.Text = "DATOS DEL USUARIO";
             // 
             // txtRol
             // 
-            this.txtRol.BackColor = System.Drawing.SystemColors.Window;
+            this.txtRol.BackColor = System.Drawing.SystemColors.Menu;
             this.txtRol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.txtRol.FormattingEnabled = true;
             this.txtRol.Items.AddRange(new object[] {
             "Recepcion",
             "Biblioteca"});
-            this.txtRol.Location = new System.Drawing.Point(150, 126);
+            this.txtRol.Location = new System.Drawing.Point(150, 138);
             this.txtRol.Name = "txtRol";
             this.txtRol.Size = new System.Drawing.Size(200, 24);
-            this.txtRol.TabIndex = 26;
+            this.txtRol.TabIndex = 28;
             this.txtRol.Text = "Elige Un Rol";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.BackColor = System.Drawing.SystemColors.Window;
-            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(150, 97);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(200, 16);
-            this.txtEmail.TabIndex = 11;
             // 
             // lbCC_User
             // 
             this.lbCC_User.AutoSize = true;
             this.lbCC_User.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCC_User.Location = new System.Drawing.Point(21, 29);
+            this.lbCC_User.Location = new System.Drawing.Point(21, 26);
             this.lbCC_User.Name = "lbCC_User";
             this.lbCC_User.Size = new System.Drawing.Size(48, 18);
             this.lbCC_User.TabIndex = 0;
@@ -145,41 +135,21 @@
             this.lblNombre.TabIndex = 1;
             this.lblNombre.Text = "Nombre: ";
             // 
-            // txtNombre
-            // 
-            this.txtNombre.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(150, 62);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(200, 16);
-            this.txtNombre.TabIndex = 7;
-            // 
             // lblStock
             // 
             this.lblStock.AutoSize = true;
             this.lblStock.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStock.Location = new System.Drawing.Point(21, 97);
+            this.lblStock.Location = new System.Drawing.Point(21, 102);
             this.lblStock.Name = "lblStock";
             this.lblStock.Size = new System.Drawing.Size(56, 18);
             this.lblStock.TabIndex = 2;
             this.lblStock.Text = "Email: ";
             // 
-            // txtCod_serie
-            // 
-            this.txtCod_serie.BackColor = System.Drawing.SystemColors.Window;
-            this.txtCod_serie.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCod_serie.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCod_serie.Location = new System.Drawing.Point(150, 26);
-            this.txtCod_serie.Name = "txtCod_serie";
-            this.txtCod_serie.Size = new System.Drawing.Size(200, 16);
-            this.txtCod_serie.TabIndex = 6;
-            // 
             // lblMarca
             // 
             this.lblMarca.AutoSize = true;
             this.lblMarca.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarca.Location = new System.Drawing.Point(21, 129);
+            this.lblMarca.Location = new System.Drawing.Point(21, 144);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(39, 18);
             this.lblMarca.TabIndex = 3;
@@ -206,12 +176,13 @@
             this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Menu;
             this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminar.Location = new System.Drawing.Point(290, 476);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(133, 47);
-            this.btnEliminar.TabIndex = 24;
+            this.btnEliminar.TabIndex = 23;
             this.btnEliminar.Text = "       ELIMINAR";
             this.toolTip1.SetToolTip(this.btnEliminar, "Eliminar");
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -223,12 +194,13 @@
             this.btnEdit.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Menu;
             this.btnEdit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEdit.Location = new System.Drawing.Point(151, 476);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(133, 47);
-            this.btnEdit.TabIndex = 23;
+            this.btnEdit.TabIndex = 22;
             this.btnEdit.Text = "       EDITAR";
             this.toolTip1.SetToolTip(this.btnEdit, "Editar");
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -240,12 +212,13 @@
             this.btnAgregar1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Menu;
             this.btnAgregar1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumAquamarine;
             this.btnAgregar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar1.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar1.Image")));
             this.btnAgregar1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregar1.Location = new System.Drawing.Point(12, 476);
             this.btnAgregar1.Name = "btnAgregar1";
             this.btnAgregar1.Size = new System.Drawing.Size(133, 47);
-            this.btnAgregar1.TabIndex = 22;
+            this.btnAgregar1.TabIndex = 21;
             this.btnAgregar1.Text = "       AGREGAR";
             this.toolTip1.SetToolTip(this.btnAgregar1, "Agregar");
             this.btnAgregar1.UseVisualStyleBackColor = true;
@@ -361,6 +334,66 @@
             this.rol_user.Name = "rol_user";
             this.rol_user.Width = 48;
             // 
+            // txtCC
+            // 
+            this.txtCC.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtCC.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCC.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtCC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCC.HintForeColor = System.Drawing.Color.Empty;
+            this.txtCC.HintText = "";
+            this.txtCC.isPassword = false;
+            this.txtCC.LineFocusedColor = System.Drawing.Color.Khaki;
+            this.txtCC.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtCC.LineMouseHoverColor = System.Drawing.Color.Khaki;
+            this.txtCC.LineThickness = 2;
+            this.txtCC.Location = new System.Drawing.Point(150, 14);
+            this.txtCC.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCC.Name = "txtCC";
+            this.txtCC.Size = new System.Drawing.Size(200, 30);
+            this.txtCC.TabIndex = 25;
+            this.txtCC.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtNombre.HintForeColor = System.Drawing.Color.Empty;
+            this.txtNombre.HintText = "";
+            this.txtNombre.isPassword = false;
+            this.txtNombre.LineFocusedColor = System.Drawing.Color.Khaki;
+            this.txtNombre.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtNombre.LineMouseHoverColor = System.Drawing.Color.Khaki;
+            this.txtNombre.LineThickness = 2;
+            this.txtNombre.Location = new System.Drawing.Point(150, 52);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(200, 30);
+            this.txtNombre.TabIndex = 26;
+            this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtEmail.HintForeColor = System.Drawing.Color.Empty;
+            this.txtEmail.HintText = "";
+            this.txtEmail.isPassword = false;
+            this.txtEmail.LineFocusedColor = System.Drawing.Color.Khaki;
+            this.txtEmail.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtEmail.LineMouseHoverColor = System.Drawing.Color.Khaki;
+            this.txtEmail.LineThickness = 2;
+            this.txtEmail.Location = new System.Drawing.Point(150, 90);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(200, 30);
+            this.txtEmail.TabIndex = 27;
+            this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // MenuUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -394,9 +427,7 @@
         private System.Windows.Forms.GroupBox gbUser;
         private System.Windows.Forms.Label lbCC_User;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblStock;
-        private System.Windows.Forms.TextBox txtCod_serie;
         private System.Windows.Forms.Label lblMarca;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.Button btnEliminar;
@@ -411,7 +442,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn datetime_user;
         private System.Windows.Forms.DataGridViewTextBoxColumn rol_user;
         private System.Windows.Forms.ComboBox txtRol;
-        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.ToolTip toolTip1;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtEmail;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtNombre;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtCC;
     }
 }

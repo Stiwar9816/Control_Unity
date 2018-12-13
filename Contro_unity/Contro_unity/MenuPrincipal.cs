@@ -25,6 +25,7 @@ namespace Contro_unity
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
         private void btnSlide_Click(object sender, EventArgs e)
         {
+            
             if (menuVertical.Width == 200)
             {
                 menuVertical.Width = 56;

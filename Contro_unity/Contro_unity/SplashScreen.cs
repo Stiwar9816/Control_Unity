@@ -18,18 +18,19 @@ namespace Contro_unity
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+        private extern static void SendMessage(IntPtr hwnd, int wmsg, int wparam, int lparam);
         public SplashScreen()
         {
             InitializeComponent();
         }
+
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             try
             {
                 rectangleShape2.Width += 1;
-                if(rectangleShape2.Width >= 606)
+                if(rectangleShape2.Width >= 588)
                 {
                     timer1.Stop();
                     MenuPrincipal Menu = new MenuPrincipal();
@@ -68,6 +69,6 @@ namespace Contro_unity
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        
+       
     }
 }

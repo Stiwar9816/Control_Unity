@@ -8,12 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-using CapaNegocio;
 using System.Data.SqlClient;
-
-
-
-
 
 namespace Contro_unity
 {
@@ -32,44 +27,6 @@ namespace Contro_unity
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void txtuser_Enter(object sender, EventArgs e)
-        {
-            if(txtuser.Text == "Usuario")
-            {
-                txtuser.Text = "";
-                txtuser.ForeColor = Color.Black;
-            }
-
-        }
-        private void txtuser_Leave(object sender, EventArgs e)
-        {
-            if (txtuser.Text == "")
-            {
-                txtuser.Text = "Usuario";
-                txtuser.ForeColor = Color.DimGray;
-            }
-        }
-
-        private void txtpass_Enter(object sender, EventArgs e)
-        {
-            if(txtpass.Text == "Contraseña")
-            {
-                txtpass.Text = "";
-                txtpass.ForeColor = Color.Black;
-                txtpass.UseSystemPasswordChar = true;
-            }
-        }
-
-        private void txtpass_Leave(object sender, EventArgs e)
-        {
-            if(txtpass.Text == "")
-            {
-                txtpass.Text = "Contraseña";
-                txtpass.ForeColor = Color.DimGray;
-                txtpass.UseSystemPasswordChar = false;
-            }
         }
 
         private void btnminimizar_Click(object sender, EventArgs e)
@@ -95,15 +52,43 @@ namespace Contro_unity
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void btnlogin_Click(object sender, EventArgs e)
+        private void txtuser_Enter_1(object sender, EventArgs e)
         {
-            CNusuarios objUsers = new CNusuarios();
-            
-            objUsers.cc_user = txtuser.Text;
-            objUsers.pass_user = txtpass.Text;
-           
-
+            if (txtuser.Text == "Usuario")
+            {
+                txtuser.Text = "";
+                txtuser.ForeColor = Color.Black;
             }
-       }
+        }
+
+        private void txtuser_Leave_1(object sender, EventArgs e)
+        {
+            if (txtuser.Text == "")
+            {
+                txtuser.Text = "Usuario";
+                txtuser.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void txtpass_Enter_1(object sender, EventArgs e)
+        {
+            if (txtpass.Text == "Contraseña")
+            {
+                txtpass.Text = "";
+                txtpass.ForeColor = Color.Black;
+                txtpass.isPassword = true;
+            }
+        }
+
+        private void txtpass_Leave_1(object sender, EventArgs e)
+        {
+            if (txtpass.Text == "")
+            {
+                txtpass.Text = "Contraseña";
+                txtpass.ForeColor = Color.DimGray;
+                txtpass.isPassword = false;
+            }
+        }
+    }
     }
 

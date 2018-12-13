@@ -51,16 +51,16 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.gbEditInventario = new System.Windows.Forms.GroupBox();
             this.txtStock = new System.Windows.Forms.NumericUpDown();
-            this.txtMarca = new System.Windows.Forms.TextBox();
             this.lbCod_serie = new System.Windows.Forms.Label();
             this.LblDescripcion = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblStock = new System.Windows.Forms.Label();
-            this.txtCod_serie = new System.Windows.Forms.TextBox();
             this.lblMarca = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.txtDescripcion = new System.Windows.Forms.RichTextBox();
+            this.txtCod_Serie = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtNombre = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtMarca = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtDescripcion = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.gbEditInventario.SuspendLayout();
@@ -74,12 +74,13 @@
             this.btnEliminarInventario.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Menu;
             this.btnEliminarInventario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
             this.btnEliminarInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarInventario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarInventario.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarInventario.Image")));
             this.btnEliminarInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminarInventario.Location = new System.Drawing.Point(289, 455);
             this.btnEliminarInventario.Name = "btnEliminarInventario";
             this.btnEliminarInventario.Size = new System.Drawing.Size(133, 47);
-            this.btnEliminarInventario.TabIndex = 16;
+            this.btnEliminarInventario.TabIndex = 15;
             this.btnEliminarInventario.Text = "       ELIMINAR";
             this.toolTip1.SetToolTip(this.btnEliminarInventario, "Eliminar");
             this.btnEliminarInventario.UseVisualStyleBackColor = true;
@@ -91,12 +92,13 @@
             this.btnEditInventario.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Menu;
             this.btnEditInventario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
             this.btnEditInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditInventario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditInventario.Image = ((System.Drawing.Image)(resources.GetObject("btnEditInventario.Image")));
             this.btnEditInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEditInventario.Location = new System.Drawing.Point(150, 455);
             this.btnEditInventario.Name = "btnEditInventario";
             this.btnEditInventario.Size = new System.Drawing.Size(133, 47);
-            this.btnEditInventario.TabIndex = 15;
+            this.btnEditInventario.TabIndex = 14;
             this.btnEditInventario.Text = "       EDITAR";
             this.toolTip1.SetToolTip(this.btnEditInventario, "Editar");
             this.btnEditInventario.UseVisualStyleBackColor = true;
@@ -108,12 +110,13 @@
             this.btnAgregarInventario.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Menu;
             this.btnAgregarInventario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumAquamarine;
             this.btnAgregarInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarInventario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarInventario.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarInventario.Image")));
             this.btnAgregarInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregarInventario.Location = new System.Drawing.Point(11, 455);
             this.btnAgregarInventario.Name = "btnAgregarInventario";
             this.btnAgregarInventario.Size = new System.Drawing.Size(133, 47);
-            this.btnAgregarInventario.TabIndex = 14;
+            this.btnAgregarInventario.TabIndex = 13;
             this.btnAgregarInventario.Text = "       AGREGAR";
             this.toolTip1.SetToolTip(this.btnAgregarInventario, "Agregar");
             this.btnAgregarInventario.UseVisualStyleBackColor = true;
@@ -263,7 +266,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(782, 359);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(146, 48);
-            this.btnAgregar.TabIndex = 11;
+            this.btnAgregar.TabIndex = 22;
             this.btnAgregar.Text = "      CONFIRMAR";
             this.toolTip1.SetToolTip(this.btnAgregar, "Confirmar");
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -272,21 +275,21 @@
             // 
             this.gbEditInventario.BackColor = System.Drawing.SystemColors.Menu;
             this.gbEditInventario.Controls.Add(this.txtDescripcion);
-            this.gbEditInventario.Controls.Add(this.txtStock);
             this.gbEditInventario.Controls.Add(this.txtMarca);
+            this.gbEditInventario.Controls.Add(this.txtNombre);
+            this.gbEditInventario.Controls.Add(this.txtCod_Serie);
+            this.gbEditInventario.Controls.Add(this.txtStock);
             this.gbEditInventario.Controls.Add(this.lbCod_serie);
             this.gbEditInventario.Controls.Add(this.LblDescripcion);
             this.gbEditInventario.Controls.Add(this.lblNombre);
-            this.gbEditInventario.Controls.Add(this.txtNombre);
             this.gbEditInventario.Controls.Add(this.lblStock);
-            this.gbEditInventario.Controls.Add(this.txtCod_serie);
             this.gbEditInventario.Controls.Add(this.lblMarca);
             this.gbEditInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbEditInventario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbEditInventario.Location = new System.Drawing.Point(651, 66);
             this.gbEditInventario.Name = "gbEditInventario";
-            this.gbEditInventario.Size = new System.Drawing.Size(361, 273);
-            this.gbEditInventario.TabIndex = 17;
+            this.gbEditInventario.Size = new System.Drawing.Size(361, 287);
+            this.gbEditInventario.TabIndex = 16;
             this.gbEditInventario.TabStop = false;
             this.gbEditInventario.Text = "DATOS DEL IMPLEMENTO";
             // 
@@ -298,18 +301,8 @@
             this.txtStock.Location = new System.Drawing.Point(150, 95);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(44, 19);
-            this.txtStock.TabIndex = 8;
+            this.txtStock.TabIndex = 19;
             this.txtStock.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtMarca
-            // 
-            this.txtMarca.BackColor = System.Drawing.SystemColors.Window;
-            this.txtMarca.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMarca.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMarca.Location = new System.Drawing.Point(150, 127);
-            this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(200, 16);
-            this.txtMarca.TabIndex = 9;
             // 
             // lbCod_serie
             // 
@@ -325,7 +318,7 @@
             // 
             this.LblDescripcion.AutoSize = true;
             this.LblDescripcion.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDescripcion.Location = new System.Drawing.Point(21, 193);
+            this.LblDescripcion.Location = new System.Drawing.Point(21, 212);
             this.LblDescripcion.Name = "LblDescripcion";
             this.LblDescripcion.Size = new System.Drawing.Size(101, 18);
             this.LblDescripcion.TabIndex = 5;
@@ -341,55 +334,105 @@
             this.lblNombre.TabIndex = 1;
             this.lblNombre.Text = "Nombre: ";
             // 
-            // txtNombre
-            // 
-            this.txtNombre.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(150, 62);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(200, 16);
-            this.txtNombre.TabIndex = 7;
-            // 
             // lblStock
             // 
             this.lblStock.AutoSize = true;
             this.lblStock.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStock.Location = new System.Drawing.Point(21, 97);
+            this.lblStock.Location = new System.Drawing.Point(21, 96);
             this.lblStock.Name = "lblStock";
             this.lblStock.Size = new System.Drawing.Size(56, 18);
             this.lblStock.TabIndex = 2;
             this.lblStock.Text = "Stock: ";
             // 
-            // txtCod_serie
-            // 
-            this.txtCod_serie.BackColor = System.Drawing.SystemColors.Window;
-            this.txtCod_serie.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCod_serie.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCod_serie.Location = new System.Drawing.Point(150, 26);
-            this.txtCod_serie.Name = "txtCod_serie";
-            this.txtCod_serie.Size = new System.Drawing.Size(200, 16);
-            this.txtCod_serie.TabIndex = 6;
-            // 
             // lblMarca
             // 
             this.lblMarca.AutoSize = true;
             this.lblMarca.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarca.Location = new System.Drawing.Point(21, 129);
+            this.lblMarca.Location = new System.Drawing.Point(21, 140);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(66, 18);
             this.lblMarca.TabIndex = 3;
             this.lblMarca.Text = "Marca: ";
             // 
+            // txtCod_Serie
+            // 
+            this.txtCod_Serie.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtCod_Serie.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCod_Serie.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtCod_Serie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCod_Serie.HintForeColor = System.Drawing.Color.Empty;
+            this.txtCod_Serie.HintText = "";
+            this.txtCod_Serie.isPassword = false;
+            this.txtCod_Serie.LineFocusedColor = System.Drawing.Color.Khaki;
+            this.txtCod_Serie.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtCod_Serie.LineMouseHoverColor = System.Drawing.Color.Khaki;
+            this.txtCod_Serie.LineThickness = 2;
+            this.txtCod_Serie.Location = new System.Drawing.Point(150, 17);
+            this.txtCod_Serie.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCod_Serie.Name = "txtCod_Serie";
+            this.txtCod_Serie.Size = new System.Drawing.Size(200, 30);
+            this.txtCod_Serie.TabIndex = 17;
+            this.txtCod_Serie.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtNombre.HintForeColor = System.Drawing.Color.Empty;
+            this.txtNombre.HintText = "";
+            this.txtNombre.isPassword = false;
+            this.txtNombre.LineFocusedColor = System.Drawing.Color.Khaki;
+            this.txtNombre.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtNombre.LineMouseHoverColor = System.Drawing.Color.Khaki;
+            this.txtNombre.LineThickness = 2;
+            this.txtNombre.Location = new System.Drawing.Point(150, 52);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(200, 30);
+            this.txtNombre.TabIndex = 18;
+            this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txtMarca
+            // 
+            this.txtMarca.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtMarca.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMarca.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtMarca.HintForeColor = System.Drawing.Color.Empty;
+            this.txtMarca.HintText = "";
+            this.txtMarca.isPassword = false;
+            this.txtMarca.LineFocusedColor = System.Drawing.Color.Khaki;
+            this.txtMarca.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtMarca.LineMouseHoverColor = System.Drawing.Color.Khaki;
+            this.txtMarca.LineThickness = 2;
+            this.txtMarca.Location = new System.Drawing.Point(150, 128);
+            this.txtMarca.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Size = new System.Drawing.Size(200, 30);
+            this.txtMarca.TabIndex = 20;
+            this.txtMarca.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // txtDescripcion
             // 
-            this.txtDescripcion.BackColor = System.Drawing.SystemColors.Window;
-            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDescripcion.Location = new System.Drawing.Point(150, 160);
+            this.txtDescripcion.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtDescripcion.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDescripcion.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtDescripcion.HintForeColor = System.Drawing.Color.Empty;
+            this.txtDescripcion.HintText = "";
+            this.txtDescripcion.isPassword = false;
+            this.txtDescripcion.LineFocusedColor = System.Drawing.Color.Khaki;
+            this.txtDescripcion.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtDescripcion.LineMouseHoverColor = System.Drawing.Color.Khaki;
+            this.txtDescripcion.LineThickness = 2;
+            this.txtDescripcion.Location = new System.Drawing.Point(150, 168);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(200, 100);
-            this.txtDescripcion.TabIndex = 18;
-            this.txtDescripcion.Text = "";
+            this.txtDescripcion.TabIndex = 21;
+            this.txtDescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // MenuInventario
             // 
@@ -437,15 +480,15 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.GroupBox gbEditInventario;
         public System.Windows.Forms.NumericUpDown txtStock;
-        private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.Label lbCod_serie;
         private System.Windows.Forms.Label LblDescripcion;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblStock;
-        private System.Windows.Forms.TextBox txtCod_serie;
         private System.Windows.Forms.Label lblMarca;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.RichTextBox txtDescripcion;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtDescripcion;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtMarca;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtNombre;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtCod_Serie;
     }
 }

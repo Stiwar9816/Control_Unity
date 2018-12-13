@@ -34,11 +34,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnminimizar = new System.Windows.Forms.PictureBox();
             this.btncerrar = new System.Windows.Forms.PictureBox();
-            this.txtuser = new System.Windows.Forms.TextBox();
-            this.txtpass = new System.Windows.Forms.TextBox();
-            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.btnlogin = new System.Windows.Forms.Button();
             this.linkpass = new System.Windows.Forms.LinkLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -47,6 +42,9 @@
             this.lblErrorPass = new System.Windows.Forms.Label();
             this.lblErrorLogin = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.txtuser = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtpass = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).BeginInit();
@@ -82,9 +80,9 @@
             // btnminimizar
             // 
             this.btnminimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnminimizar.Image")));
-            this.btnminimizar.Location = new System.Drawing.Point(327, 1);
+            this.btnminimizar.Location = new System.Drawing.Point(322, 3);
             this.btnminimizar.Name = "btnminimizar";
-            this.btnminimizar.Size = new System.Drawing.Size(20, 19);
+            this.btnminimizar.Size = new System.Drawing.Size(20, 17);
             this.btnminimizar.TabIndex = 6;
             this.btnminimizar.TabStop = false;
             this.toolTip1.SetToolTip(this.btnminimizar, "Minimizar");
@@ -93,69 +91,13 @@
             // btncerrar
             // 
             this.btncerrar.Image = ((System.Drawing.Image)(resources.GetObject("btncerrar.Image")));
-            this.btncerrar.Location = new System.Drawing.Point(349, 1);
+            this.btncerrar.Location = new System.Drawing.Point(346, 3);
             this.btncerrar.Name = "btncerrar";
             this.btncerrar.Size = new System.Drawing.Size(17, 17);
             this.btncerrar.TabIndex = 5;
             this.btncerrar.TabStop = false;
             this.toolTip1.SetToolTip(this.btncerrar, "Cerrar");
             this.btncerrar.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // txtuser
-            // 
-            this.txtuser.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtuser.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtuser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtuser.Location = new System.Drawing.Point(82, 232);
-            this.txtuser.Name = "txtuser";
-            this.txtuser.Size = new System.Drawing.Size(229, 20);
-            this.txtuser.TabIndex = 1;
-            this.txtuser.Text = "Usuario";
-            this.txtuser.Enter += new System.EventHandler(this.txtuser_Enter);
-            this.txtuser.Leave += new System.EventHandler(this.txtuser_Leave);
-            // 
-            // txtpass
-            // 
-            this.txtpass.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtpass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtpass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpass.Location = new System.Drawing.Point(81, 287);
-            this.txtpass.Name = "txtpass";
-            this.txtpass.Size = new System.Drawing.Size(229, 20);
-            this.txtpass.TabIndex = 2;
-            this.txtpass.Text = "Contraseña";
-            this.txtpass.Enter += new System.EventHandler(this.txtpass_Enter);
-            this.txtpass.Leave += new System.EventHandler(this.txtpass_Leave);
-            // 
-            // shapeContainer1
-            // 
-            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer1.Name = "shapeContainer1";
-            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape2,
-            this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(367, 441);
-            this.shapeContainer1.TabIndex = 3;
-            this.shapeContainer1.TabStop = false;
-            // 
-            // lineShape2
-            // 
-            this.lineShape2.Enabled = false;
-            this.lineShape2.Name = "lineShape2";
-            this.lineShape2.X1 = 82;
-            this.lineShape2.X2 = 307;
-            this.lineShape2.Y1 = 308;
-            this.lineShape2.Y2 = 308;
-            // 
-            // lineShape1
-            // 
-            this.lineShape1.Enabled = false;
-            this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 83;
-            this.lineShape1.X2 = 308;
-            this.lineShape1.Y1 = 253;
-            this.lineShape1.Y2 = 253;
             // 
             // btnlogin
             // 
@@ -174,7 +116,6 @@
             this.btnlogin.Text = "INGRESAR";
             this.toolTip1.SetToolTip(this.btnlogin, "Ingresar");
             this.btnlogin.UseVisualStyleBackColor = false;
-            this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
             // linkpass
             // 
@@ -185,7 +126,7 @@
             this.linkpass.Location = new System.Drawing.Point(78, 416);
             this.linkpass.Name = "linkpass";
             this.linkpass.Size = new System.Drawing.Size(203, 16);
-            this.linkpass.TabIndex = 0;
+            this.linkpass.TabIndex = 4;
             this.linkpass.TabStop = true;
             this.linkpass.Text = "¿Has olvidado tu contraseña?";
             this.toolTip1.SetToolTip(this.linkpass, "¿Has olvidado tu contraseña?");
@@ -240,12 +181,65 @@
             this.lblErrorLogin.Text = "login?";
             this.lblErrorLogin.Visible = false;
             // 
+            // txtuser
+            // 
+            this.txtuser.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtuser.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtuser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtuser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtuser.HintForeColor = System.Drawing.Color.Empty;
+            this.txtuser.HintText = "";
+            this.txtuser.isPassword = false;
+            this.txtuser.LineFocusedColor = System.Drawing.Color.Khaki;
+            this.txtuser.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtuser.LineMouseHoverColor = System.Drawing.Color.Khaki;
+            this.txtuser.LineThickness = 2;
+            this.txtuser.Location = new System.Drawing.Point(83, 216);
+            this.txtuser.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.txtuser.Name = "txtuser";
+            this.txtuser.Size = new System.Drawing.Size(225, 34);
+            this.txtuser.TabIndex = 1;
+            this.txtuser.Text = "Usuario";
+            this.txtuser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtuser.Enter += new System.EventHandler(this.txtuser_Enter_1);
+            this.txtuser.Leave += new System.EventHandler(this.txtuser_Leave_1);
+            // 
+            // txtpass
+            // 
+            this.txtpass.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtpass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtpass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtpass.HintForeColor = System.Drawing.Color.Empty;
+            this.txtpass.HintText = "";
+            this.txtpass.isPassword = false;
+            this.txtpass.LineFocusedColor = System.Drawing.Color.Khaki;
+            this.txtpass.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtpass.LineMouseHoverColor = System.Drawing.Color.Khaki;
+            this.txtpass.LineThickness = 2;
+            this.txtpass.Location = new System.Drawing.Point(84, 275);
+            this.txtpass.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.txtpass.Name = "txtpass";
+            this.txtpass.Size = new System.Drawing.Size(225, 34);
+            this.txtpass.TabIndex = 2;
+            this.txtpass.Text = "Contraseña";
+            this.txtpass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtpass.Enter += new System.EventHandler(this.txtpass_Enter_1);
+            this.txtpass.Leave += new System.EventHandler(this.txtpass_Leave_1);
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 10;
+            this.bunifuElipse1.TargetControl = this;
+            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(367, 441);
+            this.Controls.Add(this.txtpass);
+            this.Controls.Add(this.txtuser);
             this.Controls.Add(this.lblErrorLogin);
             this.Controls.Add(this.lblErrorPass);
             this.Controls.Add(this.lblErrorUser);
@@ -253,10 +247,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.linkpass);
             this.Controls.Add(this.btnlogin);
-            this.Controls.Add(this.txtpass);
-            this.Controls.Add(this.txtuser);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.shapeContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "login";
             this.Opacity = 0.85D;
@@ -277,11 +268,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtuser;
-        private System.Windows.Forms.TextBox txtpass;
-        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         private System.Windows.Forms.Button btnlogin;
         private System.Windows.Forms.LinkLabel linkpass;
         private System.Windows.Forms.PictureBox btncerrar;
@@ -293,6 +279,9 @@
         private System.Windows.Forms.Label lblErrorPass;
         private System.Windows.Forms.Label lblErrorLogin;
         private System.Windows.Forms.ToolTip toolTip1;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtuser;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtpass;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }
 
