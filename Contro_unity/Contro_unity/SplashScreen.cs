@@ -69,6 +69,19 @@ namespace Contro_unity
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-       
+        private void SplashScreen_Load(object sender, EventArgs e)
+        {
+            timer2.Start();
+
+            if(this.Opacity == 1)
+            {
+                timer2.Stop();
+            }
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            this.Opacity += .010;
+        }
     }
 }
