@@ -29,17 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuReportes));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.implementosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reservasParticularesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.salonesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reservasParticularesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.profesoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.particularesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
@@ -75,6 +74,12 @@
             this.implementosToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.implementosToolStripMenuItem.Text = "Implementos";
             // 
+            // salonesToolStripMenuItem
+            // 
+            this.salonesToolStripMenuItem.Name = "salonesToolStripMenuItem";
+            this.salonesToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.salonesToolStripMenuItem.Text = "Salones";
+            // 
             // reservasParticularesToolStripMenuItem
             // 
             this.reservasParticularesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -84,11 +89,29 @@
             this.reservasParticularesToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.reservasParticularesToolStripMenuItem.Text = "Reservas";
             // 
+            // profesoresToolStripMenuItem
+            // 
+            this.profesoresToolStripMenuItem.Name = "profesoresToolStripMenuItem";
+            this.profesoresToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.profesoresToolStripMenuItem.Text = "Profesores";
+            // 
+            // particularesToolStripMenuItem
+            // 
+            this.particularesToolStripMenuItem.Name = "particularesToolStripMenuItem";
+            this.particularesToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.particularesToolStripMenuItem.Text = "Particulares";
+            // 
+            // usuariosToolStripMenuItem
+            // 
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            // 
             // btnCerrar
             // 
             this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.Image = global::Contro_unity.Properties.Resources.icons8_delete_50;
             this.btnCerrar.Location = new System.Drawing.Point(1001, 0);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(20, 19);
@@ -108,30 +131,6 @@
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.Size = new System.Drawing.Size(1024, 450);
             this.reportViewer1.TabIndex = 2;
-            // 
-            // salonesToolStripMenuItem
-            // 
-            this.salonesToolStripMenuItem.Name = "salonesToolStripMenuItem";
-            this.salonesToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.salonesToolStripMenuItem.Text = "Salones";
-            // 
-            // profesoresToolStripMenuItem
-            // 
-            this.profesoresToolStripMenuItem.Name = "profesoresToolStripMenuItem";
-            this.profesoresToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.profesoresToolStripMenuItem.Text = "Profesores";
-            // 
-            // particularesToolStripMenuItem
-            // 
-            this.particularesToolStripMenuItem.Name = "particularesToolStripMenuItem";
-            this.particularesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.particularesToolStripMenuItem.Text = "Particulares";
-            // 
-            // usuariosToolStripMenuItem
-            // 
-            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.usuariosToolStripMenuItem.Text = "Usuarios";
             // 
             // MenuReportes
             // 

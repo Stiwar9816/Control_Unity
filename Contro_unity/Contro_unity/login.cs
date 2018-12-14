@@ -89,6 +89,13 @@ namespace Contro_unity
                 txtpass.isPassword = false;
             }
         }
+
+
+
+        private void linkpass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
     }
 

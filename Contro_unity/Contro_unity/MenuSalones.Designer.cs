@@ -29,50 +29,31 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuSalones));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btnAgregar = new System.Windows.Forms.Button();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbEditInventario = new System.Windows.Forms.GroupBox();
+            this.txtDescripcion = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtNom_Salon = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.lbCod_serie = new System.Windows.Forms.Label();
             this.LblDescripcion = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.btnEliminarInventario = new System.Windows.Forms.Button();
-            this.btnEditInventario = new System.Windows.Forms.Button();
-            this.btnAgregarInventario = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nom_salon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.description_salon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.txtNom_Salon = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtDescripcion = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.btnConfirmar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnAgregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.gbEditInventario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregar.FlatAppearance.BorderSize = 0;
-            this.btnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Menu;
-            this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumAquamarine;
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
-            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(758, 243);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(146, 48);
-            this.btnAgregar.TabIndex = 10;
-            this.btnAgregar.Text = "      CONFIRMAR";
-            this.toolTip1.SetToolTip(this.btnAgregar, "Confirmar");
-            this.btnAgregar.UseVisualStyleBackColor = true;
             // 
             // gbEditInventario
             // 
@@ -89,6 +70,46 @@
             this.gbEditInventario.TabIndex = 7;
             this.gbEditInventario.TabStop = false;
             this.gbEditInventario.Text = "DATOS DEL SALON";
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtDescripcion.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDescripcion.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtDescripcion.HintForeColor = System.Drawing.Color.Empty;
+            this.txtDescripcion.HintText = "";
+            this.txtDescripcion.isPassword = false;
+            this.txtDescripcion.LineFocusedColor = System.Drawing.Color.Khaki;
+            this.txtDescripcion.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtDescripcion.LineMouseHoverColor = System.Drawing.Color.Khaki;
+            this.txtDescripcion.LineThickness = 2;
+            this.txtDescripcion.Location = new System.Drawing.Point(171, 79);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(182, 100);
+            this.txtDescripcion.TabIndex = 9;
+            this.txtDescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txtNom_Salon
+            // 
+            this.txtNom_Salon.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtNom_Salon.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNom_Salon.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtNom_Salon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtNom_Salon.HintForeColor = System.Drawing.Color.Empty;
+            this.txtNom_Salon.HintText = "";
+            this.txtNom_Salon.isPassword = false;
+            this.txtNom_Salon.LineFocusedColor = System.Drawing.Color.Khaki;
+            this.txtNom_Salon.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtNom_Salon.LineMouseHoverColor = System.Drawing.Color.Khaki;
+            this.txtNom_Salon.LineThickness = 2;
+            this.txtNom_Salon.Location = new System.Drawing.Point(171, 17);
+            this.txtNom_Salon.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNom_Salon.Name = "txtNom_Salon";
+            this.txtNom_Salon.Size = new System.Drawing.Size(182, 30);
+            this.txtNom_Salon.TabIndex = 8;
+            this.txtNom_Salon.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // lbCod_serie
             // 
@@ -114,7 +135,7 @@
             // 
             this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.Image = global::Contro_unity.Properties.Resources.icons8_delete_50;
             this.btnCerrar.Location = new System.Drawing.Point(1000, -2);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(21, 23);
@@ -123,57 +144,6 @@
             this.btnCerrar.TabStop = false;
             this.toolTip1.SetToolTip(this.btnCerrar, "Cerrar Ventana");
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
-            // btnEliminarInventario
-            // 
-            this.btnEliminarInventario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminarInventario.FlatAppearance.BorderSize = 0;
-            this.btnEliminarInventario.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Menu;
-            this.btnEliminarInventario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
-            this.btnEliminarInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarInventario.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarInventario.Image")));
-            this.btnEliminarInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminarInventario.Location = new System.Drawing.Point(288, 448);
-            this.btnEliminarInventario.Name = "btnEliminarInventario";
-            this.btnEliminarInventario.Size = new System.Drawing.Size(133, 47);
-            this.btnEliminarInventario.TabIndex = 6;
-            this.btnEliminarInventario.Text = "       ELIMINAR";
-            this.toolTip1.SetToolTip(this.btnEliminarInventario, "Eliminar");
-            this.btnEliminarInventario.UseVisualStyleBackColor = true;
-            // 
-            // btnEditInventario
-            // 
-            this.btnEditInventario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditInventario.FlatAppearance.BorderSize = 0;
-            this.btnEditInventario.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Menu;
-            this.btnEditInventario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
-            this.btnEditInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditInventario.Image = ((System.Drawing.Image)(resources.GetObject("btnEditInventario.Image")));
-            this.btnEditInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditInventario.Location = new System.Drawing.Point(149, 448);
-            this.btnEditInventario.Name = "btnEditInventario";
-            this.btnEditInventario.Size = new System.Drawing.Size(133, 47);
-            this.btnEditInventario.TabIndex = 5;
-            this.btnEditInventario.Text = "       EDITAR";
-            this.toolTip1.SetToolTip(this.btnEditInventario, "Editar");
-            this.btnEditInventario.UseVisualStyleBackColor = true;
-            // 
-            // btnAgregarInventario
-            // 
-            this.btnAgregarInventario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarInventario.FlatAppearance.BorderSize = 0;
-            this.btnAgregarInventario.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Menu;
-            this.btnAgregarInventario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumAquamarine;
-            this.btnAgregarInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarInventario.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarInventario.Image")));
-            this.btnAgregarInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarInventario.Location = new System.Drawing.Point(12, 448);
-            this.btnAgregarInventario.Name = "btnAgregarInventario";
-            this.btnAgregarInventario.Size = new System.Drawing.Size(133, 47);
-            this.btnAgregarInventario.TabIndex = 4;
-            this.btnAgregarInventario.Text = "       AGREGAR";
-            this.toolTip1.SetToolTip(this.btnAgregarInventario, "Agregar");
-            this.btnAgregarInventario.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -187,62 +157,62 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeight = 37;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.Nom_salon,
             this.description_salon});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Menu;
             this.dataGridView1.Location = new System.Drawing.Point(12, 40);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 10;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(592, 402);
             this.dataGridView1.TabIndex = 3;
@@ -265,45 +235,149 @@
             this.description_salon.Name = "description_salon";
             this.description_salon.Width = 102;
             // 
-            // txtNom_Salon
+            // btnConfirmar
             // 
-            this.txtNom_Salon.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtNom_Salon.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNom_Salon.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtNom_Salon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtNom_Salon.HintForeColor = System.Drawing.Color.Empty;
-            this.txtNom_Salon.HintText = "";
-            this.txtNom_Salon.isPassword = false;
-            this.txtNom_Salon.LineFocusedColor = System.Drawing.Color.Khaki;
-            this.txtNom_Salon.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtNom_Salon.LineMouseHoverColor = System.Drawing.Color.Khaki;
-            this.txtNom_Salon.LineThickness = 2;
-            this.txtNom_Salon.Location = new System.Drawing.Point(171, 17);
-            this.txtNom_Salon.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNom_Salon.Name = "txtNom_Salon";
-            this.txtNom_Salon.Size = new System.Drawing.Size(182, 30);
-            this.txtNom_Salon.TabIndex = 8;
-            this.txtNom_Salon.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnConfirmar.Activecolor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmar.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConfirmar.BorderRadius = 3;
+            this.btnConfirmar.ButtonText = "Confirmar";
+            this.btnConfirmar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConfirmar.DisabledColor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnConfirmar.Iconimage = global::Contro_unity.Properties.Resources.icons8_checked_50;
+            this.btnConfirmar.Iconimage_right = null;
+            this.btnConfirmar.Iconimage_right_Selected = null;
+            this.btnConfirmar.Iconimage_Selected = null;
+            this.btnConfirmar.IconMarginLeft = 0;
+            this.btnConfirmar.IconMarginRight = 0;
+            this.btnConfirmar.IconRightVisible = true;
+            this.btnConfirmar.IconRightZoom = 0D;
+            this.btnConfirmar.IconVisible = true;
+            this.btnConfirmar.IconZoom = 55D;
+            this.btnConfirmar.IsTab = false;
+            this.btnConfirmar.Location = new System.Drawing.Point(757, 246);
+            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Normalcolor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
+            this.btnConfirmar.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnConfirmar.selected = false;
+            this.btnConfirmar.Size = new System.Drawing.Size(147, 48);
+            this.btnConfirmar.TabIndex = 19;
+            this.btnConfirmar.Text = "Confirmar";
+            this.btnConfirmar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnConfirmar.Textcolor = System.Drawing.Color.Black;
+            this.btnConfirmar.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolTip1.SetToolTip(this.btnConfirmar, "Confirmar");
             // 
-            // txtDescripcion
+            // bunifuFlatButton3
             // 
-            this.txtDescripcion.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtDescripcion.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDescripcion.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtDescripcion.HintForeColor = System.Drawing.Color.Empty;
-            this.txtDescripcion.HintText = "";
-            this.txtDescripcion.isPassword = false;
-            this.txtDescripcion.LineFocusedColor = System.Drawing.Color.Khaki;
-            this.txtDescripcion.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtDescripcion.LineMouseHoverColor = System.Drawing.Color.Khaki;
-            this.txtDescripcion.LineThickness = 2;
-            this.txtDescripcion.Location = new System.Drawing.Point(171, 79);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(182, 100);
-            this.txtDescripcion.TabIndex = 9;
-            this.txtDescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuFlatButton3.Activecolor = System.Drawing.SystemColors.Menu;
+            this.bunifuFlatButton3.BackColor = System.Drawing.SystemColors.Menu;
+            this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bunifuFlatButton3.BorderRadius = 3;
+            this.bunifuFlatButton3.ButtonText = "ELIMINAR";
+            this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton3.DisabledColor = System.Drawing.SystemColors.Menu;
+            this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton3.Iconimage = global::Contro_unity.Properties.Resources.icons8_trash_can_50;
+            this.bunifuFlatButton3.Iconimage_right = null;
+            this.bunifuFlatButton3.Iconimage_right_Selected = null;
+            this.bunifuFlatButton3.Iconimage_Selected = null;
+            this.bunifuFlatButton3.IconMarginLeft = 0;
+            this.bunifuFlatButton3.IconMarginRight = 0;
+            this.bunifuFlatButton3.IconRightVisible = true;
+            this.bunifuFlatButton3.IconRightZoom = 0D;
+            this.bunifuFlatButton3.IconVisible = true;
+            this.bunifuFlatButton3.IconZoom = 55D;
+            this.bunifuFlatButton3.IsTab = false;
+            this.bunifuFlatButton3.Location = new System.Drawing.Point(317, 461);
+            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton3.Name = "bunifuFlatButton3";
+            this.bunifuFlatButton3.Normalcolor = System.Drawing.SystemColors.Menu;
+            this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.LightCoral;
+            this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.Black;
+            this.bunifuFlatButton3.selected = false;
+            this.bunifuFlatButton3.Size = new System.Drawing.Size(128, 47);
+            this.bunifuFlatButton3.TabIndex = 23;
+            this.bunifuFlatButton3.Text = "ELIMINAR";
+            this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton3.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolTip1.SetToolTip(this.bunifuFlatButton3, "Eliminar");
+            // 
+            // bunifuFlatButton2
+            // 
+            this.bunifuFlatButton2.Activecolor = System.Drawing.SystemColors.Menu;
+            this.bunifuFlatButton2.BackColor = System.Drawing.SystemColors.Menu;
+            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bunifuFlatButton2.BorderRadius = 3;
+            this.bunifuFlatButton2.ButtonText = "EDITAR";
+            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton2.DisabledColor = System.Drawing.SystemColors.Menu;
+            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton2.Iconimage = global::Contro_unity.Properties.Resources.icons8_edit_50;
+            this.bunifuFlatButton2.Iconimage_right = null;
+            this.bunifuFlatButton2.Iconimage_right_Selected = null;
+            this.bunifuFlatButton2.Iconimage_Selected = null;
+            this.bunifuFlatButton2.IconMarginLeft = 0;
+            this.bunifuFlatButton2.IconMarginRight = 0;
+            this.bunifuFlatButton2.IconRightVisible = true;
+            this.bunifuFlatButton2.IconRightZoom = 0D;
+            this.bunifuFlatButton2.IconVisible = true;
+            this.bunifuFlatButton2.IconZoom = 55D;
+            this.bunifuFlatButton2.IsTab = false;
+            this.bunifuFlatButton2.Location = new System.Drawing.Point(162, 461);
+            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
+            this.bunifuFlatButton2.Normalcolor = System.Drawing.SystemColors.Menu;
+            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.SkyBlue;
+            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.Black;
+            this.bunifuFlatButton2.selected = false;
+            this.bunifuFlatButton2.Size = new System.Drawing.Size(128, 47);
+            this.bunifuFlatButton2.TabIndex = 22;
+            this.bunifuFlatButton2.Text = "EDITAR";
+            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolTip1.SetToolTip(this.bunifuFlatButton2, "Editar");
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Activecolor = System.Drawing.SystemColors.Menu;
+            this.btnAgregar.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAgregar.BorderRadius = 3;
+            this.btnAgregar.ButtonText = "AGREGAR";
+            this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregar.DisabledColor = System.Drawing.SystemColors.Menu;
+            this.btnAgregar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnAgregar.Iconimage = global::Contro_unity.Properties.Resources.icons8_plus_50;
+            this.btnAgregar.Iconimage_right = null;
+            this.btnAgregar.Iconimage_right_Selected = null;
+            this.btnAgregar.Iconimage_Selected = null;
+            this.btnAgregar.IconMarginLeft = 0;
+            this.btnAgregar.IconMarginRight = 0;
+            this.btnAgregar.IconRightVisible = true;
+            this.btnAgregar.IconRightZoom = 0D;
+            this.btnAgregar.IconVisible = true;
+            this.btnAgregar.IconZoom = 55D;
+            this.btnAgregar.IsTab = false;
+            this.btnAgregar.Location = new System.Drawing.Point(12, 461);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Normalcolor = System.Drawing.SystemColors.Menu;
+            this.btnAgregar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
+            this.btnAgregar.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnAgregar.selected = false;
+            this.btnAgregar.Size = new System.Drawing.Size(128, 47);
+            this.btnAgregar.TabIndex = 21;
+            this.btnAgregar.Text = "AGREGAR";
+            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAgregar.Textcolor = System.Drawing.Color.Black;
+            this.btnAgregar.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolTip1.SetToolTip(this.btnAgregar, "Agregar");
             // 
             // MenuSalones
             // 
@@ -311,12 +385,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(1024, 630);
+            this.Controls.Add(this.bunifuFlatButton3);
+            this.Controls.Add(this.bunifuFlatButton2);
             this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.gbEditInventario);
             this.Controls.Add(this.btnCerrar);
-            this.Controls.Add(this.btnEliminarInventario);
-            this.Controls.Add(this.btnEditInventario);
-            this.Controls.Add(this.btnAgregarInventario);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -333,15 +407,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.GroupBox gbEditInventario;
         private System.Windows.Forms.Label lbCod_serie;
         private System.Windows.Forms.Label LblDescripcion;
         private System.Windows.Forms.PictureBox btnCerrar;
-        private System.Windows.Forms.Button btnEliminarInventario;
-        private System.Windows.Forms.Button btnEditInventario;
-        private System.Windows.Forms.Button btnAgregarInventario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
@@ -350,5 +419,9 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtNom_Salon;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtDescripcion;
+        private Bunifu.Framework.UI.BunifuFlatButton btnConfirmar;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
+        private Bunifu.Framework.UI.BunifuFlatButton btnAgregar;
     }
 }

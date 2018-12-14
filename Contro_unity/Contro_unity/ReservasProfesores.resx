@@ -117,32 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJ
-        TUUH4gwHFQc3Im6XwgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAACqSURBVDhP
-        lZHZDQIxDAXTENc/dw3cLe4fRXEXwRuzljiyIR5ppDhkDBJJHOWSQxAa2rSQ9/aiFt5+NHNZu+Qndlhy
-        k6UlnbEzk11L/sbOVH4vqY6dibxKgnDsjCW/5CHDMazkSZ7lgYsIHvdaL3IvqyDmW/s2veDMkp1NBXKx
-        40u2NmUg5sHApjx8xpuNTW94PLSpDG/4i9c2CWIuamLHl9CmRo44BFGTmie4fiqc80PncwAAAABJRU5E
-        rkJggg==
-</value>
-  </data>
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJ
-        TUUH4gwJBDQiRuOobQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADcSURBVEhL
-        7ZU5DsIwEEVdUFBQIbEUnACuQIFYz8ENOArXoaZhX27E/7ZiHDCOE8ZUPOlF4xTzKIisfsEugStoucO6
-        oH24hKTGx02P8ozhhkOKAJfvYYsH6cAE2uVEMsDlB2iXE6nAFB5hW58cJALu8gYcQIsvoP9ekczgCWa/
-        fATXZjT4Als4NGOQ1+UkKtCDVxiKzOEZdvTpSVSAhCKflpPoAPFFFvACfctJqQBxI0XLSekAySK0yxcB
-        KgUIv86mGYNUDsTyDxTyFpC+MvkR5gK+S/tbc5d+QpR6ALzbU7k/n/jdAAAAAElFTkSuQmCC
-</value>
-  </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="bunifuDragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>114, 17</value>
+  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>

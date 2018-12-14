@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReservasProfesores));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btnConfirmar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.bunifuDropdown2 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.bunifuDropdown3 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -69,8 +69,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox3);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.bunifuDropdown3);
+            this.groupBox1.Controls.Add(this.bunifuDropdown2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -81,42 +81,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS PERSONALES";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.BackColor = System.Drawing.SystemColors.Menu;
-            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Jackson Berney",
-            "Johnny Blanquiceth",
-            "Lina Mosquera"});
-            this.comboBox3.Location = new System.Drawing.Point(93, 31);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(255, 24);
-            this.comboBox3.TabIndex = 1;
-            this.comboBox3.Text = "Eliga Un Profesor";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.Menu;
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Ingeniria sistemas",
-            "Ingeniria Industrial",
-            "Psicologia",
-            "Trabajo Social",
-            "Ingles",
-            "Otro"});
-            this.comboBox1.Location = new System.Drawing.Point(93, 75);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(255, 24);
-            this.comboBox1.TabIndex = 2;
-            this.comboBox1.Text = "Elige Un Programa";
             // 
             // label3
             // 
@@ -142,46 +106,25 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.comboBox2);
+            this.groupBox2.Controls.Add(this.bunifuDropdown1);
+            this.groupBox2.Controls.Add(this.bunifuDatepicker1);
             this.groupBox2.Controls.Add(this.checkBox6);
             this.groupBox2.Controls.Add(this.checkBox5);
             this.groupBox2.Controls.Add(this.checkBox4);
             this.groupBox2.Controls.Add(this.checkBox3);
             this.groupBox2.Controls.Add(this.checkBox2);
             this.groupBox2.Controls.Add(this.checkBox1);
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(436, 71);
+            this.groupBox2.Location = new System.Drawing.Point(420, 71);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(547, 190);
+            this.groupBox2.Size = new System.Drawing.Size(563, 190);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "DATOS DE LA RESERVA";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.BackColor = System.Drawing.SystemColors.Menu;
-            this.comboBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Salon 101",
-            "Salon 102",
-            "Salon 202",
-            "Salon 204",
-            "Sala De Sistemas 1",
-            "Sala De Sistemas 2",
-            "Auditorio"});
-            this.comboBox2.Location = new System.Drawing.Point(188, 105);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(335, 24);
-            this.comboBox2.TabIndex = 10;
-            this.comboBox2.Text = "Seleccione Un Salon";
             // 
             // checkBox6
             // 
@@ -189,7 +132,7 @@
             this.checkBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBox6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox6.Location = new System.Drawing.Point(443, 64);
+            this.checkBox6.Location = new System.Drawing.Point(476, 59);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(80, 20);
             this.checkBox6.TabIndex = 9;
@@ -202,7 +145,7 @@
             this.checkBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBox5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox5.Location = new System.Drawing.Point(334, 64);
+            this.checkBox5.Location = new System.Drawing.Point(367, 59);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(91, 20);
             this.checkBox5.TabIndex = 8;
@@ -215,7 +158,7 @@
             this.checkBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBox4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox4.Location = new System.Drawing.Point(189, 64);
+            this.checkBox4.Location = new System.Drawing.Point(222, 59);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(105, 20);
             this.checkBox4.TabIndex = 7;
@@ -228,7 +171,7 @@
             this.checkBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBox3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.Location = new System.Drawing.Point(443, 23);
+            this.checkBox3.Location = new System.Drawing.Point(476, 18);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(54, 20);
             this.checkBox3.TabIndex = 6;
@@ -241,7 +184,7 @@
             this.checkBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(334, 23);
+            this.checkBox2.Location = new System.Drawing.Point(367, 18);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(59, 20);
             this.checkBox2.TabIndex = 5;
@@ -254,23 +197,12 @@
             this.checkBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(189, 23);
+            this.checkBox1.Location = new System.Drawing.Point(222, 18);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(105, 20);
             this.checkBox1.TabIndex = 4;
             this.checkBox1.Text = "VIDEO BEAM\t";
             this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.Menu;
-            this.dateTimePicker1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(189, 152);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(334, 23);
-            this.dateTimePicker1.TabIndex = 11;
             // 
             // label6
             // 
@@ -307,7 +239,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::Contro_unity.Properties.Resources.icons8_delete_50;
             this.pictureBox1.Location = new System.Drawing.Point(1000, 1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(22, 19);
@@ -317,22 +250,134 @@
             this.toolTip1.SetToolTip(this.pictureBox1, "Cerrar");
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // button1
+            // btnConfirmar
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Menu;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(436, 531);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 45);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "      RESERVAR";
-            this.toolTip1.SetToolTip(this.button1, "Reservar");
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnConfirmar.Activecolor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmar.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConfirmar.BorderRadius = 3;
+            this.btnConfirmar.ButtonText = "RESERVAR";
+            this.btnConfirmar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConfirmar.DisabledColor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnConfirmar.Iconimage = global::Contro_unity.Properties.Resources.icons8_checked_50;
+            this.btnConfirmar.Iconimage_right = null;
+            this.btnConfirmar.Iconimage_right_Selected = null;
+            this.btnConfirmar.Iconimage_Selected = null;
+            this.btnConfirmar.IconMarginLeft = 0;
+            this.btnConfirmar.IconMarginRight = 0;
+            this.btnConfirmar.IconRightVisible = true;
+            this.btnConfirmar.IconRightZoom = 0D;
+            this.btnConfirmar.IconVisible = true;
+            this.btnConfirmar.IconZoom = 55D;
+            this.btnConfirmar.IsTab = false;
+            this.btnConfirmar.Location = new System.Drawing.Point(436, 518);
+            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Normalcolor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
+            this.btnConfirmar.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnConfirmar.selected = false;
+            this.btnConfirmar.Size = new System.Drawing.Size(147, 48);
+            this.btnConfirmar.TabIndex = 18;
+            this.btnConfirmar.Text = "RESERVAR";
+            this.btnConfirmar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnConfirmar.Textcolor = System.Drawing.Color.Black;
+            this.btnConfirmar.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolTip1.SetToolTip(this.btnConfirmar, "Confirmar");
+            // 
+            // bunifuDatepicker1
+            // 
+            this.bunifuDatepicker1.BackColor = System.Drawing.SystemColors.Menu;
+            this.bunifuDatepicker1.BorderRadius = 3;
+            this.bunifuDatepicker1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuDatepicker1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuDatepicker1.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.bunifuDatepicker1.FormatCustom = null;
+            this.bunifuDatepicker1.Location = new System.Drawing.Point(212, 152);
+            this.bunifuDatepicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuDatepicker1.Name = "bunifuDatepicker1";
+            this.bunifuDatepicker1.Size = new System.Drawing.Size(344, 26);
+            this.bunifuDatepicker1.TabIndex = 19;
+            this.bunifuDatepicker1.Value = new System.DateTime(2018, 12, 14, 11, 6, 2, 829);
+            // 
+            // bunifuDropdown1
+            // 
+            this.bunifuDropdown1.BackColor = System.Drawing.SystemColors.Menu;
+            this.bunifuDropdown1.BorderRadius = 3;
+            this.bunifuDropdown1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuDropdown1.DisabledColor = System.Drawing.SystemColors.Menu;
+            this.bunifuDropdown1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuDropdown1.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDropdown1.Items = new string[] {
+        " Salon 101",
+        " Salon 102",
+        " Salon 202",
+        " Salon 204",
+        " Sala De Sistemas 1",
+        " Sala De Sistemas 2",
+        " Auditorio"};
+            this.bunifuDropdown1.Location = new System.Drawing.Point(212, 104);
+            this.bunifuDropdown1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuDropdown1.Name = "bunifuDropdown1";
+            this.bunifuDropdown1.NomalColor = System.Drawing.SystemColors.Menu;
+            this.bunifuDropdown1.onHoverColor = System.Drawing.Color.Gainsboro;
+            this.bunifuDropdown1.selectedIndex = -1;
+            this.bunifuDropdown1.Size = new System.Drawing.Size(344, 24);
+            this.bunifuDropdown1.TabIndex = 19;
+            // 
+            // bunifuDropdown2
+            // 
+            this.bunifuDropdown2.BackColor = System.Drawing.SystemColors.Menu;
+            this.bunifuDropdown2.BorderRadius = 3;
+            this.bunifuDropdown2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuDropdown2.DisabledColor = System.Drawing.SystemColors.Menu;
+            this.bunifuDropdown2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuDropdown2.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDropdown2.Items = new string[] {
+        " Ingeniria sistemas",
+        " Ingeniria Industrial",
+        " Psicologia",
+        " Trabajo Social",
+        " Ingles",
+        " Otro"};
+            this.bunifuDropdown2.Location = new System.Drawing.Point(93, 77);
+            this.bunifuDropdown2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuDropdown2.Name = "bunifuDropdown2";
+            this.bunifuDropdown2.NomalColor = System.Drawing.SystemColors.Menu;
+            this.bunifuDropdown2.onHoverColor = System.Drawing.Color.Gainsboro;
+            this.bunifuDropdown2.selectedIndex = -1;
+            this.bunifuDropdown2.Size = new System.Drawing.Size(255, 24);
+            this.bunifuDropdown2.TabIndex = 20;
+            // 
+            // bunifuDropdown3
+            // 
+            this.bunifuDropdown3.BackColor = System.Drawing.SystemColors.Menu;
+            this.bunifuDropdown3.BorderRadius = 3;
+            this.bunifuDropdown3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuDropdown3.DisabledColor = System.Drawing.SystemColors.Menu;
+            this.bunifuDropdown3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuDropdown3.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDropdown3.Items = new string[] {
+        " Jackson Berney",
+        " Johnny Blanquiceth",
+        " Lina Mosquera"};
+            this.bunifuDropdown3.Location = new System.Drawing.Point(93, 28);
+            this.bunifuDropdown3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuDropdown3.Name = "bunifuDropdown3";
+            this.bunifuDropdown3.NomalColor = System.Drawing.SystemColors.Menu;
+            this.bunifuDropdown3.onHoverColor = System.Drawing.Color.Gainsboro;
+            this.bunifuDropdown3.selectedIndex = -1;
+            this.bunifuDropdown3.Size = new System.Drawing.Size(255, 24);
+            this.bunifuDropdown3.TabIndex = 21;
+            // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = null;
+            this.bunifuDragControl1.Vertical = true;
             // 
             // ReservasProfesores
             // 
@@ -340,7 +385,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(1024, 630);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -363,14 +408,12 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox checkBox6;
         private System.Windows.Forms.CheckBox checkBox5;
@@ -378,9 +421,12 @@
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private Bunifu.Framework.UI.BunifuFlatButton btnConfirmar;
+        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker1;
+        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown1;
+        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown3;
+        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown2;
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
     }
 }
