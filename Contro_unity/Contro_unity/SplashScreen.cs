@@ -81,7 +81,19 @@ namespace Contro_unity
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            this.Opacity += .010;
+            this.Opacity += .12;
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

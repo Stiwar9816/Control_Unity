@@ -34,10 +34,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnminimizar = new System.Windows.Forms.PictureBox();
             this.btncerrar = new System.Windows.Forms.PictureBox();
-            this.btnlogin = new System.Windows.Forms.Button();
             this.linkpass = new System.Windows.Forms.LinkLabel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblErrorUser = new System.Windows.Forms.Label();
             this.lblErrorPass = new System.Windows.Forms.Label();
             this.lblErrorLogin = new System.Windows.Forms.Label();
@@ -45,12 +42,17 @@
             this.txtuser = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtpass = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.btnLogin = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -79,10 +81,12 @@
             // 
             // btnminimizar
             // 
-            this.btnminimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnminimizar.Image")));
+            this.btnminimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnminimizar.Image = global::Contro_unity.Properties.Resources.icons8_expand_arrow_50;
             this.btnminimizar.Location = new System.Drawing.Point(322, 3);
             this.btnminimizar.Name = "btnminimizar";
             this.btnminimizar.Size = new System.Drawing.Size(20, 17);
+            this.btnminimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnminimizar.TabIndex = 6;
             this.btnminimizar.TabStop = false;
             this.toolTip1.SetToolTip(this.btnminimizar, "Minimizar");
@@ -90,32 +94,16 @@
             // 
             // btncerrar
             // 
-            this.btncerrar.Image = ((System.Drawing.Image)(resources.GetObject("btncerrar.Image")));
+            this.btncerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btncerrar.Image = global::Contro_unity.Properties.Resources.icons8_delete_50;
             this.btncerrar.Location = new System.Drawing.Point(346, 3);
             this.btncerrar.Name = "btncerrar";
             this.btncerrar.Size = new System.Drawing.Size(17, 17);
+            this.btncerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btncerrar.TabIndex = 5;
             this.btncerrar.TabStop = false;
             this.toolTip1.SetToolTip(this.btncerrar, "Cerrar");
             this.btncerrar.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // btnlogin
-            // 
-            this.btnlogin.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnlogin.FlatAppearance.BorderSize = 0;
-            this.btnlogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.btnlogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnlogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlogin.Image = ((System.Drawing.Image)(resources.GetObject("btnlogin.Image")));
-            this.btnlogin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnlogin.Location = new System.Drawing.Point(53, 360);
-            this.btnlogin.Name = "btnlogin";
-            this.btnlogin.Size = new System.Drawing.Size(255, 28);
-            this.btnlogin.TabIndex = 3;
-            this.btnlogin.Text = "INGRESAR";
-            this.toolTip1.SetToolTip(this.btnlogin, "Ingresar");
-            this.btnlogin.UseVisualStyleBackColor = false;
             // 
             // linkpass
             // 
@@ -123,33 +111,14 @@
             this.linkpass.AutoSize = true;
             this.linkpass.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkpass.LinkColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.linkpass.Location = new System.Drawing.Point(78, 416);
+            this.linkpass.Location = new System.Drawing.Point(80, 416);
             this.linkpass.Name = "linkpass";
             this.linkpass.Size = new System.Drawing.Size(203, 16);
             this.linkpass.TabIndex = 4;
             this.linkpass.TabStop = true;
             this.linkpass.Text = "¿Has olvidado tu contraseña?";
             this.toolTip1.SetToolTip(this.linkpass, "¿Has olvidado tu contraseña?");
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(53, 228);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(27, 27);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(53, 282);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(27, 27);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
+            this.linkpass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkpass_LinkClicked);
             // 
             // lblErrorUser
             // 
@@ -232,12 +201,79 @@
             this.bunifuElipse1.ElipseRadius = 10;
             this.bunifuElipse1.TargetControl = this;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Contro_unity.Properties.Resources.icons8_forgot_password_50;
+            this.pictureBox4.Location = new System.Drawing.Point(53, 412);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(27, 27);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 12;
+            this.pictureBox4.TabStop = false;
+
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Activecolor = System.Drawing.Color.DarkGray;
+            this.btnLogin.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLogin.BorderRadius = 5;
+            this.btnLogin.ButtonText = "INGRESAR";
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogin.DisabledColor = System.Drawing.Color.Gray;
+            this.btnLogin.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnLogin.Iconimage = null;
+            this.btnLogin.Iconimage_right = global::Contro_unity.Properties.Resources.icons8_enter_50;
+            this.btnLogin.Iconimage_right_Selected = null;
+            this.btnLogin.Iconimage_Selected = null;
+            this.btnLogin.IconMarginLeft = 0;
+            this.btnLogin.IconMarginRight = 0;
+            this.btnLogin.IconRightVisible = true;
+            this.btnLogin.IconRightZoom = 0D;
+            this.btnLogin.IconVisible = true;
+            this.btnLogin.IconZoom = 60D;
+            this.btnLogin.IsTab = false;
+            this.btnLogin.Location = new System.Drawing.Point(53, 360);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Normalcolor = System.Drawing.Color.Gainsboro;
+            this.btnLogin.OnHovercolor = System.Drawing.Color.DarkGray;
+            this.btnLogin.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnLogin.selected = false;
+            this.btnLogin.Size = new System.Drawing.Size(255, 31);
+            this.btnLogin.TabIndex = 3;
+            this.btnLogin.Text = "INGRESAR";
+            this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLogin.Textcolor = System.Drawing.Color.Black;
+            this.btnLogin.TextFont = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Italic);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Contro_unity.Properties.Resources.icons8_lock_50;
+            this.pictureBox3.Location = new System.Drawing.Point(53, 282);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(27, 27);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Contro_unity.Properties.Resources.icons8_user_avatar_50;
+            this.pictureBox2.Location = new System.Drawing.Point(53, 228);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(27, 27);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(367, 441);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtpass);
             this.Controls.Add(this.txtuser);
             this.Controls.Add(this.lblErrorLogin);
@@ -246,7 +282,6 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.linkpass);
-            this.Controls.Add(this.btnlogin);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "login";
@@ -258,8 +293,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,7 +304,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnlogin;
         private System.Windows.Forms.LinkLabel linkpass;
         private System.Windows.Forms.PictureBox btncerrar;
         private System.Windows.Forms.PictureBox btnminimizar;
@@ -282,6 +317,8 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtuser;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtpass;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private Bunifu.Framework.UI.BunifuFlatButton btnLogin;
     }
 }
 

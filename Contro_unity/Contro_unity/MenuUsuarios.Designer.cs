@@ -29,23 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuUsuarios));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.gbUser = new System.Windows.Forms.GroupBox();
-            this.txtRol = new System.Windows.Forms.ComboBox();
+            this.txtEmail = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtNombre = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtCC = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.lbCC_User = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblStock = new System.Windows.Forms.Label();
             this.lblMarca = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnAgregar1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,39 +52,23 @@
             this.datetime_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rol_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.txtCC = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtNombre = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtEmail = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnConfirmar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuDropdown2 = new Bunifu.Framework.UI.BunifuDropdown();
             this.gbUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregar.FlatAppearance.BorderSize = 0;
-            this.btnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Menu;
-            this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumAquamarine;
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
-            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(766, 252);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(146, 48);
-            this.btnAgregar.TabIndex = 29;
-            this.btnAgregar.Text = "      CONFIRMAR";
-            this.toolTip1.SetToolTip(this.btnAgregar, "Confirmar");
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            // 
             // gbUser
             // 
             this.gbUser.BackColor = System.Drawing.SystemColors.Menu;
+            this.gbUser.Controls.Add(this.bunifuDropdown2);
             this.gbUser.Controls.Add(this.txtEmail);
             this.gbUser.Controls.Add(this.txtNombre);
             this.gbUser.Controls.Add(this.txtCC);
-            this.gbUser.Controls.Add(this.txtRol);
             this.gbUser.Controls.Add(this.lbCC_User);
             this.gbUser.Controls.Add(this.lblNombre);
             this.gbUser.Controls.Add(this.lblStock);
@@ -101,19 +82,65 @@
             this.gbUser.TabStop = false;
             this.gbUser.Text = "DATOS DEL USUARIO";
             // 
-            // txtRol
+            // txtEmail
             // 
-            this.txtRol.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtRol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.txtRol.FormattingEnabled = true;
-            this.txtRol.Items.AddRange(new object[] {
-            "Recepcion",
-            "Biblioteca"});
-            this.txtRol.Location = new System.Drawing.Point(150, 138);
-            this.txtRol.Name = "txtRol";
-            this.txtRol.Size = new System.Drawing.Size(200, 24);
-            this.txtRol.TabIndex = 28;
-            this.txtRol.Text = "Elige Un Rol";
+            this.txtEmail.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtEmail.HintForeColor = System.Drawing.Color.Empty;
+            this.txtEmail.HintText = "";
+            this.txtEmail.isPassword = false;
+            this.txtEmail.LineFocusedColor = System.Drawing.Color.Khaki;
+            this.txtEmail.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtEmail.LineMouseHoverColor = System.Drawing.Color.Khaki;
+            this.txtEmail.LineThickness = 2;
+            this.txtEmail.Location = new System.Drawing.Point(150, 90);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(200, 30);
+            this.txtEmail.TabIndex = 27;
+            this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtNombre.HintForeColor = System.Drawing.Color.Empty;
+            this.txtNombre.HintText = "";
+            this.txtNombre.isPassword = false;
+            this.txtNombre.LineFocusedColor = System.Drawing.Color.Khaki;
+            this.txtNombre.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtNombre.LineMouseHoverColor = System.Drawing.Color.Khaki;
+            this.txtNombre.LineThickness = 2;
+            this.txtNombre.Location = new System.Drawing.Point(150, 52);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(200, 30);
+            this.txtNombre.TabIndex = 26;
+            this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txtCC
+            // 
+            this.txtCC.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtCC.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCC.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtCC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCC.HintForeColor = System.Drawing.Color.Empty;
+            this.txtCC.HintText = "";
+            this.txtCC.isPassword = false;
+            this.txtCC.LineFocusedColor = System.Drawing.Color.Khaki;
+            this.txtCC.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtCC.LineMouseHoverColor = System.Drawing.Color.Khaki;
+            this.txtCC.LineThickness = 2;
+            this.txtCC.Location = new System.Drawing.Point(150, 14);
+            this.txtCC.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCC.Name = "txtCC";
+            this.txtCC.Size = new System.Drawing.Size(200, 30);
+            this.txtCC.TabIndex = 25;
+            this.txtCC.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // lbCC_User
             // 
@@ -159,7 +186,7 @@
             // 
             this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.Image = global::Contro_unity.Properties.Resources.icons8_delete_50;
             this.btnCerrar.Location = new System.Drawing.Point(1001, -1);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(21, 23);
@@ -168,60 +195,6 @@
             this.btnCerrar.TabStop = false;
             this.toolTip1.SetToolTip(this.btnCerrar, "Cerrar");
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Menu;
-            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(290, 476);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(133, 47);
-            this.btnEliminar.TabIndex = 23;
-            this.btnEliminar.Text = "       ELIMINAR";
-            this.toolTip1.SetToolTip(this.btnEliminar, "Eliminar");
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEdit.FlatAppearance.BorderSize = 0;
-            this.btnEdit.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Menu;
-            this.btnEdit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
-            this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.Location = new System.Drawing.Point(151, 476);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(133, 47);
-            this.btnEdit.TabIndex = 22;
-            this.btnEdit.Text = "       EDITAR";
-            this.toolTip1.SetToolTip(this.btnEdit, "Editar");
-            this.btnEdit.UseVisualStyleBackColor = true;
-            // 
-            // btnAgregar1
-            // 
-            this.btnAgregar1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregar1.FlatAppearance.BorderSize = 0;
-            this.btnAgregar1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Menu;
-            this.btnAgregar1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumAquamarine;
-            this.btnAgregar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar1.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar1.Image")));
-            this.btnAgregar1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar1.Location = new System.Drawing.Point(12, 476);
-            this.btnAgregar1.Name = "btnAgregar1";
-            this.btnAgregar1.Size = new System.Drawing.Size(133, 47);
-            this.btnAgregar1.TabIndex = 21;
-            this.btnAgregar1.Text = "       AGREGAR";
-            this.toolTip1.SetToolTip(this.btnAgregar1, "Agregar");
-            this.btnAgregar1.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -334,65 +307,170 @@
             this.rol_user.Name = "rol_user";
             this.rol_user.Width = 48;
             // 
-            // txtCC
+            // bunifuFlatButton3
             // 
-            this.txtCC.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtCC.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCC.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtCC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCC.HintForeColor = System.Drawing.Color.Empty;
-            this.txtCC.HintText = "";
-            this.txtCC.isPassword = false;
-            this.txtCC.LineFocusedColor = System.Drawing.Color.Khaki;
-            this.txtCC.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtCC.LineMouseHoverColor = System.Drawing.Color.Khaki;
-            this.txtCC.LineThickness = 2;
-            this.txtCC.Location = new System.Drawing.Point(150, 14);
-            this.txtCC.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCC.Name = "txtCC";
-            this.txtCC.Size = new System.Drawing.Size(200, 30);
-            this.txtCC.TabIndex = 25;
-            this.txtCC.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuFlatButton3.Activecolor = System.Drawing.SystemColors.Menu;
+            this.bunifuFlatButton3.BackColor = System.Drawing.SystemColors.Menu;
+            this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bunifuFlatButton3.BorderRadius = 3;
+            this.bunifuFlatButton3.ButtonText = "ELIMINAR";
+            this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton3.DisabledColor = System.Drawing.SystemColors.Menu;
+            this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton3.Iconimage = global::Contro_unity.Properties.Resources.icons8_trash_can_50;
+            this.bunifuFlatButton3.Iconimage_right = null;
+            this.bunifuFlatButton3.Iconimage_right_Selected = null;
+            this.bunifuFlatButton3.Iconimage_Selected = null;
+            this.bunifuFlatButton3.IconMarginLeft = 0;
+            this.bunifuFlatButton3.IconMarginRight = 0;
+            this.bunifuFlatButton3.IconRightVisible = true;
+            this.bunifuFlatButton3.IconRightZoom = 0D;
+            this.bunifuFlatButton3.IconVisible = true;
+            this.bunifuFlatButton3.IconZoom = 55D;
+            this.bunifuFlatButton3.IsTab = false;
+            this.bunifuFlatButton3.Location = new System.Drawing.Point(322, 489);
+            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton3.Name = "bunifuFlatButton3";
+            this.bunifuFlatButton3.Normalcolor = System.Drawing.SystemColors.Menu;
+            this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.LightCoral;
+            this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.Black;
+            this.bunifuFlatButton3.selected = false;
+            this.bunifuFlatButton3.Size = new System.Drawing.Size(128, 47);
+            this.bunifuFlatButton3.TabIndex = 32;
+            this.bunifuFlatButton3.Text = "ELIMINAR";
+            this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton3.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolTip1.SetToolTip(this.bunifuFlatButton3, "Eliminar");
             // 
-            // txtNombre
+            // bunifuFlatButton2
             // 
-            this.txtNombre.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtNombre.HintForeColor = System.Drawing.Color.Empty;
-            this.txtNombre.HintText = "";
-            this.txtNombre.isPassword = false;
-            this.txtNombre.LineFocusedColor = System.Drawing.Color.Khaki;
-            this.txtNombre.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtNombre.LineMouseHoverColor = System.Drawing.Color.Khaki;
-            this.txtNombre.LineThickness = 2;
-            this.txtNombre.Location = new System.Drawing.Point(150, 52);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(200, 30);
-            this.txtNombre.TabIndex = 26;
-            this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuFlatButton2.Activecolor = System.Drawing.SystemColors.Menu;
+            this.bunifuFlatButton2.BackColor = System.Drawing.SystemColors.Menu;
+            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bunifuFlatButton2.BorderRadius = 3;
+            this.bunifuFlatButton2.ButtonText = "EDITAR";
+            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton2.DisabledColor = System.Drawing.SystemColors.Menu;
+            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton2.Iconimage = global::Contro_unity.Properties.Resources.icons8_edit_50;
+            this.bunifuFlatButton2.Iconimage_right = null;
+            this.bunifuFlatButton2.Iconimage_right_Selected = null;
+            this.bunifuFlatButton2.Iconimage_Selected = null;
+            this.bunifuFlatButton2.IconMarginLeft = 0;
+            this.bunifuFlatButton2.IconMarginRight = 0;
+            this.bunifuFlatButton2.IconRightVisible = true;
+            this.bunifuFlatButton2.IconRightZoom = 0D;
+            this.bunifuFlatButton2.IconVisible = true;
+            this.bunifuFlatButton2.IconZoom = 55D;
+            this.bunifuFlatButton2.IsTab = false;
+            this.bunifuFlatButton2.Location = new System.Drawing.Point(167, 489);
+            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
+            this.bunifuFlatButton2.Normalcolor = System.Drawing.SystemColors.Menu;
+            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.SkyBlue;
+            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.Black;
+            this.bunifuFlatButton2.selected = false;
+            this.bunifuFlatButton2.Size = new System.Drawing.Size(128, 47);
+            this.bunifuFlatButton2.TabIndex = 31;
+            this.bunifuFlatButton2.Text = "EDITAR";
+            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolTip1.SetToolTip(this.bunifuFlatButton2, "Editar");
             // 
-            // txtEmail
+            // bunifuFlatButton1
             // 
-            this.txtEmail.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtEmail.HintForeColor = System.Drawing.Color.Empty;
-            this.txtEmail.HintText = "";
-            this.txtEmail.isPassword = false;
-            this.txtEmail.LineFocusedColor = System.Drawing.Color.Khaki;
-            this.txtEmail.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtEmail.LineMouseHoverColor = System.Drawing.Color.Khaki;
-            this.txtEmail.LineThickness = 2;
-            this.txtEmail.Location = new System.Drawing.Point(150, 90);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(200, 30);
-            this.txtEmail.TabIndex = 27;
-            this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuFlatButton1.Activecolor = System.Drawing.SystemColors.Menu;
+            this.bunifuFlatButton1.BackColor = System.Drawing.SystemColors.Menu;
+            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bunifuFlatButton1.BorderRadius = 3;
+            this.bunifuFlatButton1.ButtonText = "AGREGAR";
+            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton1.DisabledColor = System.Drawing.SystemColors.Menu;
+            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.Iconimage = global::Contro_unity.Properties.Resources.icons8_plus_50;
+            this.bunifuFlatButton1.Iconimage_right = null;
+            this.bunifuFlatButton1.Iconimage_right_Selected = null;
+            this.bunifuFlatButton1.Iconimage_Selected = null;
+            this.bunifuFlatButton1.IconMarginLeft = 0;
+            this.bunifuFlatButton1.IconMarginRight = 0;
+            this.bunifuFlatButton1.IconRightVisible = true;
+            this.bunifuFlatButton1.IconRightZoom = 0D;
+            this.bunifuFlatButton1.IconVisible = true;
+            this.bunifuFlatButton1.IconZoom = 55D;
+            this.bunifuFlatButton1.IsTab = false;
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(17, 489);
+            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
+            this.bunifuFlatButton1.Normalcolor = System.Drawing.SystemColors.Menu;
+            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
+            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.Black;
+            this.bunifuFlatButton1.selected = false;
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(128, 47);
+            this.bunifuFlatButton1.TabIndex = 30;
+            this.bunifuFlatButton1.Text = "AGREGAR";
+            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolTip1.SetToolTip(this.bunifuFlatButton1, "Agregar");
+            // 
+            // btnConfirmar
+            // 
+            this.btnConfirmar.Activecolor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmar.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConfirmar.BorderRadius = 3;
+            this.btnConfirmar.ButtonText = "Confirmar";
+            this.btnConfirmar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConfirmar.DisabledColor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnConfirmar.Iconimage = global::Contro_unity.Properties.Resources.icons8_checked_50;
+            this.btnConfirmar.Iconimage_right = null;
+            this.btnConfirmar.Iconimage_right_Selected = null;
+            this.btnConfirmar.Iconimage_Selected = null;
+            this.btnConfirmar.IconMarginLeft = 0;
+            this.btnConfirmar.IconMarginRight = 0;
+            this.btnConfirmar.IconRightVisible = true;
+            this.btnConfirmar.IconRightZoom = 0D;
+            this.btnConfirmar.IconVisible = true;
+            this.btnConfirmar.IconZoom = 55D;
+            this.btnConfirmar.IsTab = false;
+            this.btnConfirmar.Location = new System.Drawing.Point(759, 267);
+            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Normalcolor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
+            this.btnConfirmar.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnConfirmar.selected = false;
+            this.btnConfirmar.Size = new System.Drawing.Size(147, 48);
+            this.btnConfirmar.TabIndex = 33;
+            this.btnConfirmar.Text = "Confirmar";
+            this.btnConfirmar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnConfirmar.Textcolor = System.Drawing.Color.Black;
+            this.btnConfirmar.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolTip1.SetToolTip(this.btnConfirmar, "Confirmar");
+            // 
+            // bunifuDropdown2
+            // 
+            this.bunifuDropdown2.BackColor = System.Drawing.SystemColors.Menu;
+            this.bunifuDropdown2.BorderRadius = 3;
+            this.bunifuDropdown2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuDropdown2.DisabledColor = System.Drawing.SystemColors.Menu;
+            this.bunifuDropdown2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuDropdown2.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDropdown2.Items = new string[] {
+        " Administrador",
+        " Recepciòn",
+        " Biblioteca"};
+            this.bunifuDropdown2.Location = new System.Drawing.Point(150, 144);
+            this.bunifuDropdown2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuDropdown2.Name = "bunifuDropdown2";
+            this.bunifuDropdown2.NomalColor = System.Drawing.SystemColors.Menu;
+            this.bunifuDropdown2.onHoverColor = System.Drawing.Color.Gainsboro;
+            this.bunifuDropdown2.selectedIndex = -1;
+            this.bunifuDropdown2.Size = new System.Drawing.Size(200, 24);
+            this.bunifuDropdown2.TabIndex = 34;
             // 
             // MenuUsuarios
             // 
@@ -400,12 +478,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(1024, 630);
-            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.btnConfirmar);
+            this.Controls.Add(this.bunifuFlatButton3);
+            this.Controls.Add(this.bunifuFlatButton2);
+            this.Controls.Add(this.bunifuFlatButton1);
             this.Controls.Add(this.gbUser);
             this.Controls.Add(this.btnCerrar);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.btnAgregar1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -422,17 +500,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.GroupBox gbUser;
         private System.Windows.Forms.Label lbCC_User;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblStock;
         private System.Windows.Forms.Label lblMarca;
         private System.Windows.Forms.PictureBox btnCerrar;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnAgregar1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
@@ -441,10 +514,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn email_user;
         private System.Windows.Forms.DataGridViewTextBoxColumn datetime_user;
         private System.Windows.Forms.DataGridViewTextBoxColumn rol_user;
-        private System.Windows.Forms.ComboBox txtRol;
         private System.Windows.Forms.ToolTip toolTip1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtEmail;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtNombre;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtCC;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private Bunifu.Framework.UI.BunifuFlatButton btnConfirmar;
+        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown2;
     }
 }

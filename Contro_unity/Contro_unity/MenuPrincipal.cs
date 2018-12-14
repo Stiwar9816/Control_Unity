@@ -82,23 +82,28 @@ namespace Contro_unity
             fh.Show();
         }
 
-        private void btnInventario_Click(object sender, EventArgs e)
-        {
-            AbrirFormInPanel(new MenuInventario());
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             lbHora.Text = DateTime.Now.ToString("hh:mm:ss tt");
             lbFecha.Text = DateTime.Now.ToLongDateString();
         }
 
-        private void btnSalones_Click(object sender, EventArgs e)
+        private void btnInventario_Click_1(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new MenuInventario());
+        }
+
+        private void btnSalones_Click_1(object sender, EventArgs e)
         {
             AbrirFormInPanel(new MenuSalones());
         }
 
-        private void btnProfesores_Click(object sender, EventArgs e)
+        private void btnReportes_Click_1(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new MenuReportes());
+        }
+
+        private void btnProfesores_Click_1(object sender, EventArgs e)
         {
             AbrirFormInPanel(new MenuProfesores());
         }
@@ -108,14 +113,14 @@ namespace Contro_unity
             AbrirFormInPanel(new MenuUsuarios());
         }
 
-        private void btnConfiguracion_Click(object sender, EventArgs e)
+        private void btnConfiguraciones_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel(new MenuConfig());
         }
 
-        private void btnReportes_Click(object sender, EventArgs e)
+        private void btnReservas_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new MenuReportes());
+            AbrirFormInPanel(new ReservasProfesores());
         }
     }
 }

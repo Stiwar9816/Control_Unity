@@ -29,13 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuConfig));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnConfirmar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtPassActual = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtPassNew = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtPassConf = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.btnConfirmar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,10 +56,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnConfirmar);
             this.groupBox1.Controls.Add(this.txtPassActual);
             this.groupBox1.Controls.Add(this.txtPassNew);
             this.groupBox1.Controls.Add(this.txtPassConf);
-            this.groupBox1.Controls.Add(this.btnConfirmar);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -68,10 +67,46 @@
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(59, 90);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(400, 197);
+            this.groupBox1.Size = new System.Drawing.Size(400, 208);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CONTRASEÑA";
+            // 
+            // btnConfirmar
+            // 
+            this.btnConfirmar.Activecolor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmar.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConfirmar.BorderRadius = 3;
+            this.btnConfirmar.ButtonText = "Confirmar";
+            this.btnConfirmar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConfirmar.DisabledColor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnConfirmar.Iconimage = global::Contro_unity.Properties.Resources.icons8_checked_50;
+            this.btnConfirmar.Iconimage_right = null;
+            this.btnConfirmar.Iconimage_right_Selected = null;
+            this.btnConfirmar.Iconimage_Selected = null;
+            this.btnConfirmar.IconMarginLeft = 0;
+            this.btnConfirmar.IconMarginRight = 0;
+            this.btnConfirmar.IconRightVisible = true;
+            this.btnConfirmar.IconRightZoom = 0D;
+            this.btnConfirmar.IconVisible = true;
+            this.btnConfirmar.IconZoom = 55D;
+            this.btnConfirmar.IsTab = false;
+            this.btnConfirmar.Location = new System.Drawing.Point(131, 142);
+            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Normalcolor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
+            this.btnConfirmar.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnConfirmar.selected = false;
+            this.btnConfirmar.Size = new System.Drawing.Size(147, 48);
+            this.btnConfirmar.TabIndex = 3;
+            this.btnConfirmar.Text = "Confirmar";
+            this.btnConfirmar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnConfirmar.Textcolor = System.Drawing.Color.Black;
+            this.btnConfirmar.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolTip1.SetToolTip(this.btnConfirmar, "Confirmar");
             // 
             // txtPassActual
             // 
@@ -133,24 +168,6 @@
             this.txtPassConf.TabIndex = 3;
             this.txtPassConf.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // btnConfirmar
-            // 
-            this.btnConfirmar.BackColor = System.Drawing.SystemColors.Menu;
-            this.btnConfirmar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConfirmar.FlatAppearance.BorderSize = 0;
-            this.btnConfirmar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Menu;
-            this.btnConfirmar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmar.Image = ((System.Drawing.Image)(resources.GetObject("btnConfirmar.Image")));
-            this.btnConfirmar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConfirmar.Location = new System.Drawing.Point(119, 137);
-            this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(143, 46);
-            this.btnConfirmar.TabIndex = 6;
-            this.btnConfirmar.Text = "       Confirmar";
-            this.toolTip1.SetToolTip(this.btnConfirmar, "Confirmar");
-            this.btnConfirmar.UseVisualStyleBackColor = false;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -182,7 +199,7 @@
             // 
             this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.Image = global::Contro_unity.Properties.Resources.icons8_delete_50;
             this.btnCerrar.Location = new System.Drawing.Point(997, 1);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(26, 19);
@@ -220,11 +237,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnConfirmar;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.ToolTip toolTip1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtPassConf;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtPassActual;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtPassNew;
+        private Bunifu.Framework.UI.BunifuFlatButton btnConfirmar;
     }
 }
