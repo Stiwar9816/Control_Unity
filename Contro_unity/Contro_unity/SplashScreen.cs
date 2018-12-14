@@ -83,10 +83,5 @@ namespace Contro_unity
         {
             this.Opacity += .010;
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
