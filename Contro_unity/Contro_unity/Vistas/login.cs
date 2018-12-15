@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Data.SqlClient;
+using CapaNegocio;
 
 namespace Contro_unity
 {
@@ -95,6 +96,24 @@ namespace Contro_unity
         private void linkpass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            CNusuarios objUsuario = new CNusuarios();
+            SqlDataReader Loguear;
+            objUsuario.cc_user = txtuser.Text;
+            objUsuario.pass_user = txtpass.Text;
+            Loguear = objUsuario.IniciarSesion();
+            if (Loguear.Read() == true)
+            {
+                this.Hide();
+                MenuPrincipal objMP = new MenuPrincipal();
+                objMP.Show();
+            } else
+            {
+                MessageBox.Show("Contraseña y/o Usuario Invalido");
+            }
         }
     }
     }

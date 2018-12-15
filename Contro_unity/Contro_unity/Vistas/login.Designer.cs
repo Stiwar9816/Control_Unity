@@ -210,7 +210,6 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 12;
             this.pictureBox4.TabStop = false;
-
             // 
             // btnLogin
             // 
@@ -245,6 +244,7 @@
             this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLogin.Textcolor = System.Drawing.Color.Black;
             this.btnLogin.TextFont = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Italic);
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // pictureBox3
             // 
