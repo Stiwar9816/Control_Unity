@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbEditInventario = new System.Windows.Forms.GroupBox();
+            this.txtPrograma = new Bunifu.Framework.UI.BunifuDropdown();
             this.txtFullName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtCC = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.lbCod_serie = new System.Windows.Forms.Label();
@@ -42,26 +43,30 @@
             this.lblMarca = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Id_teacher = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cc_teacher = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nom_teacher = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.program_teacher = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnConfirmar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAgregar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuDropdown2 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.control_unityDataSet = new Contro_unity.control_unityDataSet();
+            this.teacherBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.teacherTableAdapter = new Contro_unity.control_unityDataSetTableAdapters.teacherTableAdapter();
+            this.idteacherDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ccteacherDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomteacherDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.programteacherDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbEditInventario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.control_unityDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teacherBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // gbEditInventario
             // 
             this.gbEditInventario.BackColor = System.Drawing.SystemColors.Menu;
-            this.gbEditInventario.Controls.Add(this.bunifuDropdown2);
+            this.gbEditInventario.Controls.Add(this.txtPrograma);
             this.gbEditInventario.Controls.Add(this.txtFullName);
             this.gbEditInventario.Controls.Add(this.txtCC);
             this.gbEditInventario.Controls.Add(this.lbCod_serie);
@@ -75,6 +80,30 @@
             this.gbEditInventario.TabIndex = 5;
             this.gbEditInventario.TabStop = false;
             this.gbEditInventario.Text = "DATOS DEL PROFESOR";
+            // 
+            // txtPrograma
+            // 
+            this.txtPrograma.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtPrograma.BorderRadius = 3;
+            this.txtPrograma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtPrograma.DisabledColor = System.Drawing.SystemColors.Menu;
+            this.txtPrograma.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrograma.ForeColor = System.Drawing.Color.Black;
+            this.txtPrograma.Items = new string[] {
+        " Ingeniria sistemas",
+        " Ingeniria Industrial",
+        " Psicologia",
+        " Trabajo Social",
+        " Ingles",
+        " Otro"};
+            this.txtPrograma.Location = new System.Drawing.Point(182, 102);
+            this.txtPrograma.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPrograma.Name = "txtPrograma";
+            this.txtPrograma.NomalColor = System.Drawing.SystemColors.Menu;
+            this.txtPrograma.onHoverColor = System.Drawing.Color.Gainsboro;
+            this.txtPrograma.selectedIndex = -1;
+            this.txtPrograma.Size = new System.Drawing.Size(239, 24);
+            this.txtPrograma.TabIndex = 31;
             // 
             // txtFullName
             // 
@@ -158,90 +187,69 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridView1.AllowUserToAddRows = false;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridView1.ColumnHeadersHeight = 37;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id_teacher,
-            this.cc_teacher,
-            this.nom_teacher,
-            this.program_teacher});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
+            this.idteacherDataGridViewTextBoxColumn,
+            this.ccteacherDataGridViewTextBoxColumn,
+            this.nomteacherDataGridViewTextBoxColumn,
+            this.programteacherDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.teacherBindingSource;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Menu;
             this.dataGridView1.Location = new System.Drawing.Point(12, 48);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 10;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(554, 401);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // Id_teacher
-            // 
-            this.Id_teacher.HeaderText = "ID";
-            this.Id_teacher.Name = "Id_teacher";
-            this.Id_teacher.Width = 43;
-            // 
-            // cc_teacher
-            // 
-            this.cc_teacher.HeaderText = "C.C.";
-            this.cc_teacher.Name = "cc_teacher";
-            this.cc_teacher.Width = 57;
-            // 
-            // nom_teacher
-            // 
-            this.nom_teacher.HeaderText = "Nombre Completo";
-            this.nom_teacher.Name = "nom_teacher";
-            this.nom_teacher.Width = 133;
-            // 
-            // program_teacher
-            // 
-            this.program_teacher.HeaderText = "Programa";
-            this.program_teacher.Name = "program_teacher";
-            this.program_teacher.Width = 91;
             // 
             // btnCerrar
             // 
@@ -364,6 +372,7 @@
             this.btnConfirmar.Textcolor = System.Drawing.Color.Black;
             this.btnConfirmar.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolTip1.SetToolTip(this.btnConfirmar, "Confirmar");
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // btnAgregar
             // 
@@ -400,30 +409,50 @@
             this.btnAgregar.Textcolor = System.Drawing.Color.Black;
             this.btnAgregar.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolTip1.SetToolTip(this.btnAgregar, "Agregar");
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // bunifuDropdown2
+            // control_unityDataSet
             // 
-            this.bunifuDropdown2.BackColor = System.Drawing.SystemColors.Menu;
-            this.bunifuDropdown2.BorderRadius = 3;
-            this.bunifuDropdown2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuDropdown2.DisabledColor = System.Drawing.SystemColors.Menu;
-            this.bunifuDropdown2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuDropdown2.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDropdown2.Items = new string[] {
-        " Ingeniria sistemas",
-        " Ingeniria Industrial",
-        " Psicologia",
-        " Trabajo Social",
-        " Ingles",
-        " Otro"};
-            this.bunifuDropdown2.Location = new System.Drawing.Point(182, 102);
-            this.bunifuDropdown2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuDropdown2.Name = "bunifuDropdown2";
-            this.bunifuDropdown2.NomalColor = System.Drawing.SystemColors.Menu;
-            this.bunifuDropdown2.onHoverColor = System.Drawing.Color.Gainsboro;
-            this.bunifuDropdown2.selectedIndex = -1;
-            this.bunifuDropdown2.Size = new System.Drawing.Size(239, 24);
-            this.bunifuDropdown2.TabIndex = 31;
+            this.control_unityDataSet.DataSetName = "control_unityDataSet";
+            this.control_unityDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // teacherBindingSource
+            // 
+            this.teacherBindingSource.DataMember = "teacher";
+            this.teacherBindingSource.DataSource = this.control_unityDataSet;
+            // 
+            // teacherTableAdapter
+            // 
+            this.teacherTableAdapter.ClearBeforeFill = true;
+            // 
+            // idteacherDataGridViewTextBoxColumn
+            // 
+            this.idteacherDataGridViewTextBoxColumn.DataPropertyName = "id_teacher";
+            this.idteacherDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idteacherDataGridViewTextBoxColumn.Name = "idteacherDataGridViewTextBoxColumn";
+            this.idteacherDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idteacherDataGridViewTextBoxColumn.Width = 43;
+            // 
+            // ccteacherDataGridViewTextBoxColumn
+            // 
+            this.ccteacherDataGridViewTextBoxColumn.DataPropertyName = "cc_teacher";
+            this.ccteacherDataGridViewTextBoxColumn.HeaderText = "C.C";
+            this.ccteacherDataGridViewTextBoxColumn.Name = "ccteacherDataGridViewTextBoxColumn";
+            this.ccteacherDataGridViewTextBoxColumn.Width = 54;
+            // 
+            // nomteacherDataGridViewTextBoxColumn
+            // 
+            this.nomteacherDataGridViewTextBoxColumn.DataPropertyName = "nom_teacher";
+            this.nomteacherDataGridViewTextBoxColumn.HeaderText = "Nombre Completo";
+            this.nomteacherDataGridViewTextBoxColumn.Name = "nomteacherDataGridViewTextBoxColumn";
+            this.nomteacherDataGridViewTextBoxColumn.Width = 133;
+            // 
+            // programteacherDataGridViewTextBoxColumn
+            // 
+            this.programteacherDataGridViewTextBoxColumn.DataPropertyName = "program_teacher";
+            this.programteacherDataGridViewTextBoxColumn.HeaderText = "Programa";
+            this.programteacherDataGridViewTextBoxColumn.Name = "programteacherDataGridViewTextBoxColumn";
+            this.programteacherDataGridViewTextBoxColumn.Width = 91;
             // 
             // MenuProfesores
             // 
@@ -442,10 +471,13 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MenuProfesores";
             this.Text = "MenuProfesores";
+            this.Load += new System.EventHandler(this.MenuProfesores_Load);
             this.gbEditInventario.ResumeLayout(false);
             this.gbEditInventario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.control_unityDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teacherBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -458,10 +490,6 @@
         private System.Windows.Forms.Label lblMarca;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id_teacher;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cc_teacher;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nom_teacher;
-        private System.Windows.Forms.DataGridViewTextBoxColumn program_teacher;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.ToolTip toolTip1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtFullName;
@@ -470,6 +498,13 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private Bunifu.Framework.UI.BunifuFlatButton btnConfirmar;
         private Bunifu.Framework.UI.BunifuFlatButton btnAgregar;
-        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown2;
+        private Bunifu.Framework.UI.BunifuDropdown txtPrograma;
+        private control_unityDataSet control_unityDataSet;
+        private System.Windows.Forms.BindingSource teacherBindingSource;
+        private control_unityDataSetTableAdapters.teacherTableAdapter teacherTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idteacherDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ccteacherDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomteacherDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn programteacherDataGridViewTextBoxColumn;
     }
 }
