@@ -57,7 +57,7 @@ namespace Contro_unity
             //Agregar Profesor si los textBox estan habilitados
             if (btnAgregar.Enabled == true)
             {
-                MessageBox.Show(con.insertar_profesores(Convert.ToInt64(txtCC.Text), txtFullName.Text, txtPrograma.Text));
+               // MessageBox.Show(con.insertar_profesores(Convert.ToInt64(txtCC.Text), txtFullName.Text, txtPrograma.Text));
                 this.teacherTableAdapter.Fill(this.control_unityDataSet.teacher);
                 txtCC.Text = "";
                 txtFullName.Text = "";

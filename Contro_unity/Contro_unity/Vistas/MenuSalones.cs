@@ -42,7 +42,7 @@ namespace Contro_unity
         {
             if(btnAgregar.Enabled == true)
             {
-                MessageBox.Show(con.insertar_salon(txtNom_Salon.Text,txtDescripcion.Text));
+               // MessageBox.Show(con.insertar_salon(txtNom_Salon.Text,txtDescripcion.Text));
                 this.salonsTableAdapter.Fill(this.control_unityDataSet.salons);
                 txtNom_Salon.Text = "";
                 txtDescripcion.Text = "";
