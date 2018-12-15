@@ -35,6 +35,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbEditInventario = new System.Windows.Forms.GroupBox();
+            this.txtPrograma = new System.Windows.Forms.ComboBox();
             this.txtFullName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtCC = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.lbCod_serie = new System.Windows.Forms.Label();
@@ -55,7 +56,6 @@
             this.btnConfirmar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAgregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.teacherTableAdapter = new Contro_unity.control_unityDataSetTableAdapters.teacherTableAdapter();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.gbEditInventario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teacherBindingSource)).BeginInit();
@@ -66,7 +66,7 @@
             // gbEditInventario
             // 
             this.gbEditInventario.BackColor = System.Drawing.SystemColors.Menu;
-            this.gbEditInventario.Controls.Add(this.comboBox1);
+            this.gbEditInventario.Controls.Add(this.txtPrograma);
             this.gbEditInventario.Controls.Add(this.txtFullName);
             this.gbEditInventario.Controls.Add(this.txtCC);
             this.gbEditInventario.Controls.Add(this.lbCod_serie);
@@ -80,6 +80,25 @@
             this.gbEditInventario.TabIndex = 5;
             this.gbEditInventario.TabStop = false;
             this.gbEditInventario.Text = "DATOS DEL PROFESOR";
+            // 
+            // txtPrograma
+            // 
+            this.txtPrograma.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtPrograma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtPrograma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.txtPrograma.FormattingEnabled = true;
+            this.txtPrograma.Items.AddRange(new object[] {
+            "Ingenieria Industrial",
+            "Ingenieria Sistemas",
+            "Psicologia",
+            "Antropologia",
+            "Ingles",
+            "Trabajo Social",
+            "Otro"});
+            this.txtPrograma.Location = new System.Drawing.Point(182, 96);
+            this.txtPrograma.Name = "txtPrograma";
+            this.txtPrograma.Size = new System.Drawing.Size(239, 24);
+            this.txtPrograma.TabIndex = 8;
             // 
             // txtFullName
             // 
@@ -431,25 +450,6 @@
             // 
             this.teacherTableAdapter.ClearBeforeFill = true;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Ingenieria Industrial",
-            "Ingenieria Sistemas",
-            "Psicologia",
-            "Antropologia",
-            "Ingles",
-            "Trabajo Social",
-            "Otro"});
-            this.comboBox1.Location = new System.Drawing.Point(182, 96);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(239, 24);
-            this.comboBox1.TabIndex = 8;
-            // 
             // MenuProfesores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -501,6 +501,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ccteacherDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomteacherDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn programteacherDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox txtPrograma;
     }
 }

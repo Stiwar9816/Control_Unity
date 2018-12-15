@@ -35,6 +35,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbUser = new System.Windows.Forms.GroupBox();
+            this.txtRol = new System.Windows.Forms.ComboBox();
             this.txtEmail = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtNombre = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtCC = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -59,7 +60,6 @@
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnConfirmar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.usersTableAdapter = new Contro_unity.control_unityDataSetTableAdapters.usersTableAdapter();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.gbUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -70,7 +70,7 @@
             // gbUser
             // 
             this.gbUser.BackColor = System.Drawing.SystemColors.Menu;
-            this.gbUser.Controls.Add(this.comboBox1);
+            this.gbUser.Controls.Add(this.txtRol);
             this.gbUser.Controls.Add(this.txtEmail);
             this.gbUser.Controls.Add(this.txtNombre);
             this.gbUser.Controls.Add(this.txtCC);
@@ -86,6 +86,21 @@
             this.gbUser.TabIndex = 24;
             this.gbUser.TabStop = false;
             this.gbUser.Text = "DATOS DEL USUARIO";
+            // 
+            // txtRol
+            // 
+            this.txtRol.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtRol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.txtRol.FormattingEnabled = true;
+            this.txtRol.Items.AddRange(new object[] {
+            "Administrador",
+            "Recepcion",
+            "Biblioteca"});
+            this.txtRol.Location = new System.Drawing.Point(150, 141);
+            this.txtRol.Name = "txtRol";
+            this.txtRol.Size = new System.Drawing.Size(200, 24);
+            this.txtRol.TabIndex = 34;
             // 
             // txtEmail
             // 
@@ -486,21 +501,6 @@
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Administrador",
-            "Recepcion",
-            "Biblioteca"});
-            this.comboBox1.Location = new System.Drawing.Point(150, 141);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 24);
-            this.comboBox1.TabIndex = 34;
-            // 
             // MenuUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -557,6 +557,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn emailuserDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datetimeuserDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn roluserDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox txtRol;
     }
 }
