@@ -81,6 +81,7 @@ namespace Contro_unity
         }
 
 
+
         //Consultas Salones
 
         public string insertar_salon(string nombre, string descripcion)
@@ -104,13 +105,13 @@ namespace Contro_unity
 
         //Consultas Inventario
 
-        public string insertar_inventario(string cod_serie, string nombre,DateTime fecha, Decimal stock, string marca, string descripcion)
+        public string insertar_inventario(string cod_serie, string nombre, decimal stock, string marca, string descripcion)
         {
             string resultado = "Se agrego correctamente";
 
             try
             {
-                SqlCom = new SqlCommand("insert into implements (cod_serie,nom_implements,datetime_register_implements,stock,brand,description_implements) values ('" + cod_serie + "','" + nombre + "'",gedate(),getdate()" "+stock+", '"+marca+"','"+descripcion+"')", SqlCon);
+                SqlCom = new SqlCommand("insert into implements (cod_serie,nom_implements,stock_implements,brand,description_implements) values ('" + cod_serie + "','" + nombre + "', "+stock+", '"+marca+"','"+descripcion+"')", SqlCon);
                 SqlCom.ExecuteNonQuery();
             }
             catch (Exception Ex)

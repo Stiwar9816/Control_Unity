@@ -53,9 +53,6 @@
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.control_unityDataSet = new Contro_unity.control_unityDataSet();
-            this.implementsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.implementsTableAdapter = new Contro_unity.control_unityDataSetTableAdapters.implementsTableAdapter();
             this.idimplementsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codserieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomimplementsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,12 +60,16 @@
             this.stockimplementsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.brandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionimplementsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.implementsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.control_unityDataSet = new Contro_unity.control_unityDataSet();
+            this.implementsTableAdapter = new Contro_unity.control_unityDataSetTableAdapters.implementsTableAdapter();
+            this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.gbEditInventario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.control_unityDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.implementsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.control_unityDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -436,7 +437,8 @@
             this.datetimeregisterimplementsDataGridViewTextBoxColumn,
             this.stockimplementsDataGridViewTextBoxColumn,
             this.brandDataGridViewTextBoxColumn,
-            this.descriptionimplementsDataGridViewTextBoxColumn});
+            this.descriptionimplementsDataGridViewTextBoxColumn,
+            this.Eliminar});
             this.dataGridView1.DataSource = this.implementsBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Menu;
@@ -473,20 +475,6 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(610, 401);
             this.dataGridView1.TabIndex = 21;
-            // 
-            // control_unityDataSet
-            // 
-            this.control_unityDataSet.DataSetName = "control_unityDataSet";
-            this.control_unityDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // implementsBindingSource
-            // 
-            this.implementsBindingSource.DataMember = "implements";
-            this.implementsBindingSource.DataSource = this.control_unityDataSet;
-            // 
-            // implementsTableAdapter
-            // 
-            this.implementsTableAdapter.ClearBeforeFill = true;
             // 
             // idimplementsDataGridViewTextBoxColumn
             // 
@@ -544,6 +532,27 @@
             this.descriptionimplementsDataGridViewTextBoxColumn.ReadOnly = true;
             this.descriptionimplementsDataGridViewTextBoxColumn.Width = 102;
             // 
+            // implementsBindingSource
+            // 
+            this.implementsBindingSource.DataMember = "implements";
+            this.implementsBindingSource.DataSource = this.control_unityDataSet;
+            // 
+            // control_unityDataSet
+            // 
+            this.control_unityDataSet.DataSetName = "control_unityDataSet";
+            this.control_unityDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // implementsTableAdapter
+            // 
+            this.implementsTableAdapter.ClearBeforeFill = true;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            this.Eliminar.Width = 58;
+            // 
             // MenuInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -568,8 +577,8 @@
             this.gbEditInventario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtStock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.control_unityDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.implementsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.control_unityDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -605,5 +614,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn stockimplementsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn brandDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionimplementsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
     }
 }

@@ -52,13 +52,14 @@ namespace Contro_unity
             {
                 if (btnAgregar.Enabled == true)
                 {
-                    MessageBox.Show(con.insertar_inventario(txtCod_Serie.Text,txtNombre.Text,DateTime.Now,txtStock.Value,txtMarca.Text,txtDescripcion.Text));
+                    MessageBox.Show(con.insertar_inventario(txtCod_Serie.Text,txtNombre.Text,Convert.ToInt32( txtStock.Value),txtMarca.Text,txtDescripcion.Text));
                     this.implementsTableAdapter.Fill(this.control_unityDataSet.implements);
                     txtCod_Serie.Text = "";
                     txtNombre.Text = "";
                     txtStock.Value = 0;
                     txtMarca.Text = "";
                     txtDescripcion.Text = "";
+                    //txtFecha.Text = "";
                 }
                 else
                 {

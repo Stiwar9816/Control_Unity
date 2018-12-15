@@ -45,27 +45,32 @@
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cc_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nom_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datetime_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rol_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iduserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ccuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datetimeuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roluserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.control_unityDataSet = new Contro_unity.control_unityDataSet();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnConfirmar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuDropdown2 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.usersTableAdapter = new Contro_unity.control_unityDataSetTableAdapters.usersTableAdapter();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.gbUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.control_unityDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // gbUser
             // 
             this.gbUser.BackColor = System.Drawing.SystemColors.Menu;
-            this.gbUser.Controls.Add(this.bunifuDropdown2);
+            this.gbUser.Controls.Add(this.comboBox1);
             this.gbUser.Controls.Add(this.txtEmail);
             this.gbUser.Controls.Add(this.txtNombre);
             this.gbUser.Controls.Add(this.txtCC);
@@ -208,11 +213,13 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Menu;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Menu;
@@ -231,12 +238,13 @@
             this.dataGridView1.ColumnHeadersHeight = 37;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.cc_user,
-            this.nom_user,
-            this.email_user,
-            this.datetime_user,
-            this.rol_user});
+            this.iduserDataGridViewTextBoxColumn,
+            this.ccuserDataGridViewTextBoxColumn,
+            this.nomuserDataGridViewTextBoxColumn,
+            this.emailuserDataGridViewTextBoxColumn,
+            this.datetimeuserDataGridViewTextBoxColumn,
+            this.roluserDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.usersBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Menu;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -249,6 +257,7 @@
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Menu;
             this.dataGridView1.Location = new System.Drawing.Point(12, 69);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Menu;
@@ -271,41 +280,63 @@
             this.dataGridView1.Size = new System.Drawing.Size(615, 387);
             this.dataGridView1.TabIndex = 20;
             // 
-            // Id
+            // iduserDataGridViewTextBoxColumn
             // 
-            this.Id.HeaderText = "ID";
-            this.Id.Name = "Id";
-            this.Id.Width = 43;
+            this.iduserDataGridViewTextBoxColumn.DataPropertyName = "id_user";
+            this.iduserDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iduserDataGridViewTextBoxColumn.Name = "iduserDataGridViewTextBoxColumn";
+            this.iduserDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iduserDataGridViewTextBoxColumn.Width = 43;
             // 
-            // cc_user
+            // ccuserDataGridViewTextBoxColumn
             // 
-            this.cc_user.HeaderText = "C.C.";
-            this.cc_user.Name = "cc_user";
-            this.cc_user.Width = 57;
+            this.ccuserDataGridViewTextBoxColumn.DataPropertyName = "cc_user";
+            this.ccuserDataGridViewTextBoxColumn.HeaderText = "C.C";
+            this.ccuserDataGridViewTextBoxColumn.Name = "ccuserDataGridViewTextBoxColumn";
+            this.ccuserDataGridViewTextBoxColumn.ReadOnly = true;
+            this.ccuserDataGridViewTextBoxColumn.Width = 54;
             // 
-            // nom_user
+            // nomuserDataGridViewTextBoxColumn
             // 
-            this.nom_user.HeaderText = "Nombre ";
-            this.nom_user.Name = "nom_user";
-            this.nom_user.Width = 84;
+            this.nomuserDataGridViewTextBoxColumn.DataPropertyName = "nom_user";
+            this.nomuserDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nomuserDataGridViewTextBoxColumn.Name = "nomuserDataGridViewTextBoxColumn";
+            this.nomuserDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nomuserDataGridViewTextBoxColumn.Width = 81;
             // 
-            // email_user
+            // emailuserDataGridViewTextBoxColumn
             // 
-            this.email_user.HeaderText = "Email";
-            this.email_user.Name = "email_user";
-            this.email_user.Width = 63;
+            this.emailuserDataGridViewTextBoxColumn.DataPropertyName = "email_user";
+            this.emailuserDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailuserDataGridViewTextBoxColumn.Name = "emailuserDataGridViewTextBoxColumn";
+            this.emailuserDataGridViewTextBoxColumn.ReadOnly = true;
+            this.emailuserDataGridViewTextBoxColumn.Width = 63;
             // 
-            // datetime_user
+            // datetimeuserDataGridViewTextBoxColumn
             // 
-            this.datetime_user.HeaderText = "Fecha Y Hora De Registro";
-            this.datetime_user.Name = "datetime_user";
-            this.datetime_user.Width = 121;
+            this.datetimeuserDataGridViewTextBoxColumn.DataPropertyName = "datetime_user";
+            this.datetimeuserDataGridViewTextBoxColumn.HeaderText = "Fecha de registro";
+            this.datetimeuserDataGridViewTextBoxColumn.Name = "datetimeuserDataGridViewTextBoxColumn";
+            this.datetimeuserDataGridViewTextBoxColumn.ReadOnly = true;
+            this.datetimeuserDataGridViewTextBoxColumn.Width = 123;
             // 
-            // rol_user
+            // roluserDataGridViewTextBoxColumn
             // 
-            this.rol_user.HeaderText = "Rol";
-            this.rol_user.Name = "rol_user";
-            this.rol_user.Width = 48;
+            this.roluserDataGridViewTextBoxColumn.DataPropertyName = "rol_user";
+            this.roluserDataGridViewTextBoxColumn.HeaderText = "Rol";
+            this.roluserDataGridViewTextBoxColumn.Name = "roluserDataGridViewTextBoxColumn";
+            this.roluserDataGridViewTextBoxColumn.ReadOnly = true;
+            this.roluserDataGridViewTextBoxColumn.Width = 48;
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "users";
+            this.usersBindingSource.DataSource = this.control_unityDataSet;
+            // 
+            // control_unityDataSet
+            // 
+            this.control_unityDataSet.DataSetName = "control_unityDataSet";
+            this.control_unityDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bunifuFlatButton3
             // 
@@ -451,26 +482,24 @@
             this.btnConfirmar.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolTip1.SetToolTip(this.btnConfirmar, "Confirmar");
             // 
-            // bunifuDropdown2
+            // usersTableAdapter
             // 
-            this.bunifuDropdown2.BackColor = System.Drawing.SystemColors.Menu;
-            this.bunifuDropdown2.BorderRadius = 3;
-            this.bunifuDropdown2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuDropdown2.DisabledColor = System.Drawing.SystemColors.Menu;
-            this.bunifuDropdown2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuDropdown2.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDropdown2.Items = new string[] {
-        " Administrador",
-        " Recepciòn",
-        " Biblioteca"};
-            this.bunifuDropdown2.Location = new System.Drawing.Point(150, 144);
-            this.bunifuDropdown2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuDropdown2.Name = "bunifuDropdown2";
-            this.bunifuDropdown2.NomalColor = System.Drawing.SystemColors.Menu;
-            this.bunifuDropdown2.onHoverColor = System.Drawing.Color.Gainsboro;
-            this.bunifuDropdown2.selectedIndex = -1;
-            this.bunifuDropdown2.Size = new System.Drawing.Size(200, 24);
-            this.bunifuDropdown2.TabIndex = 34;
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Administrador",
+            "Recepcion",
+            "Biblioteca"});
+            this.comboBox1.Location = new System.Drawing.Point(150, 141);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(200, 24);
+            this.comboBox1.TabIndex = 34;
             // 
             // MenuUsuarios
             // 
@@ -490,10 +519,13 @@
             this.Name = "MenuUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuUsuarios";
+            this.Load += new System.EventHandler(this.MenuUsuarios_Load);
             this.gbUser.ResumeLayout(false);
             this.gbUser.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.control_unityDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -508,12 +540,6 @@
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cc_user;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nom_user;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email_user;
-        private System.Windows.Forms.DataGridViewTextBoxColumn datetime_user;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rol_user;
         private System.Windows.Forms.ToolTip toolTip1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtEmail;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtNombre;
@@ -522,6 +548,15 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Bunifu.Framework.UI.BunifuFlatButton btnConfirmar;
-        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown2;
+        private control_unityDataSet control_unityDataSet;
+        private System.Windows.Forms.BindingSource usersBindingSource;
+        private control_unityDataSetTableAdapters.usersTableAdapter usersTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iduserDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ccuserDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomuserDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailuserDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datetimeuserDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roluserDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

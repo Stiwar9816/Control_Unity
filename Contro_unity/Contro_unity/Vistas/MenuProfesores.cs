@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Contro_unity
 {
@@ -54,7 +55,7 @@ namespace Contro_unity
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             //Agregar Profesor si los textBox estan habilitados
-            if(btnAgregar.Enabled == true)
+            if (btnAgregar.Enabled == true)
             {
                 MessageBox.Show(con.insertar_profesores(Convert.ToInt64(txtCC.Text), txtFullName.Text, txtPrograma.selectedValue));
                 this.teacherTableAdapter.Fill(this.control_unityDataSet.teacher);
@@ -64,8 +65,18 @@ namespace Contro_unity
             }
             else
             {
-                MessageBox.Show("Los Campo de textos no estan habilitados, Por favor presione agregar e intente de neuvo");
+                MessageBox.Show("Los Campo de textos no estan habilitados, Por favor seleccione una opcion e intente de neuvo");
             }
+
         }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            txtCC.Enabled = true;
+            txtFullName.Enabled = true;
+            txtPrograma.Enabled = true;
+           
+        }
+
     }
 }

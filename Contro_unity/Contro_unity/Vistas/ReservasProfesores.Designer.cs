@@ -34,6 +34,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
             this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
@@ -46,14 +47,21 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnConfirmar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
-            this.bunifuDropdown2 = new Bunifu.Framework.UI.BunifuDropdown();
-            this.bunifuDropdown3 = new Bunifu.Framework.UI.BunifuDropdown();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.txtNombre = new System.Windows.Forms.ComboBox();
+            this.teacherBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.control_unityDataSet = new Contro_unity.control_unityDataSet();
+            this.teacherTableAdapter = new Contro_unity.control_unityDataSetTableAdapters.teacherTableAdapter();
+            this.txtPrograma = new System.Windows.Forms.ComboBox();
+            this.txtSalon = new System.Windows.Forms.ComboBox();
+            this.salonsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.salonsTableAdapter = new Contro_unity.control_unityDataSetTableAdapters.salonsTableAdapter();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teacherBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.control_unityDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salonsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -69,8 +77,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.bunifuDropdown3);
-            this.groupBox1.Controls.Add(this.bunifuDropdown2);
+            this.groupBox1.Controls.Add(this.txtPrograma);
+            this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -106,7 +114,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.bunifuDropdown1);
+            this.groupBox2.Controls.Add(this.txtSalon);
             this.groupBox2.Controls.Add(this.bunifuDatepicker1);
             this.groupBox2.Controls.Add(this.checkBox6);
             this.groupBox2.Controls.Add(this.checkBox5);
@@ -125,6 +133,22 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "DATOS DE LA RESERVA";
+            // 
+            // bunifuDatepicker1
+            // 
+            this.bunifuDatepicker1.BackColor = System.Drawing.SystemColors.Menu;
+            this.bunifuDatepicker1.BorderRadius = 3;
+            this.bunifuDatepicker1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuDatepicker1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuDatepicker1.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.bunifuDatepicker1.FormatCustom = null;
+            this.bunifuDatepicker1.Location = new System.Drawing.Point(212, 152);
+            this.bunifuDatepicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuDatepicker1.Name = "bunifuDatepicker1";
+            this.bunifuDatepicker1.Size = new System.Drawing.Size(344, 26);
+            this.bunifuDatepicker1.TabIndex = 19;
+            this.bunifuDatepicker1.Value = new System.DateTime(2018, 12, 14, 11, 6, 2, 829);
             // 
             // checkBox6
             // 
@@ -286,98 +310,89 @@
             this.btnConfirmar.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolTip1.SetToolTip(this.btnConfirmar, "Confirmar");
             // 
-            // bunifuDatepicker1
-            // 
-            this.bunifuDatepicker1.BackColor = System.Drawing.SystemColors.Menu;
-            this.bunifuDatepicker1.BorderRadius = 3;
-            this.bunifuDatepicker1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuDatepicker1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuDatepicker1.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.bunifuDatepicker1.FormatCustom = null;
-            this.bunifuDatepicker1.Location = new System.Drawing.Point(212, 152);
-            this.bunifuDatepicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuDatepicker1.Name = "bunifuDatepicker1";
-            this.bunifuDatepicker1.Size = new System.Drawing.Size(344, 26);
-            this.bunifuDatepicker1.TabIndex = 19;
-            this.bunifuDatepicker1.Value = new System.DateTime(2018, 12, 14, 11, 6, 2, 829);
-            // 
-            // bunifuDropdown1
-            // 
-            this.bunifuDropdown1.BackColor = System.Drawing.SystemColors.Menu;
-            this.bunifuDropdown1.BorderRadius = 3;
-            this.bunifuDropdown1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuDropdown1.DisabledColor = System.Drawing.SystemColors.Menu;
-            this.bunifuDropdown1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuDropdown1.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDropdown1.Items = new string[] {
-        " Salon 101",
-        " Salon 102",
-        " Salon 202",
-        " Salon 204",
-        " Sala De Sistemas 1",
-        " Sala De Sistemas 2",
-        " Auditorio"};
-            this.bunifuDropdown1.Location = new System.Drawing.Point(212, 104);
-            this.bunifuDropdown1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuDropdown1.Name = "bunifuDropdown1";
-            this.bunifuDropdown1.NomalColor = System.Drawing.SystemColors.Menu;
-            this.bunifuDropdown1.onHoverColor = System.Drawing.Color.Gainsboro;
-            this.bunifuDropdown1.selectedIndex = -1;
-            this.bunifuDropdown1.Size = new System.Drawing.Size(344, 24);
-            this.bunifuDropdown1.TabIndex = 19;
-            // 
-            // bunifuDropdown2
-            // 
-            this.bunifuDropdown2.BackColor = System.Drawing.SystemColors.Menu;
-            this.bunifuDropdown2.BorderRadius = 3;
-            this.bunifuDropdown2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuDropdown2.DisabledColor = System.Drawing.SystemColors.Menu;
-            this.bunifuDropdown2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuDropdown2.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDropdown2.Items = new string[] {
-        " Ingeniria sistemas",
-        " Ingeniria Industrial",
-        " Psicologia",
-        " Trabajo Social",
-        " Ingles",
-        " Otro"};
-            this.bunifuDropdown2.Location = new System.Drawing.Point(93, 77);
-            this.bunifuDropdown2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuDropdown2.Name = "bunifuDropdown2";
-            this.bunifuDropdown2.NomalColor = System.Drawing.SystemColors.Menu;
-            this.bunifuDropdown2.onHoverColor = System.Drawing.Color.Gainsboro;
-            this.bunifuDropdown2.selectedIndex = -1;
-            this.bunifuDropdown2.Size = new System.Drawing.Size(255, 24);
-            this.bunifuDropdown2.TabIndex = 20;
-            // 
-            // bunifuDropdown3
-            // 
-            this.bunifuDropdown3.BackColor = System.Drawing.SystemColors.Menu;
-            this.bunifuDropdown3.BorderRadius = 3;
-            this.bunifuDropdown3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuDropdown3.DisabledColor = System.Drawing.SystemColors.Menu;
-            this.bunifuDropdown3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuDropdown3.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDropdown3.Items = new string[] {
-        " Jackson Berney",
-        " Johnny Blanquiceth",
-        " Lina Mosquera"};
-            this.bunifuDropdown3.Location = new System.Drawing.Point(93, 28);
-            this.bunifuDropdown3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuDropdown3.Name = "bunifuDropdown3";
-            this.bunifuDropdown3.NomalColor = System.Drawing.SystemColors.Menu;
-            this.bunifuDropdown3.onHoverColor = System.Drawing.Color.Gainsboro;
-            this.bunifuDropdown3.selectedIndex = -1;
-            this.bunifuDropdown3.Size = new System.Drawing.Size(255, 24);
-            this.bunifuDropdown3.TabIndex = 21;
-            // 
             // bunifuDragControl1
             // 
             this.bunifuDragControl1.Fixed = true;
             this.bunifuDragControl1.Horizontal = true;
             this.bunifuDragControl1.TargetControl = null;
             this.bunifuDragControl1.Vertical = true;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtNombre.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtNombre.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.teacherBindingSource, "nom_teacher", true));
+            this.txtNombre.DataSource = this.teacherBindingSource;
+            this.txtNombre.DisplayMember = "nom_teacher";
+            this.txtNombre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.txtNombre.FormattingEnabled = true;
+            this.txtNombre.Location = new System.Drawing.Point(94, 31);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(254, 26);
+            this.txtNombre.TabIndex = 19;
+            this.txtNombre.ValueMember = "nom_teacher";
+            // 
+            // teacherBindingSource
+            // 
+            this.teacherBindingSource.DataMember = "teacher";
+            this.teacherBindingSource.DataSource = this.control_unityDataSet;
+            // 
+            // control_unityDataSet
+            // 
+            this.control_unityDataSet.DataSetName = "control_unityDataSet";
+            this.control_unityDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // teacherTableAdapter
+            // 
+            this.teacherTableAdapter.ClearBeforeFill = true;
+            // 
+            // txtPrograma
+            // 
+            this.txtPrograma.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtPrograma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtPrograma.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.teacherBindingSource, "program_teacher", true));
+            this.txtPrograma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtPrograma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.txtPrograma.FormattingEnabled = true;
+            this.txtPrograma.Items.AddRange(new object[] {
+            "Ingenieria de sistemas",
+            "Ingeniria Industrial",
+            "Psicologia",
+            "Trabajo Social",
+            "Antropologia",
+            "Ingles",
+            "Especializaciones",
+            "Otro"});
+            this.txtPrograma.Location = new System.Drawing.Point(94, 75);
+            this.txtPrograma.Name = "txtPrograma";
+            this.txtPrograma.Size = new System.Drawing.Size(254, 26);
+            this.txtPrograma.TabIndex = 19;
+            // 
+            // txtSalon
+            // 
+            this.txtSalon.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtSalon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtSalon.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.salonsBindingSource, "nom_salon", true));
+            this.txtSalon.DataSource = this.salonsBindingSource;
+            this.txtSalon.DisplayMember = "nom_salon";
+            this.txtSalon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtSalon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.txtSalon.FormattingEnabled = true;
+            this.txtSalon.Location = new System.Drawing.Point(212, 102);
+            this.txtSalon.Name = "txtSalon";
+            this.txtSalon.Size = new System.Drawing.Size(344, 26);
+            this.txtSalon.TabIndex = 19;
+            this.txtSalon.ValueMember = "nom_salon";
+            // 
+            // salonsBindingSource
+            // 
+            this.salonsBindingSource.DataMember = "salons";
+            this.salonsBindingSource.DataSource = this.control_unityDataSet;
+            // 
+            // salonsTableAdapter
+            // 
+            this.salonsTableAdapter.ClearBeforeFill = true;
             // 
             // ReservasProfesores
             // 
@@ -394,11 +409,15 @@
             this.Name = "ReservasProfesores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReservasProfesores";
+            this.Load += new System.EventHandler(this.ReservasProfesores_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teacherBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.control_unityDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salonsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -424,9 +443,14 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private Bunifu.Framework.UI.BunifuFlatButton btnConfirmar;
         private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker1;
-        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown1;
-        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown3;
-        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown2;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private System.Windows.Forms.ComboBox txtNombre;
+        private control_unityDataSet control_unityDataSet;
+        private System.Windows.Forms.BindingSource teacherBindingSource;
+        private control_unityDataSetTableAdapters.teacherTableAdapter teacherTableAdapter;
+        private System.Windows.Forms.ComboBox txtPrograma;
+        private System.Windows.Forms.ComboBox txtSalon;
+        private System.Windows.Forms.BindingSource salonsBindingSource;
+        private control_unityDataSetTableAdapters.salonsTableAdapter salonsTableAdapter;
     }
 }

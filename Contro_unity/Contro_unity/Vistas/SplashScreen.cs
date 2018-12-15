@@ -100,3 +100,10 @@ namespace Contro_unity
         }
     }
 }
+
+namespace Vistas
+{
+    class SplashScreen : Form
+    {
+    }
+}
