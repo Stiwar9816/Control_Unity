@@ -71,12 +71,15 @@ namespace Contro_unity
 
         private void SplashScreen_Load(object sender, EventArgs e)
         {
+            Conexion con = new Conexion();
+
             timer2.Start();
 
             if(this.Opacity == 1)
             {
                 timer2.Stop();
             }
+
         }
 
         private void timer2_Tick(object sender, EventArgs e)
