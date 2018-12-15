@@ -9,14 +9,12 @@ using System.Data;
 namespace CapaDatos
 {
     
-    public class CDlogin
+     public class CDlogin
     {
-        private CDconexion Conexion = new CDconexion();
+        private CDConexion Conexion = new CDConexion();
         private SqlDataReader leer;
-
-        public SqlDataReader IniciarSesion(string user, string pass)
-        {
-            
+        
+        public SqlDataReader IniciarSesion(string user, string pass){
             SqlCommand comando = new SqlCommand("SPIniciarSesion",Conexion.AbrirConexion());
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("@Usuario", user);
