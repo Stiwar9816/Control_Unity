@@ -1,13 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+
 
 namespace Contro_unity.Clases
 {
     class user:Funciones
     {
+        Conexion con = new Conexion();
         //PRODIEDADES DE LA CLASE
         public int Id_user { get; set; }
         public int Cc_user { get; set; }
@@ -57,7 +62,41 @@ namespace Contro_unity.Clases
 
         public int Registrar()
         {
-            throw new NotImplementedException();
+            int ultimo_id = 0;
+            try
+            {
+                using (var cmd = new SqlCommand("SP_REGISTAR_USER", con.Con))
+                {
+                    cmd.Parameters.AddWithValue("@cc_user", this.Cc_user);
+                    cmd.Parameters.AddWithValue("@nom_user", this.Nom_user);
+                    cmd.Parameters.AddWithValue("@password_user", this.Password_user);
+                    cmd.Parameters.AddWithValue("@email_user", this.Email_user);
+                    cmd.Parameters.AddWithValue("@datetime_user", this.Datetime_user);
+                    cmd.Parameters.AddWithValue("@rol_user", this.Rol_user);
+                    cmd.Parameters.AddWithValue("@privilege_user", this.Privilege_user);
+                    cmd.Parameters.AddWithValue("@ultimo_id", SqlDbType.Int).Direction = ParameterDirection.Output;
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    con.Con.Open();
+                    cmd.ExecuteNonQuery();
+                    ultimo_id = Convert.ToInt32(cmd.Parameters["@ultimo_id"].Value.ToString());
+                    con.Con.Close();
+                }
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show("No se pudo registrar", e.Message);
+                return ultimo_id;
+            }
+            finally
+            {
+                if (con.Con.State == ConnectionState.Open)
+                {
+                    con.Con.Close();
+                }
+
+
+            }
+            return ultimo_id;
         }
 
         public bool Actualizar()

@@ -34,197 +34,106 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.gbUser = new System.Windows.Forms.GroupBox();
-            this.txtRol = new System.Windows.Forms.ComboBox();
-            this.txtEmail = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtNombre = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtCC = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.lbCC_User = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblStock = new System.Windows.Forms.Label();
-            this.lblMarca = new System.Windows.Forms.Label();
-            this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.iduserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ccuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datetimeuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roluserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.control_unityDataSet = new Contro_unity.control_unityDataSet();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnConfirmar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.usersTableAdapter = new Contro_unity.control_unityDataSetTableAdapters.usersTableAdapter();
-            this.gbUser.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.roluserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datetimeuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ccuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iduserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.btnAgregar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnConfirmar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.lblMarca = new System.Windows.Forms.Label();
+            this.lblStock = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lbCC_User = new System.Windows.Forms.Label();
+            this.txtCC = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtNombre = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtEmail = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtRol = new System.Windows.Forms.ComboBox();
+            this.txtPass = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.gbUser = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtPrivilegio = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtFecha = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.control_unityDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            this.gbUser.SuspendLayout();
             this.SuspendLayout();
             // 
-            // gbUser
+            // usersBindingSource
             // 
-            this.gbUser.BackColor = System.Drawing.SystemColors.Menu;
-            this.gbUser.Controls.Add(this.txtRol);
-            this.gbUser.Controls.Add(this.txtEmail);
-            this.gbUser.Controls.Add(this.txtNombre);
-            this.gbUser.Controls.Add(this.txtCC);
-            this.gbUser.Controls.Add(this.lbCC_User);
-            this.gbUser.Controls.Add(this.lblNombre);
-            this.gbUser.Controls.Add(this.lblStock);
-            this.gbUser.Controls.Add(this.lblMarca);
-            this.gbUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.gbUser.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbUser.Location = new System.Drawing.Point(642, 69);
-            this.gbUser.Name = "gbUser";
-            this.gbUser.Size = new System.Drawing.Size(361, 177);
-            this.gbUser.TabIndex = 24;
-            this.gbUser.TabStop = false;
-            this.gbUser.Text = "DATOS DEL USUARIO";
+            this.usersBindingSource.DataMember = "users";
+            this.usersBindingSource.DataSource = this.control_unityDataSet;
             // 
-            // txtRol
+            // control_unityDataSet
             // 
-            this.txtRol.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtRol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.txtRol.FormattingEnabled = true;
-            this.txtRol.Items.AddRange(new object[] {
-            "Administrador",
-            "Recepcion",
-            "Biblioteca"});
-            this.txtRol.Location = new System.Drawing.Point(150, 141);
-            this.txtRol.Name = "txtRol";
-            this.txtRol.Size = new System.Drawing.Size(200, 24);
-            this.txtRol.TabIndex = 34;
+            this.control_unityDataSet.DataSetName = "control_unityDataSet";
+            this.control_unityDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // txtEmail
+            // usersTableAdapter
             // 
-            this.txtEmail.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtEmail.HintForeColor = System.Drawing.Color.Empty;
-            this.txtEmail.HintText = "";
-            this.txtEmail.isPassword = false;
-            this.txtEmail.LineFocusedColor = System.Drawing.Color.Khaki;
-            this.txtEmail.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtEmail.LineMouseHoverColor = System.Drawing.Color.Khaki;
-            this.txtEmail.LineThickness = 2;
-            this.txtEmail.Location = new System.Drawing.Point(150, 90);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(200, 30);
-            this.txtEmail.TabIndex = 27;
-            this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.usersTableAdapter.ClearBeforeFill = true;
             // 
-            // txtNombre
+            // roluserDataGridViewTextBoxColumn
             // 
-            this.txtNombre.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtNombre.HintForeColor = System.Drawing.Color.Empty;
-            this.txtNombre.HintText = "";
-            this.txtNombre.isPassword = false;
-            this.txtNombre.LineFocusedColor = System.Drawing.Color.Khaki;
-            this.txtNombre.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtNombre.LineMouseHoverColor = System.Drawing.Color.Khaki;
-            this.txtNombre.LineThickness = 2;
-            this.txtNombre.Location = new System.Drawing.Point(150, 52);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(200, 30);
-            this.txtNombre.TabIndex = 26;
-            this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.roluserDataGridViewTextBoxColumn.DataPropertyName = "rol_user";
+            this.roluserDataGridViewTextBoxColumn.HeaderText = "Rol";
+            this.roluserDataGridViewTextBoxColumn.Name = "roluserDataGridViewTextBoxColumn";
+            this.roluserDataGridViewTextBoxColumn.ReadOnly = true;
+            this.roluserDataGridViewTextBoxColumn.Width = 48;
             // 
-            // txtCC
+            // datetimeuserDataGridViewTextBoxColumn
             // 
-            this.txtCC.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtCC.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCC.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtCC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCC.HintForeColor = System.Drawing.Color.Empty;
-            this.txtCC.HintText = "";
-            this.txtCC.isPassword = false;
-            this.txtCC.LineFocusedColor = System.Drawing.Color.Khaki;
-            this.txtCC.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtCC.LineMouseHoverColor = System.Drawing.Color.Khaki;
-            this.txtCC.LineThickness = 2;
-            this.txtCC.Location = new System.Drawing.Point(150, 14);
-            this.txtCC.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCC.Name = "txtCC";
-            this.txtCC.Size = new System.Drawing.Size(200, 30);
-            this.txtCC.TabIndex = 25;
-            this.txtCC.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.datetimeuserDataGridViewTextBoxColumn.DataPropertyName = "datetime_user";
+            this.datetimeuserDataGridViewTextBoxColumn.HeaderText = "Fecha de registro";
+            this.datetimeuserDataGridViewTextBoxColumn.Name = "datetimeuserDataGridViewTextBoxColumn";
+            this.datetimeuserDataGridViewTextBoxColumn.ReadOnly = true;
+            this.datetimeuserDataGridViewTextBoxColumn.Width = 123;
             // 
-            // lbCC_User
+            // emailuserDataGridViewTextBoxColumn
             // 
-            this.lbCC_User.AutoSize = true;
-            this.lbCC_User.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCC_User.Location = new System.Drawing.Point(21, 26);
-            this.lbCC_User.Name = "lbCC_User";
-            this.lbCC_User.Size = new System.Drawing.Size(48, 18);
-            this.lbCC_User.TabIndex = 0;
-            this.lbCC_User.Text = "C.C : ";
+            this.emailuserDataGridViewTextBoxColumn.DataPropertyName = "email_user";
+            this.emailuserDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailuserDataGridViewTextBoxColumn.Name = "emailuserDataGridViewTextBoxColumn";
+            this.emailuserDataGridViewTextBoxColumn.ReadOnly = true;
+            this.emailuserDataGridViewTextBoxColumn.Width = 63;
             // 
-            // lblNombre
+            // nomuserDataGridViewTextBoxColumn
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(21, 64);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(76, 18);
-            this.lblNombre.TabIndex = 1;
-            this.lblNombre.Text = "Nombre: ";
+            this.nomuserDataGridViewTextBoxColumn.DataPropertyName = "nom_user";
+            this.nomuserDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nomuserDataGridViewTextBoxColumn.Name = "nomuserDataGridViewTextBoxColumn";
+            this.nomuserDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nomuserDataGridViewTextBoxColumn.Width = 81;
             // 
-            // lblStock
+            // ccuserDataGridViewTextBoxColumn
             // 
-            this.lblStock.AutoSize = true;
-            this.lblStock.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStock.Location = new System.Drawing.Point(21, 102);
-            this.lblStock.Name = "lblStock";
-            this.lblStock.Size = new System.Drawing.Size(56, 18);
-            this.lblStock.TabIndex = 2;
-            this.lblStock.Text = "Email: ";
+            this.ccuserDataGridViewTextBoxColumn.DataPropertyName = "cc_user";
+            this.ccuserDataGridViewTextBoxColumn.HeaderText = "C.C";
+            this.ccuserDataGridViewTextBoxColumn.Name = "ccuserDataGridViewTextBoxColumn";
+            this.ccuserDataGridViewTextBoxColumn.ReadOnly = true;
+            this.ccuserDataGridViewTextBoxColumn.Width = 54;
             // 
-            // lblMarca
+            // iduserDataGridViewTextBoxColumn
             // 
-            this.lblMarca.AutoSize = true;
-            this.lblMarca.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarca.Location = new System.Drawing.Point(21, 144);
-            this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(39, 18);
-            this.lblMarca.TabIndex = 3;
-            this.lblMarca.Text = "Rol: ";
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.Image = global::Contro_unity.Properties.Resources.icons8_delete_50;
-            this.btnCerrar.Location = new System.Drawing.Point(1001, -1);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(21, 23);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrar.TabIndex = 18;
-            this.btnCerrar.TabStop = false;
-            this.toolTip1.SetToolTip(this.btnCerrar, "Cerrar");
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 19);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "USUARIOS REGISTRADOS";
+            this.iduserDataGridViewTextBoxColumn.DataPropertyName = "id_user";
+            this.iduserDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iduserDataGridViewTextBoxColumn.Name = "iduserDataGridViewTextBoxColumn";
+            this.iduserDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iduserDataGridViewTextBoxColumn.Width = 43;
             // 
             // dataGridView1
             // 
@@ -292,102 +201,69 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(615, 387);
+            this.dataGridView1.Size = new System.Drawing.Size(451, 387);
             this.dataGridView1.TabIndex = 20;
             // 
-            // iduserDataGridViewTextBoxColumn
+            // label1
             // 
-            this.iduserDataGridViewTextBoxColumn.DataPropertyName = "id_user";
-            this.iduserDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iduserDataGridViewTextBoxColumn.Name = "iduserDataGridViewTextBoxColumn";
-            this.iduserDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iduserDataGridViewTextBoxColumn.Width = 43;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(13, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(196, 19);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "USUARIOS REGISTRADOS";
             // 
-            // ccuserDataGridViewTextBoxColumn
+            // btnCerrar
             // 
-            this.ccuserDataGridViewTextBoxColumn.DataPropertyName = "cc_user";
-            this.ccuserDataGridViewTextBoxColumn.HeaderText = "C.C";
-            this.ccuserDataGridViewTextBoxColumn.Name = "ccuserDataGridViewTextBoxColumn";
-            this.ccuserDataGridViewTextBoxColumn.ReadOnly = true;
-            this.ccuserDataGridViewTextBoxColumn.Width = 54;
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.Image = global::Contro_unity.Properties.Resources.icons8_delete_50;
+            this.btnCerrar.Location = new System.Drawing.Point(1001, -1);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(21, 23);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrar.TabIndex = 18;
+            this.btnCerrar.TabStop = false;
+            this.toolTip1.SetToolTip(this.btnCerrar, "Cerrar");
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // nomuserDataGridViewTextBoxColumn
+            // btnAgregar
             // 
-            this.nomuserDataGridViewTextBoxColumn.DataPropertyName = "nom_user";
-            this.nomuserDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nomuserDataGridViewTextBoxColumn.Name = "nomuserDataGridViewTextBoxColumn";
-            this.nomuserDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nomuserDataGridViewTextBoxColumn.Width = 81;
-            // 
-            // emailuserDataGridViewTextBoxColumn
-            // 
-            this.emailuserDataGridViewTextBoxColumn.DataPropertyName = "email_user";
-            this.emailuserDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailuserDataGridViewTextBoxColumn.Name = "emailuserDataGridViewTextBoxColumn";
-            this.emailuserDataGridViewTextBoxColumn.ReadOnly = true;
-            this.emailuserDataGridViewTextBoxColumn.Width = 63;
-            // 
-            // datetimeuserDataGridViewTextBoxColumn
-            // 
-            this.datetimeuserDataGridViewTextBoxColumn.DataPropertyName = "datetime_user";
-            this.datetimeuserDataGridViewTextBoxColumn.HeaderText = "Fecha de registro";
-            this.datetimeuserDataGridViewTextBoxColumn.Name = "datetimeuserDataGridViewTextBoxColumn";
-            this.datetimeuserDataGridViewTextBoxColumn.ReadOnly = true;
-            this.datetimeuserDataGridViewTextBoxColumn.Width = 123;
-            // 
-            // roluserDataGridViewTextBoxColumn
-            // 
-            this.roluserDataGridViewTextBoxColumn.DataPropertyName = "rol_user";
-            this.roluserDataGridViewTextBoxColumn.HeaderText = "Rol";
-            this.roluserDataGridViewTextBoxColumn.Name = "roluserDataGridViewTextBoxColumn";
-            this.roluserDataGridViewTextBoxColumn.ReadOnly = true;
-            this.roluserDataGridViewTextBoxColumn.Width = 48;
-            // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataMember = "users";
-            this.usersBindingSource.DataSource = this.control_unityDataSet;
-            // 
-            // control_unityDataSet
-            // 
-            this.control_unityDataSet.DataSetName = "control_unityDataSet";
-            this.control_unityDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bunifuFlatButton3
-            // 
-            this.bunifuFlatButton3.Activecolor = System.Drawing.SystemColors.Menu;
-            this.bunifuFlatButton3.BackColor = System.Drawing.SystemColors.Menu;
-            this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bunifuFlatButton3.BorderRadius = 3;
-            this.bunifuFlatButton3.ButtonText = "ELIMINAR";
-            this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton3.DisabledColor = System.Drawing.SystemColors.Menu;
-            this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton3.Iconimage = global::Contro_unity.Properties.Resources.icons8_trash_can_50;
-            this.bunifuFlatButton3.Iconimage_right = null;
-            this.bunifuFlatButton3.Iconimage_right_Selected = null;
-            this.bunifuFlatButton3.Iconimage_Selected = null;
-            this.bunifuFlatButton3.IconMarginLeft = 0;
-            this.bunifuFlatButton3.IconMarginRight = 0;
-            this.bunifuFlatButton3.IconRightVisible = true;
-            this.bunifuFlatButton3.IconRightZoom = 0D;
-            this.bunifuFlatButton3.IconVisible = true;
-            this.bunifuFlatButton3.IconZoom = 55D;
-            this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(322, 489);
-            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuFlatButton3.Name = "bunifuFlatButton3";
-            this.bunifuFlatButton3.Normalcolor = System.Drawing.SystemColors.Menu;
-            this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.LightCoral;
-            this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.Black;
-            this.bunifuFlatButton3.selected = false;
-            this.bunifuFlatButton3.Size = new System.Drawing.Size(128, 47);
-            this.bunifuFlatButton3.TabIndex = 32;
-            this.bunifuFlatButton3.Text = "ELIMINAR";
-            this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton3.Textcolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolTip1.SetToolTip(this.bunifuFlatButton3, "Eliminar");
+            this.btnAgregar.Activecolor = System.Drawing.SystemColors.Menu;
+            this.btnAgregar.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAgregar.BorderRadius = 3;
+            this.btnAgregar.ButtonText = "AGREGAR";
+            this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregar.DisabledColor = System.Drawing.SystemColors.Menu;
+            this.btnAgregar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnAgregar.Iconimage = global::Contro_unity.Properties.Resources.icons8_plus_50;
+            this.btnAgregar.Iconimage_right = null;
+            this.btnAgregar.Iconimage_right_Selected = null;
+            this.btnAgregar.Iconimage_Selected = null;
+            this.btnAgregar.IconMarginLeft = 0;
+            this.btnAgregar.IconMarginRight = 0;
+            this.btnAgregar.IconRightVisible = true;
+            this.btnAgregar.IconRightZoom = 0D;
+            this.btnAgregar.IconVisible = true;
+            this.btnAgregar.IconZoom = 55D;
+            this.btnAgregar.IsTab = false;
+            this.btnAgregar.Location = new System.Drawing.Point(17, 489);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Normalcolor = System.Drawing.SystemColors.Menu;
+            this.btnAgregar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
+            this.btnAgregar.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnAgregar.selected = false;
+            this.btnAgregar.Size = new System.Drawing.Size(128, 47);
+            this.btnAgregar.TabIndex = 30;
+            this.btnAgregar.Text = "AGREGAR";
+            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAgregar.Textcolor = System.Drawing.Color.Black;
+            this.btnAgregar.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolTip1.SetToolTip(this.btnAgregar, "Agregar");
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // bunifuFlatButton2
             // 
@@ -425,41 +301,41 @@
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolTip1.SetToolTip(this.bunifuFlatButton2, "Editar");
             // 
-            // bunifuFlatButton1
+            // bunifuFlatButton3
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.SystemColors.Menu;
-            this.bunifuFlatButton1.BackColor = System.Drawing.SystemColors.Menu;
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bunifuFlatButton1.BorderRadius = 3;
-            this.bunifuFlatButton1.ButtonText = "AGREGAR";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.SystemColors.Menu;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = global::Contro_unity.Properties.Resources.icons8_plus_50;
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 55D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(17, 489);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.SystemColors.Menu;
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.Black;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(128, 47);
-            this.bunifuFlatButton1.TabIndex = 30;
-            this.bunifuFlatButton1.Text = "AGREGAR";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolTip1.SetToolTip(this.bunifuFlatButton1, "Agregar");
+            this.bunifuFlatButton3.Activecolor = System.Drawing.SystemColors.Menu;
+            this.bunifuFlatButton3.BackColor = System.Drawing.SystemColors.Menu;
+            this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bunifuFlatButton3.BorderRadius = 3;
+            this.bunifuFlatButton3.ButtonText = "ELIMINAR";
+            this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton3.DisabledColor = System.Drawing.SystemColors.Menu;
+            this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton3.Iconimage = global::Contro_unity.Properties.Resources.icons8_trash_can_50;
+            this.bunifuFlatButton3.Iconimage_right = null;
+            this.bunifuFlatButton3.Iconimage_right_Selected = null;
+            this.bunifuFlatButton3.Iconimage_Selected = null;
+            this.bunifuFlatButton3.IconMarginLeft = 0;
+            this.bunifuFlatButton3.IconMarginRight = 0;
+            this.bunifuFlatButton3.IconRightVisible = true;
+            this.bunifuFlatButton3.IconRightZoom = 0D;
+            this.bunifuFlatButton3.IconVisible = true;
+            this.bunifuFlatButton3.IconZoom = 55D;
+            this.bunifuFlatButton3.IsTab = false;
+            this.bunifuFlatButton3.Location = new System.Drawing.Point(322, 489);
+            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton3.Name = "bunifuFlatButton3";
+            this.bunifuFlatButton3.Normalcolor = System.Drawing.SystemColors.Menu;
+            this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.LightCoral;
+            this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.Black;
+            this.bunifuFlatButton3.selected = false;
+            this.bunifuFlatButton3.Size = new System.Drawing.Size(128, 47);
+            this.bunifuFlatButton3.TabIndex = 32;
+            this.bunifuFlatButton3.Text = "ELIMINAR";
+            this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton3.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolTip1.SetToolTip(this.bunifuFlatButton3, "Eliminar");
             // 
             // btnConfirmar
             // 
@@ -482,7 +358,7 @@
             this.btnConfirmar.IconVisible = true;
             this.btnConfirmar.IconZoom = 55D;
             this.btnConfirmar.IsTab = false;
-            this.btnConfirmar.Location = new System.Drawing.Point(759, 267);
+            this.btnConfirmar.Location = new System.Drawing.Point(681, 419);
             this.btnConfirmar.Margin = new System.Windows.Forms.Padding(4);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Normalcolor = System.Drawing.SystemColors.Menu;
@@ -496,10 +372,226 @@
             this.btnConfirmar.Textcolor = System.Drawing.Color.Black;
             this.btnConfirmar.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolTip1.SetToolTip(this.btnConfirmar, "Confirmar");
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
-            // usersTableAdapter
+            // lblMarca
             // 
-            this.usersTableAdapter.ClearBeforeFill = true;
+            this.lblMarca.AutoSize = true;
+            this.lblMarca.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMarca.Location = new System.Drawing.Point(21, 247);
+            this.lblMarca.Name = "lblMarca";
+            this.lblMarca.Size = new System.Drawing.Size(39, 18);
+            this.lblMarca.TabIndex = 3;
+            this.lblMarca.Text = "Rol: ";
+            // 
+            // lblStock
+            // 
+            this.lblStock.AutoSize = true;
+            this.lblStock.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStock.Location = new System.Drawing.Point(21, 152);
+            this.lblStock.Name = "lblStock";
+            this.lblStock.Size = new System.Drawing.Size(56, 18);
+            this.lblStock.TabIndex = 2;
+            this.lblStock.Text = "Email: ";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(21, 64);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(76, 18);
+            this.lblNombre.TabIndex = 1;
+            this.lblNombre.Text = "Nombre: ";
+            // 
+            // lbCC_User
+            // 
+            this.lbCC_User.AutoSize = true;
+            this.lbCC_User.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCC_User.Location = new System.Drawing.Point(21, 26);
+            this.lbCC_User.Name = "lbCC_User";
+            this.lbCC_User.Size = new System.Drawing.Size(48, 18);
+            this.lbCC_User.TabIndex = 0;
+            this.lbCC_User.Text = "C.C : ";
+            // 
+            // txtCC
+            // 
+            this.txtCC.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtCC.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCC.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtCC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCC.HintForeColor = System.Drawing.Color.Empty;
+            this.txtCC.HintText = "";
+            this.txtCC.isPassword = false;
+            this.txtCC.LineFocusedColor = System.Drawing.Color.Khaki;
+            this.txtCC.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtCC.LineMouseHoverColor = System.Drawing.Color.Khaki;
+            this.txtCC.LineThickness = 2;
+            this.txtCC.Location = new System.Drawing.Point(150, 14);
+            this.txtCC.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCC.Name = "txtCC";
+            this.txtCC.Size = new System.Drawing.Size(367, 30);
+            this.txtCC.TabIndex = 25;
+            this.txtCC.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtNombre.HintForeColor = System.Drawing.Color.Empty;
+            this.txtNombre.HintText = "";
+            this.txtNombre.isPassword = false;
+            this.txtNombre.LineFocusedColor = System.Drawing.Color.Khaki;
+            this.txtNombre.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtNombre.LineMouseHoverColor = System.Drawing.Color.Khaki;
+            this.txtNombre.LineThickness = 2;
+            this.txtNombre.Location = new System.Drawing.Point(150, 52);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(367, 30);
+            this.txtNombre.TabIndex = 26;
+            this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtEmail.HintForeColor = System.Drawing.Color.Empty;
+            this.txtEmail.HintText = "";
+            this.txtEmail.isPassword = false;
+            this.txtEmail.LineFocusedColor = System.Drawing.Color.Khaki;
+            this.txtEmail.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtEmail.LineMouseHoverColor = System.Drawing.Color.Khaki;
+            this.txtEmail.LineThickness = 2;
+            this.txtEmail.Location = new System.Drawing.Point(150, 140);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(367, 30);
+            this.txtEmail.TabIndex = 27;
+            this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txtRol
+            // 
+            this.txtRol.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtRol.DisplayMember = "1";
+            this.txtRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtRol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.txtRol.FormattingEnabled = true;
+            this.txtRol.Items.AddRange(new object[] {
+            "Administrador",
+            "Recepcion",
+            "Biblioteca"});
+            this.txtRol.Location = new System.Drawing.Point(150, 244);
+            this.txtRol.Name = "txtRol";
+            this.txtRol.Size = new System.Drawing.Size(367, 24);
+            this.txtRol.TabIndex = 34;
+            // 
+            // txtPass
+            // 
+            this.txtPass.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtPass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPass.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPass.HintForeColor = System.Drawing.Color.Empty;
+            this.txtPass.HintText = "";
+            this.txtPass.isPassword = false;
+            this.txtPass.LineFocusedColor = System.Drawing.Color.Khaki;
+            this.txtPass.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtPass.LineMouseHoverColor = System.Drawing.Color.Khaki;
+            this.txtPass.LineThickness = 2;
+            this.txtPass.Location = new System.Drawing.Point(150, 95);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(367, 30);
+            this.txtPass.TabIndex = 36;
+            this.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // gbUser
+            // 
+            this.gbUser.BackColor = System.Drawing.SystemColors.Menu;
+            this.gbUser.Controls.Add(this.txtFecha);
+            this.gbUser.Controls.Add(this.label4);
+            this.gbUser.Controls.Add(this.txtPrivilegio);
+            this.gbUser.Controls.Add(this.label3);
+            this.gbUser.Controls.Add(this.label2);
+            this.gbUser.Controls.Add(this.txtPass);
+            this.gbUser.Controls.Add(this.txtRol);
+            this.gbUser.Controls.Add(this.txtEmail);
+            this.gbUser.Controls.Add(this.txtNombre);
+            this.gbUser.Controls.Add(this.txtCC);
+            this.gbUser.Controls.Add(this.lbCC_User);
+            this.gbUser.Controls.Add(this.lblNombre);
+            this.gbUser.Controls.Add(this.lblStock);
+            this.gbUser.Controls.Add(this.lblMarca);
+            this.gbUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.gbUser.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbUser.Location = new System.Drawing.Point(469, 69);
+            this.gbUser.Name = "gbUser";
+            this.gbUser.Size = new System.Drawing.Size(534, 343);
+            this.gbUser.TabIndex = 24;
+            this.gbUser.TabStop = false;
+            this.gbUser.Text = "DATOS DEL USUARIO";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(21, 107);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(102, 18);
+            this.label2.TabIndex = 37;
+            this.label2.Text = "Contraseña: ";
+            // 
+            // txtPrivilegio
+            // 
+            this.txtPrivilegio.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtPrivilegio.DisplayMember = "1";
+            this.txtPrivilegio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtPrivilegio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.txtPrivilegio.FormattingEnabled = true;
+            this.txtPrivilegio.Items.AddRange(new object[] {
+            "1 (Administrador)",
+            "2 (Recepcion)",
+            "3 (Biblioteca)"});
+            this.txtPrivilegio.Location = new System.Drawing.Point(150, 287);
+            this.txtPrivilegio.Name = "txtPrivilegio";
+            this.txtPrivilegio.Size = new System.Drawing.Size(367, 24);
+            this.txtPrivilegio.TabIndex = 39;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(21, 290);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 18);
+            this.label3.TabIndex = 38;
+            this.label3.Text = "Privilegio: ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(21, 204);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(84, 18);
+            this.label4.TabIndex = 40;
+            this.label4.Text = "Privilegio: ";
+            // 
+            // txtFecha
+            // 
+            this.txtFecha.CalendarMonthBackground = System.Drawing.Color.WhiteSmoke;
+            this.txtFecha.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtFecha.Location = new System.Drawing.Point(150, 199);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(366, 23);
+            this.txtFecha.TabIndex = 41;
+            this.txtFecha.Value = new System.DateTime(2018, 12, 16, 15, 27, 40, 0);
             // 
             // MenuUsuarios
             // 
@@ -510,7 +602,7 @@
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.bunifuFlatButton3);
             this.Controls.Add(this.bunifuFlatButton2);
-            this.Controls.Add(this.bunifuFlatButton1);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.gbUser);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.label1);
@@ -520,43 +612,49 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuUsuarios";
             this.Load += new System.EventHandler(this.MenuUsuarios_Load);
-            this.gbUser.ResumeLayout(false);
-            this.gbUser.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.control_unityDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            this.gbUser.ResumeLayout(false);
+            this.gbUser.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.GroupBox gbUser;
-        private System.Windows.Forms.Label lbCC_User;
-        private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Label lblStock;
-        private System.Windows.Forms.Label lblMarca;
-        private System.Windows.Forms.PictureBox btnCerrar;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ToolTip toolTip1;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtEmail;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtNombre;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtCC;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
-        private Bunifu.Framework.UI.BunifuFlatButton btnConfirmar;
         private control_unityDataSet control_unityDataSet;
         private System.Windows.Forms.BindingSource usersBindingSource;
         private control_unityDataSetTableAdapters.usersTableAdapter usersTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iduserDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ccuserDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomuserDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailuserDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn datetimeuserDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn roluserDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datetimeuserDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailuserDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomuserDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ccuserDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iduserDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox btnCerrar;
+        private Bunifu.Framework.UI.BunifuFlatButton btnAgregar;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
+        private Bunifu.Framework.UI.BunifuFlatButton btnConfirmar;
+        private System.Windows.Forms.Label lblMarca;
+        private System.Windows.Forms.Label lblStock;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lbCC_User;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtCC;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtNombre;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtEmail;
         private System.Windows.Forms.ComboBox txtRol;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtPass;
+        private System.Windows.Forms.GroupBox gbUser;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox txtPrivilegio;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker txtFecha;
+        private System.Windows.Forms.Label label4;
     }
 }

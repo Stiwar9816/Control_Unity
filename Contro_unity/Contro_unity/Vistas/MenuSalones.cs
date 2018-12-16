@@ -40,9 +40,12 @@ namespace Contro_unity
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
+            var Salon = new Clases.salon();
+
             if(btnAgregar.Enabled == true)
             {
-               // MessageBox.Show(con.insertar_salon(txtNom_Salon.Text,txtDescripcion.Text));
+                Salon = new Clases.salon(txtNom_Salon.Text,txtDescripcion.Text);
+                int ultimo_id = Salon.Registrar();
                 this.salonsTableAdapter.Fill(this.control_unityDataSet.salons);
                 txtNom_Salon.Text = "";
                 txtDescripcion.Text = "";

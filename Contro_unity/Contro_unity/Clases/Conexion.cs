@@ -13,16 +13,16 @@ namespace Contro_unity
 {
     class Conexion
     {
-        /*SqlConnection SqlCon;
+        SqlConnection SqlCon;
         SqlCommand SqlCom;
         SqlDataReader SqlDr;
         SqlDataAdapter SqlDa;
-        DataTable DaT;*/
+        DataTable DaT;
 
         //Conexion a la BD
-        private SqlConnection Con = new SqlConnection("Server= DESKTOP-S7URQ0I\\SQLEXPRESS;DataBase=control_unity;Integrated Security=true");
+        public SqlConnection Con = new SqlConnection("Server= DESKTOP-S7URQ0I\\SQLEXPRESS;DataBase=control_unity;Integrated Security=true");
 
-        public SqlConnection AbrirConexion()
+       /* public SqlConnection AbrirConexion()
         {
             if (Con.State == ConnectionState.Closed)
                 Con.Open();
@@ -33,7 +33,7 @@ namespace Contro_unity
             if (Con.State == ConnectionState.Open)
                 Con.Close();
             return Con;
-        }
+        }*/
     }
 }
 

@@ -54,11 +54,13 @@ namespace Contro_unity
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
+            var profesor = new Clases.profesor();
             //Agregar Profesor si los textBox estan habilitados
             if (btnAgregar.Enabled == true)
             {
-               // MessageBox.Show(con.insertar_profesores(Convert.ToInt64(txtCC.Text), txtFullName.Text, txtPrograma.Text));
-                this.teacherTableAdapter.Fill(this.control_unityDataSet.teacher);
+                var Profesor = new Clases.profesor(Convert.ToInt32( txtCC.Text),txtFullName.Text,txtPrograma.Text);
+                int ultimo_id = Profesor.Registrar();
+                teacherTableAdapter.Fill(this.control_unityDataSet.teacher);
                 txtCC.Text = "";
                 txtFullName.Text = "";
                 txtPrograma.Text="";
