@@ -40,19 +40,35 @@ namespace Contro_unity
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
+
+         
+
             var Salon = new Clases.salon();
 
             if(btnAgregar.Enabled == true)
             {
-                Salon = new Clases.salon(txtNom_Salon.Text,txtDescripcion.Text);
-                int ultimo_id = Salon.Registrar();
-                this.salonsTableAdapter.Fill(this.control_unityDataSet.salons);
-                txtNom_Salon.Text = "";
-                txtDescripcion.Text = "";
+                if (txtNom_Salon.Text.Equals(""))
+                {
+                    txtNom_Salon.Focus();
+                    MessageBox.Show("Completar nombre del salon", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (txtDescripcion.Text.Equals(""))
+                {
+                    txtDescripcion.Focus();
+                    MessageBox.Show("Completar la descripcion del salon", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    Salon = new Clases.salon(txtNom_Salon.Text, txtDescripcion.Text);
+                    int ultimo_id = Salon.Registrar();
+                    this.salonsTableAdapter.Fill(this.control_unityDataSet.salons);
+                    txtNom_Salon.Text = "";
+                    txtDescripcion.Text = "";
+                }
             }
-            else
+            else 
             {
-                MessageBox.Show("Los Campo de textos no estan habilitados, Por favor presione agregar e intente de neuvo");
+                MessageBox.Show("Los Campo de textos no estan habilitados, Por favor presione agregar e intente de neuvo", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

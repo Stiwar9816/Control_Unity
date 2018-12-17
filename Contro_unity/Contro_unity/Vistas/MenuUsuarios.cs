@@ -43,10 +43,12 @@ namespace Contro_unity
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
 
+            
+
             var Usuario = new Clases.user();
             if (btnAgregar.Enabled == true)
             {
-                Usuario = new Clases.user(Convert.ToInt32( txtCC.Text),txtNombre.Text,txtPass.Text,txtEmail.Text,Convert.ToString(txtFecha.Text),txtRol.Text,Convert.ToInt32( txtPrivilegio.Text));
+                Usuario = new Clases.user(Convert.ToInt32( txtCC.Text),txtNombre.Text,txtPass.Text,txtEmail.Text,Convert.ToDateTime(txtFecha.Text),txtRol.Text,Convert.ToInt32( txtPrivilegio.Text));
                 int ultimo_id = Usuario.Registrar();
                 this.usersTableAdapter.Fill(this.control_unityDataSet.users);
                 txtCC.Text = "";

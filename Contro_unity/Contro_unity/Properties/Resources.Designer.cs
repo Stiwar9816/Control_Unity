@@ -213,6 +213,16 @@ namespace Contro_unity.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_find_user_male_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-find-user-male-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_forgot_password_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8_forgot_password_50", resourceCulture);

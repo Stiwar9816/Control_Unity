@@ -49,13 +49,13 @@
             this.programteacherDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teacherBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.control_unityDataSet = new Contro_unity.control_unityDataSet();
-            this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.teacherTableAdapter = new Contro_unity.control_unityDataSetTableAdapters.teacherTableAdapter();
+            this.btnAgregar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnConfirmar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnEliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnEditar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnConfirmar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnAgregar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.teacherTableAdapter = new Contro_unity.control_unityDataSetTableAdapters.teacherTableAdapter();
+            this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.gbEditInventario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teacherBindingSource)).BeginInit();
@@ -74,7 +74,7 @@
             this.gbEditInventario.Controls.Add(this.lblMarca);
             this.gbEditInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbEditInventario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbEditInventario.Location = new System.Drawing.Point(584, 48);
+            this.gbEditInventario.Location = new System.Drawing.Point(584, 42);
             this.gbEditInventario.Name = "gbEditInventario";
             this.gbEditInventario.Size = new System.Drawing.Size(428, 147);
             this.gbEditInventario.TabIndex = 5;
@@ -221,7 +221,7 @@
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Menu;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 48);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 42);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -243,7 +243,7 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(554, 401);
+            this.dataGridView1.Size = new System.Drawing.Size(512, 401);
             this.dataGridView1.TabIndex = 1;
             // 
             // idteacherDataGridViewTextBoxColumn
@@ -285,19 +285,83 @@
             this.control_unityDataSet.DataSetName = "control_unityDataSet";
             this.control_unityDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // btnCerrar
+            // teacherTableAdapter
             // 
-            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.Image = global::Contro_unity.Properties.Resources.icons8_delete_50;
-            this.btnCerrar.Location = new System.Drawing.Point(1000, -3);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(21, 23);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrar.TabIndex = 25;
-            this.btnCerrar.TabStop = false;
-            this.toolTip1.SetToolTip(this.btnCerrar, "Cerrar");
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.teacherTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Activecolor = System.Drawing.SystemColors.Menu;
+            this.btnAgregar.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAgregar.BorderRadius = 3;
+            this.btnAgregar.ButtonText = "AGREGAR";
+            this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregar.DisabledColor = System.Drawing.SystemColors.Menu;
+            this.btnAgregar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnAgregar.Iconimage = global::Contro_unity.Properties.Resources.icons8_plus_50;
+            this.btnAgregar.Iconimage_right = null;
+            this.btnAgregar.Iconimage_right_Selected = null;
+            this.btnAgregar.Iconimage_Selected = null;
+            this.btnAgregar.IconMarginLeft = 0;
+            this.btnAgregar.IconMarginRight = 0;
+            this.btnAgregar.IconRightVisible = true;
+            this.btnAgregar.IconRightZoom = 0D;
+            this.btnAgregar.IconVisible = true;
+            this.btnAgregar.IconZoom = 55D;
+            this.btnAgregar.IsTab = false;
+            this.btnAgregar.Location = new System.Drawing.Point(12, 469);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Normalcolor = System.Drawing.SystemColors.Menu;
+            this.btnAgregar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
+            this.btnAgregar.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnAgregar.selected = false;
+            this.btnAgregar.Size = new System.Drawing.Size(128, 47);
+            this.btnAgregar.TabIndex = 30;
+            this.btnAgregar.Text = "AGREGAR";
+            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAgregar.Textcolor = System.Drawing.Color.Black;
+            this.btnAgregar.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolTip1.SetToolTip(this.btnAgregar, "Agregar");
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // btnConfirmar
+            // 
+            this.btnConfirmar.Activecolor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmar.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConfirmar.BorderRadius = 3;
+            this.btnConfirmar.ButtonText = "Confirmar";
+            this.btnConfirmar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConfirmar.DisabledColor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnConfirmar.Iconimage = global::Contro_unity.Properties.Resources.icons8_checked_50;
+            this.btnConfirmar.Iconimage_right = null;
+            this.btnConfirmar.Iconimage_right_Selected = null;
+            this.btnConfirmar.Iconimage_Selected = null;
+            this.btnConfirmar.IconMarginLeft = 0;
+            this.btnConfirmar.IconMarginRight = 0;
+            this.btnConfirmar.IconRightVisible = true;
+            this.btnConfirmar.IconRightZoom = 0D;
+            this.btnConfirmar.IconVisible = true;
+            this.btnConfirmar.IconZoom = 55D;
+            this.btnConfirmar.IsTab = false;
+            this.btnConfirmar.Location = new System.Drawing.Point(716, 211);
+            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Normalcolor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
+            this.btnConfirmar.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnConfirmar.selected = false;
+            this.btnConfirmar.Size = new System.Drawing.Size(147, 48);
+            this.btnConfirmar.TabIndex = 29;
+            this.btnConfirmar.Text = "Confirmar";
+            this.btnConfirmar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnConfirmar.Textcolor = System.Drawing.Color.Black;
+            this.btnConfirmar.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolTip1.SetToolTip(this.btnConfirmar, "Confirmar");
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // btnEliminar
             // 
@@ -372,83 +436,19 @@
             this.toolTip1.SetToolTip(this.btnEditar, "Editar");
             this.btnEditar.Click += new System.EventHandler(this.bunifuFlatButton2_Click);
             // 
-            // btnConfirmar
+            // btnCerrar
             // 
-            this.btnConfirmar.Activecolor = System.Drawing.SystemColors.Menu;
-            this.btnConfirmar.BackColor = System.Drawing.SystemColors.Menu;
-            this.btnConfirmar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnConfirmar.BorderRadius = 3;
-            this.btnConfirmar.ButtonText = "Confirmar";
-            this.btnConfirmar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConfirmar.DisabledColor = System.Drawing.SystemColors.Menu;
-            this.btnConfirmar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnConfirmar.Iconimage = global::Contro_unity.Properties.Resources.icons8_checked_50;
-            this.btnConfirmar.Iconimage_right = null;
-            this.btnConfirmar.Iconimage_right_Selected = null;
-            this.btnConfirmar.Iconimage_Selected = null;
-            this.btnConfirmar.IconMarginLeft = 0;
-            this.btnConfirmar.IconMarginRight = 0;
-            this.btnConfirmar.IconRightVisible = true;
-            this.btnConfirmar.IconRightZoom = 0D;
-            this.btnConfirmar.IconVisible = true;
-            this.btnConfirmar.IconZoom = 55D;
-            this.btnConfirmar.IsTab = false;
-            this.btnConfirmar.Location = new System.Drawing.Point(716, 217);
-            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Normalcolor = System.Drawing.SystemColors.Menu;
-            this.btnConfirmar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
-            this.btnConfirmar.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnConfirmar.selected = false;
-            this.btnConfirmar.Size = new System.Drawing.Size(147, 48);
-            this.btnConfirmar.TabIndex = 29;
-            this.btnConfirmar.Text = "Confirmar";
-            this.btnConfirmar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnConfirmar.Textcolor = System.Drawing.Color.Black;
-            this.btnConfirmar.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolTip1.SetToolTip(this.btnConfirmar, "Confirmar");
-            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Activecolor = System.Drawing.SystemColors.Menu;
-            this.btnAgregar.BackColor = System.Drawing.SystemColors.Menu;
-            this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAgregar.BorderRadius = 3;
-            this.btnAgregar.ButtonText = "AGREGAR";
-            this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregar.DisabledColor = System.Drawing.SystemColors.Menu;
-            this.btnAgregar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnAgregar.Iconimage = global::Contro_unity.Properties.Resources.icons8_plus_50;
-            this.btnAgregar.Iconimage_right = null;
-            this.btnAgregar.Iconimage_right_Selected = null;
-            this.btnAgregar.Iconimage_Selected = null;
-            this.btnAgregar.IconMarginLeft = 0;
-            this.btnAgregar.IconMarginRight = 0;
-            this.btnAgregar.IconRightVisible = true;
-            this.btnAgregar.IconRightZoom = 0D;
-            this.btnAgregar.IconVisible = true;
-            this.btnAgregar.IconZoom = 55D;
-            this.btnAgregar.IsTab = false;
-            this.btnAgregar.Location = new System.Drawing.Point(12, 469);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Normalcolor = System.Drawing.SystemColors.Menu;
-            this.btnAgregar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
-            this.btnAgregar.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnAgregar.selected = false;
-            this.btnAgregar.Size = new System.Drawing.Size(128, 47);
-            this.btnAgregar.TabIndex = 30;
-            this.btnAgregar.Text = "AGREGAR";
-            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAgregar.Textcolor = System.Drawing.Color.Black;
-            this.btnAgregar.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolTip1.SetToolTip(this.btnAgregar, "Agregar");
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // teacherTableAdapter
-            // 
-            this.teacherTableAdapter.ClearBeforeFill = true;
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.Image = global::Contro_unity.Properties.Resources.icons8_delete_50;
+            this.btnCerrar.Location = new System.Drawing.Point(1000, -3);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(21, 23);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrar.TabIndex = 25;
+            this.btnCerrar.TabStop = false;
+            this.toolTip1.SetToolTip(this.btnCerrar, "Cerrar");
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // MenuProfesores
             // 

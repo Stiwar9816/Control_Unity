@@ -54,21 +54,38 @@ namespace Contro_unity
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
+
+
             var profesor = new Clases.profesor();
             //Agregar Profesor si los textBox estan habilitados
             if (btnAgregar.Enabled == true)
             {
-                var Profesor = new Clases.profesor(Convert.ToInt32( txtCC.Text),txtFullName.Text,txtPrograma.Text);
-                int ultimo_id = Profesor.Registrar();
-                teacherTableAdapter.Fill(this.control_unityDataSet.teacher);
-                txtCC.Text = "";
-                txtFullName.Text = "";
-                txtPrograma.Text="";
-
+                if (txtCC.Text.Equals(""))
+                {
+                    txtCC.Focus();
+                    MessageBox.Show("El campo de la identificacion esta vacio", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (txtFullName.Text.Equals(""))
+                {
+                    txtFullName.Focus();
+                    MessageBox.Show("El campo nombre esta vacio", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                } else if(txtPrograma.Text.Equals("")){
+                    txtPrograma.Focus();
+                    MessageBox.Show("El campo programa esta vacio", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    var Profesor = new Clases.profesor(Convert.ToInt32(txtCC.Text), txtFullName.Text, txtPrograma.Text);
+                    int ultimo_id = Profesor.Registrar();
+                    teacherTableAdapter.Fill(this.control_unityDataSet.teacher);
+                    txtCC.Text = "";
+                    txtFullName.Text = "";
+                    txtPrograma.Text = "";
+                }
             }
             else
             {
-                MessageBox.Show("Los Campo de textos no estan habilitados, Por favor seleccione una opcion e intente de neuvo");
+                MessageBox.Show("Los Campo de textos no estan habilitados, Por favor seleccione una opcion e intente de nuevo", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }

@@ -19,7 +19,7 @@ namespace Contro_unity.Clases
         public string Nom_user { get; set; }
         public string Password_user { get; set; }
         public string Email_user { get; set; }
-        public string Datetime_user { get; set; }
+        public DateTime Datetime_user { get; set; }
         public string Rol_user { get; set; }
         public int Privilege_user { get; set; }
 
@@ -27,7 +27,7 @@ namespace Contro_unity.Clases
 
         //CONSTRUCTOR DE LA CLASE
         //CONSTRUCTOR PARA REGISTRAR
-        public user(int _cc_user, string _nom_user, string _password_user, string _email_user, string _datetime_user, string _rol_user, int _privilege_user)
+        public user(int _cc_user, string _nom_user, string _password_user, string _email_user, DateTime _datetime_user, string _rol_user, int _privilege_user)
         {
             this.Cc_user = _cc_user;
             this.Nom_user = _nom_user;
@@ -40,7 +40,7 @@ namespace Contro_unity.Clases
 
         //CONSTRUCTOR DE LA CLASE
         //CONSTRUCTOR PARA ACTUALIZAR
-        public user(int _cc_user, string _nom_user, string _password_user, string _email_user, string _datetime_user, string _rol_user, int _privilege_user,int _id_user)
+        public user(int _cc_user, string _nom_user, string _password_user, string _email_user, DateTime _datetime_user, string _rol_user, int _privilege_user,int _id_user)
         {
             this.Cc_user = _cc_user;
             this.Nom_user = _nom_user;
@@ -65,7 +65,7 @@ namespace Contro_unity.Clases
             int ultimo_id = 0;
             try
             {
-                using (var cmd = new SqlCommand("SP_REGISTAR_USER", con.Con))
+                using (var cmd = new SqlCommand("SP_REGISTAR_USUARIO1", con.Con))
                 {
                     cmd.Parameters.AddWithValue("@cc_user", this.Cc_user);
                     cmd.Parameters.AddWithValue("@nom_user", this.Nom_user);
