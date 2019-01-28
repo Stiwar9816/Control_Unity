@@ -64,5 +64,30 @@ namespace Contro_unity
                 MessageBox.Show("Los Campo de textos no estan habilitados, Por favor seleccione una opcion e intente de nuevo");
             }
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            txtCC.Enabled = false;
+            txtFecha.Enabled = false;
+            txtNombre.Enabled = true;
+            txtPass.Enabled = false;
+            txtEmail.Enabled = true;
+            txtPrivilegio.Enabled = false;
+            txtRol.Enabled = false;
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                txtCC.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                txtNombre.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                txtPass.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                txtEmail.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                //txtFecha.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                //txtRol.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+                //txtPrivilegio.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un registro", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

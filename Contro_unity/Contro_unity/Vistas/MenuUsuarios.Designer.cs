@@ -37,20 +37,14 @@
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.control_unityDataSet = new Contro_unity.control_unityDataSet();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.usersTableAdapter = new Contro_unity.control_unityDataSetTableAdapters.usersTableAdapter();
-            this.roluserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datetimeuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ccuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iduserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnAgregar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnEditar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnConfirmar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.usersTableAdapter = new Contro_unity.control_unityDataSetTableAdapters.usersTableAdapter();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblMarca = new System.Windows.Forms.Label();
             this.lblStock = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
@@ -61,15 +55,22 @@
             this.txtRol = new System.Windows.Forms.ComboBox();
             this.txtPass = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.gbUser = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txtFecha = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtPrivilegio = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtFecha = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.iduserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ccuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datetimeuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roluserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Privilegio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.control_unityDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.gbUser.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,137 +83,6 @@
             // 
             this.control_unityDataSet.DataSetName = "control_unityDataSet";
             this.control_unityDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usersTableAdapter
-            // 
-            this.usersTableAdapter.ClearBeforeFill = true;
-            // 
-            // roluserDataGridViewTextBoxColumn
-            // 
-            this.roluserDataGridViewTextBoxColumn.DataPropertyName = "rol_user";
-            this.roluserDataGridViewTextBoxColumn.HeaderText = "Rol";
-            this.roluserDataGridViewTextBoxColumn.Name = "roluserDataGridViewTextBoxColumn";
-            this.roluserDataGridViewTextBoxColumn.ReadOnly = true;
-            this.roluserDataGridViewTextBoxColumn.Width = 48;
-            // 
-            // datetimeuserDataGridViewTextBoxColumn
-            // 
-            this.datetimeuserDataGridViewTextBoxColumn.DataPropertyName = "datetime_user";
-            this.datetimeuserDataGridViewTextBoxColumn.HeaderText = "Fecha de registro";
-            this.datetimeuserDataGridViewTextBoxColumn.Name = "datetimeuserDataGridViewTextBoxColumn";
-            this.datetimeuserDataGridViewTextBoxColumn.ReadOnly = true;
-            this.datetimeuserDataGridViewTextBoxColumn.Width = 123;
-            // 
-            // emailuserDataGridViewTextBoxColumn
-            // 
-            this.emailuserDataGridViewTextBoxColumn.DataPropertyName = "email_user";
-            this.emailuserDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailuserDataGridViewTextBoxColumn.Name = "emailuserDataGridViewTextBoxColumn";
-            this.emailuserDataGridViewTextBoxColumn.ReadOnly = true;
-            this.emailuserDataGridViewTextBoxColumn.Width = 63;
-            // 
-            // nomuserDataGridViewTextBoxColumn
-            // 
-            this.nomuserDataGridViewTextBoxColumn.DataPropertyName = "nom_user";
-            this.nomuserDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nomuserDataGridViewTextBoxColumn.Name = "nomuserDataGridViewTextBoxColumn";
-            this.nomuserDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nomuserDataGridViewTextBoxColumn.Width = 81;
-            // 
-            // ccuserDataGridViewTextBoxColumn
-            // 
-            this.ccuserDataGridViewTextBoxColumn.DataPropertyName = "cc_user";
-            this.ccuserDataGridViewTextBoxColumn.HeaderText = "C.C";
-            this.ccuserDataGridViewTextBoxColumn.Name = "ccuserDataGridViewTextBoxColumn";
-            this.ccuserDataGridViewTextBoxColumn.ReadOnly = true;
-            this.ccuserDataGridViewTextBoxColumn.Width = 54;
-            // 
-            // iduserDataGridViewTextBoxColumn
-            // 
-            this.iduserDataGridViewTextBoxColumn.DataPropertyName = "id_user";
-            this.iduserDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iduserDataGridViewTextBoxColumn.Name = "iduserDataGridViewTextBoxColumn";
-            this.iduserDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iduserDataGridViewTextBoxColumn.Width = 43;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Menu;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Khaki;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.ColumnHeadersHeight = 37;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iduserDataGridViewTextBoxColumn,
-            this.ccuserDataGridViewTextBoxColumn,
-            this.nomuserDataGridViewTextBoxColumn,
-            this.emailuserDataGridViewTextBoxColumn,
-            this.datetimeuserDataGridViewTextBoxColumn,
-            this.roluserDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.usersBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.Menu;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 69);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(451, 387);
-            this.dataGridView1.TabIndex = 20;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 19);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "USUARIOS REGISTRADOS";
             // 
             // btnCerrar
             // 
@@ -265,41 +135,42 @@
             this.toolTip1.SetToolTip(this.btnAgregar, "Agregar");
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // bunifuFlatButton2
+            // btnEditar
             // 
-            this.bunifuFlatButton2.Activecolor = System.Drawing.SystemColors.Menu;
-            this.bunifuFlatButton2.BackColor = System.Drawing.SystemColors.Menu;
-            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bunifuFlatButton2.BorderRadius = 3;
-            this.bunifuFlatButton2.ButtonText = "EDITAR";
-            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton2.DisabledColor = System.Drawing.SystemColors.Menu;
-            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.Iconimage = global::Contro_unity.Properties.Resources.icons8_edit_50;
-            this.bunifuFlatButton2.Iconimage_right = null;
-            this.bunifuFlatButton2.Iconimage_right_Selected = null;
-            this.bunifuFlatButton2.Iconimage_Selected = null;
-            this.bunifuFlatButton2.IconMarginLeft = 0;
-            this.bunifuFlatButton2.IconMarginRight = 0;
-            this.bunifuFlatButton2.IconRightVisible = true;
-            this.bunifuFlatButton2.IconRightZoom = 0D;
-            this.bunifuFlatButton2.IconVisible = true;
-            this.bunifuFlatButton2.IconZoom = 55D;
-            this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(167, 489);
-            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
-            this.bunifuFlatButton2.Normalcolor = System.Drawing.SystemColors.Menu;
-            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.SkyBlue;
-            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.Black;
-            this.bunifuFlatButton2.selected = false;
-            this.bunifuFlatButton2.Size = new System.Drawing.Size(128, 47);
-            this.bunifuFlatButton2.TabIndex = 31;
-            this.bunifuFlatButton2.Text = "EDITAR";
-            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolTip1.SetToolTip(this.bunifuFlatButton2, "Editar");
+            this.btnEditar.Activecolor = System.Drawing.SystemColors.Menu;
+            this.btnEditar.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEditar.BorderRadius = 3;
+            this.btnEditar.ButtonText = "EDITAR";
+            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditar.DisabledColor = System.Drawing.SystemColors.Menu;
+            this.btnEditar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnEditar.Iconimage = global::Contro_unity.Properties.Resources.icons8_edit_50;
+            this.btnEditar.Iconimage_right = null;
+            this.btnEditar.Iconimage_right_Selected = null;
+            this.btnEditar.Iconimage_Selected = null;
+            this.btnEditar.IconMarginLeft = 0;
+            this.btnEditar.IconMarginRight = 0;
+            this.btnEditar.IconRightVisible = true;
+            this.btnEditar.IconRightZoom = 0D;
+            this.btnEditar.IconVisible = true;
+            this.btnEditar.IconZoom = 55D;
+            this.btnEditar.IsTab = false;
+            this.btnEditar.Location = new System.Drawing.Point(167, 489);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Normalcolor = System.Drawing.SystemColors.Menu;
+            this.btnEditar.OnHovercolor = System.Drawing.Color.SkyBlue;
+            this.btnEditar.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnEditar.selected = false;
+            this.btnEditar.Size = new System.Drawing.Size(128, 47);
+            this.btnEditar.TabIndex = 31;
+            this.btnEditar.Text = "EDITAR";
+            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnEditar.Textcolor = System.Drawing.Color.Black;
+            this.btnEditar.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolTip1.SetToolTip(this.btnEditar, "Editar");
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // bunifuFlatButton3
             // 
@@ -374,11 +245,95 @@
             this.toolTip1.SetToolTip(this.btnConfirmar, "Confirmar");
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Menu;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Khaki;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.ColumnHeadersHeight = 37;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iduserDataGridViewTextBoxColumn,
+            this.ccuserDataGridViewTextBoxColumn,
+            this.nomuserDataGridViewTextBoxColumn,
+            this.emailuserDataGridViewTextBoxColumn,
+            this.datetimeuserDataGridViewTextBoxColumn,
+            this.roluserDataGridViewTextBoxColumn,
+            this.Privilegio});
+            this.dataGridView1.DataSource = this.usersBindingSource;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.Menu;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 69);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(451, 387);
+            this.dataGridView1.TabIndex = 20;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(13, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(196, 19);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "USUARIOS REGISTRADOS";
+            // 
             // lblMarca
             // 
             this.lblMarca.AutoSize = true;
             this.lblMarca.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarca.Location = new System.Drawing.Point(21, 247);
+            this.lblMarca.Location = new System.Drawing.Point(6, 247);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(39, 18);
             this.lblMarca.TabIndex = 3;
@@ -388,7 +343,7 @@
             // 
             this.lblStock.AutoSize = true;
             this.lblStock.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStock.Location = new System.Drawing.Point(21, 152);
+            this.lblStock.Location = new System.Drawing.Point(6, 152);
             this.lblStock.Name = "lblStock";
             this.lblStock.Size = new System.Drawing.Size(56, 18);
             this.lblStock.TabIndex = 2;
@@ -398,7 +353,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(21, 64);
+            this.lblNombre.Location = new System.Drawing.Point(6, 64);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(76, 18);
             this.lblNombre.TabIndex = 1;
@@ -408,7 +363,7 @@
             // 
             this.lbCC_User.AutoSize = true;
             this.lbCC_User.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCC_User.Location = new System.Drawing.Point(21, 26);
+            this.lbCC_User.Location = new System.Drawing.Point(6, 26);
             this.lbCC_User.Name = "lbCC_User";
             this.lbCC_User.Size = new System.Drawing.Size(48, 18);
             this.lbCC_User.TabIndex = 0;
@@ -536,15 +491,26 @@
             this.gbUser.TabStop = false;
             this.gbUser.Text = "DATOS DEL USUARIO";
             // 
-            // label2
+            // txtFecha
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(21, 107);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 18);
-            this.label2.TabIndex = 37;
-            this.label2.Text = "Contraseña: ";
+            this.txtFecha.CalendarMonthBackground = System.Drawing.Color.WhiteSmoke;
+            this.txtFecha.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtFecha.Location = new System.Drawing.Point(150, 199);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(366, 23);
+            this.txtFecha.TabIndex = 41;
+            this.txtFecha.Value = new System.DateTime(2018, 12, 16, 15, 27, 40, 0);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(6, 204);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(131, 18);
+            this.label4.TabIndex = 40;
+            this.label4.Text = "Feha de registro:";
             // 
             // txtPrivilegio
             // 
@@ -566,32 +532,77 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(21, 290);
+            this.label3.Location = new System.Drawing.Point(6, 290);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 18);
             this.label3.TabIndex = 38;
             this.label3.Text = "Privilegio: ";
             // 
-            // label4
+            // label2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(21, 204);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 18);
-            this.label4.TabIndex = 40;
-            this.label4.Text = "Privilegio: ";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 107);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(102, 18);
+            this.label2.TabIndex = 37;
+            this.label2.Text = "Contraseña: ";
             // 
-            // txtFecha
+            // iduserDataGridViewTextBoxColumn
             // 
-            this.txtFecha.CalendarMonthBackground = System.Drawing.Color.WhiteSmoke;
-            this.txtFecha.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txtFecha.Location = new System.Drawing.Point(150, 199);
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(366, 23);
-            this.txtFecha.TabIndex = 41;
-            this.txtFecha.Value = new System.DateTime(2018, 12, 16, 15, 27, 40, 0);
+            this.iduserDataGridViewTextBoxColumn.DataPropertyName = "id_user";
+            this.iduserDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iduserDataGridViewTextBoxColumn.Name = "iduserDataGridViewTextBoxColumn";
+            this.iduserDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iduserDataGridViewTextBoxColumn.Width = 43;
+            // 
+            // ccuserDataGridViewTextBoxColumn
+            // 
+            this.ccuserDataGridViewTextBoxColumn.DataPropertyName = "cc_user";
+            this.ccuserDataGridViewTextBoxColumn.HeaderText = "C.C";
+            this.ccuserDataGridViewTextBoxColumn.Name = "ccuserDataGridViewTextBoxColumn";
+            this.ccuserDataGridViewTextBoxColumn.ReadOnly = true;
+            this.ccuserDataGridViewTextBoxColumn.Width = 54;
+            // 
+            // nomuserDataGridViewTextBoxColumn
+            // 
+            this.nomuserDataGridViewTextBoxColumn.DataPropertyName = "nom_user";
+            this.nomuserDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nomuserDataGridViewTextBoxColumn.Name = "nomuserDataGridViewTextBoxColumn";
+            this.nomuserDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nomuserDataGridViewTextBoxColumn.Width = 81;
+            // 
+            // emailuserDataGridViewTextBoxColumn
+            // 
+            this.emailuserDataGridViewTextBoxColumn.DataPropertyName = "email_user";
+            this.emailuserDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailuserDataGridViewTextBoxColumn.Name = "emailuserDataGridViewTextBoxColumn";
+            this.emailuserDataGridViewTextBoxColumn.ReadOnly = true;
+            this.emailuserDataGridViewTextBoxColumn.Width = 63;
+            // 
+            // datetimeuserDataGridViewTextBoxColumn
+            // 
+            this.datetimeuserDataGridViewTextBoxColumn.DataPropertyName = "datetime_user";
+            this.datetimeuserDataGridViewTextBoxColumn.HeaderText = "Fecha de registro";
+            this.datetimeuserDataGridViewTextBoxColumn.Name = "datetimeuserDataGridViewTextBoxColumn";
+            this.datetimeuserDataGridViewTextBoxColumn.ReadOnly = true;
+            this.datetimeuserDataGridViewTextBoxColumn.Width = 123;
+            // 
+            // roluserDataGridViewTextBoxColumn
+            // 
+            this.roluserDataGridViewTextBoxColumn.DataPropertyName = "rol_user";
+            this.roluserDataGridViewTextBoxColumn.HeaderText = "Rol";
+            this.roluserDataGridViewTextBoxColumn.Name = "roluserDataGridViewTextBoxColumn";
+            this.roluserDataGridViewTextBoxColumn.ReadOnly = true;
+            this.roluserDataGridViewTextBoxColumn.Width = 48;
+            // 
+            // Privilegio
+            // 
+            this.Privilegio.DataPropertyName = "privilege_user";
+            this.Privilegio.HeaderText = "Privilegio";
+            this.Privilegio.Name = "Privilegio";
+            this.Privilegio.ReadOnly = true;
+            this.Privilegio.Width = 84;
             // 
             // MenuUsuarios
             // 
@@ -601,7 +612,7 @@
             this.ClientSize = new System.Drawing.Size(1024, 630);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.bunifuFlatButton3);
-            this.Controls.Add(this.bunifuFlatButton2);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.gbUser);
             this.Controls.Add(this.btnCerrar);
@@ -614,8 +625,8 @@
             this.Load += new System.EventHandler(this.MenuUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.control_unityDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.gbUser.ResumeLayout(false);
             this.gbUser.PerformLayout();
             this.ResumeLayout(false);
@@ -628,33 +639,34 @@
         private control_unityDataSet control_unityDataSet;
         private System.Windows.Forms.BindingSource usersBindingSource;
         private control_unityDataSetTableAdapters.usersTableAdapter usersTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn roluserDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn datetimeuserDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailuserDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomuserDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ccuserDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iduserDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox btnCerrar;
         private Bunifu.Framework.UI.BunifuFlatButton btnAgregar;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
+        private Bunifu.Framework.UI.BunifuFlatButton btnEditar;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
         private Bunifu.Framework.UI.BunifuFlatButton btnConfirmar;
         private System.Windows.Forms.Label lblMarca;
         private System.Windows.Forms.Label lblStock;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lbCC_User;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtCC;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtNombre;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtEmail;
-        private System.Windows.Forms.ComboBox txtRol;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtPass;
         private System.Windows.Forms.GroupBox gbUser;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox txtPrivilegio;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker txtFecha;
         private System.Windows.Forms.Label label4;
+        public System.Windows.Forms.DataGridView dataGridView1;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox txtCC;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox txtNombre;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox txtEmail;
+        public System.Windows.Forms.ComboBox txtRol;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox txtPass;
+        public System.Windows.Forms.ComboBox txtPrivilegio;
+        public System.Windows.Forms.DateTimePicker txtFecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iduserDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ccuserDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomuserDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailuserDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datetimeuserDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roluserDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Privilegio;
     }
 }

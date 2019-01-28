@@ -33,6 +33,7 @@ namespace Contro_unity
             txtStock.Enabled = false;
             txtMarca.Enabled = false;
             txtDescripcion.Enabled = false;
+            txtFecha.Enabled = false;
 
 
         }
@@ -44,6 +45,7 @@ namespace Contro_unity
             txtStock.Enabled = true;
             txtMarca.Enabled = true;
             txtDescripcion.Enabled = true;
+            txtFecha.Enabled = true;
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
@@ -52,19 +54,42 @@ namespace Contro_unity
             {
                 if (btnAgregar.Enabled == true)
                 {
-                   // MessageBox.Show(con.insertar_inventario(txtCod_Serie.Text,txtNombre.Text,Convert.ToInt32( txtStock.Value),txtMarca.Text,txtDescripcion.Text));
+                    var Implemento = new Clases.implemento(txtCod_Serie.Text,txtNombre.Text,txtFecha.Text,Convert.ToInt32(txtStock.Value),txtMarca.Text,txtDescripcion.Text);
+                    Implemento.Registrar();
                     this.implementsTableAdapter.Fill(this.control_unityDataSet.implements);
                     txtCod_Serie.Text = "";
                     txtNombre.Text = "";
                     txtStock.Value = 0;
+                    txtFecha.Text = "";
                     txtMarca.Text = "";
                     txtDescripcion.Text = "";
-                    //txtFecha.Text = "";
+                    
                 }
                 else
                 {
-                    MessageBox.Show("Los Campo de textos no estan habilitados, Por favor presione agregar e intente de neuvo");
+                    MessageBox.Show("Los Campo de textos no estan habilitados, Por favor presione agregar e intente de nuevo");
                 }
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            txtCod_Serie.Enabled = true;
+            txtNombre.Enabled = true;
+            txtStock.Enabled = true;
+            txtMarca.Enabled = true;
+            txtDescripcion.Enabled = true;
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                txtCod_Serie.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                txtNombre.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                //txtStock = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                txtMarca.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                txtDescripcion.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un registro", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

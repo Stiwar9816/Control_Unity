@@ -58,6 +58,8 @@ namespace Contro_unity
 
             var profesor = new Clases.profesor();
             //Agregar Profesor si los textBox estan habilitados
+
+            
             if (btnAgregar.Enabled == true)
             {
                 if (txtCC.Text.Equals(""))
@@ -69,7 +71,9 @@ namespace Contro_unity
                 {
                     txtFullName.Focus();
                     MessageBox.Show("El campo nombre esta vacio", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                } else if(txtPrograma.Text.Equals("")){
+                }
+                else if (txtPrograma.Text.Equals(""))
+                {
                     txtPrograma.Focus();
                     MessageBox.Show("El campo programa esta vacio", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
@@ -87,16 +91,27 @@ namespace Contro_unity
             {
                 MessageBox.Show("Los Campo de textos no estan habilitados, Por favor seleccione una opcion e intente de nuevo", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
         }
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
-            txtCC.Enabled = true;
+            
+            txtCC.Enabled = false;
             txtFullName.Enabled = true;
             txtPrograma.Enabled = true;
-           
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                
+                txtCC.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                txtFullName.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                txtPrograma.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                
+                
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un registro", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
-
     }
 }

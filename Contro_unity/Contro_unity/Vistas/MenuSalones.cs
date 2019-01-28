@@ -71,5 +71,20 @@ namespace Contro_unity
                 MessageBox.Show("Los Campo de textos no estan habilitados, Por favor presione agregar e intente de neuvo", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            txtNom_Salon.Enabled = true;
+            txtDescripcion.Enabled = true;
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                txtNom_Salon.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                txtDescripcion.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un registro", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

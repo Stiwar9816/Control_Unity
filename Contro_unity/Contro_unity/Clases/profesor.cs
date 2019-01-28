@@ -95,6 +95,19 @@ namespace Contro_unity.Clases
             throw new NotImplementedException();
         }
 
+        public void Editar(string nom_teacher, string program_teacher, int cc)
+        {
+           
+            con.Con.Open();
+            var cmd = new SqlCommand("SP_ACTUALIZAR_PROFESOR", con.Con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@nom_teacher", nom_teacher);
+            cmd.Parameters.AddWithValue("@program_teacher", program_teacher);
+            cmd.Parameters.AddWithValue("@cc_teacher", cc);
+            cmd.ExecuteNonQuery();
+
+        }
+
 
     }
 }

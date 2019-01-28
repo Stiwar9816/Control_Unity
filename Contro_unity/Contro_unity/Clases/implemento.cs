@@ -14,7 +14,7 @@ namespace Contro_unity.Clases
         Conexion con = new Conexion();
         //PRODIEDADES DE LA CLASE
         public int Id_implements { get; set; }
-        public int Cod_serie { get; set; }
+        public string Cod_serie { get; set; }
         public string Nom_implements { get; set; }
         public string Datetime_register_implements { get; set; }
         public int Stock_implements { get; set; }
@@ -25,7 +25,7 @@ namespace Contro_unity.Clases
 
         //CONSTRUCTOR DE LA CLASE
         //CONSTRUCTOR PARA REGISTRAR
-        public implemento(int _cod_serie, string _nom_implements,string _datetime_register_implements,int _stock, string _brand, string _description_implements)
+        public implemento(string _cod_serie, string _nom_implements,string _datetime_register_implements,int _stock, string _brand, string _description_implements)
         {
             this.Cod_serie = _cod_serie;
             this.Nom_implements = _nom_implements;
@@ -37,7 +37,7 @@ namespace Contro_unity.Clases
 
         //CONSTRUCTOR DE LA CLASE
         //CONSTRUCTOR PARA REGISTRAR
-        public implemento(int _cod_serie, string _nom_implements, string _datetime_register_implements, int _stock, string _brand, string _description_implements,int _id_implements)
+        public implemento(string _cod_serie, string _nom_implements, string _datetime_register_implements, int _stock, string _brand, string _description_implements,int _id_implements)
         {
             this.Cod_serie = _cod_serie;
             this.Nom_implements = _nom_implements;
@@ -50,7 +50,7 @@ namespace Contro_unity.Clases
 
         //CONSTRUCTOR DE LA CLASE
         //CONSTRUCTOR PARA ELMINAR
-        public implemento(int _cod_serie)
+        public implemento(string _cod_serie)
         {
             this.Cod_serie = _cod_serie;
 
@@ -79,7 +79,7 @@ namespace Contro_unity.Clases
             }
             catch (SqlException e)
             {
-                MessageBox.Show("No se pudo registrar", e.Message);
+                MessageBox.Show(e.ToString());
                 return ultimo_id;
             }
             finally

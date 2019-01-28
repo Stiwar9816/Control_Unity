@@ -63,6 +63,16 @@ namespace Contro_unity.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_about_500 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-about-500", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_available_updates_filled_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8_available_updates_filled_50", resourceCulture);
@@ -233,6 +243,16 @@ namespace Contro_unity.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_help_500 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-help-500", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_home_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8_home_50", resourceCulture);
@@ -256,6 +276,16 @@ namespace Contro_unity.Properties {
         internal static System.Drawing.Bitmap icons8_info_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8_info_50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_info_500 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-info-500", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

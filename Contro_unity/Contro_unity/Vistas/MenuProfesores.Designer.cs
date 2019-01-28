@@ -50,12 +50,12 @@
             this.teacherBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.control_unityDataSet = new Contro_unity.control_unityDataSet();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.teacherTableAdapter = new Contro_unity.control_unityDataSetTableAdapters.teacherTableAdapter();
             this.btnAgregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnConfirmar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnEliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnEditar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.teacherTableAdapter = new Contro_unity.control_unityDataSetTableAdapters.teacherTableAdapter();
             this.gbEditInventario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teacherBindingSource)).BeginInit();
@@ -223,6 +223,7 @@
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Menu;
             this.dataGridView1.Location = new System.Drawing.Point(12, 42);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Menu;
@@ -259,6 +260,7 @@
             this.ccteacherDataGridViewTextBoxColumn.DataPropertyName = "cc_teacher";
             this.ccteacherDataGridViewTextBoxColumn.HeaderText = "C.C";
             this.ccteacherDataGridViewTextBoxColumn.Name = "ccteacherDataGridViewTextBoxColumn";
+            this.ccteacherDataGridViewTextBoxColumn.ReadOnly = true;
             this.ccteacherDataGridViewTextBoxColumn.Width = 54;
             // 
             // nomteacherDataGridViewTextBoxColumn
@@ -266,6 +268,7 @@
             this.nomteacherDataGridViewTextBoxColumn.DataPropertyName = "nom_teacher";
             this.nomteacherDataGridViewTextBoxColumn.HeaderText = "Nombre Completo";
             this.nomteacherDataGridViewTextBoxColumn.Name = "nomteacherDataGridViewTextBoxColumn";
+            this.nomteacherDataGridViewTextBoxColumn.ReadOnly = true;
             this.nomteacherDataGridViewTextBoxColumn.Width = 133;
             // 
             // programteacherDataGridViewTextBoxColumn
@@ -273,6 +276,7 @@
             this.programteacherDataGridViewTextBoxColumn.DataPropertyName = "program_teacher";
             this.programteacherDataGridViewTextBoxColumn.HeaderText = "Programa";
             this.programteacherDataGridViewTextBoxColumn.Name = "programteacherDataGridViewTextBoxColumn";
+            this.programteacherDataGridViewTextBoxColumn.ReadOnly = true;
             this.programteacherDataGridViewTextBoxColumn.Width = 91;
             // 
             // teacherBindingSource
@@ -284,10 +288,6 @@
             // 
             this.control_unityDataSet.DataSetName = "control_unityDataSet";
             this.control_unityDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // teacherTableAdapter
-            // 
-            this.teacherTableAdapter.ClearBeforeFill = true;
             // 
             // btnAgregar
             // 
@@ -450,6 +450,10 @@
             this.toolTip1.SetToolTip(this.btnCerrar, "Cerrar");
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // teacherTableAdapter
+            // 
+            this.teacherTableAdapter.ClearBeforeFill = true;
+            // 
             // MenuProfesores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -485,11 +489,8 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblMarca;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.ToolTip toolTip1;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtFullName;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtCC;
         private Bunifu.Framework.UI.BunifuFlatButton btnEliminar;
         private Bunifu.Framework.UI.BunifuFlatButton btnEditar;
         private Bunifu.Framework.UI.BunifuFlatButton btnConfirmar;
@@ -501,6 +502,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ccteacherDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomteacherDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn programteacherDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ComboBox txtPrograma;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox txtFullName;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox txtCC;
+        public System.Windows.Forms.ComboBox txtPrograma;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }

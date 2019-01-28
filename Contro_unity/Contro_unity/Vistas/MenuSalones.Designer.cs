@@ -44,7 +44,7 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnConfirmar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnEditar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAgregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.control_unityDataSet = new Contro_unity.control_unityDataSet();
             this.salonsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -233,41 +233,42 @@
             this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolTip1.SetToolTip(this.bunifuFlatButton3, "Eliminar");
             // 
-            // bunifuFlatButton2
+            // btnEditar
             // 
-            this.bunifuFlatButton2.Activecolor = System.Drawing.SystemColors.Menu;
-            this.bunifuFlatButton2.BackColor = System.Drawing.SystemColors.Menu;
-            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bunifuFlatButton2.BorderRadius = 3;
-            this.bunifuFlatButton2.ButtonText = "EDITAR";
-            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton2.DisabledColor = System.Drawing.SystemColors.Menu;
-            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.Iconimage = global::Contro_unity.Properties.Resources.icons8_edit_50;
-            this.bunifuFlatButton2.Iconimage_right = null;
-            this.bunifuFlatButton2.Iconimage_right_Selected = null;
-            this.bunifuFlatButton2.Iconimage_Selected = null;
-            this.bunifuFlatButton2.IconMarginLeft = 0;
-            this.bunifuFlatButton2.IconMarginRight = 0;
-            this.bunifuFlatButton2.IconRightVisible = true;
-            this.bunifuFlatButton2.IconRightZoom = 0D;
-            this.bunifuFlatButton2.IconVisible = true;
-            this.bunifuFlatButton2.IconZoom = 55D;
-            this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(162, 461);
-            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
-            this.bunifuFlatButton2.Normalcolor = System.Drawing.SystemColors.Menu;
-            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.SkyBlue;
-            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.Black;
-            this.bunifuFlatButton2.selected = false;
-            this.bunifuFlatButton2.Size = new System.Drawing.Size(128, 47);
-            this.bunifuFlatButton2.TabIndex = 22;
-            this.bunifuFlatButton2.Text = "EDITAR";
-            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolTip1.SetToolTip(this.bunifuFlatButton2, "Editar");
+            this.btnEditar.Activecolor = System.Drawing.SystemColors.Menu;
+            this.btnEditar.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEditar.BorderRadius = 3;
+            this.btnEditar.ButtonText = "EDITAR";
+            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditar.DisabledColor = System.Drawing.SystemColors.Menu;
+            this.btnEditar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnEditar.Iconimage = global::Contro_unity.Properties.Resources.icons8_edit_50;
+            this.btnEditar.Iconimage_right = null;
+            this.btnEditar.Iconimage_right_Selected = null;
+            this.btnEditar.Iconimage_Selected = null;
+            this.btnEditar.IconMarginLeft = 0;
+            this.btnEditar.IconMarginRight = 0;
+            this.btnEditar.IconRightVisible = true;
+            this.btnEditar.IconRightZoom = 0D;
+            this.btnEditar.IconVisible = true;
+            this.btnEditar.IconZoom = 55D;
+            this.btnEditar.IsTab = false;
+            this.btnEditar.Location = new System.Drawing.Point(162, 461);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Normalcolor = System.Drawing.SystemColors.Menu;
+            this.btnEditar.OnHovercolor = System.Drawing.Color.SkyBlue;
+            this.btnEditar.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnEditar.selected = false;
+            this.btnEditar.Size = new System.Drawing.Size(128, 47);
+            this.btnEditar.TabIndex = 22;
+            this.btnEditar.Text = "EDITAR";
+            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnEditar.Textcolor = System.Drawing.Color.Black;
+            this.btnEditar.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolTip1.SetToolTip(this.btnEditar, "Editar");
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnAgregar
             // 
@@ -415,7 +416,7 @@
             this.ClientSize = new System.Drawing.Size(1024, 630);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.bunifuFlatButton3);
-            this.Controls.Add(this.bunifuFlatButton2);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.gbEditInventario);
@@ -444,18 +445,18 @@
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolTip toolTip1;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtNom_Salon;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtDescripcion;
         private Bunifu.Framework.UI.BunifuFlatButton btnConfirmar;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
+        private Bunifu.Framework.UI.BunifuFlatButton btnEditar;
         private Bunifu.Framework.UI.BunifuFlatButton btnAgregar;
         private control_unityDataSet control_unityDataSet;
         private System.Windows.Forms.BindingSource salonsBindingSource;
         private control_unityDataSetTableAdapters.salonsTableAdapter salonsTableAdapter;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idsalonDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomsalonDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionsalonDataGridViewTextBoxColumn;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox txtNom_Salon;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox txtDescripcion;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }
