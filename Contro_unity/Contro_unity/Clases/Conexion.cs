@@ -20,7 +20,7 @@ namespace Contro_unity
         DataTable DaT;
 
         //Conexion a la BD
-        public SqlConnection Con = new SqlConnection("Server= DESKTOP-S7URQ0I\\SQLEXPRESS;DataBase=control_unity;Integrated Security=true");
+        public SqlConnection Con = new SqlConnection("Data Source=DESKTOP-S7URQ0I\\SQLEXPRESS;Initial Catalog=control_unity;Persist Security Info=True;User ID=controlUnity;Password=control123");
 
        /* public SqlConnection AbrirConexion()
         {
