@@ -82,7 +82,17 @@ namespace Contro_unity.Clases
             throw new NotImplementedException();
         }
 
-        public bool Eliminar()
+        public void Eliminar(int Id_salon)
+        {
+            con.Con.Open();
+            var cmd = new SqlCommand("SP_ELIMINAR_SALON", con.Con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@id_salon", Id_salon);
+            cmd.ExecuteNonQuery();
+            cmd.Parameters.Clear();
+        }
+
+        public int Eliminar()
         {
             throw new NotImplementedException();
         }

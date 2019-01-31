@@ -86,5 +86,21 @@ namespace Contro_unity
                 MessageBox.Show("Seleccione un registro", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                var DeleteSalon = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                var salon = new Clases.salon();
+                salon.Eliminar(Convert.ToInt32(DeleteSalon));
+                salonsTableAdapter.Fill(this.control_unityDataSet.salons);
+                MessageBox.Show("Elimando Correctamente");
+            }
+            else
+            {
+                MessageBox.Show("Selecciones una fila");
+            }
+        }
     }
 }

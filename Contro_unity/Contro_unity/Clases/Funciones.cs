@@ -10,7 +10,7 @@ namespace Contro_unity.Clases
     {
         int Registrar();
         bool Actualizar();
-        bool Eliminar();
+        int Eliminar();
 
     }
 }

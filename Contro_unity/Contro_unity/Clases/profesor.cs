@@ -90,9 +90,14 @@ namespace Contro_unity.Clases
             throw new NotImplementedException();
         }
 
-        public bool Eliminar()
+        public void Eliminar(int Id_teacher)
         {
-            throw new NotImplementedException();
+            con.Con.Open();
+            SqlCommand cmd = new SqlCommand("SP_ELIMINAR_PROFESOR", con.Con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@id_teacher", Id_teacher);
+            cmd.ExecuteNonQuery();
+            cmd.Parameters.Clear();
         }
 
         public void Editar(string nom_teacher, string program_teacher, int cc)
@@ -108,6 +113,14 @@ namespace Contro_unity.Clases
 
         }
 
+        public void Eliminar()
+        {
+            throw new NotImplementedException();
+        }
 
+        int Funciones.Eliminar()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -104,7 +104,12 @@ namespace Contro_unity.Clases
             throw new NotImplementedException();
         }
 
-        public bool Eliminar()
+        public void Eliminar()
+        {
+            throw new NotImplementedException();
+        }
+
+        int Funciones.Eliminar()
         {
             throw new NotImplementedException();
         }

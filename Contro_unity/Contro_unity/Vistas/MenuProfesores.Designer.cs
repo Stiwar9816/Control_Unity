@@ -398,6 +398,7 @@
             this.btnEliminar.Textcolor = System.Drawing.Color.Black;
             this.btnEliminar.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolTip1.SetToolTip(this.btnEliminar, "Eliminar");
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 

@@ -2,14 +2,14 @@
 <xs:schema id="control_unityDataSet" targetNamespace="http://tempuri.org/control_unityDataSet.xsd" xmlns:mstns="http://tempuri.org/control_unityDataSet.xsd" xmlns="http://tempuri.org/control_unityDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConexionBD" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConexionBD (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Contro_unity.Properties.Settings.GlobalReference.Default.ConexionBD" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="control_unityConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="control_unityConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Contro_unity.Properties.Settings.GlobalReference.Default.control_unityConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="booking_teacherTableAdapter" GeneratorDataComponentClassName="booking_teacherTableAdapter" Name="booking_teacher" UserDataComponentName="booking_teacherTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ConexionBD (Settings)" DbObjectName="control_unity.dbo.booking_teacher" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="control_unityConnectionString (Settings)" DbObjectName="control_unity.dbo.booking_teacher" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[booking_teacher] WHERE (([id_booking] = @Original_id_booking) AND ([cc_teacher] = @Original_cc_teacher) AND ([nom_teacher] = @Original_nom_teacher) AND ([programa_teacher] = @Original_programa_teacher) AND ([datetime_in_teacher] = @Original_datetime_in_teacher) AND ([datetime_out_teacher] = @Original_datetime_out_teacher) AND ([reserve_implements_teacher] = @Original_reserve_implements_teacher) AND ([reserve_salon_teacher] = @Original_reserve_salon_teacher) AND ([delivered_by_teacher] = @Original_delivered_by_teacher) AND ([received_by_teacher] = @Original_received_by_teacher))</CommandText>
@@ -96,7 +96,7 @@ SELECT id_booking, cc_teacher, nom_teacher, programa_teacher, datetime_in_teache
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="booking_userTableAdapter" GeneratorDataComponentClassName="booking_userTableAdapter" Name="booking_user" UserDataComponentName="booking_userTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ConexionBD (Settings)" DbObjectName="control_unity.dbo.booking_user" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="control_unityConnectionString (Settings)" DbObjectName="control_unity.dbo.booking_user" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[booking_user] WHERE (([id_user] = @Original_id_user) AND ([cc_user] = @Original_cc_user) AND ([nom_user] = @Original_nom_user) AND ((@IsNull_program_user = 1 AND [program_user] IS NULL) OR ([program_user] = @Original_program_user)) AND ([datetime_in_user] = @Original_datetime_in_user) AND ([datetime_out_user] = @Original_datetime_out_user) AND ([reserve_implements_user] = @Original_reserve_implements_user) AND ([reserve_salon_user] = @Original_reserve_salon_user) AND ([delivered_by_user] = @Original_delivered_by_user) AND ([received_by_user] = @Original_received_by_user))</CommandText>
@@ -186,7 +186,7 @@ SELECT id_user, cc_user, nom_user, program_user, datetime_in_user, datetime_out_
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="implementsTableAdapter" GeneratorDataComponentClassName="implementsTableAdapter" Name="implements" UserDataComponentName="implementsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ConexionBD (Settings)" DbObjectName="control_unity.dbo.implements" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="control_unityConnectionString (Settings)" DbObjectName="control_unity.dbo.implements" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[implements] WHERE (([id_implements] = @Original_id_implements) AND ([cod_serie] = @Original_cod_serie) AND ([nom_implements] = @Original_nom_implements) AND ([datetime_register_implements] = @Original_datetime_register_implements) AND ([stock_implements] = @Original_stock_implements) AND ([brand] = @Original_brand) AND ((@IsNull_description_implements = 1 AND [description_implements] IS NULL) OR ([description_implements] = @Original_description_implements)))</CommandText>
@@ -194,7 +194,7 @@ SELECT id_user, cc_user, nom_user, program_user, datetime_in_user, datetime_out_
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_id_implements" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_implements" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_cod_serie" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="cod_serie" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_nom_implements" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="nom_implements" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_datetime_register_implements" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="datetime_register_implements" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime2" Direction="Input" ParameterName="@Original_datetime_register_implements" Precision="0" ProviderType="DateTime2" Scale="0" Size="0" SourceColumn="datetime_register_implements" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_stock_implements" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="stock_implements" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_brand" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="brand" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_description_implements" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="description_implements" SourceColumnNullMapping="true" SourceVersion="Original" />
@@ -209,7 +209,7 @@ SELECT id_implements, cod_serie, nom_implements, datetime_register_implements, s
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@cod_serie" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="cod_serie" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@nom_implements" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="nom_implements" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@datetime_register_implements" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="datetime_register_implements" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime2" Direction="Input" ParameterName="@datetime_register_implements" Precision="0" ProviderType="DateTime2" Scale="0" Size="0" SourceColumn="datetime_register_implements" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@stock_implements" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="stock_implements" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@brand" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="brand" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@description_implements" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="description_implements" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -229,14 +229,14 @@ SELECT id_implements, cod_serie, nom_implements, datetime_register_implements, s
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@cod_serie" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="cod_serie" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@nom_implements" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="nom_implements" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@datetime_register_implements" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="datetime_register_implements" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime2" Direction="Input" ParameterName="@datetime_register_implements" Precision="0" ProviderType="DateTime2" Scale="0" Size="0" SourceColumn="datetime_register_implements" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@stock_implements" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="stock_implements" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@brand" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="brand" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@description_implements" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="description_implements" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_id_implements" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_implements" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_cod_serie" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="cod_serie" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_nom_implements" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="nom_implements" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_datetime_register_implements" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="datetime_register_implements" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime2" Direction="Input" ParameterName="@Original_datetime_register_implements" Precision="0" ProviderType="DateTime2" Scale="0" Size="0" SourceColumn="datetime_register_implements" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_stock_implements" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="stock_implements" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_brand" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="brand" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_description_implements" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="description_implements" SourceColumnNullMapping="true" SourceVersion="Original" />
@@ -260,7 +260,7 @@ SELECT id_implements, cod_serie, nom_implements, datetime_register_implements, s
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="salonsTableAdapter" GeneratorDataComponentClassName="salonsTableAdapter" Name="salons" UserDataComponentName="salonsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ConexionBD (Settings)" DbObjectName="control_unity.dbo.salons" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="control_unityConnectionString (Settings)" DbObjectName="control_unity.dbo.salons" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[salons] WHERE (([id_salon] = @Original_id_salon) AND ([nom_salon] = @Original_nom_salon) AND ([description_salon] = @Original_description_salon))</CommandText>
@@ -312,7 +312,7 @@ SELECT id_salon, nom_salon, description_salon FROM salons WHERE (id_salon = @id_
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="teacherTableAdapter" GeneratorDataComponentClassName="teacherTableAdapter" Name="teacher" UserDataComponentName="teacherTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ConexionBD (Settings)" DbObjectName="control_unity.dbo.teacher" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="control_unityConnectionString (Settings)" DbObjectName="control_unity.dbo.teacher" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[teacher] WHERE (([id_teacher] = @Original_id_teacher) AND ([cc_teacher] = @Original_cc_teacher) AND ([nom_teacher] = @Original_nom_teacher) AND ([program_teacher] = @Original_program_teacher))</CommandText>
@@ -369,7 +369,7 @@ SELECT id_teacher, cc_teacher, nom_teacher, program_teacher FROM teacher WHERE (
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="usersTableAdapter" GeneratorDataComponentClassName="usersTableAdapter" Name="users" UserDataComponentName="usersTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ConexionBD (Settings)" DbObjectName="control_unity.dbo.users" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="control_unityConnectionString (Settings)" DbObjectName="control_unity.dbo.users" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[users] WHERE (([id_user] = @Original_id_user) AND ([cc_user] = @Original_cc_user) AND ([nom_user] = @Original_nom_user) AND ([password_user] = @Original_password_user) AND ([email_user] = @Original_email_user) AND ([datetime_user] = @Original_datetime_user) AND ([rol_user] = @Original_rol_user) AND ([privilege_user] = @Original_privilege_user))</CommandText>
@@ -444,8 +444,119 @@ SELECT id_user, cc_user, nom_user, password_user, email_user, datetime_user, rol
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SP_BUSCAR_PROFESORTableAdapter" GeneratorDataComponentClassName="SP_BUSCAR_PROFESORTableAdapter" Name="SP_BUSCAR_PROFESOR" UserDataComponentName="SP_BUSCAR_PROFESORTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="control_unityConnectionString (Settings)" DbObjectName="control_unity.dbo.SP_BUSCAR_PROFESOR" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.SP_BUSCAR_PROFESOR</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@cc_teacher" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="cc_teacher" DataSetColumn="cc_teacher" />
+              <Mapping SourceColumn="nom_teacher" DataSetColumn="nom_teacher" />
+              <Mapping SourceColumn="program_teacher" DataSetColumn="program_teacher" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SPIniciarSesionTableAdapter" GeneratorDataComponentClassName="SPIniciarSesionTableAdapter" Name="SPIniciarSesion" UserDataComponentName="SPIniciarSesionTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="control_unityConnectionString (Settings)" DbObjectName="control_unity.dbo.SPIniciarSesion" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.SPIniciarSesion</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@Usuario" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@Password" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_user" DataSetColumn="id_user" />
+              <Mapping SourceColumn="cc_user" DataSetColumn="cc_user" />
+              <Mapping SourceColumn="nom_user" DataSetColumn="nom_user" />
+              <Mapping SourceColumn="password_user" DataSetColumn="password_user" />
+              <Mapping SourceColumn="email_user" DataSetColumn="email_user" />
+              <Mapping SourceColumn="datetime_user" DataSetColumn="datetime_user" />
+              <Mapping SourceColumn="rol_user" DataSetColumn="rol_user" />
+              <Mapping SourceColumn="privilege_user" DataSetColumn="privilege_user" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
-        <Sources />
+        <Sources>
+          <DbSource ConnectionRef="control_unityConnectionString (Settings)" DbObjectName="control_unity.dbo.SP_REGISTAR_PROFESOR" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="SP_REGISTAR_PROFESOR" MethodsParameterType="CLR" Modifier="Public" Name="SP_REGISTAR_PROFESOR" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="SP_REGISTAR_PROFESOR">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.SP_REGISTAR_PROFESOR</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@cc_teacher" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@nom_teacher" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@program_teacher" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="InputOutput" ParameterName="@ultimo_id" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="control_unityConnectionString (Settings)" DbObjectName="control_unity.dbo.SP_REGISTRAR_IMPLEMENTO" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="SP_REGISTRAR_IMPLEMENTO" MethodsParameterType="CLR" Modifier="Public" Name="SP_REGISTRAR_IMPLEMENTO" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="SP_REGISTRAR_IMPLEMENTO">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.SP_REGISTRAR_IMPLEMENTO</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@cod_serie" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@nom_implements" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="datetime2" DbType="DateTime2" Direction="Input" ParameterName="@datetime_register_implements" Precision="19" ProviderType="DateTime2" Scale="0" Size="6" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@stock_implements" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@brand" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@description_implements" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="InputOutput" ParameterName="@ultimo_id" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="control_unityConnectionString (Settings)" DbObjectName="control_unity.dbo.SP_REGISTRAR_SALON" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="SP_REGISTRAR_SALON" MethodsParameterType="CLR" Modifier="Public" Name="SP_REGISTRAR_SALON" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="SP_REGISTRAR_SALON">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.SP_REGISTRAR_SALON</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@nom_salon" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@description_salon" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="InputOutput" ParameterName="@ultimo_id" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="control_unityConnectionString (Settings)" DbObjectName="control_unity.dbo.SP_REGISTRAR_USUARIO" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="SP_REGISTRAR_USUARIO" MethodsParameterType="CLR" Modifier="Public" Name="SP_REGISTRAR_USUARIO" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="SP_REGISTRAR_USUARIO">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.SP_REGISTRAR_USUARIO</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@cc_user" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@nom_user" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@password_user" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@email_user" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="timestamp" DbType="Binary" Direction="Input" ParameterName="@datetime_user" Precision="0" ProviderType="Timestamp" Scale="0" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@rol_user" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@privilege_user" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="InputOutput" ParameterName="@ultimo_id" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+        </Sources>
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
@@ -680,6 +791,65 @@ SELECT id_user, cc_user, nom_user, password_user, email_user, datetime_user, rol
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="SP_BUSCAR_PROFESOR" msprop:Generator_TableClassName="SP_BUSCAR_PROFESORDataTable" msprop:Generator_TableVarName="tableSP_BUSCAR_PROFESOR" msprop:Generator_TablePropName="SP_BUSCAR_PROFESOR" msprop:Generator_RowDeletingName="SP_BUSCAR_PROFESORRowDeleting" msprop:Generator_RowChangingName="SP_BUSCAR_PROFESORRowChanging" msprop:Generator_RowEvHandlerName="SP_BUSCAR_PROFESORRowChangeEventHandler" msprop:Generator_RowDeletedName="SP_BUSCAR_PROFESORRowDeleted" msprop:Generator_UserTableName="SP_BUSCAR_PROFESOR" msprop:Generator_RowChangedName="SP_BUSCAR_PROFESORRowChanged" msprop:Generator_RowEvArgName="SP_BUSCAR_PROFESORRowChangeEvent" msprop:Generator_RowClassName="SP_BUSCAR_PROFESORRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cc_teacher" msprop:Generator_ColumnVarNameInTable="columncc_teacher" msprop:Generator_ColumnPropNameInRow="cc_teacher" msprop:Generator_ColumnPropNameInTable="cc_teacherColumn" msprop:Generator_UserColumnName="cc_teacher" type="xs:int" />
+              <xs:element name="nom_teacher" msprop:Generator_ColumnVarNameInTable="columnnom_teacher" msprop:Generator_ColumnPropNameInRow="nom_teacher" msprop:Generator_ColumnPropNameInTable="nom_teacherColumn" msprop:Generator_UserColumnName="nom_teacher">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="program_teacher" msprop:Generator_ColumnVarNameInTable="columnprogram_teacher" msprop:Generator_ColumnPropNameInRow="program_teacher" msprop:Generator_ColumnPropNameInTable="program_teacherColumn" msprop:Generator_UserColumnName="program_teacher">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SPIniciarSesion" msprop:Generator_TableClassName="SPIniciarSesionDataTable" msprop:Generator_TableVarName="tableSPIniciarSesion" msprop:Generator_TablePropName="SPIniciarSesion" msprop:Generator_RowDeletingName="SPIniciarSesionRowDeleting" msprop:Generator_RowChangingName="SPIniciarSesionRowChanging" msprop:Generator_RowEvHandlerName="SPIniciarSesionRowChangeEventHandler" msprop:Generator_RowDeletedName="SPIniciarSesionRowDeleted" msprop:Generator_UserTableName="SPIniciarSesion" msprop:Generator_RowChangedName="SPIniciarSesionRowChanged" msprop:Generator_RowEvArgName="SPIniciarSesionRowChangeEvent" msprop:Generator_RowClassName="SPIniciarSesionRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_user" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnid_user" msprop:Generator_ColumnPropNameInRow="id_user" msprop:Generator_ColumnPropNameInTable="id_userColumn" msprop:Generator_UserColumnName="id_user" type="xs:int" />
+              <xs:element name="cc_user" msprop:Generator_ColumnVarNameInTable="columncc_user" msprop:Generator_ColumnPropNameInRow="cc_user" msprop:Generator_ColumnPropNameInTable="cc_userColumn" msprop:Generator_UserColumnName="cc_user" type="xs:int" />
+              <xs:element name="nom_user" msprop:Generator_ColumnVarNameInTable="columnnom_user" msprop:Generator_ColumnPropNameInRow="nom_user" msprop:Generator_ColumnPropNameInTable="nom_userColumn" msprop:Generator_UserColumnName="nom_user">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="password_user" msprop:Generator_ColumnVarNameInTable="columnpassword_user" msprop:Generator_ColumnPropNameInRow="password_user" msprop:Generator_ColumnPropNameInTable="password_userColumn" msprop:Generator_UserColumnName="password_user">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="email_user" msprop:Generator_ColumnVarNameInTable="columnemail_user" msprop:Generator_ColumnPropNameInRow="email_user" msprop:Generator_ColumnPropNameInTable="email_userColumn" msprop:Generator_UserColumnName="email_user">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="datetime_user" msprop:Generator_ColumnVarNameInTable="columndatetime_user" msprop:Generator_ColumnPropNameInRow="datetime_user" msprop:Generator_ColumnPropNameInTable="datetime_userColumn" msprop:Generator_UserColumnName="datetime_user" type="xs:dateTime" />
+              <xs:element name="rol_user" msprop:Generator_ColumnVarNameInTable="columnrol_user" msprop:Generator_ColumnPropNameInRow="rol_user" msprop:Generator_ColumnPropNameInTable="rol_userColumn" msprop:Generator_UserColumnName="rol_user">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="privilege_user" msprop:Generator_ColumnVarNameInTable="columnprivilege_user" msprop:Generator_ColumnPropNameInRow="privilege_user" msprop:Generator_ColumnPropNameInTable="privilege_userColumn" msprop:Generator_UserColumnName="privilege_user" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -704,6 +874,10 @@ SELECT id_user, cc_user, nom_user, password_user, email_user, datetime_user, rol
     </xs:unique>
     <xs:unique name="users_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:users" />
+      <xs:field xpath="mstns:id_user" />
+    </xs:unique>
+    <xs:unique name="SPIniciarSesion_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SPIniciarSesion" />
       <xs:field xpath="mstns:id_user" />
     </xs:unique>
   </xs:element>

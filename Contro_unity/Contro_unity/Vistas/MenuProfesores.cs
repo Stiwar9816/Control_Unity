@@ -113,5 +113,20 @@ namespace Contro_unity
                 MessageBox.Show("Seleccione un registro", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                var DeletePro = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                var profesor = new Clases.profesor();
+                profesor.Eliminar(Convert.ToInt32(DeletePro));
+                teacherTableAdapter.Fill(this.control_unityDataSet.teacher);
+                MessageBox.Show("Elimando Correctamente");
+            } else
+            {
+                MessageBox.Show("Selecciones una fila");
+            }
+        }
     }
 }

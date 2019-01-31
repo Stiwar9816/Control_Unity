@@ -37,6 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.gbEditInventario = new System.Windows.Forms.GroupBox();
+            this.txtStock = new System.Windows.Forms.NumericUpDown();
             this.txtFecha = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.txtDescripcion = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -52,7 +53,7 @@
             this.btnConfirmar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAgregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnEditar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnEliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idimplementsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codserieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,13 +65,12 @@
             this.implementsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.control_unityDataSet = new Contro_unity.control_unityDataSet();
             this.implementsTableAdapter = new Contro_unity.control_unityDataSetTableAdapters.implementsTableAdapter();
-            this.txtStock = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.gbEditInventario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.implementsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.control_unityDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStock)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -120,6 +120,17 @@
             this.gbEditInventario.TabIndex = 16;
             this.gbEditInventario.TabStop = false;
             this.gbEditInventario.Text = "DATOS DEL IMPLEMENTO";
+            // 
+            // txtStock
+            // 
+            this.txtStock.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtStock.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtStock.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtStock.Location = new System.Drawing.Point(150, 105);
+            this.txtStock.Name = "txtStock";
+            this.txtStock.Size = new System.Drawing.Size(44, 19);
+            this.txtStock.TabIndex = 19;
+            this.txtStock.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtFecha
             // 
@@ -386,41 +397,42 @@
             this.toolTip1.SetToolTip(this.btnEditar, "Editar");
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // bunifuFlatButton3
+            // btnEliminar
             // 
-            this.bunifuFlatButton3.Activecolor = System.Drawing.SystemColors.Menu;
-            this.bunifuFlatButton3.BackColor = System.Drawing.SystemColors.Menu;
-            this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bunifuFlatButton3.BorderRadius = 3;
-            this.bunifuFlatButton3.ButtonText = "ELIMINAR";
-            this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton3.DisabledColor = System.Drawing.SystemColors.Menu;
-            this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton3.Iconimage = global::Contro_unity.Properties.Resources.icons8_trash_can_50;
-            this.bunifuFlatButton3.Iconimage_right = null;
-            this.bunifuFlatButton3.Iconimage_right_Selected = null;
-            this.bunifuFlatButton3.Iconimage_Selected = null;
-            this.bunifuFlatButton3.IconMarginLeft = 0;
-            this.bunifuFlatButton3.IconMarginRight = 0;
-            this.bunifuFlatButton3.IconRightVisible = true;
-            this.bunifuFlatButton3.IconRightZoom = 0D;
-            this.bunifuFlatButton3.IconVisible = true;
-            this.bunifuFlatButton3.IconZoom = 55D;
-            this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(321, 467);
-            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuFlatButton3.Name = "bunifuFlatButton3";
-            this.bunifuFlatButton3.Normalcolor = System.Drawing.SystemColors.Menu;
-            this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.LightCoral;
-            this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.Black;
-            this.bunifuFlatButton3.selected = false;
-            this.bunifuFlatButton3.Size = new System.Drawing.Size(128, 47);
-            this.bunifuFlatButton3.TabIndex = 20;
-            this.bunifuFlatButton3.Text = "ELIMINAR";
-            this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton3.Textcolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolTip1.SetToolTip(this.bunifuFlatButton3, "Eliminar");
+            this.btnEliminar.Activecolor = System.Drawing.SystemColors.Menu;
+            this.btnEliminar.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEliminar.BorderRadius = 3;
+            this.btnEliminar.ButtonText = "ELIMINAR";
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar.DisabledColor = System.Drawing.SystemColors.Menu;
+            this.btnEliminar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnEliminar.Iconimage = global::Contro_unity.Properties.Resources.icons8_trash_can_50;
+            this.btnEliminar.Iconimage_right = null;
+            this.btnEliminar.Iconimage_right_Selected = null;
+            this.btnEliminar.Iconimage_Selected = null;
+            this.btnEliminar.IconMarginLeft = 0;
+            this.btnEliminar.IconMarginRight = 0;
+            this.btnEliminar.IconRightVisible = true;
+            this.btnEliminar.IconRightZoom = 0D;
+            this.btnEliminar.IconVisible = true;
+            this.btnEliminar.IconZoom = 55D;
+            this.btnEliminar.IsTab = false;
+            this.btnEliminar.Location = new System.Drawing.Point(321, 467);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Normalcolor = System.Drawing.SystemColors.Menu;
+            this.btnEliminar.OnHovercolor = System.Drawing.Color.LightCoral;
+            this.btnEliminar.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnEliminar.selected = false;
+            this.btnEliminar.Size = new System.Drawing.Size(128, 47);
+            this.btnEliminar.TabIndex = 20;
+            this.btnEliminar.Text = "ELIMINAR";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnEliminar.Textcolor = System.Drawing.Color.Black;
+            this.btnEliminar.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolTip1.SetToolTip(this.btnEliminar, "Eliminar");
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // dataGridView1
             // 
@@ -562,17 +574,6 @@
             // 
             this.implementsTableAdapter.ClearBeforeFill = true;
             // 
-            // txtStock
-            // 
-            this.txtStock.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtStock.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtStock.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtStock.Location = new System.Drawing.Point(150, 105);
-            this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(44, 19);
-            this.txtStock.TabIndex = 19;
-            this.txtStock.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // MenuInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -580,7 +581,7 @@
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(1024, 630);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.bunifuFlatButton3);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnConfirmar);
@@ -595,10 +596,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.gbEditInventario.ResumeLayout(false);
             this.gbEditInventario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.implementsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.control_unityDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStock)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -617,7 +618,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnConfirmar;
         private Bunifu.Framework.UI.BunifuFlatButton btnAgregar;
         private Bunifu.Framework.UI.BunifuFlatButton btnEditar;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
+        private Bunifu.Framework.UI.BunifuFlatButton btnEliminar;
         private control_unityDataSet control_unityDataSet;
         private System.Windows.Forms.BindingSource implementsBindingSource;
         private control_unityDataSetTableAdapters.implementsTableAdapter implementsTableAdapter;
