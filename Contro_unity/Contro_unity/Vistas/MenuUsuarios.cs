@@ -26,10 +26,14 @@ namespace Contro_unity
         {
             // TODO: esta línea de código carga datos en la tabla 'control_unityDataSet.users' Puede moverla o quitarla según sea necesario.
             this.usersTableAdapter.Fill(this.control_unityDataSet.users);
+
+
             txtCC.Enabled = false;
             txtNombre.Enabled = false;
             txtEmail.Enabled = false;
             txtRol.Enabled = false;
+            txtPass.Enabled = false;
+            txtPrivilegio.Enabled = false;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -38,6 +42,8 @@ namespace Contro_unity
             txtNombre.Enabled = true;
             txtEmail.Enabled = true;
             txtRol.Enabled = true;
+            txtPass.Enabled = true;
+            txtPrivilegio.Enabled = true;
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)

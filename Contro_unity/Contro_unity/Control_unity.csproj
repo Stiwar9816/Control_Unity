@@ -103,6 +103,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>control_unityDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Vistas\login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,7 +166,6 @@
     <Compile Include="Vistas\SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Vistas\login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
@@ -359,6 +359,8 @@
     <None Include="Resources\icons8-about-500.png" />
     <None Include="Resources\icons8-help-500.png" />
     <None Include="Resources\icons8-info-500.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -46,18 +46,21 @@
             this.btnEliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnEditar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAgregar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.control_unityDataSet = new Contro_unity.control_unityDataSet();
-            this.salonsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.salonsTableAdapter = new Contro_unity.control_unityDataSetTableAdapters.salonsTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idsalonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomsalonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionsalonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.control_unityDataSet = new Contro_unity.control_unityDataSet();
+            this.salonsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.salonsTableAdapter = new Contro_unity.control_unityDataSetTableAdapters.salonsTableAdapter();
+            this.idsalonDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomsalonDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionsalonDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbEditInventario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.control_unityDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salonsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbEditInventario
@@ -308,23 +311,11 @@
             this.toolTip1.SetToolTip(this.btnAgregar, "Agregar");
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // control_unityDataSet
-            // 
-            this.control_unityDataSet.DataSetName = "control_unityDataSet";
-            this.control_unityDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // salonsBindingSource
-            // 
-            this.salonsBindingSource.DataMember = "salons";
-            this.salonsBindingSource.DataSource = this.control_unityDataSet;
-            // 
-            // salonsTableAdapter
-            // 
-            this.salonsTableAdapter.ClearBeforeFill = true;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Menu;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -348,13 +339,13 @@
             this.dataGridView1.ColumnHeadersHeight = 37;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idsalonDataGridViewTextBoxColumn,
-            this.nomsalonDataGridViewTextBoxColumn,
-            this.descriptionsalonDataGridViewTextBoxColumn});
+            this.idsalonDataGridViewTextBoxColumn1,
+            this.nomsalonDataGridViewTextBoxColumn1,
+            this.descriptionsalonDataGridViewTextBoxColumn1});
             this.dataGridView1.DataSource = this.salonsBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Info;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
@@ -364,6 +355,7 @@
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Menu;
             this.dataGridView1.Location = new System.Drawing.Point(12, 40);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Menu;
@@ -398,16 +390,56 @@
             // nomsalonDataGridViewTextBoxColumn
             // 
             this.nomsalonDataGridViewTextBoxColumn.DataPropertyName = "nom_salon";
-            this.nomsalonDataGridViewTextBoxColumn.HeaderText = "Salon";
+            this.nomsalonDataGridViewTextBoxColumn.HeaderText = "SALÒN";
             this.nomsalonDataGridViewTextBoxColumn.Name = "nomsalonDataGridViewTextBoxColumn";
-            this.nomsalonDataGridViewTextBoxColumn.Width = 62;
+            this.nomsalonDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nomsalonDataGridViewTextBoxColumn.Width = 71;
             // 
             // descriptionsalonDataGridViewTextBoxColumn
             // 
             this.descriptionsalonDataGridViewTextBoxColumn.DataPropertyName = "description_salon";
-            this.descriptionsalonDataGridViewTextBoxColumn.HeaderText = "Descripción";
+            this.descriptionsalonDataGridViewTextBoxColumn.HeaderText = "DESCRIPCIÒN";
             this.descriptionsalonDataGridViewTextBoxColumn.Name = "descriptionsalonDataGridViewTextBoxColumn";
-            this.descriptionsalonDataGridViewTextBoxColumn.Width = 102;
+            this.descriptionsalonDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descriptionsalonDataGridViewTextBoxColumn.Width = 111;
+            // 
+            // control_unityDataSet
+            // 
+            this.control_unityDataSet.DataSetName = "control_unityDataSet";
+            this.control_unityDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // salonsBindingSource
+            // 
+            this.salonsBindingSource.DataMember = "salons";
+            this.salonsBindingSource.DataSource = this.control_unityDataSet;
+            // 
+            // salonsTableAdapter
+            // 
+            this.salonsTableAdapter.ClearBeforeFill = true;
+            // 
+            // idsalonDataGridViewTextBoxColumn1
+            // 
+            this.idsalonDataGridViewTextBoxColumn1.DataPropertyName = "id_salon";
+            this.idsalonDataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.idsalonDataGridViewTextBoxColumn1.Name = "idsalonDataGridViewTextBoxColumn1";
+            this.idsalonDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.idsalonDataGridViewTextBoxColumn1.Width = 43;
+            // 
+            // nomsalonDataGridViewTextBoxColumn1
+            // 
+            this.nomsalonDataGridViewTextBoxColumn1.DataPropertyName = "nom_salon";
+            this.nomsalonDataGridViewTextBoxColumn1.HeaderText = "SALÒN";
+            this.nomsalonDataGridViewTextBoxColumn1.Name = "nomsalonDataGridViewTextBoxColumn1";
+            this.nomsalonDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.nomsalonDataGridViewTextBoxColumn1.Width = 71;
+            // 
+            // descriptionsalonDataGridViewTextBoxColumn1
+            // 
+            this.descriptionsalonDataGridViewTextBoxColumn1.DataPropertyName = "description_salon";
+            this.descriptionsalonDataGridViewTextBoxColumn1.HeaderText = "DESCRIPCIÒN";
+            this.descriptionsalonDataGridViewTextBoxColumn1.Name = "descriptionsalonDataGridViewTextBoxColumn1";
+            this.descriptionsalonDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.descriptionsalonDataGridViewTextBoxColumn1.Width = 111;
             // 
             // MenuSalones
             // 
@@ -431,9 +463,9 @@
             this.gbEditInventario.ResumeLayout(false);
             this.gbEditInventario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.control_unityDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salonsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -450,14 +482,18 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnEliminar;
         private Bunifu.Framework.UI.BunifuFlatButton btnEditar;
         private Bunifu.Framework.UI.BunifuFlatButton btnAgregar;
-        private control_unityDataSet control_unityDataSet;
-        private System.Windows.Forms.BindingSource salonsBindingSource;
-        private control_unityDataSetTableAdapters.salonsTableAdapter salonsTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idsalonDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomsalonDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionsalonDataGridViewTextBoxColumn;
         public Bunifu.Framework.UI.BunifuMaterialTextbox txtNom_Salon;
         public Bunifu.Framework.UI.BunifuMaterialTextbox txtDescripcion;
         public System.Windows.Forms.DataGridView dataGridView1;
+        
+        private System.Windows.Forms.DataGridViewTextBoxColumn idsalonDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomsalonDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionsalonDataGridViewTextBoxColumn;
+        private control_unityDataSet control_unityDataSet;
+        private System.Windows.Forms.BindingSource salonsBindingSource;
+        private control_unityDataSetTableAdapters.salonsTableAdapter salonsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idsalonDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomsalonDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionsalonDataGridViewTextBoxColumn1;
     }
 }

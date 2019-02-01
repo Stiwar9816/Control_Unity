@@ -14,11 +14,11 @@ namespace CapaDatos
         private CDConexion Conexion = new CDConexion();
         private SqlDataReader leer;
         
-        public SqlDataReader IniciarSesion(string user, string pass){
-            SqlCommand comando = new SqlCommand("SPIniciarSesion",Conexion.AbrirConexion());
-            comando.CommandType = CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@Usuario", user);
-            comando.Parameters.AddWithValue("@Password", pass);
+        public SqlDataReader iniciarSesion(string user, string pass){
+            string sql = "select from user where cc_user ='"+user+ "' and password_user='"+pass+"'";
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = Conexion.AbrirConexion();
+            comando.CommandText = sql;
             leer = comando.ExecuteReader();
             return leer;
         }

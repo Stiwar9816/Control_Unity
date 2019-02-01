@@ -46,6 +46,7 @@ namespace Contro_unity
         {
             // TODO: esta línea de código carga datos en la tabla 'control_unityDataSet.teacher' Puede moverla o quitarla según sea necesario.
             this.teacherTableAdapter.Fill(this.control_unityDataSet.teacher);
+
             txtCC.Enabled = false;
             txtFullName.Enabled = false;
             txtPrograma.Enabled = false;

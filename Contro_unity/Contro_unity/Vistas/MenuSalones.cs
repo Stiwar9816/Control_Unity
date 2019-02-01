@@ -34,6 +34,9 @@ namespace Contro_unity
         {
             // TODO: esta línea de código carga datos en la tabla 'control_unityDataSet.salons' Puede moverla o quitarla según sea necesario.
             this.salonsTableAdapter.Fill(this.control_unityDataSet.salons);
+            // TODO: esta línea de código carga datos en la tabla 'control_unityDataSet.salons' Puede moverla o quitarla según sea necesario.
+
+
             txtNom_Salon.Enabled = false;
             txtDescripcion.Enabled = false;
         }
@@ -61,7 +64,7 @@ namespace Contro_unity
                 {
                     Salon = new Clases.salon(txtNom_Salon.Text, txtDescripcion.Text);
                     int ultimo_id = Salon.Registrar();
-                    this.salonsTableAdapter.Fill(this.control_unityDataSet.salons);
+                    
                     txtNom_Salon.Text = "";
                     txtDescripcion.Text = "";
                 }

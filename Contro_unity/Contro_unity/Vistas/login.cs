@@ -103,7 +103,7 @@ namespace Contro_unity
             CNusuarios objUsuario = new CNusuarios();
             SqlDataReader Loguear;
             objUsuario.cc_user = txtuser.Text;
-            objUsuario.pass_user = txtpass.Text;
+            objUsuario.password_user = txtpass.Text;
             Loguear = objUsuario.IniciarSesion();
             if (Loguear.Read() == true)
             {

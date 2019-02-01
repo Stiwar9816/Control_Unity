@@ -28,6 +28,7 @@ namespace Contro_unity
         {
             // TODO: esta línea de código carga datos en la tabla 'control_unityDataSet.implements' Puede moverla o quitarla según sea necesario.
             this.implementsTableAdapter.Fill(this.control_unityDataSet.implements);
+
             txtCod_Serie.Enabled = false;
             txtNombre.Enabled = false;
             txtStock.Enabled = false;
@@ -56,7 +57,7 @@ namespace Contro_unity
                 {
                     var Implemento = new Clases.implemento(txtCod_Serie.Text,txtNombre.Text,txtFecha.Text,Convert.ToInt32(txtStock.Value),txtMarca.Text,txtDescripcion.Text);
                     Implemento.Registrar();
-                    this.implementsTableAdapter.Fill(this.control_unityDataSet.implements);
+                    //this.implementsTableAdapter.Fill(this.control_unityDataSet.implements);
                     txtCod_Serie.Text = "";
                     txtNombre.Text = "";
                     txtStock.Value = 0;

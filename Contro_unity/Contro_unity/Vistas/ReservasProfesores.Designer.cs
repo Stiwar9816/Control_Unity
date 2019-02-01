@@ -31,9 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtPrograma = new System.Windows.Forms.ComboBox();
+            this.txtNombre = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtSalon = new System.Windows.Forms.ComboBox();
             this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
             this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.checkBox5 = new System.Windows.Forms.CheckBox();
@@ -48,19 +51,16 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnConfirmar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.txtNombre = new System.Windows.Forms.ComboBox();
-            this.teacherBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.control_unityDataSet = new Contro_unity.control_unityDataSet();
+            this.teacherBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.teacherTableAdapter = new Contro_unity.control_unityDataSetTableAdapters.teacherTableAdapter();
-            this.txtPrograma = new System.Windows.Forms.ComboBox();
-            this.txtSalon = new System.Windows.Forms.ComboBox();
             this.salonsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.salonsTableAdapter = new Contro_unity.control_unityDataSetTableAdapters.salonsTableAdapter();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teacherBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.control_unityDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teacherBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salonsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,6 +89,42 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS PERSONALES";
+            // 
+            // txtPrograma
+            // 
+            this.txtPrograma.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtPrograma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtPrograma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtPrograma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.txtPrograma.FormattingEnabled = true;
+            this.txtPrograma.Items.AddRange(new object[] {
+            "Ingenieria Sistemas",
+            "Ingenieria Industrial",
+            "Psicologia",
+            "Antropologia",
+            "Teologia",
+            "Ingles",
+            "Trabajo Social",
+            "Otro"});
+            this.txtPrograma.Location = new System.Drawing.Point(94, 75);
+            this.txtPrograma.Name = "txtPrograma";
+            this.txtPrograma.Size = new System.Drawing.Size(254, 26);
+            this.txtPrograma.TabIndex = 19;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtNombre.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtNombre.DataSource = this.teacherBindingSource;
+            this.txtNombre.DisplayMember = "nom_teacher";
+            this.txtNombre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.txtNombre.FormattingEnabled = true;
+            this.txtNombre.Location = new System.Drawing.Point(94, 31);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(254, 26);
+            this.txtNombre.TabIndex = 19;
+            this.txtNombre.ValueMember = "nom_teacher";
             // 
             // label3
             // 
@@ -133,6 +169,21 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "DATOS DE LA RESERVA";
+            // 
+            // txtSalon
+            // 
+            this.txtSalon.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtSalon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtSalon.DataSource = this.salonsBindingSource;
+            this.txtSalon.DisplayMember = "nom_salon";
+            this.txtSalon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtSalon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.txtSalon.FormattingEnabled = true;
+            this.txtSalon.Location = new System.Drawing.Point(212, 102);
+            this.txtSalon.Name = "txtSalon";
+            this.txtSalon.Size = new System.Drawing.Size(344, 26);
+            this.txtSalon.TabIndex = 19;
+            this.txtSalon.ValueMember = "nom_salon";
             // 
             // bunifuDatepicker1
             // 
@@ -317,73 +368,19 @@
             this.bunifuDragControl1.TargetControl = null;
             this.bunifuDragControl1.Vertical = true;
             // 
-            // txtNombre
+            // control_unityDataSet
             // 
-            this.txtNombre.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtNombre.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtNombre.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.teacherBindingSource, "nom_teacher", true));
-            this.txtNombre.DataSource = this.teacherBindingSource;
-            this.txtNombre.DisplayMember = "nom_teacher";
-            this.txtNombre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.txtNombre.FormattingEnabled = true;
-            this.txtNombre.Location = new System.Drawing.Point(94, 31);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(254, 26);
-            this.txtNombre.TabIndex = 19;
-            this.txtNombre.ValueMember = "nom_teacher";
+            this.control_unityDataSet.DataSetName = "control_unityDataSet";
+            this.control_unityDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // teacherBindingSource
             // 
             this.teacherBindingSource.DataMember = "teacher";
             this.teacherBindingSource.DataSource = this.control_unityDataSet;
             // 
-            // control_unityDataSet
-            // 
-            this.control_unityDataSet.DataSetName = "control_unityDataSet";
-            this.control_unityDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // teacherTableAdapter
             // 
             this.teacherTableAdapter.ClearBeforeFill = true;
-            // 
-            // txtPrograma
-            // 
-            this.txtPrograma.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtPrograma.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtPrograma.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.teacherBindingSource, "program_teacher", true));
-            this.txtPrograma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtPrograma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.txtPrograma.FormattingEnabled = true;
-            this.txtPrograma.Items.AddRange(new object[] {
-            "Ingenieria de sistemas",
-            "Ingeniria Industrial",
-            "Psicologia",
-            "Trabajo Social",
-            "Antropologia",
-            "Ingles",
-            "Especializaciones",
-            "Otro"});
-            this.txtPrograma.Location = new System.Drawing.Point(94, 75);
-            this.txtPrograma.Name = "txtPrograma";
-            this.txtPrograma.Size = new System.Drawing.Size(254, 26);
-            this.txtPrograma.TabIndex = 19;
-            // 
-            // txtSalon
-            // 
-            this.txtSalon.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtSalon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtSalon.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.salonsBindingSource, "nom_salon", true));
-            this.txtSalon.DataSource = this.salonsBindingSource;
-            this.txtSalon.DisplayMember = "nom_salon";
-            this.txtSalon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtSalon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.txtSalon.FormattingEnabled = true;
-            this.txtSalon.Location = new System.Drawing.Point(212, 102);
-            this.txtSalon.Name = "txtSalon";
-            this.txtSalon.Size = new System.Drawing.Size(344, 26);
-            this.txtSalon.TabIndex = 19;
-            this.txtSalon.ValueMember = "nom_salon";
             // 
             // salonsBindingSource
             // 
@@ -415,8 +412,8 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teacherBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.control_unityDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teacherBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salonsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -445,11 +442,12 @@
         private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker1;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private System.Windows.Forms.ComboBox txtNombre;
+        
+        private System.Windows.Forms.ComboBox txtPrograma;
+        private System.Windows.Forms.ComboBox txtSalon;
         private control_unityDataSet control_unityDataSet;
         private System.Windows.Forms.BindingSource teacherBindingSource;
         private control_unityDataSetTableAdapters.teacherTableAdapter teacherTableAdapter;
-        private System.Windows.Forms.ComboBox txtPrograma;
-        private System.Windows.Forms.ComboBox txtSalon;
         private System.Windows.Forms.BindingSource salonsBindingSource;
         private control_unityDataSetTableAdapters.salonsTableAdapter salonsTableAdapter;
     }

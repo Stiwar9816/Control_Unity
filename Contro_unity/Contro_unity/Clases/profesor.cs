@@ -113,11 +113,6 @@ namespace Contro_unity.Clases
 
         }
 
-        public void Eliminar()
-        {
-            throw new NotImplementedException();
-        }
-
         int Funciones.Eliminar()
         {
             throw new NotImplementedException();

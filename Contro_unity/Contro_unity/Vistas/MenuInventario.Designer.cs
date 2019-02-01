@@ -55,22 +55,21 @@
             this.btnEditar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnEliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idimplementsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codserieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomimplementsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datetimeregisterimplementsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stockimplementsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.brandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionimplementsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.implementsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.control_unityDataSet = new Contro_unity.control_unityDataSet();
+            this.implementsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.implementsTableAdapter = new Contro_unity.control_unityDataSetTableAdapters.implementsTableAdapter();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.gbEditInventario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.implementsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.control_unityDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.implementsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -437,6 +436,7 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Menu;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -460,13 +460,12 @@
             this.dataGridView1.ColumnHeadersHeight = 37;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idimplementsDataGridViewTextBoxColumn,
-            this.codserieDataGridViewTextBoxColumn,
-            this.nomimplementsDataGridViewTextBoxColumn,
-            this.datetimeregisterimplementsDataGridViewTextBoxColumn,
-            this.stockimplementsDataGridViewTextBoxColumn,
-            this.brandDataGridViewTextBoxColumn,
-            this.descriptionimplementsDataGridViewTextBoxColumn});
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7});
             this.dataGridView1.DataSource = this.implementsBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Menu;
@@ -504,75 +503,67 @@
             this.dataGridView1.Size = new System.Drawing.Size(610, 401);
             this.dataGridView1.TabIndex = 21;
             // 
-            // idimplementsDataGridViewTextBoxColumn
+            // control_unityDataSet
             // 
-            this.idimplementsDataGridViewTextBoxColumn.DataPropertyName = "id_implements";
-            this.idimplementsDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idimplementsDataGridViewTextBoxColumn.Name = "idimplementsDataGridViewTextBoxColumn";
-            this.idimplementsDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idimplementsDataGridViewTextBoxColumn.Width = 43;
-            // 
-            // codserieDataGridViewTextBoxColumn
-            // 
-            this.codserieDataGridViewTextBoxColumn.DataPropertyName = "cod_serie";
-            this.codserieDataGridViewTextBoxColumn.HeaderText = "Codigo Serie";
-            this.codserieDataGridViewTextBoxColumn.Name = "codserieDataGridViewTextBoxColumn";
-            this.codserieDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codserieDataGridViewTextBoxColumn.Width = 99;
-            // 
-            // nomimplementsDataGridViewTextBoxColumn
-            // 
-            this.nomimplementsDataGridViewTextBoxColumn.DataPropertyName = "nom_implements";
-            this.nomimplementsDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nomimplementsDataGridViewTextBoxColumn.Name = "nomimplementsDataGridViewTextBoxColumn";
-            this.nomimplementsDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nomimplementsDataGridViewTextBoxColumn.Width = 81;
-            // 
-            // datetimeregisterimplementsDataGridViewTextBoxColumn
-            // 
-            this.datetimeregisterimplementsDataGridViewTextBoxColumn.DataPropertyName = "datetime_register_implements";
-            this.datetimeregisterimplementsDataGridViewTextBoxColumn.HeaderText = "Fecha de registro";
-            this.datetimeregisterimplementsDataGridViewTextBoxColumn.Name = "datetimeregisterimplementsDataGridViewTextBoxColumn";
-            this.datetimeregisterimplementsDataGridViewTextBoxColumn.ReadOnly = true;
-            this.datetimeregisterimplementsDataGridViewTextBoxColumn.Width = 123;
-            // 
-            // stockimplementsDataGridViewTextBoxColumn
-            // 
-            this.stockimplementsDataGridViewTextBoxColumn.DataPropertyName = "stock_implements";
-            this.stockimplementsDataGridViewTextBoxColumn.HeaderText = "Stock";
-            this.stockimplementsDataGridViewTextBoxColumn.Name = "stockimplementsDataGridViewTextBoxColumn";
-            this.stockimplementsDataGridViewTextBoxColumn.ReadOnly = true;
-            this.stockimplementsDataGridViewTextBoxColumn.Width = 64;
-            // 
-            // brandDataGridViewTextBoxColumn
-            // 
-            this.brandDataGridViewTextBoxColumn.DataPropertyName = "brand";
-            this.brandDataGridViewTextBoxColumn.HeaderText = "Marca";
-            this.brandDataGridViewTextBoxColumn.Name = "brandDataGridViewTextBoxColumn";
-            this.brandDataGridViewTextBoxColumn.ReadOnly = true;
-            this.brandDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // descriptionimplementsDataGridViewTextBoxColumn
-            // 
-            this.descriptionimplementsDataGridViewTextBoxColumn.DataPropertyName = "description_implements";
-            this.descriptionimplementsDataGridViewTextBoxColumn.HeaderText = "Descripción";
-            this.descriptionimplementsDataGridViewTextBoxColumn.Name = "descriptionimplementsDataGridViewTextBoxColumn";
-            this.descriptionimplementsDataGridViewTextBoxColumn.ReadOnly = true;
-            this.descriptionimplementsDataGridViewTextBoxColumn.Width = 102;
+            this.control_unityDataSet.DataSetName = "control_unityDataSet";
+            this.control_unityDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // implementsBindingSource
             // 
             this.implementsBindingSource.DataMember = "implements";
             this.implementsBindingSource.DataSource = this.control_unityDataSet;
             // 
-            // control_unityDataSet
-            // 
-            this.control_unityDataSet.DataSetName = "control_unityDataSet";
-            this.control_unityDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // implementsTableAdapter
             // 
             this.implementsTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "cod_serie";
+            this.dataGridViewTextBoxColumn2.HeaderText = "CÒDIGO SERIE";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 104;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "nom_implements";
+            this.dataGridViewTextBoxColumn3.HeaderText = "NOMBRE";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 81;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "datetime_register_implements";
+            this.dataGridViewTextBoxColumn4.HeaderText = "FECHA DE REGISTRO";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 132;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "stock_implements";
+            this.dataGridViewTextBoxColumn5.HeaderText = "STOCK";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 69;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "brand";
+            this.dataGridViewTextBoxColumn6.HeaderText = "MARCA";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 77;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "description_implements";
+            this.dataGridViewTextBoxColumn7.HeaderText = "DESCRIPCIÒN";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Width = 111;
             // 
             // MenuInventario
             // 
@@ -598,8 +589,8 @@
             this.gbEditInventario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtStock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.implementsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.control_unityDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.implementsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -619,9 +610,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnAgregar;
         private Bunifu.Framework.UI.BunifuFlatButton btnEditar;
         private Bunifu.Framework.UI.BunifuFlatButton btnEliminar;
-        private control_unityDataSet control_unityDataSet;
-        private System.Windows.Forms.BindingSource implementsBindingSource;
-        private control_unityDataSetTableAdapters.implementsTableAdapter implementsTableAdapter;
+
         public Bunifu.Framework.UI.BunifuMaterialTextbox txtDescripcion;
         public Bunifu.Framework.UI.BunifuMaterialTextbox txtMarca;
         public Bunifu.Framework.UI.BunifuMaterialTextbox txtNombre;
@@ -637,5 +626,14 @@
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.DateTimePicker txtFecha;
         public System.Windows.Forms.NumericUpDown txtStock;
+        private control_unityDataSet control_unityDataSet;
+        private System.Windows.Forms.BindingSource implementsBindingSource;
+        private control_unityDataSetTableAdapters.implementsTableAdapter implementsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
     }
 }

@@ -111,7 +111,7 @@
             this.linkpass.AutoSize = true;
             this.linkpass.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkpass.LinkColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.linkpass.Location = new System.Drawing.Point(80, 416);
+            this.linkpass.Location = new System.Drawing.Point(90, 416);
             this.linkpass.Name = "linkpass";
             this.linkpass.Size = new System.Drawing.Size(203, 16);
             this.linkpass.TabIndex = 4;
@@ -204,7 +204,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Contro_unity.Properties.Resources.icons8_forgot_password_50;
-            this.pictureBox4.Location = new System.Drawing.Point(53, 412);
+            this.pictureBox4.Location = new System.Drawing.Point(63, 412);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(27, 27);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
