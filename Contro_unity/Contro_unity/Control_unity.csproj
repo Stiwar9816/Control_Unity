@@ -232,12 +232,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
-      <Project>{8c0ec0fa-6afb-4349-89e3-b2062d595b93}</Project>
-      <Name>CapaNegocio</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8-search-50%281%29.png" />
   </ItemGroup>
   <ItemGroup>
