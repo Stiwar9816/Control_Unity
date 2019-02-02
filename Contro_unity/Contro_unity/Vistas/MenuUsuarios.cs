@@ -95,5 +95,21 @@ namespace Contro_unity
                 MessageBox.Show("Seleccione un registro", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                var DeleteUser = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                var user = new Clases.user();
+                user.Eliminar(Convert.ToInt32(DeleteUser));
+                MessageBox.Show("Elimando Correctamente");
+                usersTableAdapter.Fill(this.control_unityDataSet.users);
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una fila");
+            }
+        }
     }
 }

@@ -104,9 +104,14 @@ namespace Contro_unity.Clases
             throw new NotImplementedException();
         }
 
-        public void Eliminar()
+        public void Eliminar(int Id_user)
         {
-            throw new NotImplementedException();
+            con.Con.Open();
+            SqlCommand cmd = new SqlCommand("SP_ELIMINAR_USUARIO", con.Con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@id_user", Id_user);
+            cmd.ExecuteNonQuery();
+            cmd.Parameters.Clear();
         }
 
         int Funciones.Eliminar()

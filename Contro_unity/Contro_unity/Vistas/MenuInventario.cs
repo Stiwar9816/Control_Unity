@@ -57,7 +57,7 @@ namespace Contro_unity
                 {
                     var Implemento = new Clases.implemento(txtCod_Serie.Text,txtNombre.Text,txtFecha.Text,Convert.ToInt32(txtStock.Value),txtMarca.Text,txtDescripcion.Text);
                     Implemento.Registrar();
-                    //this.implementsTableAdapter.Fill(this.control_unityDataSet.implements);
+                    this.implementsTableAdapter.Fill(this.control_unityDataSet.implements);
                     txtCod_Serie.Text = "";
                     txtNombre.Text = "";
                     txtStock.Value = 0;
@@ -101,8 +101,8 @@ namespace Contro_unity
                 var DeleteImple = dataGridView1.CurrentRow.Cells[0].Value.ToString();
                 var implemento = new Clases.implemento();
                 implemento.Eliminar(Convert.ToInt32(DeleteImple));
-                this.implementsTableAdapter.Fill(this.control_unityDataSet.implements);
                 MessageBox.Show("Elimando Correctamente");
+                this.implementsTableAdapter.Fill(this.control_unityDataSet.implements);
             }
             else
             {

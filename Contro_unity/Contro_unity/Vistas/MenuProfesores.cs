@@ -121,9 +121,9 @@ namespace Contro_unity
             {
                 var DeletePro = dataGridView1.CurrentRow.Cells[0].Value.ToString();
                 var profesor = new Clases.profesor();
-                profesor.Eliminar(Convert.ToInt32(DeletePro));
-                teacherTableAdapter.Fill(this.control_unityDataSet.teacher);
+                profesor.Eliminar1(Convert.ToInt32(DeletePro));
                 MessageBox.Show("Elimando Correctamente");
+                teacherTableAdapter.Fill(this.control_unityDataSet.teacher);
             } else
             {
                 MessageBox.Show("Selecciones una fila");

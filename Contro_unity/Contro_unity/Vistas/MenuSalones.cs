@@ -64,7 +64,7 @@ namespace Contro_unity
                 {
                     Salon = new Clases.salon(txtNom_Salon.Text, txtDescripcion.Text);
                     int ultimo_id = Salon.Registrar();
-                    
+                    this.salonsTableAdapter.Fill(this.control_unityDataSet.salons);
                     txtNom_Salon.Text = "";
                     txtDescripcion.Text = "";
                 }
@@ -97,8 +97,8 @@ namespace Contro_unity
                 var DeleteSalon = dataGridView1.CurrentRow.Cells[0].Value.ToString();
                 var salon = new Clases.salon();
                 salon.Eliminar(Convert.ToInt32(DeleteSalon));
-                salonsTableAdapter.Fill(this.control_unityDataSet.salons);
                 MessageBox.Show("Elimando Correctamente");
+                salonsTableAdapter.Fill(this.control_unityDataSet.salons);
             }
             else
             {
