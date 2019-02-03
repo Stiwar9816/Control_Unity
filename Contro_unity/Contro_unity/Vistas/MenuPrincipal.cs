@@ -122,5 +122,10 @@ namespace Contro_unity
         {
             AbrirFormInPanel(new ReservasProfesores());
         }
+
+        private void MenuPrincipal_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

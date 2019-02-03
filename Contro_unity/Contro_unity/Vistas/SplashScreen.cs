@@ -33,7 +33,7 @@ namespace Contro_unity
                 if(rectangleShape2.Width >= 588)
                 {
                     timer1.Stop();
-                    MenuPrincipal Menu = new MenuPrincipal();
+                    login Menu = new login();
                     Menu.Show();
                     this.Hide();
                 }
