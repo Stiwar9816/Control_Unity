@@ -15,10 +15,12 @@ namespace Contro_unity.Clases
 
         public SqlDataReader IniciarSesion(string user, string pass)
         {
-            string Sql = "SELECT * FROM users WHERE cc_user ='" + user + "' AND password_user ='" + pass+"'";
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con.AbrirConexion();
-            cmd.CommandText = Sql;
+            //string Sql = "SELECT * FROM users WHERE cc_user ='" + user + "' AND password_user ='" + pass+"'";
+             
+            SqlCommand cmd = new SqlCommand("SPIniciarSesion", con.AbrirConexion());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Usuario",user);
+            cmd.Parameters.AddWithValue("@Password",pass);
             leer = cmd.ExecuteReader();
             return leer;
         }
@@ -27,11 +29,11 @@ namespace Contro_unity.Clases
         private string _pass;
 
         public string Usuario {
-            set { _User = value;}
+            set { if (value == "Usuario") { _User = "Ingrese su usuario";} else {_User = value;} }
             get { return _User;}
         }
         public string Contraseña {
-            set { _pass = value; }
+            set { if (value == "Contraseña") { _pass = "Ingrese su contraseña"; } else { _pass = value; } }
             get { return _pass; }
         }
 

@@ -111,7 +111,7 @@
             this.linkpass.AutoSize = true;
             this.linkpass.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkpass.LinkColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.linkpass.Location = new System.Drawing.Point(90, 416);
+            this.linkpass.Location = new System.Drawing.Point(90, 410);
             this.linkpass.Name = "linkpass";
             this.linkpass.Size = new System.Drawing.Size(203, 16);
             this.linkpass.TabIndex = 4;
@@ -123,9 +123,12 @@
             // lblErrorUser
             // 
             this.lblErrorUser.AutoSize = true;
+            this.lblErrorUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblErrorUser.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorUser.ForeColor = System.Drawing.Color.Red;
             this.lblErrorUser.Location = new System.Drawing.Point(81, 254);
             this.lblErrorUser.Name = "lblErrorUser";
-            this.lblErrorUser.Size = new System.Drawing.Size(43, 13);
+            this.lblErrorUser.Size = new System.Drawing.Size(51, 16);
             this.lblErrorUser.TabIndex = 8;
             this.lblErrorUser.Text = "Usuario";
             this.lblErrorUser.Visible = false;
@@ -133,9 +136,12 @@
             // lblErrorPass
             // 
             this.lblErrorPass.AutoSize = true;
+            this.lblErrorPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblErrorPass.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorPass.ForeColor = System.Drawing.Color.Red;
             this.lblErrorPass.Location = new System.Drawing.Point(80, 312);
             this.lblErrorPass.Name = "lblErrorPass";
-            this.lblErrorPass.Size = new System.Drawing.Size(30, 13);
+            this.lblErrorPass.Size = new System.Drawing.Size(33, 16);
             this.lblErrorPass.TabIndex = 9;
             this.lblErrorPass.Text = "Pass";
             this.lblErrorPass.Visible = false;
@@ -143,9 +149,12 @@
             // lblErrorLogin
             // 
             this.lblErrorLogin.AutoSize = true;
-            this.lblErrorLogin.Location = new System.Drawing.Point(160, 344);
+            this.lblErrorLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblErrorLogin.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorLogin.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorLogin.Location = new System.Drawing.Point(15, 336);
             this.lblErrorLogin.Name = "lblErrorLogin";
-            this.lblErrorLogin.Size = new System.Drawing.Size(35, 13);
+            this.lblErrorLogin.Size = new System.Drawing.Size(43, 16);
             this.lblErrorLogin.TabIndex = 10;
             this.lblErrorLogin.Text = "login?";
             this.lblErrorLogin.Visible = false;
@@ -204,7 +213,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Contro_unity.Properties.Resources.icons8_forgot_password_50;
-            this.pictureBox4.Location = new System.Drawing.Point(63, 412);
+            this.pictureBox4.Location = new System.Drawing.Point(63, 406);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(27, 27);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
