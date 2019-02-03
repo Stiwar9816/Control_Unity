@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecuperarPass));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -37,6 +38,7 @@
             this.txtuser = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.btnRecuperarPass = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtMensaje = new System.Windows.Forms.TextBox();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).BeginInit();
@@ -69,7 +71,7 @@
             // 
             this.btnminimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnminimizar.Image = global::Contro_unity.Properties.Resources.icons8_expand_arrow_50;
-            this.btnminimizar.Location = new System.Drawing.Point(592, 1);
+            this.btnminimizar.Location = new System.Drawing.Point(590, 2);
             this.btnminimizar.Name = "btnminimizar";
             this.btnminimizar.Size = new System.Drawing.Size(20, 17);
             this.btnminimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -81,7 +83,7 @@
             // 
             this.btncerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btncerrar.Image = global::Contro_unity.Properties.Resources.icons8_delete_50;
-            this.btncerrar.Location = new System.Drawing.Point(615, 1);
+            this.btncerrar.Location = new System.Drawing.Point(613, 2);
             this.btncerrar.Name = "btncerrar";
             this.btncerrar.Size = new System.Drawing.Size(17, 17);
             this.btncerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -164,11 +166,17 @@
             this.txtMensaje.BackColor = System.Drawing.SystemColors.Menu;
             this.txtMensaje.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMensaje.Enabled = false;
+            this.txtMensaje.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Italic);
             this.txtMensaje.Location = new System.Drawing.Point(269, 92);
             this.txtMensaje.Multiline = true;
             this.txtMensaje.Name = "txtMensaje";
             this.txtMensaje.Size = new System.Drawing.Size(343, 105);
             this.txtMensaje.TabIndex = 13;
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 10;
+            this.bunifuElipse1.TargetControl = this;
             // 
             // RecuperarPass
             // 
@@ -187,7 +195,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "RecuperarPass";
-            this.Opacity = 0.85D;
+            this.Opacity = 0.9D;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RecuperarPass";
             this.Load += new System.EventHandler(this.RecuperarPass_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RecuperarPass_MouseDown);
@@ -210,5 +219,6 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtuser;
         private Bunifu.Framework.UI.BunifuFlatButton btnRecuperarPass;
         private System.Windows.Forms.TextBox txtMensaje;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }
