@@ -100,8 +100,24 @@ namespace Contro_unity
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-           
+            var loguearse = new Clases.login();
+            SqlDataReader Loguear;
+            loguearse.Usuario = txtuser.Text;
+            loguearse.Contraseña = txtpass.Text;
+            Loguear = loguearse.IniciarSesion();
+            if (Loguear.Read() == true)
+            {
+                this.Hide();
+                MenuPrincipal frmPrincipal = new MenuPrincipal();
+                frmPrincipal.Show();
+
+            }else
+            {
+                MessageBox.Show("Usuario o contraseña incorrectos");
+            }
+
+
         }
     }
-    }
+}
 

@@ -22,7 +22,7 @@ namespace Contro_unity
         //Conexion a la BD
         public SqlConnection Con = new SqlConnection("Data Source=DESKTOP-S7URQ0I\\SQLEXPRESS;Initial Catalog=control_unity;Integrated Security=True");
 
-       /* public SqlConnection AbrirConexion()
+       public SqlConnection AbrirConexion()
         {
             if (Con.State == ConnectionState.Closed)
                 Con.Open();
@@ -33,7 +33,7 @@ namespace Contro_unity
             if (Con.State == ConnectionState.Open)
                 Con.Close();
             return Con;
-        }*/
+        }
     }
 }
 
