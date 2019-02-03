@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Data.SqlClient;
-
+using Contro_unity.Vistas;
 
 namespace Contro_unity
 {
@@ -27,7 +27,7 @@ namespace Contro_unity
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
         }
 
         private void btnminimizar_Click(object sender, EventArgs e)
@@ -95,7 +95,8 @@ namespace Contro_unity
 
         private void linkpass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            RecuperarPass frmRecuPass = new RecuperarPass();
+            frmRecuPass.ShowDialog();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -118,6 +119,8 @@ namespace Contro_unity
                         {
                             this.Hide();
                             MenuPrincipal frmPrincipal = new MenuPrincipal();
+                            Program.Rol = Loguear["rol_user"].ToString();
+                            Program.nom_user = Loguear["nom_user"].ToString();
                             frmPrincipal.Show();
 
                         }else{

@@ -125,7 +125,18 @@ namespace Contro_unity
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
-            
+            txtRoluser.Text = Program.Rol;
+            txtNombreuser.Text = Program.nom_user;
+            privilegio_user();
+        }
+
+        private void privilegio_user()
+        {
+            //desabilitar boton
+            if(Program.Rol != "Administrador")
+            {
+                btnInventario.Enabled = false;
+            }
         }
     }
 }

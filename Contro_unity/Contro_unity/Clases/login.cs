@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Net;
+using System.Net.Mail;
 
 namespace Contro_unity.Clases
 {
@@ -12,6 +14,58 @@ namespace Contro_unity.Clases
     {
         Conexion con = new Conexion();
         private SqlDataReader leer;
+        private string email, nombre, contraseña, mensaje;
+        private SqlCommand cmd = new SqlCommand();
+
+        private string RecuperarContraseña(string cc_user)
+        {
+            cmd.Connection = con.AbrirConexion();
+            cmd.CommandText = "SELECT * FROM users WHERE cc_user=" + cc_user;
+            leer = cmd.ExecuteReader();
+            if (leer.Read() == true)
+            {
+                email = leer["email_user"].ToString();
+                nombre = leer["nom_user"].ToString();
+                contraseña = leer["password_user"].ToString();
+                //EMAIL
+                EnviarEmail();
+                mensaje = "Estimad@ " + nombre + ", se ha enviado su contraseña a su correo: " + email + " por favor verifique en su buzon de entrada";
+                leer.Close();
+            }
+            else
+            {
+                mensaje = "No Existe datos del usuario solicitado, por favor verifique los datos ingresados";
+            }
+
+            return mensaje;
+        }
+
+        private void EnviarEmail()
+        {
+            //CORREO
+            MailMessage correo = new MailMessage();
+            correo.From = new MailAddress("stiwar.asprilla1998@gmail.com");
+            correo.To.Add(email);
+            correo.Subject=("RECUPERACIÓN DE CONTRASEÑA - CONTROL UNITY");
+            correo.Body = "Hola "+nombre+" usted solicito recuperar su contraseña de control unity.\n Su contraseña es: "+contraseña+".\n Se recomienda cambiarla al ingresar nuevamente al sistema." ;
+            correo.Priority = MailPriority.High;
+            //SMTP
+            SmtpClient ServerMail = new SmtpClient();
+            ServerMail.Credentials = new NetworkCredential("stiwar.asprilla1998@gmail.com", "Csam1098");
+            ServerMail.Host = "smtp.gmail.com";
+            ServerMail.Port = 587;
+            ServerMail.EnableSsl = true;
+
+            try
+            {
+                ServerMail.Send(correo);
+            }
+            catch (Exception ex)
+            {
+                correo.Dispose();
+            }
+        }
+
 
         public SqlDataReader IniciarSesion(string user, string pass)
         {
@@ -47,7 +101,12 @@ namespace Contro_unity.Clases
             return Loguear;
         }
 
-
+        public string RecuPass(string cc_user)
+        {
+            string mensaje;
+            mensaje = RecuperarContraseña(cc_user);
+            return mensaje;
+        }
 
     }
 }

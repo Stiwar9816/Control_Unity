@@ -8,6 +8,9 @@ namespace Contro_unity
 {
     static class Program
     {
+
+        public static string Rol;
+        public static string nom_user;
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
