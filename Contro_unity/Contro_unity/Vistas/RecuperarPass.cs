@@ -31,8 +31,7 @@ namespace Contro_unity.Vistas
 
         private void btncerrar_Click(object sender, EventArgs e)
         {
-            
-            Application.Exit();
+            Close();
         }
 
         private void RecuperarPass_Load(object sender, EventArgs e)

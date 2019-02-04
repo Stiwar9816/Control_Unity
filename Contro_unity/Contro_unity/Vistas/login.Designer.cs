@@ -110,7 +110,7 @@
             this.linkpass.ActiveLinkColor = System.Drawing.Color.Black;
             this.linkpass.AutoSize = true;
             this.linkpass.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkpass.LinkColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.linkpass.LinkColor = System.Drawing.SystemColors.WindowText;
             this.linkpass.Location = new System.Drawing.Point(90, 410);
             this.linkpass.Name = "linkpass";
             this.linkpass.Size = new System.Drawing.Size(203, 16);

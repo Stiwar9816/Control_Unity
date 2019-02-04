@@ -128,15 +128,16 @@
             // btnRecuperarPass
             // 
             this.btnRecuperarPass.Activecolor = System.Drawing.Color.DarkGray;
-            this.btnRecuperarPass.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnRecuperarPass.BackColor = System.Drawing.SystemColors.Menu;
             this.btnRecuperarPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRecuperarPass.BorderRadius = 5;
-            this.btnRecuperarPass.ButtonText = "RECUPERAR CONTRASEÑA";
+            this.btnRecuperarPass.ButtonText = " RECUPERAR CONTRASEÑA";
             this.btnRecuperarPass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRecuperarPass.DisabledColor = System.Drawing.Color.Gray;
+            this.btnRecuperarPass.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Italic);
             this.btnRecuperarPass.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnRecuperarPass.Iconimage = null;
-            this.btnRecuperarPass.Iconimage_right = global::Contro_unity.Properties.Resources.icons8_key_50;
+            this.btnRecuperarPass.Iconimage = global::Contro_unity.Properties.Resources.icons8_key_50;
+            this.btnRecuperarPass.Iconimage_right = null;
             this.btnRecuperarPass.Iconimage_right_Selected = null;
             this.btnRecuperarPass.Iconimage_Selected = null;
             this.btnRecuperarPass.IconMarginLeft = 0;
@@ -146,16 +147,16 @@
             this.btnRecuperarPass.IconVisible = true;
             this.btnRecuperarPass.IconZoom = 60D;
             this.btnRecuperarPass.IsTab = false;
-            this.btnRecuperarPass.Location = new System.Drawing.Point(294, 225);
-            this.btnRecuperarPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRecuperarPass.Location = new System.Drawing.Point(291, 224);
+            this.btnRecuperarPass.Margin = new System.Windows.Forms.Padding(4);
             this.btnRecuperarPass.Name = "btnRecuperarPass";
-            this.btnRecuperarPass.Normalcolor = System.Drawing.Color.Gainsboro;
+            this.btnRecuperarPass.Normalcolor = System.Drawing.SystemColors.Menu;
             this.btnRecuperarPass.OnHovercolor = System.Drawing.Color.DarkGray;
             this.btnRecuperarPass.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnRecuperarPass.selected = false;
-            this.btnRecuperarPass.Size = new System.Drawing.Size(265, 38);
+            this.btnRecuperarPass.Size = new System.Drawing.Size(272, 39);
             this.btnRecuperarPass.TabIndex = 2;
-            this.btnRecuperarPass.Text = "RECUPERAR CONTRASEÑA";
+            this.btnRecuperarPass.Text = " RECUPERAR CONTRASEÑA";
             this.btnRecuperarPass.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRecuperarPass.Textcolor = System.Drawing.Color.Black;
             this.btnRecuperarPass.TextFont = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Italic);
@@ -193,7 +194,7 @@
             this.Controls.Add(this.btnminimizar);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RecuperarPass";
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

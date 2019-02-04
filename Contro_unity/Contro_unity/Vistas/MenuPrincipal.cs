@@ -135,8 +135,18 @@ namespace Contro_unity
             //desabilitar boton
             if(Program.Rol != "Administrador")
             {
-                btnInventario.Enabled = false;
+                
+                btnUsuarios.Visible = false;
+                
+
             }
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            login frmlogin = new login();
+            Hide();
+            frmlogin.Show();
         }
     }
 }

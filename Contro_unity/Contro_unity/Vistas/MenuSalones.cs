@@ -19,6 +19,15 @@ namespace Contro_unity
             InitializeComponent();
         }
 
+        private void privilegio_user()
+        {
+            //desabilitar boton
+            if (Program.Rol != "Administrador")
+            {
+                btnEliminar.Visible = false;
+            }
+        }
+
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -34,20 +43,14 @@ namespace Contro_unity
         {
             // TODO: esta línea de código carga datos en la tabla 'control_unityDataSet.salons' Puede moverla o quitarla según sea necesario.
             this.salonsTableAdapter.Fill(this.control_unityDataSet.salons);
-            // TODO: esta línea de código carga datos en la tabla 'control_unityDataSet.salons' Puede moverla o quitarla según sea necesario.
-
-
+            privilegio_user();
             txtNom_Salon.Enabled = false;
             txtDescripcion.Enabled = false;
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-
-         
-
             var Salon = new Clases.salon();
-
             if(btnAgregar.Enabled == true)
             {
                 if (txtNom_Salon.Text.Equals(""))

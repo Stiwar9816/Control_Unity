@@ -29,12 +29,12 @@ namespace Contro_unity.Clases
                 contraseña = leer["password_user"].ToString();
                 //EMAIL
                 EnviarEmail();
-                mensaje = "Estimad@ " + nombre + ", se ha enviado su contraseña a su correo: " + email + " por favor verifique en su buzon de entrada";
+                mensaje = "Estimado(a) " + nombre + ", se ha enviado su contraseña a su correo: " + email + " por favor verifique en su buzon de entrada";
                 leer.Close();
             }
             else
             {
-                mensaje = "No Existe datos del usuario solicitado, por favor verifique los datos ingresados";
+                mensaje = "No Existen datos del usuario solicitado, por favor verifique los datos ingresados";
             }
 
             return mensaje;
@@ -44,14 +44,14 @@ namespace Contro_unity.Clases
         {
             //CORREO
             MailMessage correo = new MailMessage();
-            correo.From = new MailAddress("stiwar.asprilla1998@gmail.com");
+            correo.From = new MailAddress("casprilla@miuniclaretiana.edu.co");
             correo.To.Add(email);
             correo.Subject=("RECUPERACIÓN DE CONTRASEÑA - CONTROL UNITY");
             correo.Body = "Hola "+nombre+" usted solicito recuperar su contraseña de control unity.\n Su contraseña es: "+contraseña+".\n Se recomienda cambiarla al ingresar nuevamente al sistema." ;
             correo.Priority = MailPriority.High;
             //SMTP
             SmtpClient ServerMail = new SmtpClient();
-            ServerMail.Credentials = new NetworkCredential("stiwar.asprilla1998@gmail.com", "Csam1098");
+            ServerMail.Credentials = new NetworkCredential("casprilla@miuniclaretiana.edu.co", "Csam1098");
             ServerMail.Host = "smtp.gmail.com";
             ServerMail.Port = 587;
             ServerMail.EnableSsl = true;

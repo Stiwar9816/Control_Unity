@@ -20,6 +20,17 @@ namespace Contro_unity
             InitializeComponent();
         }
 
+        private void privilegio_user()
+        {
+            //desabilitar boton
+            if (Program.Rol != "Administrador")
+            {
+                btnEditar.Visible = false;
+                btnEliminar.Visible = false;
+
+            }
+        }
+
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -46,7 +57,7 @@ namespace Contro_unity
         {
             // TODO: esta línea de código carga datos en la tabla 'control_unityDataSet.teacher' Puede moverla o quitarla según sea necesario.
             this.teacherTableAdapter.Fill(this.control_unityDataSet.teacher);
-
+            privilegio_user();
             txtCC.Enabled = false;
             txtFullName.Enabled = false;
             txtPrograma.Enabled = false;
