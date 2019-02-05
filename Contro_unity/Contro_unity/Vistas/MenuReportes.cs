@@ -20,7 +20,7 @@ namespace Contro_unity
         private void MenuReportes_Load(object sender, EventArgs e)
         {
 
-            this.reportViewer1.RefreshReport();
+            
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

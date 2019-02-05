@@ -41,16 +41,6 @@ namespace Contro_unity
             txtCC.Enabled = true;
             txtFullName.Enabled = true;
             txtPrograma.Enabled = true;
-
-            /*
-            if (con.validar_profesor(Convert.ToInt32(txtCC.Text)) == 0)
-            {
-                MessageBox.Show(con.insertar_profesores(Convert.ToInt32(txtCC.Text), txtFullName.Text, txtPrograma.selectedValue));
-            }
-            else
-            {
-                MessageBox.Show("El profesor ya existe");
-            }*/
         }
 
         private void MenuProfesores_Load(object sender, EventArgs e)
@@ -66,12 +56,8 @@ namespace Contro_unity
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-
-
             var profesor = new Clases.profesor();
             //Agregar Profesor si los textBox estan habilitados
-
-            
             if (btnAgregar.Enabled == true)
             {
                 if (txtCC.Text.Equals(""))
@@ -130,9 +116,9 @@ namespace Contro_unity
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                var DeletePro = dataGridView1.CurrentRow.Cells[0].Value.ToString();
                 var profesor = new Clases.profesor();
-                profesor.Eliminar1(Convert.ToInt32(DeletePro));
+                var DeletePro = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                profesor.Eliminar(Convert.ToInt32(DeletePro));
                 MessageBox.Show("Elimando Correctamente");
                 teacherTableAdapter.Fill(this.control_unityDataSet.teacher);
             } else

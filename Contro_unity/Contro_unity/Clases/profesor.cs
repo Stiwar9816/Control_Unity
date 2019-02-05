@@ -90,7 +90,7 @@ namespace Contro_unity.Clases
             throw new NotImplementedException();
         }
 
-        public void Eliminar1(int Id_teacher)
+        public void Eliminar(int Id_teacher)
         {
             con.Con.Open();
             SqlCommand cmd = new SqlCommand("SP_ELIMINAR_PROFESOR", con.Con);

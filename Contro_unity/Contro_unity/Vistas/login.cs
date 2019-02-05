@@ -27,7 +27,15 @@ namespace Contro_unity
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            
+            if (MessageBox.Show("Desea salir de la aplicación?", "Control Unity", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                //
+            }
         }
 
         private void btnminimizar_Click(object sender, EventArgs e)
