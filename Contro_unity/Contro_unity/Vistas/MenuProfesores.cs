@@ -53,7 +53,6 @@ namespace Contro_unity
             txtCC.Enabled = false;
             txtFullName.Enabled = false;
             txtPrograma.Enabled = false;
-
         }
         private void Ingresar_profesor()
         {
@@ -96,10 +95,7 @@ namespace Contro_unity
         {
             
         }
-
-
-    
-
+        
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
