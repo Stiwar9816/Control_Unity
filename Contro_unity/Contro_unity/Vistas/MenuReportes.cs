@@ -21,7 +21,7 @@ namespace Contro_unity
         {
 
 
-            this.reportViewer1.RefreshReport();
+            this.RPInventario.RefreshReport();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
