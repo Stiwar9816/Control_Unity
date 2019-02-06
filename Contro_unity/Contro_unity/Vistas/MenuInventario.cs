@@ -88,11 +88,11 @@ namespace Contro_unity
         private void btnEditar_Click(object sender, EventArgs e)
         {
             EditarInventario frmEditar = new EditarInventario();
-            frmEditar.txtCod_Serie.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            frmEditar.txtNombre.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            frmEditar.txtStock.Value = Convert.ToDecimal ( dataGridView1.CurrentRow.Cells[3].Value.ToString());
-            frmEditar.txtMarca.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            frmEditar.txtDescripcion.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            frmEditar.txtCod_Serie.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            frmEditar.txtNombre.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            frmEditar.txtStock.Value = Convert.ToDecimal ( dataGridView1.CurrentRow.Cells[2].Value.ToString());
+            frmEditar.txtMarca.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            frmEditar.txtDescripcion.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
             frmEditar.ShowDialog();
             /*
             if (dataGridView1.SelectedRows.Count > 0)
