@@ -39,8 +39,8 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.reportViewer3 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.RPInventario = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.panel1.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -88,10 +88,13 @@
             // 
             // reportViewer5
             // 
-            this.reportViewer5.Location = new System.Drawing.Point(6, 6);
+            this.reportViewer5.BackColor = System.Drawing.SystemColors.Menu;
+            this.reportViewer5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.reportViewer5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer5.Location = new System.Drawing.Point(3, 3);
             this.reportViewer5.Name = "reportViewer5";
             this.reportViewer5.ServerReport.BearerToken = null;
-            this.reportViewer5.Size = new System.Drawing.Size(396, 246);
+            this.reportViewer5.Size = new System.Drawing.Size(1024, 416);
             this.reportViewer5.TabIndex = 1;
             // 
             // tabPage3
@@ -109,10 +112,13 @@
             // 
             // reportViewer4
             // 
-            this.reportViewer4.Location = new System.Drawing.Point(6, 6);
+            this.reportViewer4.BackColor = System.Drawing.SystemColors.Menu;
+            this.reportViewer4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.reportViewer4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer4.Location = new System.Drawing.Point(3, 3);
             this.reportViewer4.Name = "reportViewer4";
             this.reportViewer4.ServerReport.BearerToken = null;
-            this.reportViewer4.Size = new System.Drawing.Size(396, 246);
+            this.reportViewer4.Size = new System.Drawing.Size(1024, 416);
             this.reportViewer4.TabIndex = 1;
             // 
             // tabPage2
@@ -130,10 +136,13 @@
             // 
             // reportViewer3
             // 
-            this.reportViewer3.Location = new System.Drawing.Point(6, 6);
+            this.reportViewer3.BackColor = System.Drawing.SystemColors.Menu;
+            this.reportViewer3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.reportViewer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer3.Location = new System.Drawing.Point(3, 3);
             this.reportViewer3.Name = "reportViewer3";
             this.reportViewer3.ServerReport.BearerToken = null;
-            this.reportViewer3.Size = new System.Drawing.Size(396, 246);
+            this.reportViewer3.Size = new System.Drawing.Size(1024, 416);
             this.reportViewer3.TabIndex = 1;
             // 
             // tabControl1
@@ -154,18 +163,10 @@
             this.tabControl1.Size = new System.Drawing.Size(1038, 451);
             this.tabControl1.TabIndex = 2;
             // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Location = new System.Drawing.Point(6, 6);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(396, 246);
-            this.reportViewer1.TabIndex = 0;
-            // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.Menu;
-            this.tabPage1.Controls.Add(this.reportViewer1);
+            this.tabPage1.Controls.Add(this.RPInventario);
             this.tabPage1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.tabPage1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
@@ -174,6 +175,17 @@
             this.tabPage1.Size = new System.Drawing.Size(1030, 422);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Reporte Inventario";
+            // 
+            // RPInventario
+            // 
+            this.RPInventario.BackColor = System.Drawing.SystemColors.Menu;
+            this.RPInventario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.RPInventario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RPInventario.Location = new System.Drawing.Point(3, 3);
+            this.RPInventario.Name = "RPInventario";
+            this.RPInventario.ServerReport.BearerToken = null;
+            this.RPInventario.Size = new System.Drawing.Size(1024, 416);
+            this.RPInventario.TabIndex = 0;
             // 
             // MenuReportes
             // 
@@ -210,6 +222,6 @@
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer3;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private Microsoft.Reporting.WinForms.ReportViewer RPInventario;
     }
 }
