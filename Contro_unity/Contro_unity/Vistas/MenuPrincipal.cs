@@ -133,7 +133,7 @@ namespace Contro_unity
         private void privilegio_user()
         {
             //desabilitar boton
-            if(Program.Rol != "Administrador")
+            if(Program.Rol != "Developer")
             {
                 
                 btnUsuarios.Visible = false;

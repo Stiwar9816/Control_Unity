@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SimpleCrypto;
 
 namespace Contro_unity
 {
@@ -48,7 +49,12 @@ namespace Contro_unity
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
+            ICryptoService cryptoService = new PBKDF2();
 
+            //Generar algoritmo de encriptacion
+
+            string salt = cryptoService.GenerateSalt();
+            string passEncriptada = cryptoService.Compute(txtPass.Text);
             
 
             var Usuario = new Clases.user();

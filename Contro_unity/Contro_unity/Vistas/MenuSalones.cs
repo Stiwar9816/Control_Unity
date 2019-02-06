@@ -48,10 +48,10 @@ namespace Contro_unity
             txtDescripcion.Enabled = false;
         }
 
-        private void btnConfirmar_Click(object sender, EventArgs e)
+        private void Insertar_salon()
         {
             var Salon = new Clases.salon();
-            if(btnAgregar.Enabled == true)
+            if (btnAgregar.Enabled == true)
             {
                 if (txtNom_Salon.Text.Equals(""))
                 {
@@ -72,9 +72,21 @@ namespace Contro_unity
                     txtDescripcion.Text = "";
                 }
             }
-            else 
+            else
             {
                 MessageBox.Show("Los Campo de textos no estan habilitados, Por favor presione agregar e intente de neuvo", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+           if(btnAgregar.Enabled == true)
+            {
+                Insertar_salon();
+
+            } else if (btnEditar.Enabled == true)
+            {
+
             }
         }
 

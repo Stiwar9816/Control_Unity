@@ -23,11 +23,10 @@ namespace Contro_unity
         private void privilegio_user()
         {
             //desabilitar boton
-            if (Program.Rol != "Administrador")
+            if (Program.Rol != "Developer")
             {
                 btnEditar.Visible = false;
                 btnEliminar.Visible = false;
-
             }
         }
 
@@ -41,16 +40,6 @@ namespace Contro_unity
             txtCC.Enabled = true;
             txtFullName.Enabled = true;
             txtPrograma.Enabled = true;
-
-            /*
-            if (con.validar_profesor(Convert.ToInt32(txtCC.Text)) == 0)
-            {
-                MessageBox.Show(con.insertar_profesores(Convert.ToInt32(txtCC.Text), txtFullName.Text, txtPrograma.selectedValue));
-            }
-            else
-            {
-                MessageBox.Show("El profesor ya existe");
-            }*/
         }
 
         private void MenuProfesores_Load(object sender, EventArgs e)
@@ -61,17 +50,12 @@ namespace Contro_unity
             txtCC.Enabled = false;
             txtFullName.Enabled = false;
             txtPrograma.Enabled = false;
-
         }
-
-        private void btnConfirmar_Click(object sender, EventArgs e)
+        public void Insertar_Pro()
         {
-
-
             var profesor = new Clases.profesor();
             //Agregar Profesor si los textBox estan habilitados
 
-            
             if (btnAgregar.Enabled == true)
             {
                 if (txtCC.Text.Equals(""))
@@ -105,20 +89,25 @@ namespace Contro_unity
             }
         }
 
-        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            
+            if(btnAgregar.Enabled ==true )
+            {
+                Insertar_Pro();
+            } 
+           
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {            
             txtCC.Enabled = false;
             txtFullName.Enabled = true;
             txtPrograma.Enabled = true;
             if (dataGridView1.SelectedRows.Count > 0)
-            {
-                
+            {                
                 txtCC.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
                 txtFullName.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-                txtPrograma.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-                
-                
+                txtPrograma.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();                               
             }
             else
             {
@@ -140,5 +129,6 @@ namespace Contro_unity
                 MessageBox.Show("Selecciones una fila");
             }
         }
+
     }
 }

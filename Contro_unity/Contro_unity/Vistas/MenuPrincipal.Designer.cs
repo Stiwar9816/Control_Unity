@@ -32,13 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txtRoluser = new System.Windows.Forms.Label();
-            this.txtNombreuser = new System.Windows.Forms.Label();
-            this.menuVertical = new System.Windows.Forms.Panel();
-            this.BarraTitulo = new System.Windows.Forms.Panel();
-            this.PanelContenedor = new System.Windows.Forms.Panel();
             this.btnInfo = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
@@ -51,16 +44,20 @@
             this.btnReservas = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnProfesores = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnReportes = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnInventario = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnSalones = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnInicio = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCerrarSesion = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel1.SuspendLayout();
-            this.menuVertical.SuspendLayout();
-            this.BarraTitulo.SuspendLayout();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.txtRoluser = new System.Windows.Forms.Label();
+            this.txtNombreuser = new System.Windows.Forms.Label();
+            this.menuVertical = new System.Windows.Forms.Panel();
+            this.btnReportes = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BarraTitulo = new System.Windows.Forms.Panel();
+            this.PanelContenedor = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.btnInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
@@ -68,95 +65,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.menuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.BarraTitulo.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 10;
-            this.bunifuElipse1.TargetControl = this;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btnCerrarSesion);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.txtRoluser);
-            this.panel1.Controls.Add(this.txtNombreuser);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 552);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 119);
-            this.panel1.TabIndex = 12;
-            // 
-            // txtRoluser
-            // 
-            this.txtRoluser.AutoSize = true;
-            this.txtRoluser.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRoluser.Location = new System.Drawing.Point(68, 12);
-            this.txtRoluser.Name = "txtRoluser";
-            this.txtRoluser.Size = new System.Drawing.Size(86, 18);
-            this.txtRoluser.TabIndex = 9;
-            this.txtRoluser.Text = "Developer";
-            // 
-            // txtNombreuser
-            // 
-            this.txtNombreuser.AutoSize = true;
-            this.txtNombreuser.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreuser.Location = new System.Drawing.Point(65, 39);
-            this.txtNombreuser.Name = "txtNombreuser";
-            this.txtNombreuser.Size = new System.Drawing.Size(110, 18);
-            this.txtNombreuser.TabIndex = 10;
-            this.txtNombreuser.Text = "Stiwar Asprilla";
-            // 
-            // menuVertical
-            // 
-            this.menuVertical.BackColor = System.Drawing.Color.LightGray;
-            this.menuVertical.Controls.Add(this.btnConfiguraciones);
-            this.menuVertical.Controls.Add(this.btnUsuarios);
-            this.menuVertical.Controls.Add(this.btnReservas);
-            this.menuVertical.Controls.Add(this.bunifuFlatButton1);
-            this.menuVertical.Controls.Add(this.btnProfesores);
-            this.menuVertical.Controls.Add(this.btnReportes);
-            this.menuVertical.Controls.Add(this.btnInventario);
-            this.menuVertical.Controls.Add(this.btnSalones);
-            this.menuVertical.Controls.Add(this.btnInicio);
-            this.menuVertical.Controls.Add(this.panel1);
-            this.menuVertical.Controls.Add(this.pictureBox1);
-            this.menuVertical.Dock = System.Windows.Forms.DockStyle.Left;
-            this.menuVertical.Location = new System.Drawing.Point(0, 0);
-            this.menuVertical.Name = "menuVertical";
-            this.menuVertical.Size = new System.Drawing.Size(200, 671);
-            this.menuVertical.TabIndex = 0;
-            // 
-            // BarraTitulo
-            // 
-            this.BarraTitulo.Controls.Add(this.btnInfo);
-            this.BarraTitulo.Controls.Add(this.pictureBox3);
-            this.BarraTitulo.Controls.Add(this.btnRestaurar);
-            this.BarraTitulo.Controls.Add(this.btnMaximizar);
-            this.BarraTitulo.Controls.Add(this.btnMinimizar);
-            this.BarraTitulo.Controls.Add(this.btnCerrar);
-            this.BarraTitulo.Controls.Add(this.btnSlide);
-            this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BarraTitulo.Location = new System.Drawing.Point(200, 0);
-            this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(1024, 41);
-            this.BarraTitulo.TabIndex = 1;
-            this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
-            // 
-            // PanelContenedor
-            // 
-            this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelContenedor.Location = new System.Drawing.Point(200, 41);
-            this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(1024, 630);
-            this.PanelContenedor.TabIndex = 2;
             // 
             // btnInfo
             // 
@@ -438,42 +357,6 @@
             this.toolTip1.SetToolTip(this.btnProfesores, "Profesores");
             this.btnProfesores.Click += new System.EventHandler(this.btnProfesores_Click_1);
             // 
-            // btnReportes
-            // 
-            this.btnReportes.Activecolor = System.Drawing.Color.Khaki;
-            this.btnReportes.BackColor = System.Drawing.Color.LightGray;
-            this.btnReportes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnReportes.BorderRadius = 5;
-            this.btnReportes.ButtonText = "Reportes";
-            this.btnReportes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReportes.DisabledColor = System.Drawing.Color.LightGray;
-            this.btnReportes.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnReportes.Iconimage = global::Contro_unity.Properties.Resources.icons8_increase_50;
-            this.btnReportes.Iconimage_right = null;
-            this.btnReportes.Iconimage_right_Selected = null;
-            this.btnReportes.Iconimage_Selected = null;
-            this.btnReportes.IconMarginLeft = 0;
-            this.btnReportes.IconMarginRight = 0;
-            this.btnReportes.IconRightVisible = true;
-            this.btnReportes.IconRightZoom = 0D;
-            this.btnReportes.IconVisible = true;
-            this.btnReportes.IconZoom = 50D;
-            this.btnReportes.IsTab = false;
-            this.btnReportes.Location = new System.Drawing.Point(8, 274);
-            this.btnReportes.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Normalcolor = System.Drawing.Color.LightGray;
-            this.btnReportes.OnHovercolor = System.Drawing.Color.Khaki;
-            this.btnReportes.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnReportes.selected = false;
-            this.btnReportes.Size = new System.Drawing.Size(192, 45);
-            this.btnReportes.TabIndex = 5;
-            this.btnReportes.Text = "Reportes";
-            this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnReportes.Textcolor = System.Drawing.Color.Black;
-            this.btnReportes.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click_1);
-            // 
             // btnInventario
             // 
             this.btnInventario.Activecolor = System.Drawing.Color.Khaki;
@@ -584,27 +467,6 @@
             this.btnInicio.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolTip1.SetToolTip(this.btnInicio, "Inicio");
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Contro_unity.Properties.Resources.icons8_user_avatar_50;
-            this.pictureBox2.Location = new System.Drawing.Point(8, 8);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(42, 52);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-8, -5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(204, 67);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
-            // 
             // btnCerrarSesion
             // 
             this.btnCerrarSesion.Activecolor = System.Drawing.Color.Khaki;
@@ -643,6 +505,144 @@
             this.toolTip1.SetToolTip(this.btnCerrarSesion, "Cerrar Sesiòn");
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 10;
+            this.bunifuElipse1.TargetControl = this;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnCerrarSesion);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.txtRoluser);
+            this.panel1.Controls.Add(this.txtNombreuser);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 552);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 119);
+            this.panel1.TabIndex = 12;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Contro_unity.Properties.Resources.icons8_user_avatar_50;
+            this.pictureBox2.Location = new System.Drawing.Point(8, 8);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(42, 52);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            // 
+            // txtRoluser
+            // 
+            this.txtRoluser.AutoSize = true;
+            this.txtRoluser.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRoluser.Location = new System.Drawing.Point(68, 12);
+            this.txtRoluser.Name = "txtRoluser";
+            this.txtRoluser.Size = new System.Drawing.Size(86, 18);
+            this.txtRoluser.TabIndex = 9;
+            this.txtRoluser.Text = "Developer";
+            // 
+            // txtNombreuser
+            // 
+            this.txtNombreuser.AutoSize = true;
+            this.txtNombreuser.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreuser.Location = new System.Drawing.Point(65, 39);
+            this.txtNombreuser.Name = "txtNombreuser";
+            this.txtNombreuser.Size = new System.Drawing.Size(110, 18);
+            this.txtNombreuser.TabIndex = 10;
+            this.txtNombreuser.Text = "Stiwar Asprilla";
+            // 
+            // menuVertical
+            // 
+            this.menuVertical.BackColor = System.Drawing.Color.LightGray;
+            this.menuVertical.Controls.Add(this.btnConfiguraciones);
+            this.menuVertical.Controls.Add(this.btnUsuarios);
+            this.menuVertical.Controls.Add(this.btnReservas);
+            this.menuVertical.Controls.Add(this.bunifuFlatButton1);
+            this.menuVertical.Controls.Add(this.btnProfesores);
+            this.menuVertical.Controls.Add(this.btnReportes);
+            this.menuVertical.Controls.Add(this.btnInventario);
+            this.menuVertical.Controls.Add(this.btnSalones);
+            this.menuVertical.Controls.Add(this.btnInicio);
+            this.menuVertical.Controls.Add(this.panel1);
+            this.menuVertical.Controls.Add(this.pictureBox1);
+            this.menuVertical.Dock = System.Windows.Forms.DockStyle.Left;
+            this.menuVertical.Location = new System.Drawing.Point(0, 0);
+            this.menuVertical.Name = "menuVertical";
+            this.menuVertical.Size = new System.Drawing.Size(200, 671);
+            this.menuVertical.TabIndex = 0;
+            // 
+            // btnReportes
+            // 
+            this.btnReportes.Activecolor = System.Drawing.Color.Khaki;
+            this.btnReportes.BackColor = System.Drawing.Color.LightGray;
+            this.btnReportes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnReportes.BorderRadius = 5;
+            this.btnReportes.ButtonText = "Reportes";
+            this.btnReportes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReportes.DisabledColor = System.Drawing.Color.LightGray;
+            this.btnReportes.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnReportes.Iconimage = global::Contro_unity.Properties.Resources.icons8_increase_50;
+            this.btnReportes.Iconimage_right = null;
+            this.btnReportes.Iconimage_right_Selected = null;
+            this.btnReportes.Iconimage_Selected = null;
+            this.btnReportes.IconMarginLeft = 0;
+            this.btnReportes.IconMarginRight = 0;
+            this.btnReportes.IconRightVisible = true;
+            this.btnReportes.IconRightZoom = 0D;
+            this.btnReportes.IconVisible = true;
+            this.btnReportes.IconZoom = 50D;
+            this.btnReportes.IsTab = false;
+            this.btnReportes.Location = new System.Drawing.Point(8, 274);
+            this.btnReportes.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Normalcolor = System.Drawing.Color.LightGray;
+            this.btnReportes.OnHovercolor = System.Drawing.Color.Khaki;
+            this.btnReportes.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnReportes.selected = false;
+            this.btnReportes.Size = new System.Drawing.Size(192, 45);
+            this.btnReportes.TabIndex = 5;
+            this.btnReportes.Text = "Reportes";
+            this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnReportes.Textcolor = System.Drawing.Color.Black;
+            this.btnReportes.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click_1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-8, -5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(204, 67);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            // 
+            // BarraTitulo
+            // 
+            this.BarraTitulo.Controls.Add(this.btnInfo);
+            this.BarraTitulo.Controls.Add(this.pictureBox3);
+            this.BarraTitulo.Controls.Add(this.btnRestaurar);
+            this.BarraTitulo.Controls.Add(this.btnMaximizar);
+            this.BarraTitulo.Controls.Add(this.btnMinimizar);
+            this.BarraTitulo.Controls.Add(this.btnCerrar);
+            this.BarraTitulo.Controls.Add(this.btnSlide);
+            this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BarraTitulo.Location = new System.Drawing.Point(200, 0);
+            this.BarraTitulo.Name = "BarraTitulo";
+            this.BarraTitulo.Size = new System.Drawing.Size(1024, 41);
+            this.BarraTitulo.TabIndex = 1;
+            this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
+            // 
+            // PanelContenedor
+            // 
+            this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelContenedor.Location = new System.Drawing.Point(200, 41);
+            this.PanelContenedor.Name = "PanelContenedor";
+            this.PanelContenedor.Size = new System.Drawing.Size(1024, 630);
+            this.PanelContenedor.TabIndex = 2;
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -659,10 +659,6 @@
             this.Text = "MenuPrincipal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MenuPrincipal_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.menuVertical.ResumeLayout(false);
-            this.BarraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
@@ -670,8 +666,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.menuVertical.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.BarraTitulo.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
