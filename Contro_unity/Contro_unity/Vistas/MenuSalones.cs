@@ -38,6 +38,7 @@ namespace Contro_unity
         {
             txtNom_Salon.Enabled = true;
             txtDescripcion.Enabled = true;
+            btnConfirmarAgregar.Visible = true;
         }
 
         private void MenuSalones_Load(object sender, EventArgs e)
@@ -49,10 +50,10 @@ namespace Contro_unity
             txtDescripcion.Enabled = false;
         }
 
-        private void btnConfirmar_Click(object sender, EventArgs e)
+        private void Ingresar_salon()
         {
             var Salon = new Clases.salon();
-            if(btnAgregar.Enabled == true)
+            if (btnAgregar.Enabled == true)
             {
                 if (txtNom_Salon.Text.Equals(""))
                 {
@@ -73,22 +74,23 @@ namespace Contro_unity
                     txtDescripcion.Text = "";
                 }
             }
-            else 
+            else
             {
                 MessageBox.Show("Los Campo de textos no estan habilitados, Por favor presione agregar e intente de neuvo", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
+        private void Editar_Salon()
+        {
+
+        }
+
+
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            EditarSalon frmEditarSalon = new EditarSalon();
-            frmEditarSalon.txtNom_Salon.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            frmEditarSalon.txtDescripcion.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            frmEditarSalon.ShowDialog();
-
-            /*
             txtNom_Salon.Enabled = true;
             txtDescripcion.Enabled = true;
+            btnConfirmarEditar.Visible = true;
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 txtNom_Salon.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
@@ -98,8 +100,6 @@ namespace Contro_unity
             {
                 MessageBox.Show("Seleccione un registro", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            */
-        
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -116,6 +116,16 @@ namespace Contro_unity
             {
                 MessageBox.Show("Selecciones una fila");
             }
+        }
+
+        private void btnConfirmarAgregar_Click(object sender, EventArgs e)
+        {
+            Ingresar_salon();
+        }
+
+        private void btnConfirmarEditar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

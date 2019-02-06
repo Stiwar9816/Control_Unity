@@ -42,39 +42,43 @@
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.btnConfirmar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnConfirmarAgregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnEliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnEditar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAgregar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnConfirmarEditar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idsalonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomsalonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionsalonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.control_unityDataSet = new Contro_unity.control_unityDataSet();
-            this.salonsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.salonsTableAdapter = new Contro_unity.control_unityDataSetTableAdapters.salonsTableAdapter();
             this.idsalonDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomsalonDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionsalonDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salonsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.control_unityDataSet = new Contro_unity.control_unityDataSet();
+            this.idsalonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomsalonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionsalonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salonsTableAdapter = new Contro_unity.control_unityDataSetTableAdapters.salonsTableAdapter();
             this.gbEditInventario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.control_unityDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salonsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.control_unityDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // gbEditInventario
             // 
+            this.gbEditInventario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.gbEditInventario.BackColor = System.Drawing.SystemColors.Menu;
+            this.gbEditInventario.Controls.Add(this.btnConfirmarEditar);
             this.gbEditInventario.Controls.Add(this.txtDescripcion);
             this.gbEditInventario.Controls.Add(this.txtNom_Salon);
             this.gbEditInventario.Controls.Add(this.lbCod_serie);
+            this.gbEditInventario.Controls.Add(this.btnConfirmarAgregar);
             this.gbEditInventario.Controls.Add(this.LblDescripcion);
             this.gbEditInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbEditInventario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbEditInventario.Location = new System.Drawing.Point(640, 40);
             this.gbEditInventario.Name = "gbEditInventario";
-            this.gbEditInventario.Size = new System.Drawing.Size(361, 186);
+            this.gbEditInventario.Size = new System.Drawing.Size(361, 306);
             this.gbEditInventario.TabIndex = 7;
             this.gbEditInventario.TabStop = false;
             this.gbEditInventario.Text = "DATOS DEL SALON";
@@ -163,42 +167,43 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "SALONES REGISTRADOS";
             // 
-            // btnConfirmar
+            // btnConfirmarAgregar
             // 
-            this.btnConfirmar.Activecolor = System.Drawing.SystemColors.Menu;
-            this.btnConfirmar.BackColor = System.Drawing.SystemColors.Menu;
-            this.btnConfirmar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnConfirmar.BorderRadius = 3;
-            this.btnConfirmar.ButtonText = "Confirmar";
-            this.btnConfirmar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConfirmar.DisabledColor = System.Drawing.SystemColors.Menu;
-            this.btnConfirmar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnConfirmar.Iconimage = global::Contro_unity.Properties.Resources.icons8_checked_50;
-            this.btnConfirmar.Iconimage_right = null;
-            this.btnConfirmar.Iconimage_right_Selected = null;
-            this.btnConfirmar.Iconimage_Selected = null;
-            this.btnConfirmar.IconMarginLeft = 0;
-            this.btnConfirmar.IconMarginRight = 0;
-            this.btnConfirmar.IconRightVisible = true;
-            this.btnConfirmar.IconRightZoom = 0D;
-            this.btnConfirmar.IconVisible = true;
-            this.btnConfirmar.IconZoom = 55D;
-            this.btnConfirmar.IsTab = false;
-            this.btnConfirmar.Location = new System.Drawing.Point(757, 246);
-            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Normalcolor = System.Drawing.SystemColors.Menu;
-            this.btnConfirmar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
-            this.btnConfirmar.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnConfirmar.selected = false;
-            this.btnConfirmar.Size = new System.Drawing.Size(147, 48);
-            this.btnConfirmar.TabIndex = 19;
-            this.btnConfirmar.Text = "Confirmar";
-            this.btnConfirmar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnConfirmar.Textcolor = System.Drawing.Color.Black;
-            this.btnConfirmar.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolTip1.SetToolTip(this.btnConfirmar, "Confirmar");
-            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
+            this.btnConfirmarAgregar.Activecolor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmarAgregar.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmarAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConfirmarAgregar.BorderRadius = 3;
+            this.btnConfirmarAgregar.ButtonText = "Confirmar";
+            this.btnConfirmarAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConfirmarAgregar.DisabledColor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmarAgregar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnConfirmarAgregar.Iconimage = global::Contro_unity.Properties.Resources.icons8_checked_50;
+            this.btnConfirmarAgregar.Iconimage_right = null;
+            this.btnConfirmarAgregar.Iconimage_right_Selected = null;
+            this.btnConfirmarAgregar.Iconimage_Selected = null;
+            this.btnConfirmarAgregar.IconMarginLeft = 0;
+            this.btnConfirmarAgregar.IconMarginRight = 0;
+            this.btnConfirmarAgregar.IconRightVisible = true;
+            this.btnConfirmarAgregar.IconRightZoom = 0D;
+            this.btnConfirmarAgregar.IconVisible = true;
+            this.btnConfirmarAgregar.IconZoom = 55D;
+            this.btnConfirmarAgregar.IsTab = false;
+            this.btnConfirmarAgregar.Location = new System.Drawing.Point(90, 220);
+            this.btnConfirmarAgregar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnConfirmarAgregar.Name = "btnConfirmarAgregar";
+            this.btnConfirmarAgregar.Normalcolor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmarAgregar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
+            this.btnConfirmarAgregar.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnConfirmarAgregar.selected = false;
+            this.btnConfirmarAgregar.Size = new System.Drawing.Size(175, 54);
+            this.btnConfirmarAgregar.TabIndex = 19;
+            this.btnConfirmarAgregar.Text = "Confirmar";
+            this.btnConfirmarAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnConfirmarAgregar.Textcolor = System.Drawing.Color.Black;
+            this.btnConfirmarAgregar.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolTip1.SetToolTip(this.btnConfirmarAgregar, "Confirmar");
+            this.btnConfirmarAgregar.Visible = false;
+            this.btnConfirmarAgregar.Click += new System.EventHandler(this.btnConfirmarAgregar_Click);
             // 
             // btnEliminar
             // 
@@ -311,6 +316,44 @@
             this.toolTip1.SetToolTip(this.btnAgregar, "Agregar");
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // btnConfirmarEditar
+            // 
+            this.btnConfirmarEditar.Activecolor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmarEditar.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmarEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConfirmarEditar.BorderRadius = 3;
+            this.btnConfirmarEditar.ButtonText = "Confirmar";
+            this.btnConfirmarEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConfirmarEditar.DisabledColor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmarEditar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnConfirmarEditar.Iconimage = global::Contro_unity.Properties.Resources.icons8_checked_50;
+            this.btnConfirmarEditar.Iconimage_right = null;
+            this.btnConfirmarEditar.Iconimage_right_Selected = null;
+            this.btnConfirmarEditar.Iconimage_Selected = null;
+            this.btnConfirmarEditar.IconMarginLeft = 0;
+            this.btnConfirmarEditar.IconMarginRight = 0;
+            this.btnConfirmarEditar.IconRightVisible = true;
+            this.btnConfirmarEditar.IconRightZoom = 0D;
+            this.btnConfirmarEditar.IconVisible = true;
+            this.btnConfirmarEditar.IconZoom = 55D;
+            this.btnConfirmarEditar.IsTab = false;
+            this.btnConfirmarEditar.Location = new System.Drawing.Point(90, 220);
+            this.btnConfirmarEditar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnConfirmarEditar.Name = "btnConfirmarEditar";
+            this.btnConfirmarEditar.Normalcolor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmarEditar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
+            this.btnConfirmarEditar.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnConfirmarEditar.selected = false;
+            this.btnConfirmarEditar.Size = new System.Drawing.Size(175, 54);
+            this.btnConfirmarEditar.TabIndex = 25;
+            this.btnConfirmarEditar.Text = "Confirmar";
+            this.btnConfirmarEditar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnConfirmarEditar.Textcolor = System.Drawing.Color.Black;
+            this.btnConfirmarEditar.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolTip1.SetToolTip(this.btnConfirmarEditar, "Confirmar");
+            this.btnConfirmarEditar.Visible = false;
+            this.btnConfirmarEditar.Click += new System.EventHandler(this.btnConfirmarEditar_Click);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -379,44 +422,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(554, 401);
             this.dataGridView1.TabIndex = 24;
             // 
-            // idsalonDataGridViewTextBoxColumn
-            // 
-            this.idsalonDataGridViewTextBoxColumn.DataPropertyName = "id_salon";
-            this.idsalonDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idsalonDataGridViewTextBoxColumn.Name = "idsalonDataGridViewTextBoxColumn";
-            this.idsalonDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idsalonDataGridViewTextBoxColumn.Width = 43;
-            // 
-            // nomsalonDataGridViewTextBoxColumn
-            // 
-            this.nomsalonDataGridViewTextBoxColumn.DataPropertyName = "nom_salon";
-            this.nomsalonDataGridViewTextBoxColumn.HeaderText = "SALÒN";
-            this.nomsalonDataGridViewTextBoxColumn.Name = "nomsalonDataGridViewTextBoxColumn";
-            this.nomsalonDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nomsalonDataGridViewTextBoxColumn.Width = 71;
-            // 
-            // descriptionsalonDataGridViewTextBoxColumn
-            // 
-            this.descriptionsalonDataGridViewTextBoxColumn.DataPropertyName = "description_salon";
-            this.descriptionsalonDataGridViewTextBoxColumn.HeaderText = "DESCRIPCIÒN";
-            this.descriptionsalonDataGridViewTextBoxColumn.Name = "descriptionsalonDataGridViewTextBoxColumn";
-            this.descriptionsalonDataGridViewTextBoxColumn.ReadOnly = true;
-            this.descriptionsalonDataGridViewTextBoxColumn.Width = 111;
-            // 
-            // control_unityDataSet
-            // 
-            this.control_unityDataSet.DataSetName = "control_unityDataSet";
-            this.control_unityDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // salonsBindingSource
-            // 
-            this.salonsBindingSource.DataMember = "salons";
-            this.salonsBindingSource.DataSource = this.control_unityDataSet;
-            // 
-            // salonsTableAdapter
-            // 
-            this.salonsTableAdapter.ClearBeforeFill = true;
-            // 
             // idsalonDataGridViewTextBoxColumn1
             // 
             this.idsalonDataGridViewTextBoxColumn1.DataPropertyName = "id_salon";
@@ -441,6 +446,44 @@
             this.descriptionsalonDataGridViewTextBoxColumn1.ReadOnly = true;
             this.descriptionsalonDataGridViewTextBoxColumn1.Width = 111;
             // 
+            // salonsBindingSource
+            // 
+            this.salonsBindingSource.DataMember = "salons";
+            this.salonsBindingSource.DataSource = this.control_unityDataSet;
+            // 
+            // control_unityDataSet
+            // 
+            this.control_unityDataSet.DataSetName = "control_unityDataSet";
+            this.control_unityDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // idsalonDataGridViewTextBoxColumn
+            // 
+            this.idsalonDataGridViewTextBoxColumn.DataPropertyName = "id_salon";
+            this.idsalonDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idsalonDataGridViewTextBoxColumn.Name = "idsalonDataGridViewTextBoxColumn";
+            this.idsalonDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idsalonDataGridViewTextBoxColumn.Width = 43;
+            // 
+            // nomsalonDataGridViewTextBoxColumn
+            // 
+            this.nomsalonDataGridViewTextBoxColumn.DataPropertyName = "nom_salon";
+            this.nomsalonDataGridViewTextBoxColumn.HeaderText = "SALÒN";
+            this.nomsalonDataGridViewTextBoxColumn.Name = "nomsalonDataGridViewTextBoxColumn";
+            this.nomsalonDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nomsalonDataGridViewTextBoxColumn.Width = 71;
+            // 
+            // descriptionsalonDataGridViewTextBoxColumn
+            // 
+            this.descriptionsalonDataGridViewTextBoxColumn.DataPropertyName = "description_salon";
+            this.descriptionsalonDataGridViewTextBoxColumn.HeaderText = "DESCRIPCIÒN";
+            this.descriptionsalonDataGridViewTextBoxColumn.Name = "descriptionsalonDataGridViewTextBoxColumn";
+            this.descriptionsalonDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descriptionsalonDataGridViewTextBoxColumn.Width = 111;
+            // 
+            // salonsTableAdapter
+            // 
+            this.salonsTableAdapter.ClearBeforeFill = true;
+            // 
             // MenuSalones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -451,7 +494,6 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.gbEditInventario);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.label1);
@@ -464,8 +506,8 @@
             this.gbEditInventario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.control_unityDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salonsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.control_unityDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -478,7 +520,7 @@
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolTip toolTip1;
-        private Bunifu.Framework.UI.BunifuFlatButton btnConfirmar;
+        private Bunifu.Framework.UI.BunifuFlatButton btnConfirmarAgregar;
         private Bunifu.Framework.UI.BunifuFlatButton btnEliminar;
         private Bunifu.Framework.UI.BunifuFlatButton btnEditar;
         private Bunifu.Framework.UI.BunifuFlatButton btnAgregar;
@@ -495,5 +537,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idsalonDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomsalonDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionsalonDataGridViewTextBoxColumn1;
+        private Bunifu.Framework.UI.BunifuFlatButton btnConfirmarEditar;
     }
 }

@@ -33,78 +33,53 @@ namespace Contro_unity
             txtNombre.Enabled = false;
             txtEmail.Enabled = false;
             txtRol.Enabled = false;
-            txtPass.Enabled = false;
-            txtPrivilegio.Enabled = false;
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void Ingresar_Usuario()
         {
-            txtCC.Enabled = true;
-            txtNombre.Enabled = true;
-            txtEmail.Enabled = true;
-            txtRol.Enabled = true;
-            txtPass.Enabled = true;
-            txtPrivilegio.Enabled = true;
-        }
-
-        private void btnConfirmar_Click(object sender, EventArgs e)
-        {
-
-            
-
             var Usuario = new Clases.user();
             if (btnAgregar.Enabled == true)
             {
-                Usuario = new Clases.user(Convert.ToInt32( txtCC.Text),txtNombre.Text,txtPass.Text,txtEmail.Text,Convert.ToDateTime(txtFecha.Text),txtRol.Text,Convert.ToInt32( txtPrivilegio.Text));
+                //Usuario = new Clases.user(Convert.ToInt32(txtCC.Text), txtNombre.Text, txtEmail.Text, txtRol.Text);
                 int ultimo_id = Usuario.Registrar();
                 this.usersTableAdapter.Fill(this.control_unityDataSet.users);
                 txtCC.Text = "";
                 txtNombre.Text = "";
-                txtPass.Text = "";
                 txtEmail.Text = "";
                 txtRol.Text = "";
-                txtPrivilegio.Text = "";
-                txtFecha.Text = "";
             }
             else
             {
                 MessageBox.Show("Los Campo de textos no estan habilitados, Por favor seleccione una opcion e intente de nuevo");
             }
         }
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            txtCC.Enabled = true;
+            txtNombre.Enabled = true;
+            txtEmail.Enabled = true;
+            txtRol.Enabled = true;
+            btnConfirmarAgregar.Visible = true;
+        }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-
-            EditarUsuario frmEditarUsuario = new EditarUsuario();
-            frmEditarUsuario.txtCC.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            frmEditarUsuario.txtNombre.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            frmEditarUsuario.txtPass.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            frmEditarUsuario.txtEmail.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            frmEditarUsuario.txtRol.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
-            frmEditarUsuario.ShowDialog();
-
-            /*txtCC.Enabled = false;
-            txtFecha.Enabled = false;
+            txtCC.Enabled = true;
             txtNombre.Enabled = true;
-            txtPass.Enabled = false;
             txtEmail.Enabled = true;
-            txtPrivilegio.Enabled = false;
-            txtRol.Enabled = false;
+            txtRol.Enabled = true;
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 txtCC.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
                 txtNombre.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-                txtPass.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-                txtEmail.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-                //txtFecha.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-                //txtRol.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
-                //txtPrivilegio.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+                txtEmail.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                txtRol.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
             }
             else
             {
                 MessageBox.Show("Seleccione un registro", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            */
+            
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -121,6 +96,16 @@ namespace Contro_unity
             {
                 MessageBox.Show("Seleccione una fila");
             }
+        }
+
+        private void btnConfirmarEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConfirmarAgregar_Click(object sender, EventArgs e)
+        {
+            Ingresar_Usuario();
         }
     }
 }

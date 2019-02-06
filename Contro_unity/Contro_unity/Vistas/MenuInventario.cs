@@ -46,9 +46,6 @@ namespace Contro_unity
             txtStock.Enabled = false;
             txtMarca.Enabled = false;
             txtDescripcion.Enabled = false;
-            txtFecha.Enabled = false;
-
-
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -58,25 +55,25 @@ namespace Contro_unity
             txtStock.Enabled = true;
             txtMarca.Enabled = true;
             txtDescripcion.Enabled = true;
-            txtFecha.Enabled = true;
+            btnConfirmarAgregar.Visible = true;
         }
 
-        private void btnConfirmar_Click(object sender, EventArgs e)
+        private void Ingresar_Inventario()
         {
-            if(btnAgregar.Enabled == true)
+            if (btnAgregar.Enabled == true)
             {
                 if (btnAgregar.Enabled == true)
                 {
-                    var Implemento = new Clases.implemento(txtCod_Serie.Text,txtNombre.Text,txtFecha.Text,Convert.ToInt32(txtStock.Value),txtMarca.Text,txtDescripcion.Text);
-                    Implemento.Registrar();
+                    //var Implemento = new Clases.implemento(txtCod_Serie.Text,txtNombre.Text,txtFecha.Text,Convert.ToInt32(txtStock.Value),txtMarca.Text,txtDescripcion.Text);
+                    //Implemento.Registrar();
                     this.implementsTableAdapter.Fill(this.control_unityDataSet.implements);
                     txtCod_Serie.Text = "";
                     txtNombre.Text = "";
                     txtStock.Value = 0;
-                    txtFecha.Text = "";
+                    //txtFecha.Text = "";
                     txtMarca.Text = "";
                     txtDescripcion.Text = "";
-                    
+
                 }
                 else
                 {
@@ -85,28 +82,27 @@ namespace Contro_unity
             }
         }
 
+
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            EditarInventario frmEditar = new EditarInventario();
-            frmEditar.txtCod_Serie.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            frmEditar.txtNombre.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            frmEditar.txtStock.Value = Convert.ToDecimal ( dataGridView1.CurrentRow.Cells[2].Value.ToString());
-            frmEditar.txtMarca.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            frmEditar.txtDescripcion.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            frmEditar.ShowDialog();
-            /*
+            txtCod_Serie.Enabled = true;
+            txtNombre.Enabled = true;
+            txtStock.Enabled = true;
+            txtMarca.Enabled = true;
+            txtDescripcion.Enabled = true;
+            btnConfirmarEditar.Visible = true;
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                txtCod_Serie.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-                txtNombre.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-                //txtStock = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-                txtMarca.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-                txtDescripcion.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+                txtCod_Serie.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                txtNombre.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                txtStock.Value = Convert.ToInt32(dataGridView1.CurrentRow.Cells[3].Value.ToString());
+                txtMarca.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                txtDescripcion.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
             }
             else
             {
                 MessageBox.Show("Seleccione un registro", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }*/
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

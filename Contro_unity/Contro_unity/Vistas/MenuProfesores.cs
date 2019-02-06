@@ -117,9 +117,17 @@ namespace Contro_unity
             txtFullName.Enabled = true;
             txtPrograma.Enabled = true;
             btnConfirmarEditar.Visible = true;
-            txtCC.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            txtFullName.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            txtPrograma.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+
+                txtCC.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                txtFullName.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                txtPrograma.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un registro", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnConfirmarAgregar_Click(object sender, EventArgs e)
