@@ -20,7 +20,7 @@ namespace Contro_unity
         DataTable DaT;
 
         //Conexion a la BD
-        public SqlConnection Con = new SqlConnection("Data Source=DELL-PC\\CONTROLSYSTEM;Initial Catalog=control_unity;Integrated Security=True");
+        public SqlConnection Con = new SqlConnection("Data Source=DESKTOP-S7URQ0I\\SQLEXPRESS;Initial Catalog=control_unity;Integrated Security=True");
 
        public SqlConnection AbrirConexion()
         {
