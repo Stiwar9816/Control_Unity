@@ -42,6 +42,7 @@ namespace Contro_unity
             txtCC.Enabled = true;
             txtFullName.Enabled = true;
             txtPrograma.Enabled = true;
+            btnConfirmarAgregar.Visible = true;
         }
 
         private void MenuProfesores_Load(object sender, EventArgs e)
@@ -54,8 +55,7 @@ namespace Contro_unity
             txtPrograma.Enabled = false;
 
         }
-
-        private void btnConfirmar_Click(object sender, EventArgs e)
+        private void Ingresar_profesor()
         {
             var profesor = new Clases.profesor();
             //Agregar Profesor si los textBox estan habilitados
@@ -92,33 +92,13 @@ namespace Contro_unity
             }
         }
 
-        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        private void Editar_profesor()
         {
-            EditarProfesor frmEditarProfesor = new EditarProfesor();
-            frmEditarProfesor.txtCC.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            frmEditarProfesor.txtFullName.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            frmEditarProfesor.txtPrograma.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            frmEditarProfesor.ShowDialog();
-
-            /*
-            txtCC.Enabled = false;
-            txtFullName.Enabled = true;
-            txtPrograma.Enabled = true;
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-                
-                txtCC.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-                txtFullName.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-                txtPrograma.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-                
-                
-            }
-            else
-            {
-                MessageBox.Show("Seleccione un registro", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            */
+            
         }
+
+
+    
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
@@ -133,6 +113,27 @@ namespace Contro_unity
             {
                 MessageBox.Show("Selecciones una fila");
             }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            txtCC.Enabled = false;
+            txtFullName.Enabled = true;
+            txtPrograma.Enabled = true;
+            btnConfirmarEditar.Visible = true;
+            txtCC.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            txtFullName.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            txtPrograma.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+        }
+
+        private void btnConfirmarAgregar_Click(object sender, EventArgs e)
+        {
+            Ingresar_profesor();
+        }
+
+        private void btnConfirmarEditar_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
