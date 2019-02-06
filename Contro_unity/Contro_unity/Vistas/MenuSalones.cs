@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Contro_unity.Vistas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -80,6 +81,12 @@ namespace Contro_unity
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            EditarSalon frmEditarSalon = new EditarSalon();
+            frmEditarSalon.txtNom_Salon.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            frmEditarSalon.txtDescripcion.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            frmEditarSalon.ShowDialog();
+
+            /*
             txtNom_Salon.Enabled = true;
             txtDescripcion.Enabled = true;
             if (dataGridView1.SelectedRows.Count > 0)
@@ -91,6 +98,8 @@ namespace Contro_unity
             {
                 MessageBox.Show("Seleccione un registro", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            */
+        
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

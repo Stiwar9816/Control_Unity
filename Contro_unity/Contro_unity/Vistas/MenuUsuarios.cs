@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Contro_unity.Vistas;
 
 namespace Contro_unity
 {
@@ -73,7 +74,16 @@ namespace Contro_unity
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            txtCC.Enabled = false;
+
+            EditarUsuario frmEditarUsuario = new EditarUsuario();
+            frmEditarUsuario.txtCC.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            frmEditarUsuario.txtNombre.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            frmEditarUsuario.txtPass.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            frmEditarUsuario.txtEmail.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            frmEditarUsuario.txtRol.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            frmEditarUsuario.ShowDialog();
+
+            /*txtCC.Enabled = false;
             txtFecha.Enabled = false;
             txtNombre.Enabled = true;
             txtPass.Enabled = false;
@@ -94,6 +104,7 @@ namespace Contro_unity
             {
                 MessageBox.Show("Seleccione un registro", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            */
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

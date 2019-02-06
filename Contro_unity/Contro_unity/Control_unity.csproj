@@ -106,6 +106,30 @@
       <DependentUpon>control_unityDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Vistas\EditarInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\EditarInventario.Designer.cs">
+      <DependentUpon>EditarInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\EditarProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\EditarProfesor.Designer.cs">
+      <DependentUpon>EditarProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\EditarSalon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\EditarSalon.Designer.cs">
+      <DependentUpon>EditarSalon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\EditarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\EditarUsuario.Designer.cs">
+      <DependentUpon>EditarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,11 +186,11 @@
     <Compile Include="Vistas\RecuperarPass.Designer.cs">
       <DependentUpon>RecuperarPass.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\ReservasProfesores.cs">
+    <Compile Include="Vistas\MenuReservas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\ReservasProfesores.Designer.cs">
-      <DependentUpon>ReservasProfesores.cs</DependentUpon>
+    <Compile Include="Vistas\MenuReservas.Designer.cs">
+      <DependentUpon>MenuReservas.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\SplashScreen.cs">
       <SubType>Form</SubType>
@@ -174,6 +198,18 @@
     <Compile Include="Vistas\SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vistas\EditarInventario.resx">
+      <DependentUpon>EditarInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\EditarProfesor.resx">
+      <DependentUpon>EditarProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\EditarSalon.resx">
+      <DependentUpon>EditarSalon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\EditarUsuario.resx">
+      <DependentUpon>EditarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
@@ -211,8 +247,8 @@
     <EmbeddedResource Include="Vistas\RecuperarPass.resx">
       <DependentUpon>RecuperarPass.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\ReservasProfesores.resx">
-      <DependentUpon>ReservasProfesores.cs</DependentUpon>
+    <EmbeddedResource Include="Vistas\MenuReservas.resx">
+      <DependentUpon>MenuReservas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Contro_unity.Vistas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -86,11 +87,14 @@ namespace Contro_unity
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            txtCod_Serie.Enabled = true;
-            txtNombre.Enabled = true;
-            txtStock.Enabled = true;
-            txtMarca.Enabled = true;
-            txtDescripcion.Enabled = true;
+            EditarInventario frmEditar = new EditarInventario();
+            frmEditar.txtCod_Serie.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            frmEditar.txtNombre.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            frmEditar.txtStock.Value = Convert.ToDecimal ( dataGridView1.CurrentRow.Cells[3].Value.ToString());
+            frmEditar.txtMarca.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            frmEditar.txtDescripcion.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            frmEditar.ShowDialog();
+            /*
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 txtCod_Serie.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
@@ -102,7 +106,7 @@ namespace Contro_unity
             else
             {
                 MessageBox.Show("Seleccione un registro", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            }*/
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

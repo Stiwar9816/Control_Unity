@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Contro_unity.Vistas;
 
 namespace Contro_unity
 {
@@ -93,7 +94,13 @@ namespace Contro_unity
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
-            
+            EditarProfesor frmEditarProfesor = new EditarProfesor();
+            frmEditarProfesor.txtCC.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            frmEditarProfesor.txtFullName.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            frmEditarProfesor.txtPrograma.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            frmEditarProfesor.ShowDialog();
+
+            /*
             txtCC.Enabled = false;
             txtFullName.Enabled = true;
             txtPrograma.Enabled = true;
@@ -110,6 +117,7 @@ namespace Contro_unity
             {
                 MessageBox.Show("Seleccione un registro", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            */
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
