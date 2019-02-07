@@ -694,7 +694,7 @@ namespace Contro_unity {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public booking_teacherRow Addbooking_teacherRow(string cc_teacher, string nom_teacher, string programa_teacher, System.DateTime datetime_in_teacher, System.DateTime datetime_out_teacher, string reserve_implements_teacher, string reserve_salon_teacher, string delivered_by_teacher, string received_by_teacher) {
+            public booking_teacherRow Addbooking_teacherRow(string cc_teacher, string nom_teacher, string programa_teacher, string datetime_in_teacher, string datetime_out_teacher, string reserve_implements_teacher, string reserve_salon_teacher, string delivered_by_teacher, string received_by_teacher) {
                 booking_teacherRow rowbooking_teacherRow = ((booking_teacherRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -759,9 +759,9 @@ namespace Contro_unity {
                 base.Columns.Add(this.columnnom_teacher);
                 this.columnprograma_teacher = new global::System.Data.DataColumn("programa_teacher", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnprograma_teacher);
-                this.columndatetime_in_teacher = new global::System.Data.DataColumn("datetime_in_teacher", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columndatetime_in_teacher = new global::System.Data.DataColumn("datetime_in_teacher", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndatetime_in_teacher);
-                this.columndatetime_out_teacher = new global::System.Data.DataColumn("datetime_out_teacher", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columndatetime_out_teacher = new global::System.Data.DataColumn("datetime_out_teacher", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndatetime_out_teacher);
                 this.columnreserve_implements_teacher = new global::System.Data.DataColumn("reserve_implements_teacher", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnreserve_implements_teacher);
@@ -786,7 +786,9 @@ namespace Contro_unity {
                 this.columnprograma_teacher.AllowDBNull = false;
                 this.columnprograma_teacher.MaxLength = 50;
                 this.columndatetime_in_teacher.AllowDBNull = false;
+                this.columndatetime_in_teacher.MaxLength = 50;
                 this.columndatetime_out_teacher.AllowDBNull = false;
+                this.columndatetime_out_teacher.MaxLength = 50;
                 this.columnreserve_implements_teacher.AllowDBNull = false;
                 this.columnreserve_implements_teacher.MaxLength = 50;
                 this.columnreserve_salon_teacher.AllowDBNull = false;
@@ -1098,7 +1100,7 @@ namespace Contro_unity {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public booking_userRow Addbooking_userRow(int id_user, int cc_user, string nom_user, string program_user, System.DateTime datetime_in_user, System.DateTime datetime_out_user, string reserve_implements_user, string reserve_salon_user, string delivered_by_user, string received_by_user) {
+            public booking_userRow Addbooking_userRow(int id_user, int cc_user, string nom_user, string program_user, string datetime_in_user, string datetime_out_user, string reserve_implements_user, string reserve_salon_user, string delivered_by_user, string received_by_user) {
                 booking_userRow rowbooking_userRow = ((booking_userRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id_user,
@@ -1163,9 +1165,9 @@ namespace Contro_unity {
                 base.Columns.Add(this.columnnom_user);
                 this.columnprogram_user = new global::System.Data.DataColumn("program_user", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnprogram_user);
-                this.columndatetime_in_user = new global::System.Data.DataColumn("datetime_in_user", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columndatetime_in_user = new global::System.Data.DataColumn("datetime_in_user", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndatetime_in_user);
-                this.columndatetime_out_user = new global::System.Data.DataColumn("datetime_out_user", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columndatetime_out_user = new global::System.Data.DataColumn("datetime_out_user", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndatetime_out_user);
                 this.columnreserve_implements_user = new global::System.Data.DataColumn("reserve_implements_user", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnreserve_implements_user);
@@ -1184,7 +1186,9 @@ namespace Contro_unity {
                 this.columnnom_user.MaxLength = 50;
                 this.columnprogram_user.MaxLength = 50;
                 this.columndatetime_in_user.AllowDBNull = false;
+                this.columndatetime_in_user.MaxLength = 50;
                 this.columndatetime_out_user.AllowDBNull = false;
+                this.columndatetime_out_user.MaxLength = 50;
                 this.columnreserve_implements_user.AllowDBNull = false;
                 this.columnreserve_implements_user.MaxLength = 50;
                 this.columnreserve_salon_user.AllowDBNull = false;
@@ -1466,7 +1470,7 @@ namespace Contro_unity {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public implementsRow AddimplementsRow(string cod_serie, string nom_implements, System.DateTime datetime_register_implements, int stock_implements, string brand, string description_implements) {
+            public implementsRow AddimplementsRow(string cod_serie, string nom_implements, string datetime_register_implements, int stock_implements, string brand, string description_implements) {
                 implementsRow rowimplementsRow = ((implementsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1523,7 +1527,7 @@ namespace Contro_unity {
                 base.Columns.Add(this.columncod_serie);
                 this.columnnom_implements = new global::System.Data.DataColumn("nom_implements", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnom_implements);
-                this.columndatetime_register_implements = new global::System.Data.DataColumn("datetime_register_implements", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columndatetime_register_implements = new global::System.Data.DataColumn("datetime_register_implements", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndatetime_register_implements);
                 this.columnstock_implements = new global::System.Data.DataColumn("stock_implements", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstock_implements);
@@ -1544,6 +1548,7 @@ namespace Contro_unity {
                 this.columnnom_implements.AllowDBNull = false;
                 this.columnnom_implements.MaxLength = 50;
                 this.columndatetime_register_implements.AllowDBNull = false;
+                this.columndatetime_register_implements.MaxLength = 50;
                 this.columnstock_implements.AllowDBNull = false;
                 this.columnbrand.AllowDBNull = false;
                 this.columnbrand.MaxLength = 50;
@@ -3357,9 +3362,9 @@ namespace Contro_unity {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime datetime_in_teacher {
+            public string datetime_in_teacher {
                 get {
-                    return ((global::System.DateTime)(this[this.tablebooking_teacher.datetime_in_teacherColumn]));
+                    return ((string)(this[this.tablebooking_teacher.datetime_in_teacherColumn]));
                 }
                 set {
                     this[this.tablebooking_teacher.datetime_in_teacherColumn] = value;
@@ -3368,9 +3373,9 @@ namespace Contro_unity {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime datetime_out_teacher {
+            public string datetime_out_teacher {
                 get {
-                    return ((global::System.DateTime)(this[this.tablebooking_teacher.datetime_out_teacherColumn]));
+                    return ((string)(this[this.tablebooking_teacher.datetime_out_teacherColumn]));
                 }
                 set {
                     this[this.tablebooking_teacher.datetime_out_teacherColumn] = value;
@@ -3487,9 +3492,9 @@ namespace Contro_unity {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime datetime_in_user {
+            public string datetime_in_user {
                 get {
-                    return ((global::System.DateTime)(this[this.tablebooking_user.datetime_in_userColumn]));
+                    return ((string)(this[this.tablebooking_user.datetime_in_userColumn]));
                 }
                 set {
                     this[this.tablebooking_user.datetime_in_userColumn] = value;
@@ -3498,9 +3503,9 @@ namespace Contro_unity {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime datetime_out_user {
+            public string datetime_out_user {
                 get {
-                    return ((global::System.DateTime)(this[this.tablebooking_user.datetime_out_userColumn]));
+                    return ((string)(this[this.tablebooking_user.datetime_out_userColumn]));
                 }
                 set {
                     this[this.tablebooking_user.datetime_out_userColumn] = value;
@@ -3613,9 +3618,9 @@ namespace Contro_unity {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime datetime_register_implements {
+            public string datetime_register_implements {
                 get {
-                    return ((global::System.DateTime)(this[this.tableimplements.datetime_register_implementsColumn]));
+                    return ((string)(this[this.tableimplements.datetime_register_implementsColumn]));
                 }
                 set {
                     this[this.tableimplements.datetime_register_implementsColumn] = value;
@@ -4451,8 +4456,8 @@ namespace Contro_unity.control_unityDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cc_teacher", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cc_teacher", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nom_teacher", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nom_teacher", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_programa_teacher", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "programa_teacher", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_datetime_in_teacher", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_in_teacher", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_datetime_out_teacher", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_out_teacher", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_datetime_in_teacher", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_in_teacher", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_datetime_out_teacher", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_out_teacher", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_reserve_implements_teacher", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "reserve_implements_teacher", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_reserve_salon_teacher", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "reserve_salon_teacher", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_delivered_by_teacher", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "delivered_by_teacher", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -4465,8 +4470,8 @@ SELECT id_booking, cc_teacher, nom_teacher, programa_teacher, datetime_in_teache
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cc_teacher", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cc_teacher", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nom_teacher", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nom_teacher", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@programa_teacher", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "programa_teacher", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@datetime_in_teacher", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_in_teacher", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@datetime_out_teacher", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_out_teacher", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@datetime_in_teacher", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_in_teacher", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@datetime_out_teacher", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_out_teacher", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@reserve_implements_teacher", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "reserve_implements_teacher", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@reserve_salon_teacher", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "reserve_salon_teacher", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@delivered_by_teacher", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "delivered_by_teacher", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4479,8 +4484,8 @@ SELECT id_booking, cc_teacher, nom_teacher, programa_teacher, datetime_in_teache
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cc_teacher", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cc_teacher", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nom_teacher", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nom_teacher", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@programa_teacher", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "programa_teacher", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@datetime_in_teacher", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_in_teacher", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@datetime_out_teacher", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_out_teacher", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@datetime_in_teacher", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_in_teacher", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@datetime_out_teacher", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_out_teacher", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@reserve_implements_teacher", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "reserve_implements_teacher", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@reserve_salon_teacher", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "reserve_salon_teacher", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@delivered_by_teacher", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "delivered_by_teacher", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4489,8 +4494,8 @@ SELECT id_booking, cc_teacher, nom_teacher, programa_teacher, datetime_in_teache
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cc_teacher", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cc_teacher", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nom_teacher", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nom_teacher", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_programa_teacher", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "programa_teacher", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_datetime_in_teacher", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_in_teacher", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_datetime_out_teacher", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_out_teacher", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_datetime_in_teacher", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_in_teacher", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_datetime_out_teacher", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_out_teacher", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_reserve_implements_teacher", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "reserve_implements_teacher", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_reserve_salon_teacher", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "reserve_salon_teacher", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_delivered_by_teacher", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "delivered_by_teacher", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -4502,7 +4507,7 @@ SELECT id_booking, cc_teacher, nom_teacher, programa_teacher, datetime_in_teache
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Contro_unity.Properties.Settings.Default.control_unityConnectionString1;
+            this._connection.ConnectionString = global::Contro_unity.Properties.Settings.Default.ConexionBD;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4574,7 +4579,7 @@ SELECT id_booking, cc_teacher, nom_teacher, programa_teacher, datetime_in_teache
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id_booking, string Original_cc_teacher, string Original_nom_teacher, string Original_programa_teacher, System.DateTime Original_datetime_in_teacher, System.DateTime Original_datetime_out_teacher, string Original_reserve_implements_teacher, string Original_reserve_salon_teacher, string Original_delivered_by_teacher, string Original_received_by_teacher) {
+        public virtual int Delete(int Original_id_booking, string Original_cc_teacher, string Original_nom_teacher, string Original_programa_teacher, string Original_datetime_in_teacher, string Original_datetime_out_teacher, string Original_reserve_implements_teacher, string Original_reserve_salon_teacher, string Original_delivered_by_teacher, string Original_received_by_teacher) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_booking));
             if ((Original_cc_teacher == null)) {
                 throw new global::System.ArgumentNullException("Original_cc_teacher");
@@ -4594,8 +4599,18 @@ SELECT id_booking, cc_teacher, nom_teacher, programa_teacher, datetime_in_teache
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_programa_teacher));
             }
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((System.DateTime)(Original_datetime_in_teacher));
-            this.Adapter.DeleteCommand.Parameters[5].Value = ((System.DateTime)(Original_datetime_out_teacher));
+            if ((Original_datetime_in_teacher == null)) {
+                throw new global::System.ArgumentNullException("Original_datetime_in_teacher");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_datetime_in_teacher));
+            }
+            if ((Original_datetime_out_teacher == null)) {
+                throw new global::System.ArgumentNullException("Original_datetime_out_teacher");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_datetime_out_teacher));
+            }
             if ((Original_reserve_implements_teacher == null)) {
                 throw new global::System.ArgumentNullException("Original_reserve_implements_teacher");
             }
@@ -4640,7 +4655,7 @@ SELECT id_booking, cc_teacher, nom_teacher, programa_teacher, datetime_in_teache
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string cc_teacher, string nom_teacher, string programa_teacher, System.DateTime datetime_in_teacher, System.DateTime datetime_out_teacher, string reserve_implements_teacher, string reserve_salon_teacher, string delivered_by_teacher, string received_by_teacher) {
+        public virtual int Insert(string cc_teacher, string nom_teacher, string programa_teacher, string datetime_in_teacher, string datetime_out_teacher, string reserve_implements_teacher, string reserve_salon_teacher, string delivered_by_teacher, string received_by_teacher) {
             if ((cc_teacher == null)) {
                 throw new global::System.ArgumentNullException("cc_teacher");
             }
@@ -4659,8 +4674,18 @@ SELECT id_booking, cc_teacher, nom_teacher, programa_teacher, datetime_in_teache
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(programa_teacher));
             }
-            this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(datetime_in_teacher));
-            this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(datetime_out_teacher));
+            if ((datetime_in_teacher == null)) {
+                throw new global::System.ArgumentNullException("datetime_in_teacher");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(datetime_in_teacher));
+            }
+            if ((datetime_out_teacher == null)) {
+                throw new global::System.ArgumentNullException("datetime_out_teacher");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(datetime_out_teacher));
+            }
             if ((reserve_implements_teacher == null)) {
                 throw new global::System.ArgumentNullException("reserve_implements_teacher");
             }
@@ -4709,8 +4734,8 @@ SELECT id_booking, cc_teacher, nom_teacher, programa_teacher, datetime_in_teache
                     string cc_teacher, 
                     string nom_teacher, 
                     string programa_teacher, 
-                    System.DateTime datetime_in_teacher, 
-                    System.DateTime datetime_out_teacher, 
+                    string datetime_in_teacher, 
+                    string datetime_out_teacher, 
                     string reserve_implements_teacher, 
                     string reserve_salon_teacher, 
                     string delivered_by_teacher, 
@@ -4719,8 +4744,8 @@ SELECT id_booking, cc_teacher, nom_teacher, programa_teacher, datetime_in_teache
                     string Original_cc_teacher, 
                     string Original_nom_teacher, 
                     string Original_programa_teacher, 
-                    System.DateTime Original_datetime_in_teacher, 
-                    System.DateTime Original_datetime_out_teacher, 
+                    string Original_datetime_in_teacher, 
+                    string Original_datetime_out_teacher, 
                     string Original_reserve_implements_teacher, 
                     string Original_reserve_salon_teacher, 
                     string Original_delivered_by_teacher, 
@@ -4744,8 +4769,18 @@ SELECT id_booking, cc_teacher, nom_teacher, programa_teacher, datetime_in_teache
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(programa_teacher));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(datetime_in_teacher));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(datetime_out_teacher));
+            if ((datetime_in_teacher == null)) {
+                throw new global::System.ArgumentNullException("datetime_in_teacher");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(datetime_in_teacher));
+            }
+            if ((datetime_out_teacher == null)) {
+                throw new global::System.ArgumentNullException("datetime_out_teacher");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(datetime_out_teacher));
+            }
             if ((reserve_implements_teacher == null)) {
                 throw new global::System.ArgumentNullException("reserve_implements_teacher");
             }
@@ -4789,8 +4824,18 @@ SELECT id_booking, cc_teacher, nom_teacher, programa_teacher, datetime_in_teache
             else {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_programa_teacher));
             }
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(Original_datetime_in_teacher));
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((System.DateTime)(Original_datetime_out_teacher));
+            if ((Original_datetime_in_teacher == null)) {
+                throw new global::System.ArgumentNullException("Original_datetime_in_teacher");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_datetime_in_teacher));
+            }
+            if ((Original_datetime_out_teacher == null)) {
+                throw new global::System.ArgumentNullException("Original_datetime_out_teacher");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_datetime_out_teacher));
+            }
             if ((Original_reserve_implements_teacher == null)) {
                 throw new global::System.ArgumentNullException("Original_reserve_implements_teacher");
             }
@@ -4840,8 +4885,8 @@ SELECT id_booking, cc_teacher, nom_teacher, programa_teacher, datetime_in_teache
                     string cc_teacher, 
                     string nom_teacher, 
                     string programa_teacher, 
-                    System.DateTime datetime_in_teacher, 
-                    System.DateTime datetime_out_teacher, 
+                    string datetime_in_teacher, 
+                    string datetime_out_teacher, 
                     string reserve_implements_teacher, 
                     string reserve_salon_teacher, 
                     string delivered_by_teacher, 
@@ -4850,8 +4895,8 @@ SELECT id_booking, cc_teacher, nom_teacher, programa_teacher, datetime_in_teache
                     string Original_cc_teacher, 
                     string Original_nom_teacher, 
                     string Original_programa_teacher, 
-                    System.DateTime Original_datetime_in_teacher, 
-                    System.DateTime Original_datetime_out_teacher, 
+                    string Original_datetime_in_teacher, 
+                    string Original_datetime_out_teacher, 
                     string Original_reserve_implements_teacher, 
                     string Original_reserve_salon_teacher, 
                     string Original_delivered_by_teacher, 
@@ -5001,8 +5046,8 @@ SELECT id_booking, cc_teacher, nom_teacher, programa_teacher, datetime_in_teache
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nom_user", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nom_user", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_program_user", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "program_user", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_program_user", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "program_user", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_datetime_in_user", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_in_user", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_datetime_out_user", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_out_user", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_datetime_in_user", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_in_user", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_datetime_out_user", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_out_user", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_reserve_implements_user", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "reserve_implements_user", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_reserve_salon_user", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "reserve_salon_user", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_delivered_by_user", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "delivered_by_user", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -5016,8 +5061,8 @@ SELECT id_user, cc_user, nom_user, program_user, datetime_in_user, datetime_out_
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cc_user", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cc_user", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nom_user", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nom_user", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@program_user", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "program_user", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@datetime_in_user", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_in_user", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@datetime_out_user", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_out_user", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@datetime_in_user", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_in_user", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@datetime_out_user", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_out_user", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@reserve_implements_user", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "reserve_implements_user", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@reserve_salon_user", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "reserve_salon_user", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@delivered_by_user", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "delivered_by_user", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5031,8 +5076,8 @@ SELECT id_user, cc_user, nom_user, program_user, datetime_in_user, datetime_out_
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cc_user", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cc_user", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nom_user", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nom_user", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@program_user", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "program_user", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@datetime_in_user", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_in_user", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@datetime_out_user", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_out_user", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@datetime_in_user", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_in_user", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@datetime_out_user", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_out_user", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@reserve_implements_user", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "reserve_implements_user", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@reserve_salon_user", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "reserve_salon_user", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@delivered_by_user", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "delivered_by_user", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5042,8 +5087,8 @@ SELECT id_user, cc_user, nom_user, program_user, datetime_in_user, datetime_out_
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nom_user", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nom_user", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_program_user", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "program_user", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_program_user", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "program_user", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_datetime_in_user", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_in_user", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_datetime_out_user", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_out_user", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_datetime_in_user", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_in_user", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_datetime_out_user", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_out_user", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_reserve_implements_user", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "reserve_implements_user", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_reserve_salon_user", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "reserve_salon_user", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_delivered_by_user", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "delivered_by_user", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -5054,7 +5099,7 @@ SELECT id_user, cc_user, nom_user, program_user, datetime_in_user, datetime_out_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Contro_unity.Properties.Settings.Default.control_unityConnectionString1;
+            this._connection.ConnectionString = global::Contro_unity.Properties.Settings.Default.ConexionBD;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5126,7 +5171,7 @@ SELECT id_user, cc_user, nom_user, program_user, datetime_in_user, datetime_out_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id_user, int Original_cc_user, string Original_nom_user, string Original_program_user, System.DateTime Original_datetime_in_user, System.DateTime Original_datetime_out_user, string Original_reserve_implements_user, string Original_reserve_salon_user, string Original_delivered_by_user, string Original_received_by_user) {
+        public virtual int Delete(int Original_id_user, int Original_cc_user, string Original_nom_user, string Original_program_user, string Original_datetime_in_user, string Original_datetime_out_user, string Original_reserve_implements_user, string Original_reserve_salon_user, string Original_delivered_by_user, string Original_received_by_user) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_user));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_cc_user));
             if ((Original_nom_user == null)) {
@@ -5143,8 +5188,18 @@ SELECT id_user, cc_user, nom_user, program_user, datetime_in_user, datetime_out_
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_program_user));
             }
-            this.Adapter.DeleteCommand.Parameters[5].Value = ((System.DateTime)(Original_datetime_in_user));
-            this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_datetime_out_user));
+            if ((Original_datetime_in_user == null)) {
+                throw new global::System.ArgumentNullException("Original_datetime_in_user");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_datetime_in_user));
+            }
+            if ((Original_datetime_out_user == null)) {
+                throw new global::System.ArgumentNullException("Original_datetime_out_user");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_datetime_out_user));
+            }
             if ((Original_reserve_implements_user == null)) {
                 throw new global::System.ArgumentNullException("Original_reserve_implements_user");
             }
@@ -5189,7 +5244,7 @@ SELECT id_user, cc_user, nom_user, program_user, datetime_in_user, datetime_out_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int id_user, int cc_user, string nom_user, string program_user, System.DateTime datetime_in_user, System.DateTime datetime_out_user, string reserve_implements_user, string reserve_salon_user, string delivered_by_user, string received_by_user) {
+        public virtual int Insert(int id_user, int cc_user, string nom_user, string program_user, string datetime_in_user, string datetime_out_user, string reserve_implements_user, string reserve_salon_user, string delivered_by_user, string received_by_user) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(id_user));
             this.Adapter.InsertCommand.Parameters[1].Value = ((int)(cc_user));
             if ((nom_user == null)) {
@@ -5204,8 +5259,18 @@ SELECT id_user, cc_user, nom_user, program_user, datetime_in_user, datetime_out_
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(program_user));
             }
-            this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(datetime_in_user));
-            this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(datetime_out_user));
+            if ((datetime_in_user == null)) {
+                throw new global::System.ArgumentNullException("datetime_in_user");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(datetime_in_user));
+            }
+            if ((datetime_out_user == null)) {
+                throw new global::System.ArgumentNullException("datetime_out_user");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(datetime_out_user));
+            }
             if ((reserve_implements_user == null)) {
                 throw new global::System.ArgumentNullException("reserve_implements_user");
             }
@@ -5255,8 +5320,8 @@ SELECT id_user, cc_user, nom_user, program_user, datetime_in_user, datetime_out_
                     int cc_user, 
                     string nom_user, 
                     string program_user, 
-                    System.DateTime datetime_in_user, 
-                    System.DateTime datetime_out_user, 
+                    string datetime_in_user, 
+                    string datetime_out_user, 
                     string reserve_implements_user, 
                     string reserve_salon_user, 
                     string delivered_by_user, 
@@ -5265,8 +5330,8 @@ SELECT id_user, cc_user, nom_user, program_user, datetime_in_user, datetime_out_
                     int Original_cc_user, 
                     string Original_nom_user, 
                     string Original_program_user, 
-                    System.DateTime Original_datetime_in_user, 
-                    System.DateTime Original_datetime_out_user, 
+                    string Original_datetime_in_user, 
+                    string Original_datetime_out_user, 
                     string Original_reserve_implements_user, 
                     string Original_reserve_salon_user, 
                     string Original_delivered_by_user, 
@@ -5285,8 +5350,18 @@ SELECT id_user, cc_user, nom_user, program_user, datetime_in_user, datetime_out_
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(program_user));
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(datetime_in_user));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(datetime_out_user));
+            if ((datetime_in_user == null)) {
+                throw new global::System.ArgumentNullException("datetime_in_user");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(datetime_in_user));
+            }
+            if ((datetime_out_user == null)) {
+                throw new global::System.ArgumentNullException("datetime_out_user");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(datetime_out_user));
+            }
             if ((reserve_implements_user == null)) {
                 throw new global::System.ArgumentNullException("reserve_implements_user");
             }
@@ -5327,8 +5402,18 @@ SELECT id_user, cc_user, nom_user, program_user, datetime_in_user, datetime_out_
                 this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_program_user));
             }
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((System.DateTime)(Original_datetime_in_user));
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((System.DateTime)(Original_datetime_out_user));
+            if ((Original_datetime_in_user == null)) {
+                throw new global::System.ArgumentNullException("Original_datetime_in_user");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_datetime_in_user));
+            }
+            if ((Original_datetime_out_user == null)) {
+                throw new global::System.ArgumentNullException("Original_datetime_out_user");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_datetime_out_user));
+            }
             if ((Original_reserve_implements_user == null)) {
                 throw new global::System.ArgumentNullException("Original_reserve_implements_user");
             }
@@ -5377,8 +5462,8 @@ SELECT id_user, cc_user, nom_user, program_user, datetime_in_user, datetime_out_
                     int cc_user, 
                     string nom_user, 
                     string program_user, 
-                    System.DateTime datetime_in_user, 
-                    System.DateTime datetime_out_user, 
+                    string datetime_in_user, 
+                    string datetime_out_user, 
                     string reserve_implements_user, 
                     string reserve_salon_user, 
                     string delivered_by_user, 
@@ -5387,8 +5472,8 @@ SELECT id_user, cc_user, nom_user, program_user, datetime_in_user, datetime_out_
                     int Original_cc_user, 
                     string Original_nom_user, 
                     string Original_program_user, 
-                    System.DateTime Original_datetime_in_user, 
-                    System.DateTime Original_datetime_out_user, 
+                    string Original_datetime_in_user, 
+                    string Original_datetime_out_user, 
                     string Original_reserve_implements_user, 
                     string Original_reserve_salon_user, 
                     string Original_delivered_by_user, 
@@ -5533,7 +5618,7 @@ SELECT id_user, cc_user, nom_user, program_user, datetime_in_user, datetime_out_
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_implements", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_implements", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cod_serie", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_serie", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nom_implements", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nom_implements", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_datetime_register_implements", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_register_implements", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_datetime_register_implements", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_register_implements", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_stock_implements", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "stock_implements", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_brand", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "brand", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_description_implements", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "description_implements", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -5545,7 +5630,7 @@ SELECT id_implements, cod_serie, nom_implements, datetime_register_implements, s
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_serie", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_serie", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nom_implements", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nom_implements", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@datetime_register_implements", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_register_implements", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@datetime_register_implements", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_register_implements", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@stock_implements", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "stock_implements", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@brand", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "brand", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@description_implements", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "description_implements", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5556,14 +5641,14 @@ SELECT id_implements, cod_serie, nom_implements, datetime_register_implements, s
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_serie", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_serie", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nom_implements", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nom_implements", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@datetime_register_implements", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_register_implements", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@datetime_register_implements", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_register_implements", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@stock_implements", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "stock_implements", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@brand", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "brand", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@description_implements", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "description_implements", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_implements", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_implements", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cod_serie", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_serie", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nom_implements", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nom_implements", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_datetime_register_implements", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_register_implements", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_datetime_register_implements", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime_register_implements", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_stock_implements", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "stock_implements", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_brand", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "brand", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_description_implements", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "description_implements", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -5575,7 +5660,7 @@ SELECT id_implements, cod_serie, nom_implements, datetime_register_implements, s
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Contro_unity.Properties.Settings.Default.control_unityConnectionString1;
+            this._connection.ConnectionString = global::Contro_unity.Properties.Settings.Default.ConexionBD;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5646,7 +5731,7 @@ SELECT id_implements, cod_serie, nom_implements, datetime_register_implements, s
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id_implements, string Original_cod_serie, string Original_nom_implements, System.DateTime Original_datetime_register_implements, int Original_stock_implements, string Original_brand, string Original_description_implements) {
+        public virtual int Delete(int Original_id_implements, string Original_cod_serie, string Original_nom_implements, string Original_datetime_register_implements, int Original_stock_implements, string Original_brand, string Original_description_implements) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_implements));
             if ((Original_cod_serie == null)) {
                 throw new global::System.ArgumentNullException("Original_cod_serie");
@@ -5660,7 +5745,12 @@ SELECT id_implements, cod_serie, nom_implements, datetime_register_implements, s
             else {
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_nom_implements));
             }
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((System.DateTime)(Original_datetime_register_implements));
+            if ((Original_datetime_register_implements == null)) {
+                throw new global::System.ArgumentNullException("Original_datetime_register_implements");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_datetime_register_implements));
+            }
             this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_stock_implements));
             if ((Original_brand == null)) {
                 throw new global::System.ArgumentNullException("Original_brand");
@@ -5696,7 +5786,7 @@ SELECT id_implements, cod_serie, nom_implements, datetime_register_implements, s
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string cod_serie, string nom_implements, System.DateTime datetime_register_implements, int stock_implements, string brand, string description_implements) {
+        public virtual int Insert(string cod_serie, string nom_implements, string datetime_register_implements, int stock_implements, string brand, string description_implements) {
             if ((cod_serie == null)) {
                 throw new global::System.ArgumentNullException("cod_serie");
             }
@@ -5709,7 +5799,12 @@ SELECT id_implements, cod_serie, nom_implements, datetime_register_implements, s
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(nom_implements));
             }
-            this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(datetime_register_implements));
+            if ((datetime_register_implements == null)) {
+                throw new global::System.ArgumentNullException("datetime_register_implements");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(datetime_register_implements));
+            }
             this.Adapter.InsertCommand.Parameters[3].Value = ((int)(stock_implements));
             if ((brand == null)) {
                 throw new global::System.ArgumentNullException("brand");
@@ -5743,7 +5838,7 @@ SELECT id_implements, cod_serie, nom_implements, datetime_register_implements, s
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string cod_serie, string nom_implements, System.DateTime datetime_register_implements, int stock_implements, string brand, string description_implements, int Original_id_implements, string Original_cod_serie, string Original_nom_implements, System.DateTime Original_datetime_register_implements, int Original_stock_implements, string Original_brand, string Original_description_implements, int id_implements) {
+        public virtual int Update(string cod_serie, string nom_implements, string datetime_register_implements, int stock_implements, string brand, string description_implements, int Original_id_implements, string Original_cod_serie, string Original_nom_implements, string Original_datetime_register_implements, int Original_stock_implements, string Original_brand, string Original_description_implements, int id_implements) {
             if ((cod_serie == null)) {
                 throw new global::System.ArgumentNullException("cod_serie");
             }
@@ -5756,7 +5851,12 @@ SELECT id_implements, cod_serie, nom_implements, datetime_register_implements, s
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(nom_implements));
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(datetime_register_implements));
+            if ((datetime_register_implements == null)) {
+                throw new global::System.ArgumentNullException("datetime_register_implements");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(datetime_register_implements));
+            }
             this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(stock_implements));
             if ((brand == null)) {
                 throw new global::System.ArgumentNullException("brand");
@@ -5783,7 +5883,12 @@ SELECT id_implements, cod_serie, nom_implements, datetime_register_implements, s
             else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_nom_implements));
             }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Original_datetime_register_implements));
+            if ((Original_datetime_register_implements == null)) {
+                throw new global::System.ArgumentNullException("Original_datetime_register_implements");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_datetime_register_implements));
+            }
             this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_stock_implements));
             if ((Original_brand == null)) {
                 throw new global::System.ArgumentNullException("Original_brand");
@@ -5820,7 +5925,7 @@ SELECT id_implements, cod_serie, nom_implements, datetime_register_implements, s
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string cod_serie, string nom_implements, System.DateTime datetime_register_implements, int stock_implements, string brand, string description_implements, int Original_id_implements, string Original_cod_serie, string Original_nom_implements, System.DateTime Original_datetime_register_implements, int Original_stock_implements, string Original_brand, string Original_description_implements) {
+        public virtual int Update(string cod_serie, string nom_implements, string datetime_register_implements, int stock_implements, string brand, string description_implements, int Original_id_implements, string Original_cod_serie, string Original_nom_implements, string Original_datetime_register_implements, int Original_stock_implements, string Original_brand, string Original_description_implements) {
             return this.Update(cod_serie, nom_implements, datetime_register_implements, stock_implements, brand, description_implements, Original_id_implements, Original_cod_serie, Original_nom_implements, Original_datetime_register_implements, Original_stock_implements, Original_brand, Original_description_implements, Original_id_implements);
         }
     }
@@ -5984,7 +6089,7 @@ SELECT id_salon, nom_salon, description_salon FROM salons WHERE (id_salon = @id_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Contro_unity.Properties.Settings.Default.control_unityConnectionString1;
+            this._connection.ConnectionString = global::Contro_unity.Properties.Settings.Default.ConexionBD;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6338,7 +6443,7 @@ SELECT id_teacher, cc_teacher, nom_teacher, program_teacher FROM teacher WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Contro_unity.Properties.Settings.Default.control_unityConnectionString1;
+            this._connection.ConnectionString = global::Contro_unity.Properties.Settings.Default.ConexionBD;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6712,7 +6817,7 @@ SELECT id_user, cc_user, nom_user, password_user, email_user, datetime_user, rol
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Contro_unity.Properties.Settings.Default.control_unityConnectionString1;
+            this._connection.ConnectionString = global::Contro_unity.Properties.Settings.Default.ConexionBD;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7109,7 +7214,7 @@ SELECT id_user, cc_user, nom_user, password_user, email_user, datetime_user, rol
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Contro_unity.Properties.Settings.Default.control_unityConnectionString1;
+            this._connection.ConnectionString = global::Contro_unity.Properties.Settings.Default.ConexionBD;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7297,7 +7402,7 @@ SELECT id_user, cc_user, nom_user, password_user, email_user, datetime_user, rol
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Contro_unity.Properties.Settings.Default.control_unityConnectionString1;
+            this._connection.ConnectionString = global::Contro_unity.Properties.Settings.Default.ConexionBD;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7389,56 +7494,204 @@ SELECT id_user, cc_user, nom_user, password_user, email_user, datetime_user, rol
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.IDbCommand[4];
+            this._commandCollection = new global::System.Data.IDbCommand[9];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Connection = new global::System.Data.SqlClient.SqlConnection(global::Contro_unity.Properties.Settings.Default.control_unityConnectionString1);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).CommandText = "dbo.SP_REGISTAR_PROFESOR";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Connection = new global::System.Data.SqlClient.SqlConnection(global::Contro_unity.Properties.Settings.Default.ConexionBD);
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).CommandText = "dbo.SP_ELIMINAR_IMPLEMENTO";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cc_teacher", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nom_teacher", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@program_teacher", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ultimo_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.InputOutput, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_implements", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Connection = new global::System.Data.SqlClient.SqlConnection(global::Contro_unity.Properties.Settings.Default.control_unityConnectionString1);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).CommandText = "dbo.SP_REGISTRAR_IMPLEMENTO";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Connection = new global::System.Data.SqlClient.SqlConnection(global::Contro_unity.Properties.Settings.Default.ConexionBD);
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).CommandText = "dbo.SP_ELIMINAR_PROFESOR";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_serie", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nom_implements", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@datetime_register_implements", global::System.Data.SqlDbType.DateTime2, 6, global::System.Data.ParameterDirection.Input, 19, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@stock_implements", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@brand", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@description_implements", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ultimo_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.InputOutput, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_teacher", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Connection = new global::System.Data.SqlClient.SqlConnection(global::Contro_unity.Properties.Settings.Default.control_unityConnectionString1);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).CommandText = "dbo.SP_REGISTRAR_SALON";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Connection = new global::System.Data.SqlClient.SqlConnection(global::Contro_unity.Properties.Settings.Default.ConexionBD);
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).CommandText = "dbo.SP_ELIMINAR_SALON";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nom_salon", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@description_salon", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ultimo_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.InputOutput, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_salon", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Connection = new global::System.Data.SqlClient.SqlConnection(global::Contro_unity.Properties.Settings.Default.control_unityConnectionString1);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).CommandText = "dbo.SP_REGISTRAR_USUARIO";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Connection = new global::System.Data.SqlClient.SqlConnection(global::Contro_unity.Properties.Settings.Default.ConexionBD);
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).CommandText = "dbo.SP_ELIMINAR_USUARIO";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cc_user", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nom_user", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@password_user", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@email_user", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@datetime_user", global::System.Data.SqlDbType.Timestamp, 8, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@rol_user", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@privilege_user", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ultimo_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.InputOutput, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_user", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[4])).Connection = new global::System.Data.SqlClient.SqlConnection(global::Contro_unity.Properties.Settings.Default.ConexionBD);
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[4])).CommandText = "dbo.SP_REGISTAR_PROFESOR";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[4])).CommandType = global::System.Data.CommandType.StoredProcedure;
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[4])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[4])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cc_teacher", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[4])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nom_teacher", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[4])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@program_teacher", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[4])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ultimo_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.InputOutput, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[5])).Connection = new global::System.Data.SqlClient.SqlConnection(global::Contro_unity.Properties.Settings.Default.ConexionBD);
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[5])).CommandText = "dbo.SP_REGISTRAR_IMPLEMENTO";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[5])).CommandType = global::System.Data.CommandType.StoredProcedure;
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[5])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[5])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_serie", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[5])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nom_implements", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[5])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@datetime_register_implements", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[5])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@stock_implements", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[5])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@brand", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[5])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@description_implements", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[5])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ultimo_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.InputOutput, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[6] = new global::System.Data.SqlClient.SqlCommand();
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[6])).Connection = new global::System.Data.SqlClient.SqlConnection(global::Contro_unity.Properties.Settings.Default.ConexionBD);
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[6])).CommandText = "dbo.SP_REGISTRAR_IMPLEMENTO2";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[6])).CommandType = global::System.Data.CommandType.StoredProcedure;
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[6])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[6])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_serie", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[6])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nom_implements", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[6])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@datetime_register_implements", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[6])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@stock_implements", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[6])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@brand", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[6])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@description_implements", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[6])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ultimo_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.InputOutput, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[7] = new global::System.Data.SqlClient.SqlCommand();
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[7])).Connection = new global::System.Data.SqlClient.SqlConnection(global::Contro_unity.Properties.Settings.Default.ConexionBD);
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[7])).CommandText = "dbo.SP_REGISTRAR_SALON";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[7])).CommandType = global::System.Data.CommandType.StoredProcedure;
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[7])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[7])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nom_salon", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[7])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@description_salon", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[7])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ultimo_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.InputOutput, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[8] = new global::System.Data.SqlClient.SqlCommand();
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[8])).Connection = new global::System.Data.SqlClient.SqlConnection(global::Contro_unity.Properties.Settings.Default.ConexionBD);
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[8])).CommandText = "dbo.SP_REGISTRAR_USUARIO";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[8])).CommandType = global::System.Data.CommandType.StoredProcedure;
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[8])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[8])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cc_user", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[8])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nom_user", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[8])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@password_user", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[8])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@email_user", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[8])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@datetime_user", global::System.Data.SqlDbType.Timestamp, 8, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[8])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@rol_user", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[8])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@privilege_user", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[8])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ultimo_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.InputOutput, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int SP_ELIMINAR_IMPLEMENTO(global::System.Nullable<int> id_implements) {
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[0]));
+            if ((id_implements.HasValue == true)) {
+                command.Parameters[1].Value = ((int)(id_implements.Value));
+            }
+            else {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int SP_ELIMINAR_PROFESOR(global::System.Nullable<int> id_teacher) {
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[1]));
+            if ((id_teacher.HasValue == true)) {
+                command.Parameters[1].Value = ((int)(id_teacher.Value));
+            }
+            else {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int SP_ELIMINAR_SALON(global::System.Nullable<int> id_salon) {
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[2]));
+            if ((id_salon.HasValue == true)) {
+                command.Parameters[1].Value = ((int)(id_salon.Value));
+            }
+            else {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int SP_ELIMINAR_USUARIO(global::System.Nullable<int> id_user) {
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[3]));
+            if ((id_user.HasValue == true)) {
+                command.Parameters[1].Value = ((int)(id_user.Value));
+            }
+            else {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int SP_REGISTAR_PROFESOR(global::System.Nullable<int> cc_teacher, string nom_teacher, string program_teacher, ref global::System.Nullable<int> ultimo_id) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[0]));
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[4]));
             if ((cc_teacher.HasValue == true)) {
                 command.Parameters[1].Value = ((int)(cc_teacher.Value));
             }
@@ -7490,8 +7743,8 @@ SELECT id_user, cc_user, nom_user, password_user, email_user, datetime_user, rol
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int SP_REGISTRAR_IMPLEMENTO(string cod_serie, string nom_implements, global::System.Nullable<global::System.DateTime> datetime_register_implements, global::System.Nullable<int> stock_implements, string brand, string description_implements, ref global::System.Nullable<int> ultimo_id) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[1]));
+        public virtual int SP_REGISTRAR_IMPLEMENTO(string cod_serie, string nom_implements, string datetime_register_implements, global::System.Nullable<int> stock_implements, string brand, string description_implements, ref global::System.Nullable<int> ultimo_id) {
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[5]));
             if ((cod_serie == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -7504,11 +7757,82 @@ SELECT id_user, cc_user, nom_user, password_user, email_user, datetime_user, rol
             else {
                 command.Parameters[2].Value = ((string)(nom_implements));
             }
-            if ((datetime_register_implements.HasValue == true)) {
-                command.Parameters[3].Value = ((System.DateTime)(datetime_register_implements.Value));
+            if ((datetime_register_implements == null)) {
+                command.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
+                command.Parameters[3].Value = ((string)(datetime_register_implements));
+            }
+            if ((stock_implements.HasValue == true)) {
+                command.Parameters[4].Value = ((int)(stock_implements.Value));
+            }
+            else {
+                command.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((brand == null)) {
+                command.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[5].Value = ((string)(brand));
+            }
+            if ((description_implements == null)) {
+                command.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[6].Value = ((string)(description_implements));
+            }
+            if ((ultimo_id.HasValue == true)) {
+                command.Parameters[7].Value = ((int)(ultimo_id.Value));
+            }
+            else {
+                command.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((command.Parameters[7].Value == null) 
+                        || (command.Parameters[7].Value.GetType() == typeof(global::System.DBNull)))) {
+                ultimo_id = new global::System.Nullable<int>();
+            }
+            else {
+                ultimo_id = new global::System.Nullable<int>(((int)(command.Parameters[7].Value)));
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int SP_REGISTRAR_IMPLEMENTO2(string cod_serie, string nom_implements, string datetime_register_implements, global::System.Nullable<int> stock_implements, string brand, string description_implements, ref global::System.Nullable<int> ultimo_id) {
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[6]));
+            if ((cod_serie == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(cod_serie));
+            }
+            if ((nom_implements == null)) {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[2].Value = ((string)(nom_implements));
+            }
+            if ((datetime_register_implements == null)) {
                 command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[3].Value = ((string)(datetime_register_implements));
             }
             if ((stock_implements.HasValue == true)) {
                 command.Parameters[4].Value = ((int)(stock_implements.Value));
@@ -7562,7 +7886,7 @@ SELECT id_user, cc_user, nom_user, password_user, email_user, datetime_user, rol
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int SP_REGISTRAR_SALON(string nom_salon, string description_salon, ref global::System.Nullable<int> ultimo_id) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[2]));
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[7]));
             if ((nom_salon == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -7609,7 +7933,7 @@ SELECT id_user, cc_user, nom_user, password_user, email_user, datetime_user, rol
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int SP_REGISTRAR_USUARIO(global::System.Nullable<int> cc_user, string nom_user, string password_user, string email_user, byte[] datetime_user, string rol_user, global::System.Nullable<int> privilege_user, ref global::System.Nullable<int> ultimo_id) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[3]));
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[8]));
             if ((cc_user.HasValue == true)) {
                 command.Parameters[1].Value = ((int)(cc_user.Value));
             }

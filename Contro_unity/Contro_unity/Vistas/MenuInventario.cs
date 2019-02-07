@@ -111,13 +111,18 @@ namespace Contro_unity
             {
                 var DeleteImple = dataGridView1.CurrentRow.Cells[0].Value.ToString();
                 var implemento = new Clases.implemento();
-                implemento.Eliminar(Convert.ToInt32(DeleteImple));
+                implemento.Eliminar(DeleteImple);
                 MessageBox.Show("Elimando Correctamente");
                 this.implementsTableAdapter.Fill(this.control_unityDataSet.implements);
+                txtCod_Serie.Text = "";
+                txtNombre.Text = "";
+                txtStock.Value = 0;
+                txtMarca.Text = "";
+                txtDescripcion.Text = "";
             }
             else
             {
-                MessageBox.Show("Selecciones una fila");
+                MessageBox.Show("Seleccione una fila");
             }
         }
     }

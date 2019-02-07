@@ -28,7 +28,6 @@ namespace Contro_unity
             {
                 btnEditar.Visible = false;
                 btnEliminar.Visible = false;
-
             }
         }
 
@@ -93,7 +92,13 @@ namespace Contro_unity
 
         private void Editar_profesor()
         {
-            
+            var profesor = new Clases.profesor();
+            profesor.Editar(txtFullName.Text, txtPrograma.Text, Convert.ToInt32(txtCC.Text));
+            MessageBox.Show("Actualizado Correctamente");
+            teacherTableAdapter.Fill(this.control_unityDataSet.teacher);
+            txtCC.Text = "";
+            txtFullName.Text = "";
+            txtPrograma.Text = "";
         }
         
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -105,6 +110,9 @@ namespace Contro_unity
                 profesor.Eliminar(Convert.ToInt32(DeletePro));
                 MessageBox.Show("Elimando Correctamente");
                 teacherTableAdapter.Fill(this.control_unityDataSet.teacher);
+                txtCC.Text = "";
+                txtFullName.Text = "";
+                txtPrograma.Text = "";
             } else
             {
                 MessageBox.Show("Selecciones una fila");
@@ -120,9 +128,9 @@ namespace Contro_unity
             if (dataGridView1.SelectedRows.Count > 0)
             {
 
-                txtCC.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-                txtFullName.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-                txtPrograma.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                txtCC.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                txtFullName.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                txtPrograma.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
             }
             else
             {
@@ -137,7 +145,7 @@ namespace Contro_unity
 
         private void btnConfirmarEditar_Click(object sender, EventArgs e)
         {
-            
+            Editar_profesor();
         }
     }
 }

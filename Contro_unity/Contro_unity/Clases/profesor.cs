@@ -90,27 +90,27 @@ namespace Contro_unity.Clases
             throw new NotImplementedException();
         }
 
-        public void Eliminar(int Id_teacher)
+        public void Eliminar(int Cc_teacher)
         {
             con.Con.Open();
             SqlCommand cmd = new SqlCommand("SP_ELIMINAR_PROFESOR", con.Con);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@id_teacher", Id_teacher);
+            cmd.Parameters.AddWithValue("@cc_teacher", Cc_teacher);
             cmd.ExecuteNonQuery();
             cmd.Parameters.Clear();
         }
 
-        public void Editar(string nom_teacher, string program_teacher, int cc)
+        public void Editar(string nom_teacher, string program_teacher, int cc_teacher)
         {
            
             con.Con.Open();
-            var cmd = new SqlCommand("SP_ACTUALIZAR_PROFESOR", con.Con);
+            var cmd = new SqlCommand("SP_EDITAR_PROFESOR", con.Con);
             cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@cc_teacher", cc_teacher);
             cmd.Parameters.AddWithValue("@nom_teacher", nom_teacher);
             cmd.Parameters.AddWithValue("@program_teacher", program_teacher);
-            cmd.Parameters.AddWithValue("@cc_teacher", cc);
             cmd.ExecuteNonQuery();
-
+            cmd.Parameters.Clear(); 
         }
 
         public int Eliminar()

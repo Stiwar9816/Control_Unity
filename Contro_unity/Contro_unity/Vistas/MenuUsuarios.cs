@@ -27,14 +27,11 @@ namespace Contro_unity
         {
             // TODO: esta línea de código carga datos en la tabla 'control_unityDataSet.users' Puede moverla o quitarla según sea necesario.
             this.usersTableAdapter.Fill(this.control_unityDataSet.users);
-
-
             txtCC.Enabled = false;
             txtNombre.Enabled = false;
             txtEmail.Enabled = false;
             txtRol.Enabled = false;
         }
-
         private void Ingresar_Usuario()
         {
             var Usuario = new Clases.user();
@@ -53,6 +50,12 @@ namespace Contro_unity
                 MessageBox.Show("Los Campo de textos no estan habilitados, Por favor seleccione una opcion e intente de nuevo");
             }
         }
+
+        private void Editar_Usuario()
+        {
+
+        }
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             txtCC.Enabled = true;
@@ -70,10 +73,10 @@ namespace Contro_unity
             txtRol.Enabled = true;
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                txtCC.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-                txtNombre.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-                txtEmail.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-                txtRol.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                txtCC.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                txtNombre.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                txtEmail.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                txtRol.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
             }
             else
             {
@@ -91,6 +94,10 @@ namespace Contro_unity
                 user.Eliminar(Convert.ToInt32(DeleteUser));
                 MessageBox.Show("Elimando Correctamente");
                 usersTableAdapter.Fill(this.control_unityDataSet.users);
+                txtCC.Text = "";
+                txtNombre.Text = "";
+                txtEmail.Text = "";
+                txtRol.Text = "";
             }
             else
             {
