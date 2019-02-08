@@ -35,18 +35,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbEditInventario = new System.Windows.Forms.GroupBox();
+            this.btnConfirmarEditar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtDescripcion = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtNom_Salon = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.lbCod_serie = new System.Windows.Forms.Label();
+            this.btnConfirmarAgregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.LblDescripcion = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.btnConfirmarAgregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnEliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnEditar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAgregar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnConfirmarEditar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idsalonDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomsalonDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,6 +57,7 @@
             this.nomsalonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionsalonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.salonsTableAdapter = new Contro_unity.control_unityDataSetTableAdapters.salonsTableAdapter();
+            this.txtID = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.gbEditInventario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -68,6 +69,7 @@
             // 
             this.gbEditInventario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.gbEditInventario.BackColor = System.Drawing.SystemColors.Menu;
+            this.gbEditInventario.Controls.Add(this.txtID);
             this.gbEditInventario.Controls.Add(this.btnConfirmarEditar);
             this.gbEditInventario.Controls.Add(this.txtDescripcion);
             this.gbEditInventario.Controls.Add(this.txtNom_Salon);
@@ -82,6 +84,44 @@
             this.gbEditInventario.TabIndex = 7;
             this.gbEditInventario.TabStop = false;
             this.gbEditInventario.Text = "DATOS DEL SALON";
+            // 
+            // btnConfirmarEditar
+            // 
+            this.btnConfirmarEditar.Activecolor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmarEditar.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmarEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConfirmarEditar.BorderRadius = 3;
+            this.btnConfirmarEditar.ButtonText = "Confirmar";
+            this.btnConfirmarEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConfirmarEditar.DisabledColor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmarEditar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnConfirmarEditar.Iconimage = global::Contro_unity.Properties.Resources.icons8_checked_50;
+            this.btnConfirmarEditar.Iconimage_right = null;
+            this.btnConfirmarEditar.Iconimage_right_Selected = null;
+            this.btnConfirmarEditar.Iconimage_Selected = null;
+            this.btnConfirmarEditar.IconMarginLeft = 0;
+            this.btnConfirmarEditar.IconMarginRight = 0;
+            this.btnConfirmarEditar.IconRightVisible = true;
+            this.btnConfirmarEditar.IconRightZoom = 0D;
+            this.btnConfirmarEditar.IconVisible = true;
+            this.btnConfirmarEditar.IconZoom = 55D;
+            this.btnConfirmarEditar.IsTab = false;
+            this.btnConfirmarEditar.Location = new System.Drawing.Point(90, 220);
+            this.btnConfirmarEditar.Margin = new System.Windows.Forms.Padding(5);
+            this.btnConfirmarEditar.Name = "btnConfirmarEditar";
+            this.btnConfirmarEditar.Normalcolor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmarEditar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
+            this.btnConfirmarEditar.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnConfirmarEditar.selected = false;
+            this.btnConfirmarEditar.Size = new System.Drawing.Size(175, 54);
+            this.btnConfirmarEditar.TabIndex = 25;
+            this.btnConfirmarEditar.Text = "Confirmar";
+            this.btnConfirmarEditar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnConfirmarEditar.Textcolor = System.Drawing.Color.Black;
+            this.btnConfirmarEditar.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolTip1.SetToolTip(this.btnConfirmarEditar, "Confirmar");
+            this.btnConfirmarEditar.Visible = false;
+            this.btnConfirmarEditar.Click += new System.EventHandler(this.btnConfirmarEditar_Click);
             // 
             // txtDescripcion
             // 
@@ -133,6 +173,44 @@
             this.lbCod_serie.TabIndex = 1;
             this.lbCod_serie.Text = "Nombre Del Salon: ";
             // 
+            // btnConfirmarAgregar
+            // 
+            this.btnConfirmarAgregar.Activecolor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmarAgregar.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmarAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConfirmarAgregar.BorderRadius = 3;
+            this.btnConfirmarAgregar.ButtonText = "Confirmar";
+            this.btnConfirmarAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConfirmarAgregar.DisabledColor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmarAgregar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnConfirmarAgregar.Iconimage = global::Contro_unity.Properties.Resources.icons8_checked_50;
+            this.btnConfirmarAgregar.Iconimage_right = null;
+            this.btnConfirmarAgregar.Iconimage_right_Selected = null;
+            this.btnConfirmarAgregar.Iconimage_Selected = null;
+            this.btnConfirmarAgregar.IconMarginLeft = 0;
+            this.btnConfirmarAgregar.IconMarginRight = 0;
+            this.btnConfirmarAgregar.IconRightVisible = true;
+            this.btnConfirmarAgregar.IconRightZoom = 0D;
+            this.btnConfirmarAgregar.IconVisible = true;
+            this.btnConfirmarAgregar.IconZoom = 55D;
+            this.btnConfirmarAgregar.IsTab = false;
+            this.btnConfirmarAgregar.Location = new System.Drawing.Point(90, 220);
+            this.btnConfirmarAgregar.Margin = new System.Windows.Forms.Padding(5);
+            this.btnConfirmarAgregar.Name = "btnConfirmarAgregar";
+            this.btnConfirmarAgregar.Normalcolor = System.Drawing.SystemColors.Menu;
+            this.btnConfirmarAgregar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
+            this.btnConfirmarAgregar.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnConfirmarAgregar.selected = false;
+            this.btnConfirmarAgregar.Size = new System.Drawing.Size(175, 54);
+            this.btnConfirmarAgregar.TabIndex = 19;
+            this.btnConfirmarAgregar.Text = "Confirmar";
+            this.btnConfirmarAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnConfirmarAgregar.Textcolor = System.Drawing.Color.Black;
+            this.btnConfirmarAgregar.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolTip1.SetToolTip(this.btnConfirmarAgregar, "Confirmar");
+            this.btnConfirmarAgregar.Visible = false;
+            this.btnConfirmarAgregar.Click += new System.EventHandler(this.btnConfirmarAgregar_Click);
+            // 
             // LblDescripcion
             // 
             this.LblDescripcion.AutoSize = true;
@@ -166,44 +244,6 @@
             this.label1.Size = new System.Drawing.Size(190, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "SALONES REGISTRADOS";
-            // 
-            // btnConfirmarAgregar
-            // 
-            this.btnConfirmarAgregar.Activecolor = System.Drawing.SystemColors.Menu;
-            this.btnConfirmarAgregar.BackColor = System.Drawing.SystemColors.Menu;
-            this.btnConfirmarAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnConfirmarAgregar.BorderRadius = 3;
-            this.btnConfirmarAgregar.ButtonText = "Confirmar";
-            this.btnConfirmarAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConfirmarAgregar.DisabledColor = System.Drawing.SystemColors.Menu;
-            this.btnConfirmarAgregar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnConfirmarAgregar.Iconimage = global::Contro_unity.Properties.Resources.icons8_checked_50;
-            this.btnConfirmarAgregar.Iconimage_right = null;
-            this.btnConfirmarAgregar.Iconimage_right_Selected = null;
-            this.btnConfirmarAgregar.Iconimage_Selected = null;
-            this.btnConfirmarAgregar.IconMarginLeft = 0;
-            this.btnConfirmarAgregar.IconMarginRight = 0;
-            this.btnConfirmarAgregar.IconRightVisible = true;
-            this.btnConfirmarAgregar.IconRightZoom = 0D;
-            this.btnConfirmarAgregar.IconVisible = true;
-            this.btnConfirmarAgregar.IconZoom = 55D;
-            this.btnConfirmarAgregar.IsTab = false;
-            this.btnConfirmarAgregar.Location = new System.Drawing.Point(90, 220);
-            this.btnConfirmarAgregar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.btnConfirmarAgregar.Name = "btnConfirmarAgregar";
-            this.btnConfirmarAgregar.Normalcolor = System.Drawing.SystemColors.Menu;
-            this.btnConfirmarAgregar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
-            this.btnConfirmarAgregar.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnConfirmarAgregar.selected = false;
-            this.btnConfirmarAgregar.Size = new System.Drawing.Size(175, 54);
-            this.btnConfirmarAgregar.TabIndex = 19;
-            this.btnConfirmarAgregar.Text = "Confirmar";
-            this.btnConfirmarAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnConfirmarAgregar.Textcolor = System.Drawing.Color.Black;
-            this.btnConfirmarAgregar.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolTip1.SetToolTip(this.btnConfirmarAgregar, "Confirmar");
-            this.btnConfirmarAgregar.Visible = false;
-            this.btnConfirmarAgregar.Click += new System.EventHandler(this.btnConfirmarAgregar_Click);
             // 
             // btnEliminar
             // 
@@ -315,44 +355,6 @@
             this.btnAgregar.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolTip1.SetToolTip(this.btnAgregar, "Agregar");
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // btnConfirmarEditar
-            // 
-            this.btnConfirmarEditar.Activecolor = System.Drawing.SystemColors.Menu;
-            this.btnConfirmarEditar.BackColor = System.Drawing.SystemColors.Menu;
-            this.btnConfirmarEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnConfirmarEditar.BorderRadius = 3;
-            this.btnConfirmarEditar.ButtonText = "Confirmar";
-            this.btnConfirmarEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConfirmarEditar.DisabledColor = System.Drawing.SystemColors.Menu;
-            this.btnConfirmarEditar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnConfirmarEditar.Iconimage = global::Contro_unity.Properties.Resources.icons8_checked_50;
-            this.btnConfirmarEditar.Iconimage_right = null;
-            this.btnConfirmarEditar.Iconimage_right_Selected = null;
-            this.btnConfirmarEditar.Iconimage_Selected = null;
-            this.btnConfirmarEditar.IconMarginLeft = 0;
-            this.btnConfirmarEditar.IconMarginRight = 0;
-            this.btnConfirmarEditar.IconRightVisible = true;
-            this.btnConfirmarEditar.IconRightZoom = 0D;
-            this.btnConfirmarEditar.IconVisible = true;
-            this.btnConfirmarEditar.IconZoom = 55D;
-            this.btnConfirmarEditar.IsTab = false;
-            this.btnConfirmarEditar.Location = new System.Drawing.Point(90, 220);
-            this.btnConfirmarEditar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.btnConfirmarEditar.Name = "btnConfirmarEditar";
-            this.btnConfirmarEditar.Normalcolor = System.Drawing.SystemColors.Menu;
-            this.btnConfirmarEditar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
-            this.btnConfirmarEditar.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnConfirmarEditar.selected = false;
-            this.btnConfirmarEditar.Size = new System.Drawing.Size(175, 54);
-            this.btnConfirmarEditar.TabIndex = 25;
-            this.btnConfirmarEditar.Text = "Confirmar";
-            this.btnConfirmarEditar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnConfirmarEditar.Textcolor = System.Drawing.Color.Black;
-            this.btnConfirmarEditar.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolTip1.SetToolTip(this.btnConfirmarEditar, "Confirmar");
-            this.btnConfirmarEditar.Visible = false;
-            this.btnConfirmarEditar.Click += new System.EventHandler(this.btnConfirmarEditar_Click);
             // 
             // dataGridView1
             // 
@@ -484,6 +486,27 @@
             // 
             this.salonsTableAdapter.ClearBeforeFill = true;
             // 
+            // txtID
+            // 
+            this.txtID.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtID.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtID.HintForeColor = System.Drawing.Color.Empty;
+            this.txtID.HintText = "";
+            this.txtID.isPassword = false;
+            this.txtID.LineFocusedColor = System.Drawing.Color.Khaki;
+            this.txtID.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtID.LineMouseHoverColor = System.Drawing.Color.Khaki;
+            this.txtID.LineThickness = 2;
+            this.txtID.Location = new System.Drawing.Point(171, 17);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(182, 30);
+            this.txtID.TabIndex = 26;
+            this.txtID.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtID.Visible = false;
+            // 
             // MenuSalones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -538,5 +561,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nomsalonDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionsalonDataGridViewTextBoxColumn1;
         private Bunifu.Framework.UI.BunifuFlatButton btnConfirmarEditar;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox txtID;
     }
 }

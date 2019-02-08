@@ -81,7 +81,22 @@ namespace Contro_unity.Clases
         {
             throw new NotImplementedException();
         }
+        public int Eliminar()
+        {
+            throw new NotImplementedException();
+        }
 
+        public void Editar(int Id_Salon, string Nom_salon, string Description_salon)
+        {
+            con.Con.Open();
+            var cmd = new SqlCommand("SP_EDITAR_SALON", con.Con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@id_salon", Id_Salon);
+            cmd.Parameters.AddWithValue("@nom_salon", Nom_salon);
+            cmd.Parameters.AddWithValue("@description_salon", Description_salon);
+            cmd.ExecuteNonQuery();
+            cmd.Parameters.Clear();
+        }
         public void Eliminar(int Id_salon)
         {
             con.Con.Open();
@@ -92,9 +107,6 @@ namespace Contro_unity.Clases
             cmd.Parameters.Clear();
         }
 
-        public int Eliminar()
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }

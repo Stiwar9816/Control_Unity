@@ -72,6 +72,7 @@ namespace Contro_unity
                     this.salonsTableAdapter.Fill(this.control_unityDataSet.salons);
                     txtNom_Salon.Text = "";
                     txtDescripcion.Text = "";
+                    btnConfirmarAgregar.Visible = false;
                 }
             }
             else
@@ -82,7 +83,14 @@ namespace Contro_unity
 
         private void Editar_Salon()
         {
-
+            var salon = new Clases.salon();
+            salon.Editar(Convert.ToInt32( txtID.Text), txtNom_Salon.Text, txtDescripcion.Text);
+            salonsTableAdapter.Fill(this.control_unityDataSet.salons);
+            MessageBox.Show("Actualizado Correctamente");
+            txtID.Text = "";
+            txtNom_Salon.Text = "";
+            txtDescripcion.Text = "";
+            btnConfirmarEditar.Visible = false;
         }
 
 
@@ -93,6 +101,7 @@ namespace Contro_unity
             btnConfirmarEditar.Visible = true;
             if (dataGridView1.SelectedRows.Count > 0)
             {
+                txtID.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
                 txtNom_Salon.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
                 txtDescripcion.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
             }
@@ -109,8 +118,8 @@ namespace Contro_unity
                 var DeleteSalon = dataGridView1.CurrentRow.Cells[0].Value.ToString();
                 var salon = new Clases.salon();
                 salon.Eliminar(Convert.ToInt32(DeleteSalon));
-                MessageBox.Show("Elimando Correctamente");
                 salonsTableAdapter.Fill(this.control_unityDataSet.salons);
+                MessageBox.Show("Elimando Correctamente");
             }
             else
             {
@@ -125,7 +134,7 @@ namespace Contro_unity
 
         private void btnConfirmarEditar_Click(object sender, EventArgs e)
         {
-
+            Editar_Salon();
         }
     }
 }

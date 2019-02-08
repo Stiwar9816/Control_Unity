@@ -82,6 +82,7 @@ namespace Contro_unity
                     txtCC.Text = "";
                     txtFullName.Text = "";
                     txtPrograma.Text = "";
+                    btnConfirmarAgregar.Visible = false;
                 }
             }
             else
@@ -94,11 +95,12 @@ namespace Contro_unity
         {
             var profesor = new Clases.profesor();
             profesor.Editar(txtFullName.Text, txtPrograma.Text, Convert.ToInt32(txtCC.Text));
-            MessageBox.Show("Actualizado Correctamente");
             teacherTableAdapter.Fill(this.control_unityDataSet.teacher);
+            MessageBox.Show("Actualizado Correctamente");
             txtCC.Text = "";
             txtFullName.Text = "";
             txtPrograma.Text = "";
+            btnConfirmarEditar.Visible = false;
         }
         
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -108,8 +110,8 @@ namespace Contro_unity
                 var profesor = new Clases.profesor();
                 var DeletePro = dataGridView1.CurrentRow.Cells[0].Value.ToString();
                 profesor.Eliminar(Convert.ToInt32(DeletePro));
-                MessageBox.Show("Elimando Correctamente");
                 teacherTableAdapter.Fill(this.control_unityDataSet.teacher);
+                MessageBox.Show("Elimando Correctamente");
                 txtCC.Text = "";
                 txtFullName.Text = "";
                 txtPrograma.Text = "";
