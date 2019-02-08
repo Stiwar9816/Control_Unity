@@ -99,9 +99,17 @@ namespace Contro_unity.Clases
             return ultimo_id;
         }
 
-        public bool Actualizar()
+        public void Editar(int Cc_user, string Nom_user, string Email_user, string Rol_user)
         {
-            throw new NotImplementedException();
+            con.Con.Open();
+            SqlCommand cmd = new SqlCommand("SP_EDITAR_USUARIO", con.Con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@cc_user", Cc_user);
+            cmd.Parameters.AddWithValue("@nom_user", Nom_user);
+            cmd.Parameters.AddWithValue("@email_user", Email_user);
+            cmd.Parameters.AddWithValue("@rol_user", Rol_user);
+            cmd.ExecuteNonQuery();
+            cmd.Parameters.Clear();
         }
 
         public void Eliminar(int Cc_user)
@@ -115,6 +123,10 @@ namespace Contro_unity.Clases
         }
 
         int Funciones.Eliminar()
+        {
+            throw new NotImplementedException();
+        }
+        public bool Actualizar()
         {
             throw new NotImplementedException();
         }

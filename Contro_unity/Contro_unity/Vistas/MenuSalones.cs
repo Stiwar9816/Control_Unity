@@ -72,7 +72,6 @@ namespace Contro_unity
                     this.salonsTableAdapter.Fill(this.control_unityDataSet.salons);
                     txtNom_Salon.Text = "";
                     txtDescripcion.Text = "";
-                    btnConfirmarAgregar.Visible = false;
                 }
             }
             else
@@ -90,7 +89,6 @@ namespace Contro_unity
             txtID.Text = "";
             txtNom_Salon.Text = "";
             txtDescripcion.Text = "";
-            btnConfirmarEditar.Visible = false;
         }
 
 
@@ -123,18 +121,24 @@ namespace Contro_unity
             }
             else
             {
-                MessageBox.Show("Selecciones una fila");
+                MessageBox.Show("Seleccione una fila");
             }
         }
 
         private void btnConfirmarAgregar_Click(object sender, EventArgs e)
         {
             Ingresar_salon();
+            txtNom_Salon.Enabled = false;
+            txtDescripcion.Enabled = false;
+            btnConfirmarAgregar.Visible = false;
         }
 
         private void btnConfirmarEditar_Click(object sender, EventArgs e)
         {
             Editar_Salon();
+            txtNom_Salon.Enabled = false;
+            txtDescripcion.Enabled = false;
+            btnConfirmarEditar.Visible = false;
         }
     }
 }

@@ -82,7 +82,6 @@ namespace Contro_unity
                     txtCC.Text = "";
                     txtFullName.Text = "";
                     txtPrograma.Text = "";
-                    btnConfirmarAgregar.Visible = false;
                 }
             }
             else
@@ -143,11 +142,19 @@ namespace Contro_unity
         private void btnConfirmarAgregar_Click(object sender, EventArgs e)
         {
             Ingresar_profesor();
+            txtCC.Enabled = false;
+            txtFullName.Enabled = false;
+            txtPrograma.Enabled = false;
+            btnConfirmarAgregar.Visible = false;
         }
 
         private void btnConfirmarEditar_Click(object sender, EventArgs e)
         {
             Editar_profesor();
+            txtCC.Enabled = false;
+            txtFullName.Enabled = false;
+            txtPrograma.Enabled = false;
+            btnConfirmarEditar.Visible = false;
         }
     }
 }

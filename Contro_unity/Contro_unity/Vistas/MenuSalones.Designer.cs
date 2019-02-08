@@ -35,6 +35,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbEditInventario = new System.Windows.Forms.GroupBox();
+            this.txtID = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.btnConfirmarEditar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtDescripcion = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtNom_Salon = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -57,7 +58,6 @@
             this.nomsalonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionsalonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.salonsTableAdapter = new Contro_unity.control_unityDataSetTableAdapters.salonsTableAdapter();
-            this.txtID = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.gbEditInventario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -80,10 +80,31 @@
             this.gbEditInventario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbEditInventario.Location = new System.Drawing.Point(640, 40);
             this.gbEditInventario.Name = "gbEditInventario";
-            this.gbEditInventario.Size = new System.Drawing.Size(361, 306);
+            this.gbEditInventario.Size = new System.Drawing.Size(361, 263);
             this.gbEditInventario.TabIndex = 7;
             this.gbEditInventario.TabStop = false;
             this.gbEditInventario.Text = "DATOS DEL SALON";
+            // 
+            // txtID
+            // 
+            this.txtID.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtID.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtID.HintForeColor = System.Drawing.Color.Empty;
+            this.txtID.HintText = "";
+            this.txtID.isPassword = false;
+            this.txtID.LineFocusedColor = System.Drawing.Color.Khaki;
+            this.txtID.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtID.LineMouseHoverColor = System.Drawing.Color.Khaki;
+            this.txtID.LineThickness = 2;
+            this.txtID.Location = new System.Drawing.Point(171, 17);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(182, 30);
+            this.txtID.TabIndex = 26;
+            this.txtID.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtID.Visible = false;
             // 
             // btnConfirmarEditar
             // 
@@ -106,14 +127,14 @@
             this.btnConfirmarEditar.IconVisible = true;
             this.btnConfirmarEditar.IconZoom = 55D;
             this.btnConfirmarEditar.IsTab = false;
-            this.btnConfirmarEditar.Location = new System.Drawing.Point(90, 220);
+            this.btnConfirmarEditar.Location = new System.Drawing.Point(113, 202);
             this.btnConfirmarEditar.Margin = new System.Windows.Forms.Padding(5);
             this.btnConfirmarEditar.Name = "btnConfirmarEditar";
             this.btnConfirmarEditar.Normalcolor = System.Drawing.SystemColors.Menu;
             this.btnConfirmarEditar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
             this.btnConfirmarEditar.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnConfirmarEditar.selected = false;
-            this.btnConfirmarEditar.Size = new System.Drawing.Size(175, 54);
+            this.btnConfirmarEditar.Size = new System.Drawing.Size(148, 44);
             this.btnConfirmarEditar.TabIndex = 25;
             this.btnConfirmarEditar.Text = "Confirmar";
             this.btnConfirmarEditar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -194,14 +215,14 @@
             this.btnConfirmarAgregar.IconVisible = true;
             this.btnConfirmarAgregar.IconZoom = 55D;
             this.btnConfirmarAgregar.IsTab = false;
-            this.btnConfirmarAgregar.Location = new System.Drawing.Point(90, 220);
+            this.btnConfirmarAgregar.Location = new System.Drawing.Point(113, 202);
             this.btnConfirmarAgregar.Margin = new System.Windows.Forms.Padding(5);
             this.btnConfirmarAgregar.Name = "btnConfirmarAgregar";
             this.btnConfirmarAgregar.Normalcolor = System.Drawing.SystemColors.Menu;
             this.btnConfirmarAgregar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
             this.btnConfirmarAgregar.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnConfirmarAgregar.selected = false;
-            this.btnConfirmarAgregar.Size = new System.Drawing.Size(175, 54);
+            this.btnConfirmarAgregar.Size = new System.Drawing.Size(148, 44);
             this.btnConfirmarAgregar.TabIndex = 19;
             this.btnConfirmarAgregar.Text = "Confirmar";
             this.btnConfirmarAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -485,27 +506,6 @@
             // salonsTableAdapter
             // 
             this.salonsTableAdapter.ClearBeforeFill = true;
-            // 
-            // txtID
-            // 
-            this.txtID.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtID.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtID.HintForeColor = System.Drawing.Color.Empty;
-            this.txtID.HintText = "";
-            this.txtID.isPassword = false;
-            this.txtID.LineFocusedColor = System.Drawing.Color.Khaki;
-            this.txtID.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtID.LineMouseHoverColor = System.Drawing.Color.Khaki;
-            this.txtID.LineThickness = 2;
-            this.txtID.Location = new System.Drawing.Point(171, 17);
-            this.txtID.Margin = new System.Windows.Forms.Padding(4);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(182, 30);
-            this.txtID.TabIndex = 26;
-            this.txtID.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtID.Visible = false;
             // 
             // MenuSalones
             // 

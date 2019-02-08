@@ -44,6 +44,7 @@ namespace Contro_unity
                 txtNombre.Text = "";
                 txtEmail.Text = "";
                 txtRol.Text = "";
+                
             }
             else
             {
@@ -53,7 +54,15 @@ namespace Contro_unity
 
         private void Editar_Usuario()
         {
-
+            var User = new Clases.user();
+            User.Editar(Convert.ToInt32( txtCC.Text), txtNombre.Text,txtEmail.Text,txtRol.Text);
+            usersTableAdapter.Fill(this.control_unityDataSet.users);
+            MessageBox.Show("Actualizado Correctamente");
+            txtCC.Text = "";
+            txtNombre.Text = "";
+            txtEmail.Text = "";
+            txtRol.Text = "";
+            
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -71,6 +80,7 @@ namespace Contro_unity
             txtNombre.Enabled = true;
             txtEmail.Enabled = true;
             txtRol.Enabled = true;
+            btnConfirmarEditar.Visible = true;
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 txtCC.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
@@ -92,8 +102,8 @@ namespace Contro_unity
                 var DeleteUser = dataGridView1.CurrentRow.Cells[0].Value.ToString();
                 var user = new Clases.user();
                 user.Eliminar(Convert.ToInt32(DeleteUser));
-                MessageBox.Show("Elimando Correctamente");
                 usersTableAdapter.Fill(this.control_unityDataSet.users);
+                MessageBox.Show("Elimando Correctamente");
                 txtCC.Text = "";
                 txtNombre.Text = "";
                 txtEmail.Text = "";
@@ -107,12 +117,23 @@ namespace Contro_unity
 
         private void btnConfirmarEditar_Click(object sender, EventArgs e)
         {
-
+            Editar_Usuario();
+            btnConfirmarEditar.Visible = false;
+            txtCC.Enabled = false;
+            txtNombre.Enabled = false;
+            txtEmail.Enabled = false;
+            txtRol.Enabled = false;
         }
 
         private void btnConfirmarAgregar_Click(object sender, EventArgs e)
         {
             Ingresar_Usuario();
+            btnConfirmarAgregar.Visible = false;
+            txtCC.Enabled = false;
+            txtNombre.Enabled = false;
+            txtEmail.Enabled = false;
+            txtRol.ResetText();
+            txtRol.Enabled = false;
         }
     }
 }
