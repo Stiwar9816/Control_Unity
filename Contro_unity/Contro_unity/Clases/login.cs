@@ -20,13 +20,13 @@ namespace Contro_unity.Clases
         private string RecuperarContraseña(string cc_user)
         {
             cmd.Connection = con.AbrirConexion();
-            cmd.CommandText = "SELECT * FROM users WHERE cc_user=" + cc_user;
+            cmd.CommandText = "SELECT * FROM usuarios WHERE cc_user=" + cc_user;
             leer = cmd.ExecuteReader();
             if (leer.Read() == true)
             {
                 email = leer["email_user"].ToString();
                 nombre = leer["nom_user"].ToString();
-                contraseña = leer["password_user"].ToString();
+                contraseña = leer["pass_user"].ToString();
                 //EMAIL
                 EnviarEmail();
                 mensaje = "Estimado(a) " + nombre + ", se ha enviado su contraseña a su correo: " + email + " por favor verifique en su buzon de entrada";
@@ -69,8 +69,6 @@ namespace Contro_unity.Clases
 
         public SqlDataReader IniciarSesion(string user, string pass)
         {
-            //string Sql = "SELECT * FROM users WHERE cc_user ='" + user + "' AND password_user ='" + pass+"'";
-             
             SqlCommand cmd = new SqlCommand("SPIniciarSesion", con.AbrirConexion());
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@Usuario",user);

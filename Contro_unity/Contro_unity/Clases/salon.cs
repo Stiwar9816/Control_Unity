@@ -27,24 +27,6 @@ namespace Contro_unity.Clases
             this.Nom_salon = _nom_salon;
             this.Description_salon = _description_salon;
         }
-
-        //CONSTRUCTOR DE LA CLASE
-        //CONTRUCTOR PARA ACTUALIZAR
-        public salon(string _nom_salon, string _description_salon,int _id_salon)
-        {
-            this.Nom_salon = _nom_salon;
-            this.Description_salon = _description_salon;
-            this.Id_salon = _id_salon;
-        }
-
-        //CONSTRUCTOR DE LA CLASE
-        //CONSTRUCTOR PARA ELMINAR
-        public salon(string _nom_salon)
-        {
-            this.Nom_salon = _nom_salon;
-
-        }
-
         public int Registrar()
         {
             int ultimo_id = 0;
@@ -77,15 +59,6 @@ namespace Contro_unity.Clases
             return ultimo_id;
         }
 
-        public bool Actualizar()
-        {
-            throw new NotImplementedException();
-        }
-        public int Eliminar()
-        {
-            throw new NotImplementedException();
-        }
-
         public void Editar(int Id_Salon, string Nom_salon, string Description_salon)
         {
             con.Con.Open();
@@ -106,7 +79,5 @@ namespace Contro_unity.Clases
             cmd.ExecuteNonQuery();
             cmd.Parameters.Clear();
         }
-
-
     }
 }

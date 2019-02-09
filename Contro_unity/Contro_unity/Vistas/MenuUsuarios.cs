@@ -25,26 +25,29 @@ namespace Contro_unity
 
         private void MenuUsuarios_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'control_unityDataSet.users' Puede moverla o quitarla según sea necesario.
-            this.usersTableAdapter.Fill(this.control_unityDataSet.users);
+            // TODO: esta línea de código carga datos en la tabla 'control_unityDataSet.usuarios' Puede moverla o quitarla según sea necesario.
+            this.usuariosTableAdapter.Fill(this.control_unityDataSet.usuarios);
             txtCC.Enabled = false;
             txtNombre.Enabled = false;
             txtEmail.Enabled = false;
             txtRol.Enabled = false;
+            txtPass.Enabled = false;
         }
         private void Ingresar_Usuario()
         {
+            var fecha = System.DateTime.Now.ToShortDateString();
+            var hora = System.DateTime.Now.ToShortTimeString();
             var Usuario = new Clases.user();
             if (btnAgregar.Enabled == true)
             {
-                //Usuario = new Clases.user(Convert.ToInt32(txtCC.Text), txtNombre.Text, txtEmail.Text, txtRol.Text);
+                Usuario = new Clases.user(Convert.ToInt32(txtCC.Text),txtNombre.Text,txtPass.Text,txtEmail.Text,fecha+" "+hora,txtRol.Text);
                 int ultimo_id = Usuario.Registrar();
-                this.usersTableAdapter.Fill(this.control_unityDataSet.users);
+                this.usuariosTableAdapter.Fill(this.control_unityDataSet.usuarios);
                 txtCC.Text = "";
                 txtNombre.Text = "";
                 txtEmail.Text = "";
                 txtRol.Text = "";
-                
+                txtPass.Text = "";
             }
             else
             {
@@ -54,21 +57,25 @@ namespace Contro_unity
 
         private void Editar_Usuario()
         {
+            var fecha = System.DateTime.Now.ToShortDateString();
+            var hora = System.DateTime.Now.ToShortTimeString();
             var User = new Clases.user();
-            User.Editar(Convert.ToInt32( txtCC.Text), txtNombre.Text,txtEmail.Text,txtRol.Text);
-            usersTableAdapter.Fill(this.control_unityDataSet.users);
+            User.Editar(Convert.ToInt32( txtCC.Text), txtNombre.Text,txtPass.Text,txtEmail.Text,fecha+" "+hora,txtRol.Text);
+            this.usuariosTableAdapter.Fill(this.control_unityDataSet.usuarios);
             MessageBox.Show("Actualizado Correctamente");
             txtCC.Text = "";
             txtNombre.Text = "";
             txtEmail.Text = "";
             txtRol.Text = "";
-            
+            txtPass.Text = "";
+
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             txtCC.Enabled = true;
             txtNombre.Enabled = true;
+            txtPass.Enabled = true;
             txtEmail.Enabled = true;
             txtRol.Enabled = true;
             btnConfirmarAgregar.Visible = true;
@@ -79,13 +86,15 @@ namespace Contro_unity
             txtCC.Enabled = true;
             txtNombre.Enabled = true;
             txtEmail.Enabled = true;
+            txtPass.Enabled = true;
             txtRol.Enabled = true;
             btnConfirmarEditar.Visible = true;
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 txtCC.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
                 txtNombre.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-                txtEmail.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                txtPass.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                txtEmail.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
                 txtRol.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
             }
             else
@@ -102,10 +111,11 @@ namespace Contro_unity
                 var DeleteUser = dataGridView1.CurrentRow.Cells[0].Value.ToString();
                 var user = new Clases.user();
                 user.Eliminar(Convert.ToInt32(DeleteUser));
-                usersTableAdapter.Fill(this.control_unityDataSet.users);
+                this.usuariosTableAdapter.Fill(this.control_unityDataSet.usuarios);
                 MessageBox.Show("Elimando Correctamente");
                 txtCC.Text = "";
                 txtNombre.Text = "";
+                txtPass.Text = "";
                 txtEmail.Text = "";
                 txtRol.Text = "";
             }
@@ -121,6 +131,7 @@ namespace Contro_unity
             btnConfirmarEditar.Visible = false;
             txtCC.Enabled = false;
             txtNombre.Enabled = false;
+            txtPass.Enabled = false;
             txtEmail.Enabled = false;
             txtRol.Enabled = false;
         }
@@ -131,8 +142,8 @@ namespace Contro_unity
             btnConfirmarAgregar.Visible = false;
             txtCC.Enabled = false;
             txtNombre.Enabled = false;
+            txtPass.Enabled = false;
             txtEmail.Enabled = false;
-            txtRol.ResetText();
             txtRol.Enabled = false;
         }
     }

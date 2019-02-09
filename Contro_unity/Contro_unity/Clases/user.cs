@@ -17,47 +17,22 @@ namespace Contro_unity.Clases
         public int Id_user { get; set; }
         public int Cc_user { get; set; }
         public string Nom_user { get; set; }
-        public string Password_user { get; set; }
+        public string Pass_user { get; set; }
         public string Email_user { get; set; }
-        public DateTime Datetime_user { get; set; }
+        public string Datetime_register { get; set; }
         public string Rol_user { get; set; }
-        public int Privilege_user { get; set; }
-
         public user() { }
 
         //CONSTRUCTOR DE LA CLASE
         //CONSTRUCTOR PARA REGISTRAR
-        public user(int _cc_user, string _nom_user, string _password_user, string _email_user, DateTime _datetime_user, string _rol_user, int _privilege_user)
+        public user(int _cc_user, string _nom_user, string _pass_user, string _email_user, string _datetime_register, string _rol_user)
         {
             this.Cc_user = _cc_user;
             this.Nom_user = _nom_user;
-            this.Password_user = _password_user;
+            this.Pass_user = _pass_user;
             this.Email_user = _email_user;
-            this.Datetime_user = _datetime_user;
+            this.Datetime_register = _datetime_register;
             this.Rol_user = _rol_user;
-            this.Privilege_user = _privilege_user;
-        }
-
-        //CONSTRUCTOR DE LA CLASE
-        //CONSTRUCTOR PARA ACTUALIZAR
-        public user(int _cc_user, string _nom_user, string _password_user, string _email_user, DateTime _datetime_user, string _rol_user, int _privilege_user,int _id_user)
-        {
-            this.Cc_user = _cc_user;
-            this.Nom_user = _nom_user;
-            this.Password_user = _password_user;
-            this.Email_user = _email_user;
-            this.Datetime_user = _datetime_user;
-            this.Rol_user = _rol_user;
-            this.Privilege_user = _privilege_user;
-            this.Id_user = _id_user;
-        }
-
-        //CONSTRUCTOR DE LA CLASE
-        //CONSTRUCTOR PARA ELMINAR
-        public user(int _cc_user)
-        {
-            this.Cc_user = _cc_user;
-
         }
 
         public int Registrar()
@@ -69,11 +44,10 @@ namespace Contro_unity.Clases
                 {
                     cmd.Parameters.AddWithValue("@cc_user", this.Cc_user);
                     cmd.Parameters.AddWithValue("@nom_user", this.Nom_user);
-                    cmd.Parameters.AddWithValue("@password_user", this.Password_user);
+                    cmd.Parameters.AddWithValue("@pass_user", this.Pass_user);
                     cmd.Parameters.AddWithValue("@email_user", this.Email_user);
-                    cmd.Parameters.AddWithValue("@datetime_user", this.Datetime_user);
+                    cmd.Parameters.AddWithValue("@datetime_register", this.Datetime_register);
                     cmd.Parameters.AddWithValue("@rol_user", this.Rol_user);
-                    cmd.Parameters.AddWithValue("@privilege_user", this.Privilege_user);
                     cmd.Parameters.AddWithValue("@ultimo_id", SqlDbType.Int).Direction = ParameterDirection.Output;
                     cmd.CommandType = CommandType.StoredProcedure;
                     con.Con.Open();
@@ -93,20 +67,20 @@ namespace Contro_unity.Clases
                 {
                     con.Con.Close();
                 }
-
-
             }
             return ultimo_id;
         }
 
-        public void Editar(int Cc_user, string Nom_user, string Email_user, string Rol_user)
+        public void Editar(int Cc_user, string Nom_user,string Pass_user ,string Email_user,string datetime_register, string Rol_user)
         {
             con.Con.Open();
             SqlCommand cmd = new SqlCommand("SP_EDITAR_USUARIO", con.Con);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@cc_user", Cc_user);
             cmd.Parameters.AddWithValue("@nom_user", Nom_user);
+            cmd.Parameters.AddWithValue("@pass_user", Pass_user);
             cmd.Parameters.AddWithValue("@email_user", Email_user);
+            cmd.Parameters.AddWithValue("@datetime_register", datetime_register);
             cmd.Parameters.AddWithValue("@rol_user", Rol_user);
             cmd.ExecuteNonQuery();
             cmd.Parameters.Clear();
@@ -120,15 +94,6 @@ namespace Contro_unity.Clases
             cmd.Parameters.AddWithValue("@cc_user", Cc_user);
             cmd.ExecuteNonQuery();
             cmd.Parameters.Clear();
-        }
-
-        int Funciones.Eliminar()
-        {
-            throw new NotImplementedException();
-        }
-        public bool Actualizar()
-        {
-            throw new NotImplementedException();
         }
     }
 

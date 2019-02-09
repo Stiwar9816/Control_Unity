@@ -30,25 +30,6 @@ namespace Contro_unity.Clases
             this.Program_teacher = _program_teacher;
         }
 
-        //CONSTRUCTOR DE LA CLASE
-        //CONSTRUCTOR PARA ACTUALIZAR
-        public profesor(int _cc_teacher, string _nom_teacher, string _program_teacher, int _id_teacher)
-        {
-            this.Cc_teacher = _cc_teacher;
-            this.Nom_teacher = _nom_teacher;
-            this.Program_teacher = _program_teacher;
-            this.Id_teacher = _id_teacher;
-
-        }
-
-        //CONSTRUCTOR DE LA CLASE
-        //CONSTRUCTOR PARA ELMINAR
-        public profesor(int _cc_teacher)
-        {
-            this.Cc_teacher = _cc_teacher;
-
-        }
-
         //ACCIONES
         public int Registrar()
         {
@@ -85,11 +66,6 @@ namespace Contro_unity.Clases
             return ultimo_id;
         }
 
-        public bool Actualizar()
-        {
-            throw new NotImplementedException();
-        }
-
         public void Eliminar(int Cc_teacher)
         {
             con.Con.Open();
@@ -111,11 +87,6 @@ namespace Contro_unity.Clases
             cmd.Parameters.AddWithValue("@program_teacher", program_teacher);
             cmd.ExecuteNonQuery();
             cmd.Parameters.Clear(); 
-        }
-
-        public int Eliminar()
-        {
-            throw new NotImplementedException();
         }
     }
 }

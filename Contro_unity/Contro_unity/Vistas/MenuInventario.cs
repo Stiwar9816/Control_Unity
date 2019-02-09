@@ -46,6 +46,7 @@ namespace Contro_unity
             txtStock.Enabled = false;
             txtMarca.Enabled = false;
             txtDescripcion.Enabled = false;
+            
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -60,20 +61,20 @@ namespace Contro_unity
 
         private void Ingresar_Inventario()
         {
+            var fecha = System.DateTime.Now.ToShortDateString();
+            var hora = System.DateTime.Now.ToShortTimeString();
             if (btnAgregar.Enabled == true)
             {
                 if (btnAgregar.Enabled == true)
                 {
-                    //var Implemento = new Clases.implemento(txtCod_Serie.Text,txtNombre.Text,txtFecha.Text,Convert.ToInt32(txtStock.Value),txtMarca.Text,txtDescripcion.Text);
-                    //Implemento.Registrar();
+                    var Implemento = new Clases.implemento(txtCod_Serie.Text,txtNombre.Text,fecha+" "+hora,Convert.ToInt32(txtStock.Value),txtMarca.Text,txtDescripcion.Text);
+                    Implemento.Registrar();
                     this.implementsTableAdapter.Fill(this.control_unityDataSet.implements);
                     txtCod_Serie.Text = "";
                     txtNombre.Text = "";
                     txtStock.Value = 0;
-                    //txtFecha.Text = "";
                     txtMarca.Text = "";
                     txtDescripcion.Text = "";
-
                 }
                 else
                 {
@@ -83,8 +84,25 @@ namespace Contro_unity
         }
 
 
+        private void Editar_Inventario()
+        {
+            var fecha = System.DateTime.Now.ToShortDateString();
+            var hora = System.DateTime.Now.ToShortTimeString();
+            var implemento = new Clases.implemento();
+            implemento.Editar(Convert.ToInt32(txtID.Text), txtCod_Serie.Text, txtNombre.Text,fecha+" "+hora,Convert.ToInt32(txtStock.Value), txtMarca.Text, txtDescripcion.Text);
+            implementsTableAdapter.Fill(this.control_unityDataSet.implements);
+            MessageBox.Show("Actualizado Correctamente");
+            txtID.Text = "";
+            txtCod_Serie.Text = "";
+            txtNombre.Text = "";
+            txtStock.Value = 0;
+            txtMarca.Text = "";
+            txtDescripcion.Text = "";
+        }
+
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            txtID.Enabled = true;
             txtCod_Serie.Enabled = true;
             txtNombre.Enabled = true;
             txtStock.Enabled = true;
@@ -93,11 +111,11 @@ namespace Contro_unity
             btnConfirmarEditar.Visible = true;
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                txtCod_Serie.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-                txtNombre.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-                txtStock.Value = Convert.ToInt32(dataGridView1.CurrentRow.Cells[3].Value.ToString());
-                txtMarca.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-                txtDescripcion.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                txtCod_Serie.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                txtNombre.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                txtStock.Value = Convert.ToInt32(dataGridView1.CurrentRow.Cells[4].Value.ToString());
+                txtMarca.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                txtDescripcion.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
             }
             else
             {
@@ -112,8 +130,8 @@ namespace Contro_unity
                 var DeleteImple = dataGridView1.CurrentRow.Cells[0].Value.ToString();
                 var implemento = new Clases.implemento();
                 implemento.Eliminar(DeleteImple);
-                MessageBox.Show("Elimando Correctamente");
                 this.implementsTableAdapter.Fill(this.control_unityDataSet.implements);
+                MessageBox.Show("Elimando Correctamente");
                 txtCod_Serie.Text = "";
                 txtNombre.Text = "";
                 txtStock.Value = 0;
@@ -124,6 +142,30 @@ namespace Contro_unity
             {
                 MessageBox.Show("Seleccione una fila");
             }
+        }
+
+        private void btnConfirmarEditar_Click(object sender, EventArgs e)
+        {
+            Editar_Inventario();
+            txtID.Enabled = false;
+            txtCod_Serie.Enabled = false;
+            txtNombre.Enabled = false;
+            txtStock.Enabled = false;
+            txtMarca.Enabled = false;
+            txtDescripcion.Enabled = false;
+            btnConfirmarEditar.Visible = false;
+        }
+
+        private void btnConfirmarAgregar_Click(object sender, EventArgs e)
+        {
+            Ingresar_Inventario();
+            txtID.Enabled = false;
+            txtCod_Serie.Enabled = false;
+            txtNombre.Enabled = false;
+            txtStock.Enabled = false;
+            txtMarca.Enabled = false;
+            txtDescripcion.Enabled = false;
+            btnConfirmarAgregar.Visible = false;
         }
     }
 }
