@@ -95,7 +95,7 @@ namespace Contro_unity
                 txtNombre.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
                 txtPass.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
                 txtEmail.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-                txtRol.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                txtRol.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
             }
             else
             {

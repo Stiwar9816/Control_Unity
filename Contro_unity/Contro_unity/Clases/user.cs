@@ -40,7 +40,7 @@ namespace Contro_unity.Clases
             int ultimo_id = 0;
             try
             {
-                using (var cmd = new SqlCommand("SP_REGISTAR_USUARIO1", con.Con))
+                using (var cmd = new SqlCommand("SP_REGISTRAR_USUARIO", con.Con))
                 {
                     cmd.Parameters.AddWithValue("@cc_user", this.Cc_user);
                     cmd.Parameters.AddWithValue("@nom_user", this.Nom_user);
