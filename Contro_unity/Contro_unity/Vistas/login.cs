@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Data.SqlClient;
 using Contro_unity.Vistas;
+using Contro_unity.Clases;
 
 namespace Contro_unity
 {
@@ -101,52 +102,67 @@ namespace Contro_unity
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            String pass = Encriptar.DecryptData(txtpass.Text, txtuser.Text);
+            if (pass == txtpass.Text)
+            {
+
+            }
+
+            //txtuser.Text = Encriptar.DecryptData(has, "1077");
             var loguearse = new Clases.login();
             SqlDataReader Loguear;
             loguearse.Usuario = txtuser.Text;
             loguearse.Contraseña = txtpass.Text;
 
-            if(loguearse.Usuario == txtuser.Text) {
+            if (loguearse.Usuario == txtuser.Text)
+            {
 
                 lblErrorUser.Visible = false;
                 lblErrorLogin.Visible = false;
 
-                if(loguearse.Contraseña == txtpass.Text) {
+                if (loguearse.Contraseña == txtpass.Text)
+                {
                     lblErrorLogin.Visible = false;
                     lblErrorPass.Visible = false;
                     Loguear = loguearse.IniciarSesion();
-                        if (Loguear.Read() == true)
-                        {
-                            this.Hide();
-                            MenuPrincipal frmPrincipal = new MenuPrincipal();
-                            Program.Rol = Loguear["rol_user"].ToString();
-                            Program.nom_user = Loguear["nom_user"].ToString();
-                            frmPrincipal.Show();
+                    if (Loguear.Read() == true)
+                    {
+                        this.Hide();
+                        MenuPrincipal frmPrincipal = new MenuPrincipal();
+                        Program.Rol = Loguear["rol_user"].ToString();
+                        Program.nom_user = Loguear["nom_user"].ToString();
+                        frmPrincipal.Show();
 
-                        }else{
-                            lblErrorLogin.Text = "Usuario o contraseña incorrectos, intenta nuevamente";
-                            lblErrorLogin.Visible = true;
-                            txtpass.Text = "";
-                            txtpass_Leave_1(null, e);
-                            txtuser.Focus();
-                        }
-                            }else {                                
-                                { lblErrorPass.Text = loguearse.Contraseña;
-                                    lblErrorPass.Visible = true;
-                                    lblErrorUser.Visible = false;
-                                    lblErrorLogin.Visible = false;
-                                }
-                            }
-                        }
-                            else{
-                                {
-                                    lblErrorUser.Text = loguearse.Usuario;
-                                    lblErrorUser.Visible = true;
-                                    lblErrorPass.Visible = false;
-                                    lblErrorLogin.Visible = false;
-                                }
-                        }
-           }
+                    }
+                    else
+                    {
+                        lblErrorLogin.Text = "Usuario o contraseña incorrectos, intenta nuevamente";
+                        lblErrorLogin.Visible = true;
+                        txtpass.Text = "";
+                        txtpass_Leave_1(null, e);
+                        txtuser.Focus();
+                    }
+                }
+                else
+                {
+                    {
+                        lblErrorPass.Text = loguearse.Contraseña;
+                        lblErrorPass.Visible = true;
+                        lblErrorUser.Visible = false;
+                        lblErrorLogin.Visible = false;
+                    }
+                }
+            }
+            else
+            {
+                {
+                    lblErrorUser.Text = loguearse.Usuario;
+                    lblErrorUser.Visible = true;
+                    lblErrorPass.Visible = false;
+                    lblErrorLogin.Visible = false;
+                }
+            }
+        }
         }
     }
 

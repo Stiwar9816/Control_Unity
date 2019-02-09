@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Contro_unity.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SimpleCrypto;
+/*using SimpleCrypto;*/
 
 namespace Contro_unity
 {
@@ -49,13 +50,16 @@ namespace Contro_unity
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            ICryptoService cryptoService = new PBKDF2();
 
-            //Generar algoritmo de encriptacion
+            String pass = Encriptar.EncryptData(txtPass.Text, txtCC.Text);
 
-            string salt = cryptoService.GenerateSalt();
-            string passEncriptada = cryptoService.Compute(txtPass.Text);
-            
+            /*   ICryptoService cryptoService = new PBKDF2();
+
+               //Generar algoritmo de encriptacion
+
+               string salt = cryptoService.GenerateSalt();
+               string passEncriptada = cryptoService.Compute(txtPass.Text);
+            */
 
             var Usuario = new Clases.user();
             if (btnAgregar.Enabled == true)
