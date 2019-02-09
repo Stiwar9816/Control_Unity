@@ -215,7 +215,17 @@ namespace Contro_unity
                 }
             }
         }
+        
+        private void btnShowPass_MouseHover(object sender, EventArgs e)
+        {
+            txtpass.isPassword = false;
+        }
+
+        private void btnShowPass_MouseLeave(object sender, EventArgs e)
+        {
+            txtpass.isPassword = true;
+        }
     }
-    }
+}
 
 

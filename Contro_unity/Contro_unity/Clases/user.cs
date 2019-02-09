@@ -95,6 +95,19 @@ namespace Contro_unity.Clases
             cmd.ExecuteNonQuery();
             cmd.Parameters.Clear();
         }
+
+        public void Buscar(DataGridView dtg ,string Filter)
+        {
+            con.Con.Open();
+            SqlCommand cmd = new SqlCommand("SP_BUSCAR_USUARIO", con.Con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@filtro", SqlDbType.VarChar,200).Value = Filter;
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            dtg.DataSource = dt;
+        }
     }
 
 }

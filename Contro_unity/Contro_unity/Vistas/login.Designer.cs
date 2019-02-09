@@ -42,6 +42,7 @@
             this.lblErrorPass = new System.Windows.Forms.Label();
             this.lblErrorLogin = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btnShowPass = new System.Windows.Forms.PictureBox();
             this.txtuser = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtpass = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -53,6 +54,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnShowPass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -200,6 +202,19 @@
             this.lblErrorLogin.Text = "login?";
             this.lblErrorLogin.Visible = false;
             // 
+            // btnShowPass
+            // 
+            this.btnShowPass.Image = global::Contro_unity.Properties.Resources.icons8_show_password_50;
+            this.btnShowPass.Location = new System.Drawing.Point(288, 287);
+            this.btnShowPass.Name = "btnShowPass";
+            this.btnShowPass.Size = new System.Drawing.Size(20, 18);
+            this.btnShowPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnShowPass.TabIndex = 13;
+            this.btnShowPass.TabStop = false;
+            this.toolTip1.SetToolTip(this.btnShowPass, "Mostrar Contraseña");
+            this.btnShowPass.MouseLeave += new System.EventHandler(this.btnShowPass_MouseLeave);
+            this.btnShowPass.MouseHover += new System.EventHandler(this.btnShowPass_MouseHover);
+            // 
             // txtuser
             // 
             this.txtuser.BackColor = System.Drawing.SystemColors.Menu;
@@ -301,9 +316,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Contro_unity.Properties.Resources.icons8_lock_50;
-            this.pictureBox3.Location = new System.Drawing.Point(53, 282);
+            this.pictureBox3.Location = new System.Drawing.Point(53, 277);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(27, 27);
+            this.pictureBox3.Size = new System.Drawing.Size(27, 32);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
@@ -324,6 +339,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(367, 441);
+            this.Controls.Add(this.btnShowPass);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtpass);
@@ -346,6 +362,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnShowPass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -375,6 +392,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox btnShowPass;
     }
 }
 

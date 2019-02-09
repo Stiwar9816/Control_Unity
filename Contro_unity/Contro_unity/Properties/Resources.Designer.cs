@@ -423,6 +423,16 @@ namespace Contro_unity.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_search_bar_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-search-bar-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_services_filled_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8_services_filled_50", resourceCulture);

@@ -357,6 +357,7 @@
     <None Include="Resources\icons8-info-500.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8-search-bar-100.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

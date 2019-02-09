@@ -94,6 +94,7 @@ namespace Contro_unity
                 txtCC.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
                 txtNombre.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
                 txtPass.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                txtPass.isPassword = true;
                 txtEmail.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
                 txtRol.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
             }
@@ -145,6 +146,30 @@ namespace Contro_unity
             txtPass.Enabled = false;
             txtEmail.Enabled = false;
             txtRol.Enabled = false;
+        }
+
+        private void txtBuscar_Enter(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text == "Buscar Usuario")
+            {
+                txtBuscar.Text = "";
+                txtBuscar.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtBuscar_Leave(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text == "")
+            {
+                txtBuscar.Text = "Buscar Usuario";
+                txtBuscar.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void txtBuscar_OnValueChanged(object sender, EventArgs e)
+        {
+            var user = new Clases.user();
+            user.Buscar(dataGridView1 ,txtBuscar.Text.Trim());
         }
     }
 }
