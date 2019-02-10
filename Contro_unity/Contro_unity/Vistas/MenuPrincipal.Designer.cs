@@ -92,7 +92,7 @@
             this.btnInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnInfo.TabIndex = 5;
             this.btnInfo.TabStop = false;
-            this.toolTip1.SetToolTip(this.btnInfo, "Notificaciones");
+            this.toolTip1.SetToolTip(this.btnInfo, "Acerca De");
             // 
             // pictureBox3
             // 
@@ -504,7 +504,7 @@
             // 
             this.txtRoluser.AutoSize = true;
             this.txtRoluser.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRoluser.Location = new System.Drawing.Point(68, 12);
+            this.txtRoluser.Location = new System.Drawing.Point(56, 11);
             this.txtRoluser.Name = "txtRoluser";
             this.txtRoluser.Size = new System.Drawing.Size(86, 18);
             this.txtRoluser.TabIndex = 9;
@@ -514,7 +514,7 @@
             // 
             this.txtNombreuser.AutoSize = true;
             this.txtNombreuser.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreuser.Location = new System.Drawing.Point(65, 39);
+            this.txtNombreuser.Location = new System.Drawing.Point(56, 39);
             this.txtNombreuser.Name = "txtNombreuser";
             this.txtNombreuser.Size = new System.Drawing.Size(110, 18);
             this.txtNombreuser.TabIndex = 10;
@@ -624,6 +624,7 @@
             // 
             // lblHora
             // 
+            this.lblHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblHora.AutoSize = true;
             this.lblHora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblHora.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -637,11 +638,12 @@
             // 
             // lblFecha
             // 
+            this.lblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFecha.AutoSize = true;
             this.lblFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblFecha.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblFecha.Location = new System.Drawing.Point(767, 26);
+            this.lblFecha.Location = new System.Drawing.Point(719, 26);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(71, 22);
             this.lblFecha.TabIndex = 0;

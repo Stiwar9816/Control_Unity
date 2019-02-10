@@ -28,10 +28,12 @@ namespace Contro_unity
             this.salonsTableAdapter.Fill(this.control_unityDataSet.salons);
             // TODO: esta línea de código carga datos en la tabla 'control_unityDataSet.teacher' Puede moverla o quitarla según sea necesario.
             this.teacherTableAdapter.Fill(this.control_unityDataSet.teacher);
-
-
         }
 
-
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToString("hh:MM:ss tt");
+            lblFecha.Text = DateTime.Now.ToLongDateString();
+        }
     }
 }

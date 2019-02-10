@@ -48,24 +48,29 @@
             this.btnEliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnEditar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAgregar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idsalonDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomsalonDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionsalonDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.salonsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.control_unityDataSet = new Contro_unity.control_unityDataSet();
             this.idsalonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomsalonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionsalonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.salonsTableAdapter = new Contro_unity.control_unityDataSetTableAdapters.salonsTableAdapter();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtBuscar = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.idsalonDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomsalonDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionsalonDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.gbEditInventario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salonsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.control_unityDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbEditInventario
@@ -137,7 +142,7 @@
             this.btnConfirmarEditar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
             this.btnConfirmarEditar.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnConfirmarEditar.selected = false;
-            this.btnConfirmarEditar.Size = new System.Drawing.Size(141, 42);
+            this.btnConfirmarEditar.Size = new System.Drawing.Size(139, 40);
             this.btnConfirmarEditar.TabIndex = 25;
             this.btnConfirmarEditar.Text = "Confirmar";
             this.btnConfirmarEditar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -225,7 +230,7 @@
             this.btnConfirmarAgregar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
             this.btnConfirmarAgregar.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnConfirmarAgregar.selected = false;
-            this.btnConfirmarAgregar.Size = new System.Drawing.Size(141, 42);
+            this.btnConfirmarAgregar.Size = new System.Drawing.Size(139, 40);
             this.btnConfirmarAgregar.TabIndex = 19;
             this.btnConfirmarAgregar.Text = "Confirmar";
             this.btnConfirmarAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -380,6 +385,18 @@
             this.toolTip1.SetToolTip(this.btnAgregar, "Agregar");
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::Contro_unity.Properties.Resources.icons8_find_user_male_50;
+            this.pictureBox1.Location = new System.Drawing.Point(985, 40);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(27, 27);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 36;
+            this.pictureBox1.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox1, "Buscar");
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -449,6 +466,31 @@
             this.dataGridView1.Size = new System.Drawing.Size(633, 401);
             this.dataGridView1.TabIndex = 24;
             // 
+            // idsalonDataGridViewTextBoxColumn1
+            // 
+            this.idsalonDataGridViewTextBoxColumn1.DataPropertyName = "id_salon";
+            this.idsalonDataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.idsalonDataGridViewTextBoxColumn1.Name = "idsalonDataGridViewTextBoxColumn1";
+            this.idsalonDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.idsalonDataGridViewTextBoxColumn1.Visible = false;
+            this.idsalonDataGridViewTextBoxColumn1.Width = 45;
+            // 
+            // nomsalonDataGridViewTextBoxColumn1
+            // 
+            this.nomsalonDataGridViewTextBoxColumn1.DataPropertyName = "nom_salon";
+            this.nomsalonDataGridViewTextBoxColumn1.HeaderText = "SALÓN";
+            this.nomsalonDataGridViewTextBoxColumn1.Name = "nomsalonDataGridViewTextBoxColumn1";
+            this.nomsalonDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.nomsalonDataGridViewTextBoxColumn1.Width = 71;
+            // 
+            // descriptionsalonDataGridViewTextBoxColumn1
+            // 
+            this.descriptionsalonDataGridViewTextBoxColumn1.DataPropertyName = "description_salon";
+            this.descriptionsalonDataGridViewTextBoxColumn1.HeaderText = "DESCRIPCIÓN";
+            this.descriptionsalonDataGridViewTextBoxColumn1.Name = "descriptionsalonDataGridViewTextBoxColumn1";
+            this.descriptionsalonDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.descriptionsalonDataGridViewTextBoxColumn1.Width = 111;
+            // 
             // salonsBindingSource
             // 
             this.salonsBindingSource.DataMember = "salons";
@@ -487,18 +529,6 @@
             // 
             this.salonsTableAdapter.ClearBeforeFill = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::Contro_unity.Properties.Resources.icons8_find_user_male_50;
-            this.pictureBox1.Location = new System.Drawing.Point(985, 40);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(27, 27);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 36;
-            this.pictureBox1.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox1, "Buscar");
-            // 
             // txtBuscar
             // 
             this.txtBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -521,30 +551,49 @@
             this.txtBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtBuscar.OnValueChanged += new System.EventHandler(this.txtBuscar_OnValueChanged);
             // 
-            // idsalonDataGridViewTextBoxColumn1
+            // lblHora
             // 
-            this.idsalonDataGridViewTextBoxColumn1.DataPropertyName = "id_salon";
-            this.idsalonDataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.idsalonDataGridViewTextBoxColumn1.Name = "idsalonDataGridViewTextBoxColumn1";
-            this.idsalonDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.idsalonDataGridViewTextBoxColumn1.Visible = false;
-            this.idsalonDataGridViewTextBoxColumn1.Width = 43;
+            this.lblHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblHora.AutoSize = true;
+            this.lblHora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblHora.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblHora.Location = new System.Drawing.Point(880, 3);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(71, 24);
+            this.lblHora.TabIndex = 1;
+            this.lblHora.Text = "HORA";
+            this.lblHora.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // nomsalonDataGridViewTextBoxColumn1
+            // lblFecha
             // 
-            this.nomsalonDataGridViewTextBoxColumn1.DataPropertyName = "nom_salon";
-            this.nomsalonDataGridViewTextBoxColumn1.HeaderText = "SALÓN";
-            this.nomsalonDataGridViewTextBoxColumn1.Name = "nomsalonDataGridViewTextBoxColumn1";
-            this.nomsalonDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.nomsalonDataGridViewTextBoxColumn1.Width = 71;
+            this.lblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblFecha.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblFecha.Location = new System.Drawing.Point(719, 26);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(71, 22);
+            this.lblFecha.TabIndex = 0;
+            this.lblFecha.Text = "FECHA";
+            this.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // descriptionsalonDataGridViewTextBoxColumn1
+            // panel2
             // 
-            this.descriptionsalonDataGridViewTextBoxColumn1.DataPropertyName = "description_salon";
-            this.descriptionsalonDataGridViewTextBoxColumn1.HeaderText = "DESCRIPCIÓN";
-            this.descriptionsalonDataGridViewTextBoxColumn1.Name = "descriptionsalonDataGridViewTextBoxColumn1";
-            this.descriptionsalonDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.descriptionsalonDataGridViewTextBoxColumn1.Width = 111;
+            this.panel2.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.panel2.Controls.Add(this.lblHora);
+            this.panel2.Controls.Add(this.lblFecha);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 578);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1024, 52);
+            this.panel2.TabIndex = 37;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // MenuSalones
             // 
@@ -552,6 +601,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(1024, 630);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.dataGridView1);
@@ -569,10 +619,12 @@
             this.gbEditInventario.ResumeLayout(false);
             this.gbEditInventario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salonsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.control_unityDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -606,5 +658,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idsalonDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomsalonDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionsalonDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.Label lblHora;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Timer timer1;
     }
 }

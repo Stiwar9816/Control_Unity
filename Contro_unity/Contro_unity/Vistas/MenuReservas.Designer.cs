@@ -59,6 +59,10 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.teacherBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.control_unityDataSet)).BeginInit();
@@ -68,6 +72,7 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -357,13 +362,13 @@
             this.btnConfirmar.IconZoom = 55D;
             this.btnConfirmar.IsTab = false;
             this.btnConfirmar.Location = new System.Drawing.Point(409, 378);
-            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(5);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Normalcolor = System.Drawing.SystemColors.Menu;
             this.btnConfirmar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
             this.btnConfirmar.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnConfirmar.selected = false;
-            this.btnConfirmar.Size = new System.Drawing.Size(215, 57);
+            this.btnConfirmar.Size = new System.Drawing.Size(140, 50);
             this.btnConfirmar.TabIndex = 18;
             this.btnConfirmar.Text = "RESERVAR";
             this.btnConfirmar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -432,12 +437,57 @@
             this.panel1.Size = new System.Drawing.Size(1024, 25);
             this.panel1.TabIndex = 20;
             // 
+            // lblHora
+            // 
+            this.lblHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblHora.AutoSize = true;
+            this.lblHora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblHora.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblHora.Location = new System.Drawing.Point(880, 3);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(71, 24);
+            this.lblHora.TabIndex = 1;
+            this.lblHora.Text = "HORA";
+            this.lblHora.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblFecha.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblFecha.Location = new System.Drawing.Point(719, 26);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(71, 22);
+            this.lblFecha.TabIndex = 0;
+            this.lblFecha.Text = "FECHA";
+            this.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.panel2.Controls.Add(this.lblHora);
+            this.panel2.Controls.Add(this.lblFecha);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 578);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1024, 52);
+            this.panel2.TabIndex = 21;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // ReservasProfesores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(1024, 630);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -456,6 +506,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -492,5 +544,9 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblHora;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Timer timer1;
     }
 }

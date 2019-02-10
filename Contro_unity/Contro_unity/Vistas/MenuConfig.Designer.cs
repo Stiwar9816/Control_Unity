@@ -40,8 +40,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.lblHora = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -93,14 +98,14 @@
             this.btnConfirmar.IconVisible = true;
             this.btnConfirmar.IconZoom = 55D;
             this.btnConfirmar.IsTab = false;
-            this.btnConfirmar.Location = new System.Drawing.Point(131, 142);
+            this.btnConfirmar.Location = new System.Drawing.Point(128, 142);
             this.btnConfirmar.Margin = new System.Windows.Forms.Padding(4);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Normalcolor = System.Drawing.SystemColors.Menu;
             this.btnConfirmar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
             this.btnConfirmar.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnConfirmar.selected = false;
-            this.btnConfirmar.Size = new System.Drawing.Size(147, 48);
+            this.btnConfirmar.Size = new System.Drawing.Size(140, 42);
             this.btnConfirmar.TabIndex = 3;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -209,12 +214,57 @@
             this.toolTip1.SetToolTip(this.btnCerrar, "Cerrar");
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // lblHora
+            // 
+            this.lblHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblHora.AutoSize = true;
+            this.lblHora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblHora.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblHora.Location = new System.Drawing.Point(880, 3);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(71, 24);
+            this.lblHora.TabIndex = 1;
+            this.lblHora.Text = "HORA";
+            this.lblHora.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblFecha.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblFecha.Location = new System.Drawing.Point(719, 26);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(71, 22);
+            this.lblFecha.TabIndex = 0;
+            this.lblFecha.Text = "FECHA";
+            this.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.panel2.Controls.Add(this.lblHora);
+            this.panel2.Controls.Add(this.lblFecha);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 578);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1024, 52);
+            this.panel2.TabIndex = 4;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // MenuConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(1024, 630);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -225,6 +275,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -243,5 +295,9 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtPassActual;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtPassNew;
         private Bunifu.Framework.UI.BunifuFlatButton btnConfirmar;
+        private System.Windows.Forms.Label lblHora;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Timer timer1;
     }
 }

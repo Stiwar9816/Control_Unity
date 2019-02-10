@@ -146,5 +146,11 @@ namespace Contro_unity
             var salon = new Clases.salon();
             salon.Buscar(dataGridView1, txtBuscar.Text.Trim());
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToString("hh:MM:ss tt");
+            lblFecha.Text = DateTime.Now.ToLongDateString();
+        }
     }
 }
