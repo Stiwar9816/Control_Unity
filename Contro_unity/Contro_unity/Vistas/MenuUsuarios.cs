@@ -148,28 +148,10 @@ namespace Contro_unity
             txtRol.Enabled = false;
         }
 
-        private void txtBuscar_Enter(object sender, EventArgs e)
-        {
-            if (txtBuscar.Text == "Buscar Usuario")
-            {
-                txtBuscar.Text = "";
-                txtBuscar.ForeColor = Color.Black;
-            }
-        }
-
-        private void txtBuscar_Leave(object sender, EventArgs e)
-        {
-            if (txtBuscar.Text == "")
-            {
-                txtBuscar.Text = "Buscar Usuario";
-                txtBuscar.ForeColor = Color.DimGray;
-            }
-        }
-
         private void txtBuscar_OnValueChanged(object sender, EventArgs e)
         {
-            var user = new Clases.user();
-            user.Buscar(dataGridView1 ,txtBuscar.Text.Trim());
+                var user = new Clases.user();
+                user.Buscar(dataGridView1 ,txtBuscar.Text.Trim());
         }
     }
 }

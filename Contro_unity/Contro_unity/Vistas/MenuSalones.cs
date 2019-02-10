@@ -140,5 +140,11 @@ namespace Contro_unity
             txtDescripcion.Enabled = false;
             btnConfirmarEditar.Visible = false;
         }
+
+        private void txtBuscar_OnValueChanged(object sender, EventArgs e)
+        {
+            var salon = new Clases.salon();
+            salon.Buscar(dataGridView1, txtBuscar.Text.Trim());
+        }
     }
 }

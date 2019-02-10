@@ -167,5 +167,11 @@ namespace Contro_unity
             txtDescripcion.Enabled = false;
             btnConfirmarAgregar.Visible = false;
         }
+
+        private void txtBuscar_OnValueChanged(object sender, EventArgs e)
+        {
+            var implemento = new Clases.implemento();
+            implemento.Buscar(dataGridView1, txtBuscar.Text.Trim());
+        }
     }
 }

@@ -101,7 +101,7 @@ namespace Contro_unity
             txtPrograma.Text = "";
             btnConfirmarEditar.Visible = false;
         }
-        
+
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
@@ -114,7 +114,8 @@ namespace Contro_unity
                 txtCC.Text = "";
                 txtFullName.Text = "";
                 txtPrograma.Text = "";
-            } else
+            }
+            else
             {
                 MessageBox.Show("Selecciones una fila");
             }
@@ -155,6 +156,12 @@ namespace Contro_unity
             txtFullName.Enabled = false;
             txtPrograma.Enabled = false;
             btnConfirmarEditar.Visible = false;
+        }
+       
+        private void txtBuscar_OnValueChanged(object sender, EventArgs e)
+        {
+                var profesor = new Clases.profesor();
+                profesor.Buscar(dataGridView1, txtBuscar.Text.Trim());
         }
     }
 }

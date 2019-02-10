@@ -212,7 +212,7 @@
             this.btnConfirmarEditar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
             this.btnConfirmarEditar.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnConfirmarEditar.selected = false;
-            this.btnConfirmarEditar.Size = new System.Drawing.Size(150, 49);
+            this.btnConfirmarEditar.Size = new System.Drawing.Size(141, 43);
             this.btnConfirmarEditar.TabIndex = 34;
             this.btnConfirmarEditar.Text = "Confirmar";
             this.btnConfirmarEditar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -250,7 +250,7 @@
             this.btnConfirmarAgregar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
             this.btnConfirmarAgregar.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnConfirmarAgregar.selected = false;
-            this.btnConfirmarAgregar.Size = new System.Drawing.Size(150, 49);
+            this.btnConfirmarAgregar.Size = new System.Drawing.Size(141, 43);
             this.btnConfirmarAgregar.TabIndex = 33;
             this.btnConfirmarAgregar.Text = "Confirmar";
             this.btnConfirmarAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -617,16 +617,13 @@
             this.txtBuscar.LineIdleColor = System.Drawing.Color.Gray;
             this.txtBuscar.LineMouseHoverColor = System.Drawing.Color.Khaki;
             this.txtBuscar.LineThickness = 2;
-            this.txtBuscar.Location = new System.Drawing.Point(735, 60);
+            this.txtBuscar.Location = new System.Drawing.Point(817, 60);
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(277, 30);
+            this.txtBuscar.Size = new System.Drawing.Size(195, 30);
             this.txtBuscar.TabIndex = 33;
-            this.txtBuscar.Text = "Buscar Usuario";
             this.txtBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtBuscar.OnValueChanged += new System.EventHandler(this.txtBuscar_OnValueChanged);
-            this.txtBuscar.Enter += new System.EventHandler(this.txtBuscar_Enter);
-            this.txtBuscar.Leave += new System.EventHandler(this.txtBuscar_Leave);
             // 
             // MenuUsuarios
             // 
