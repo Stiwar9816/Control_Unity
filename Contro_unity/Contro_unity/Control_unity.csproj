@@ -168,6 +168,8 @@
     <Compile Include="Vistas\MenuReservas.Designer.cs">
       <DependentUpon>MenuReservas.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Clases\Reporte_Inventario.rdlc" />
+    <EmbeddedResource Include="Clases\Reporte_Salon.rdlc" />
     <EmbeddedResource Include="Vistas\login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>

@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.implementsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.control_unityDataSet = new Contro_unity.control_unityDataSet();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
@@ -41,6 +45,11 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.RPInventario = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.implementsTableAdapter = new Contro_unity.control_unityDataSetTableAdapters.implementsTableAdapter();
+            this.salonsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.salonsTableAdapter = new Contro_unity.control_unityDataSetTableAdapters.salonsTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.implementsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.control_unityDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.panel1.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -48,7 +57,18 @@
             this.tabPage2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.salonsBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // implementsBindingSource
+            // 
+            this.implementsBindingSource.DataMember = "implements";
+            this.implementsBindingSource.DataSource = this.control_unityDataSet;
+            // 
+            // control_unityDataSet
+            // 
+            this.control_unityDataSet.DataSetName = "control_unityDataSet";
+            this.control_unityDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnCerrar
             // 
@@ -82,7 +102,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1030, 422);
+            this.tabPage4.Size = new System.Drawing.Size(1029, 422);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Reporte Reservas Usuarios";
             // 
@@ -94,7 +114,7 @@
             this.reportViewer5.Location = new System.Drawing.Point(3, 3);
             this.reportViewer5.Name = "reportViewer5";
             this.reportViewer5.ServerReport.BearerToken = null;
-            this.reportViewer5.Size = new System.Drawing.Size(1024, 416);
+            this.reportViewer5.Size = new System.Drawing.Size(1023, 416);
             this.reportViewer5.TabIndex = 1;
             // 
             // tabPage3
@@ -106,7 +126,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1030, 422);
+            this.tabPage3.Size = new System.Drawing.Size(1029, 422);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Reporte Reservas Profesores";
             // 
@@ -118,7 +138,7 @@
             this.reportViewer4.Location = new System.Drawing.Point(3, 3);
             this.reportViewer4.Name = "reportViewer4";
             this.reportViewer4.ServerReport.BearerToken = null;
-            this.reportViewer4.Size = new System.Drawing.Size(1024, 416);
+            this.reportViewer4.Size = new System.Drawing.Size(1023, 416);
             this.reportViewer4.TabIndex = 1;
             // 
             // tabPage2
@@ -130,7 +150,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1030, 422);
+            this.tabPage2.Size = new System.Drawing.Size(1029, 422);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Reporte Salones";
             // 
@@ -139,10 +159,14 @@
             this.reportViewer3.BackColor = System.Drawing.SystemColors.Menu;
             this.reportViewer3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.reportViewer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.salonsBindingSource;
+            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer3.LocalReport.ReportEmbeddedResource = "Contro_unity.Clases.Reporte_Salon.rdlc";
             this.reportViewer3.Location = new System.Drawing.Point(3, 3);
             this.reportViewer3.Name = "reportViewer3";
             this.reportViewer3.ServerReport.BearerToken = null;
-            this.reportViewer3.Size = new System.Drawing.Size(1024, 416);
+            this.reportViewer3.Size = new System.Drawing.Size(1023, 416);
             this.reportViewer3.TabIndex = 1;
             // 
             // tabControl1
@@ -160,7 +184,7 @@
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1038, 451);
+            this.tabControl1.Size = new System.Drawing.Size(1037, 451);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
@@ -172,7 +196,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1030, 422);
+            this.tabPage1.Size = new System.Drawing.Size(1029, 422);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Reporte Inventario";
             // 
@@ -181,11 +205,28 @@
             this.RPInventario.BackColor = System.Drawing.SystemColors.Menu;
             this.RPInventario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.RPInventario.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource2.Name = "DataSet1";
+            reportDataSource2.Value = this.implementsBindingSource;
+            this.RPInventario.LocalReport.DataSources.Add(reportDataSource2);
+            this.RPInventario.LocalReport.ReportEmbeddedResource = "Contro_unity.Clases.Reporte_Inventario.rdlc";
             this.RPInventario.Location = new System.Drawing.Point(3, 3);
             this.RPInventario.Name = "RPInventario";
             this.RPInventario.ServerReport.BearerToken = null;
-            this.RPInventario.Size = new System.Drawing.Size(1024, 416);
+            this.RPInventario.Size = new System.Drawing.Size(1023, 416);
             this.RPInventario.TabIndex = 0;
+            // 
+            // implementsTableAdapter
+            // 
+            this.implementsTableAdapter.ClearBeforeFill = true;
+            // 
+            // salonsBindingSource
+            // 
+            this.salonsBindingSource.DataMember = "salons";
+            this.salonsBindingSource.DataSource = this.control_unityDataSet;
+            // 
+            // salonsTableAdapter
+            // 
+            this.salonsTableAdapter.ClearBeforeFill = true;
             // 
             // MenuReportes
             // 
@@ -199,6 +240,8 @@
             this.Name = "MenuReportes";
             this.Text = "MenuReportes";
             this.Load += new System.EventHandler(this.MenuReportes_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.implementsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.control_unityDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.panel1.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
@@ -206,6 +249,7 @@
             this.tabPage2.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.salonsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -223,5 +267,10 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private Microsoft.Reporting.WinForms.ReportViewer RPInventario;
+        private System.Windows.Forms.BindingSource implementsBindingSource;
+        private control_unityDataSet control_unityDataSet;
+        private control_unityDataSetTableAdapters.implementsTableAdapter implementsTableAdapter;
+        private System.Windows.Forms.BindingSource salonsBindingSource;
+        private control_unityDataSetTableAdapters.salonsTableAdapter salonsTableAdapter;
     }
 }

@@ -42,7 +42,6 @@
             this.btnConfiguraciones = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnUsuarios = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnReservas = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnReporte = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnProfesores = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnInventario = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnSalones = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -59,8 +58,8 @@
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.PanelContenedor = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
@@ -199,14 +198,14 @@
             this.btnConfiguraciones.IconVisible = true;
             this.btnConfiguraciones.IconZoom = 50D;
             this.btnConfiguraciones.IsTab = false;
-            this.btnConfiguraciones.Location = new System.Drawing.Point(8, 372);
+            this.btnConfiguraciones.Location = new System.Drawing.Point(8, 303);
             this.btnConfiguraciones.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnConfiguraciones.Name = "btnConfiguraciones";
             this.btnConfiguraciones.Normalcolor = System.Drawing.Color.LightGray;
             this.btnConfiguraciones.OnHovercolor = System.Drawing.Color.Khaki;
             this.btnConfiguraciones.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnConfiguraciones.selected = false;
-            this.btnConfiguraciones.Size = new System.Drawing.Size(192, 43);
+            this.btnConfiguraciones.Size = new System.Drawing.Size(192, 32);
             this.btnConfiguraciones.TabIndex = 7;
             this.btnConfiguraciones.Text = "Configuraciones";
             this.btnConfiguraciones.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -236,14 +235,14 @@
             this.btnUsuarios.IconVisible = true;
             this.btnUsuarios.IconZoom = 50D;
             this.btnUsuarios.IsTab = false;
-            this.btnUsuarios.Location = new System.Drawing.Point(8, 417);
+            this.btnUsuarios.Location = new System.Drawing.Point(8, 338);
             this.btnUsuarios.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Normalcolor = System.Drawing.Color.LightGray;
             this.btnUsuarios.OnHovercolor = System.Drawing.Color.Khaki;
             this.btnUsuarios.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnUsuarios.selected = false;
-            this.btnUsuarios.Size = new System.Drawing.Size(192, 45);
+            this.btnUsuarios.Size = new System.Drawing.Size(192, 34);
             this.btnUsuarios.TabIndex = 5;
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -273,14 +272,14 @@
             this.btnReservas.IconVisible = true;
             this.btnReservas.IconZoom = 50D;
             this.btnReservas.IsTab = false;
-            this.btnReservas.Location = new System.Drawing.Point(8, 225);
+            this.btnReservas.Location = new System.Drawing.Point(8, 192);
             this.btnReservas.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnReservas.Name = "btnReservas";
             this.btnReservas.Normalcolor = System.Drawing.Color.LightGray;
             this.btnReservas.OnHovercolor = System.Drawing.Color.Khaki;
             this.btnReservas.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnReservas.selected = false;
-            this.btnReservas.Size = new System.Drawing.Size(192, 45);
+            this.btnReservas.Size = new System.Drawing.Size(192, 34);
             this.btnReservas.TabIndex = 6;
             this.btnReservas.Text = "Reservas";
             this.btnReservas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -288,43 +287,6 @@
             this.btnReservas.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolTip1.SetToolTip(this.btnReservas, "Reservas");
             this.btnReservas.Click += new System.EventHandler(this.btnReservas_Click);
-            // 
-            // btnReporte
-            // 
-            this.btnReporte.Activecolor = System.Drawing.Color.Khaki;
-            this.btnReporte.BackColor = System.Drawing.Color.LightGray;
-            this.btnReporte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnReporte.BorderRadius = 5;
-            this.btnReporte.ButtonText = "Reportes";
-            this.btnReporte.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReporte.DisabledColor = System.Drawing.Color.LightGray;
-            this.btnReporte.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnReporte.Iconimage = global::Contro_unity.Properties.Resources.icons8_increase_50;
-            this.btnReporte.Iconimage_right = null;
-            this.btnReporte.Iconimage_right_Selected = null;
-            this.btnReporte.Iconimage_Selected = null;
-            this.btnReporte.IconMarginLeft = 0;
-            this.btnReporte.IconMarginRight = 0;
-            this.btnReporte.IconRightVisible = true;
-            this.btnReporte.IconRightZoom = 0D;
-            this.btnReporte.IconVisible = true;
-            this.btnReporte.IconZoom = 50D;
-            this.btnReporte.IsTab = false;
-            this.btnReporte.Location = new System.Drawing.Point(8, 274);
-            this.btnReporte.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Normalcolor = System.Drawing.Color.LightGray;
-            this.btnReporte.OnHovercolor = System.Drawing.Color.Khaki;
-            this.btnReporte.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnReporte.selected = false;
-            this.btnReporte.Size = new System.Drawing.Size(192, 45);
-            this.btnReporte.TabIndex = 5;
-            this.btnReporte.Text = "Reportes";
-            this.btnReporte.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnReporte.Textcolor = System.Drawing.Color.Black;
-            this.btnReporte.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolTip1.SetToolTip(this.btnReporte, "Reportes");
-            this.btnReporte.Click += new System.EventHandler(this.btnReportes_Click_1);
             // 
             // btnProfesores
             // 
@@ -347,14 +309,14 @@
             this.btnProfesores.IconVisible = true;
             this.btnProfesores.IconZoom = 50D;
             this.btnProfesores.IsTab = false;
-            this.btnProfesores.Location = new System.Drawing.Point(8, 127);
+            this.btnProfesores.Location = new System.Drawing.Point(8, 117);
             this.btnProfesores.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnProfesores.Name = "btnProfesores";
             this.btnProfesores.Normalcolor = System.Drawing.Color.LightGray;
             this.btnProfesores.OnHovercolor = System.Drawing.Color.Khaki;
             this.btnProfesores.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnProfesores.selected = false;
-            this.btnProfesores.Size = new System.Drawing.Size(192, 45);
+            this.btnProfesores.Size = new System.Drawing.Size(192, 34);
             this.btnProfesores.TabIndex = 4;
             this.btnProfesores.Text = "Profesores";
             this.btnProfesores.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -384,14 +346,14 @@
             this.btnInventario.IconVisible = true;
             this.btnInventario.IconZoom = 50D;
             this.btnInventario.IsTab = false;
-            this.btnInventario.Location = new System.Drawing.Point(8, 323);
+            this.btnInventario.Location = new System.Drawing.Point(8, 266);
             this.btnInventario.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnInventario.Name = "btnInventario";
             this.btnInventario.Normalcolor = System.Drawing.Color.LightGray;
             this.btnInventario.OnHovercolor = System.Drawing.Color.Khaki;
             this.btnInventario.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnInventario.selected = false;
-            this.btnInventario.Size = new System.Drawing.Size(192, 45);
+            this.btnInventario.Size = new System.Drawing.Size(192, 34);
             this.btnInventario.TabIndex = 4;
             this.btnInventario.Text = "Inventario";
             this.btnInventario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -421,14 +383,14 @@
             this.btnSalones.IconVisible = true;
             this.btnSalones.IconZoom = 50D;
             this.btnSalones.IsTab = false;
-            this.btnSalones.Location = new System.Drawing.Point(8, 176);
+            this.btnSalones.Location = new System.Drawing.Point(8, 154);
             this.btnSalones.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnSalones.Name = "btnSalones";
             this.btnSalones.Normalcolor = System.Drawing.Color.LightGray;
             this.btnSalones.OnHovercolor = System.Drawing.Color.Khaki;
             this.btnSalones.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnSalones.selected = false;
-            this.btnSalones.Size = new System.Drawing.Size(192, 45);
+            this.btnSalones.Size = new System.Drawing.Size(192, 34);
             this.btnSalones.TabIndex = 3;
             this.btnSalones.Text = "Salones";
             this.btnSalones.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -465,7 +427,7 @@
             this.btnInicio.OnHovercolor = System.Drawing.Color.Khaki;
             this.btnInicio.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnInicio.selected = false;
-            this.btnInicio.Size = new System.Drawing.Size(192, 45);
+            this.btnInicio.Size = new System.Drawing.Size(192, 34);
             this.btnInicio.TabIndex = 2;
             this.btnInicio.Text = "Inicio";
             this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -495,14 +457,14 @@
             this.btnCerrarSesion.IconVisible = true;
             this.btnCerrarSesion.IconZoom = 60D;
             this.btnCerrarSesion.IsTab = false;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(8, 76);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(8, 72);
             this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Normalcolor = System.Drawing.Color.LightGray;
             this.btnCerrarSesion.OnHovercolor = System.Drawing.Color.LightCoral;
             this.btnCerrarSesion.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnCerrarSesion.selected = false;
-            this.btnCerrarSesion.Size = new System.Drawing.Size(192, 40);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(192, 44);
             this.btnCerrarSesion.TabIndex = 11;
             this.btnCerrarSesion.Text = "Cerrar Sesiòn";
             this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -564,7 +526,6 @@
             this.menuVertical.Controls.Add(this.btnConfiguraciones);
             this.menuVertical.Controls.Add(this.btnUsuarios);
             this.menuVertical.Controls.Add(this.btnReservas);
-            this.menuVertical.Controls.Add(this.btnReporte);
             this.menuVertical.Controls.Add(this.btnProfesores);
             this.menuVertical.Controls.Add(this.btnReportes);
             this.menuVertical.Controls.Add(this.btnInventario);
@@ -599,14 +560,14 @@
             this.btnReportes.IconVisible = true;
             this.btnReportes.IconZoom = 50D;
             this.btnReportes.IsTab = false;
-            this.btnReportes.Location = new System.Drawing.Point(8, 274);
+            this.btnReportes.Location = new System.Drawing.Point(8, 229);
             this.btnReportes.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Normalcolor = System.Drawing.Color.LightGray;
             this.btnReportes.OnHovercolor = System.Drawing.Color.Khaki;
             this.btnReportes.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnReportes.selected = false;
-            this.btnReportes.Size = new System.Drawing.Size(192, 45);
+            this.btnReportes.Size = new System.Drawing.Size(192, 34);
             this.btnReportes.TabIndex = 5;
             this.btnReportes.Text = "Reportes";
             this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -661,19 +622,6 @@
             this.panel2.Size = new System.Drawing.Size(1024, 52);
             this.panel2.TabIndex = 3;
             // 
-            // lblFecha
-            // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblFecha.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblFecha.Location = new System.Drawing.Point(767, 26);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(71, 22);
-            this.lblFecha.TabIndex = 0;
-            this.lblFecha.Text = "FECHA";
-            this.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // lblHora
             // 
             this.lblHora.AutoSize = true;
@@ -686,6 +634,19 @@
             this.lblHora.TabIndex = 1;
             this.lblHora.Text = "HORA";
             this.lblHora.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblFecha.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblFecha.Location = new System.Drawing.Point(767, 26);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(71, 22);
+            this.lblFecha.TabIndex = 0;
+            this.lblFecha.Text = "FECHA";
+            this.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // MenuPrincipal
             // 
@@ -749,7 +710,6 @@
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.PictureBox btnSlide;
         private System.Windows.Forms.PictureBox btnInfo;
-        private Bunifu.Framework.UI.BunifuFlatButton btnReporte;
         private Bunifu.Framework.UI.BunifuFlatButton btnCerrarSesion;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblHora;

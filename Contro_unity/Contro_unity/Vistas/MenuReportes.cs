@@ -19,6 +19,10 @@ namespace Contro_unity
 
         private void MenuReportes_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'control_unityDataSet.salons' Puede moverla o quitarla según sea necesario.
+            this.salonsTableAdapter.Fill(this.control_unityDataSet.salons);
+            // TODO: esta línea de código carga datos en la tabla 'control_unityDataSet.implements' Puede moverla o quitarla según sea necesario.
+            this.implementsTableAdapter.Fill(this.control_unityDataSet.implements);
 
 
             this.RPInventario.RefreshReport();
