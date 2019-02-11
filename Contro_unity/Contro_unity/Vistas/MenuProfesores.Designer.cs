@@ -55,19 +55,20 @@
             this.btnEliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnEditar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.teacherTableAdapter = new Contro_unity.control_unityDataSetTableAdapters.teacherTableAdapter();
-            this.txtBuscar = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.lblHora = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtBuscar = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.gbEditInventario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teacherBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.control_unityDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -120,7 +121,7 @@
             this.btnConfirmarEditar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
             this.btnConfirmarEditar.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnConfirmarEditar.selected = false;
-            this.btnConfirmarEditar.Size = new System.Drawing.Size(140, 43);
+            this.btnConfirmarEditar.Size = new System.Drawing.Size(154, 54);
             this.btnConfirmarEditar.TabIndex = 32;
             this.btnConfirmarEditar.Text = "Confirmar";
             this.btnConfirmarEditar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -198,7 +199,7 @@
             this.btnConfirmarAgregar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
             this.btnConfirmarAgregar.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnConfirmarAgregar.selected = false;
-            this.btnConfirmarAgregar.Size = new System.Drawing.Size(140, 43);
+            this.btnConfirmarAgregar.Size = new System.Drawing.Size(154, 54);
             this.btnConfirmarAgregar.TabIndex = 29;
             this.btnConfirmarAgregar.Text = "Confirmar";
             this.btnConfirmarAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -311,7 +312,7 @@
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Menu;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 42);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 88);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -392,7 +393,7 @@
             this.btnAgregar.IconVisible = true;
             this.btnAgregar.IconZoom = 55D;
             this.btnAgregar.IsTab = false;
-            this.btnAgregar.Location = new System.Drawing.Point(12, 469);
+            this.btnAgregar.Location = new System.Drawing.Point(12, 495);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Normalcolor = System.Drawing.SystemColors.Menu;
@@ -429,7 +430,7 @@
             this.btnEliminar.IconVisible = true;
             this.btnEliminar.IconZoom = 55D;
             this.btnEliminar.IsTab = false;
-            this.btnEliminar.Location = new System.Drawing.Point(322, 469);
+            this.btnEliminar.Location = new System.Drawing.Point(322, 495);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Normalcolor = System.Drawing.SystemColors.Menu;
@@ -481,7 +482,7 @@
             this.btnEditar.IconVisible = true;
             this.btnEditar.IconZoom = 55D;
             this.btnEditar.IsTab = false;
-            this.btnEditar.Location = new System.Drawing.Point(164, 469);
+            this.btnEditar.Location = new System.Drawing.Point(167, 495);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(5);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Normalcolor = System.Drawing.SystemColors.Menu;
@@ -497,43 +498,20 @@
             this.toolTip1.SetToolTip(this.btnEditar, "Agregar");
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // pictureBox1
+            // pictureBox2
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::Contro_unity.Properties.Resources.icons8_find_user_male_50;
-            this.pictureBox1.Location = new System.Drawing.Point(985, 42);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(27, 27);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 36;
-            this.pictureBox1.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox1, "Buscar");
+            this.pictureBox2.Image = global::Contro_unity.Properties.Resources.icons8_find_user_male_50;
+            this.pictureBox2.Location = new System.Drawing.Point(301, 42);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(27, 27);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 41;
+            this.pictureBox2.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox2, "Buscar");
             // 
             // teacherTableAdapter
             // 
             this.teacherTableAdapter.ClearBeforeFill = true;
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBuscar.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtBuscar.HintForeColor = System.Drawing.Color.Empty;
-            this.txtBuscar.HintText = "";
-            this.txtBuscar.isPassword = false;
-            this.txtBuscar.LineFocusedColor = System.Drawing.Color.Khaki;
-            this.txtBuscar.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtBuscar.LineMouseHoverColor = System.Drawing.Color.Khaki;
-            this.txtBuscar.LineThickness = 2;
-            this.txtBuscar.Location = new System.Drawing.Point(818, 42);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(194, 30);
-            this.txtBuscar.TabIndex = 35;
-            this.txtBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtBuscar.OnValueChanged += new System.EventHandler(this.txtBuscar_OnValueChanged);
             // 
             // lblHora
             // 
@@ -579,15 +557,47 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(9, 54);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(125, 18);
+            this.label3.TabIndex = 42;
+            this.label3.Text = "Buscar Profesor:";
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtBuscar.HintForeColor = System.Drawing.Color.Empty;
+            this.txtBuscar.HintText = "";
+            this.txtBuscar.isPassword = false;
+            this.txtBuscar.LineFocusedColor = System.Drawing.Color.Khaki;
+            this.txtBuscar.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtBuscar.LineMouseHoverColor = System.Drawing.Color.Khaki;
+            this.txtBuscar.LineThickness = 2;
+            this.txtBuscar.Location = new System.Drawing.Point(133, 42);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(195, 30);
+            this.txtBuscar.TabIndex = 40;
+            this.txtBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtBuscar.OnValueChanged += new System.EventHandler(this.txtBuscar_OnValueChanged_1);
+            // 
             // MenuProfesores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(1024, 630);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnEliminar);
@@ -605,7 +615,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.teacherBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.control_unityDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -641,11 +651,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        public Bunifu.Framework.UI.BunifuMaterialTextbox txtBuscar;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox txtBuscar;
     }
 }

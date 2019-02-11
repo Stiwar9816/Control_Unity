@@ -105,7 +105,7 @@
             this.btnConfirmar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
             this.btnConfirmar.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnConfirmar.selected = false;
-            this.btnConfirmar.Size = new System.Drawing.Size(140, 42);
+            this.btnConfirmar.Size = new System.Drawing.Size(152, 49);
             this.btnConfirmar.TabIndex = 3;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

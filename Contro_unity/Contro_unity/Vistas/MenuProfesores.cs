@@ -158,16 +158,16 @@ namespace Contro_unity
             btnConfirmarEditar.Visible = false;
         }
        
-        private void txtBuscar_OnValueChanged(object sender, EventArgs e)
-        {
-                var profesor = new Clases.profesor();
-                profesor.Buscar(dataGridView1, txtBuscar.Text.Trim());
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblHora.Text = DateTime.Now.ToString("hh:MM:ss tt");
             lblFecha.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void txtBuscar_OnValueChanged_1(object sender, EventArgs e)
+        {
+            var profesor = new Clases.profesor();
+            profesor.Buscar(dataGridView1, txtBuscar.Text.Trim());
         }
     }
 }

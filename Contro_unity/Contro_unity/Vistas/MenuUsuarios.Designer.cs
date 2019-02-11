@@ -69,6 +69,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblHora = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -99,7 +100,7 @@
             this.btnEliminar.IconVisible = true;
             this.btnEliminar.IconZoom = 55D;
             this.btnEliminar.IsTab = false;
-            this.btnEliminar.Location = new System.Drawing.Point(321, 480);
+            this.btnEliminar.Location = new System.Drawing.Point(322, 501);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Normalcolor = System.Drawing.SystemColors.Menu;
@@ -136,7 +137,7 @@
             this.btnEditar.IconVisible = true;
             this.btnEditar.IconZoom = 55D;
             this.btnEditar.IsTab = false;
-            this.btnEditar.Location = new System.Drawing.Point(166, 480);
+            this.btnEditar.Location = new System.Drawing.Point(167, 501);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Normalcolor = System.Drawing.SystemColors.Menu;
@@ -173,7 +174,7 @@
             this.btnAgregar.IconVisible = true;
             this.btnAgregar.IconZoom = 55D;
             this.btnAgregar.IsTab = false;
-            this.btnAgregar.Location = new System.Drawing.Point(16, 480);
+            this.btnAgregar.Location = new System.Drawing.Point(17, 501);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Normalcolor = System.Drawing.SystemColors.Menu;
@@ -217,7 +218,7 @@
             this.btnConfirmarEditar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
             this.btnConfirmarEditar.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnConfirmarEditar.selected = false;
-            this.btnConfirmarEditar.Size = new System.Drawing.Size(136, 43);
+            this.btnConfirmarEditar.Size = new System.Drawing.Size(151, 50);
             this.btnConfirmarEditar.TabIndex = 34;
             this.btnConfirmarEditar.Text = "Confirmar";
             this.btnConfirmarEditar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -255,7 +256,7 @@
             this.btnConfirmarAgregar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
             this.btnConfirmarAgregar.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnConfirmarAgregar.selected = false;
-            this.btnConfirmarAgregar.Size = new System.Drawing.Size(136, 43);
+            this.btnConfirmarAgregar.Size = new System.Drawing.Size(151, 50);
             this.btnConfirmarAgregar.TabIndex = 33;
             this.btnConfirmarAgregar.Text = "Confirmar";
             this.btnConfirmarAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -283,7 +284,7 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::Contro_unity.Properties.Resources.icons8_find_user_male_50;
-            this.pictureBox1.Location = new System.Drawing.Point(985, 60);
+            this.pictureBox1.Location = new System.Drawing.Point(301, 62);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(27, 27);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -338,7 +339,7 @@
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Menu;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 60);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 107);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -610,7 +611,6 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBuscar.BackColor = System.Drawing.SystemColors.Menu;
             this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -622,7 +622,7 @@
             this.txtBuscar.LineIdleColor = System.Drawing.Color.Gray;
             this.txtBuscar.LineMouseHoverColor = System.Drawing.Color.Khaki;
             this.txtBuscar.LineThickness = 2;
-            this.txtBuscar.Location = new System.Drawing.Point(817, 60);
+            this.txtBuscar.Location = new System.Drawing.Point(133, 62);
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(195, 30);
@@ -674,12 +674,23 @@
             this.lblFecha.Text = "FECHA";
             this.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(9, 74);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(117, 18);
+            this.label3.TabIndex = 39;
+            this.label3.Text = "Buscar Usuario:";
+            // 
             // MenuUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(1024, 630);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtBuscar);
@@ -752,5 +763,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Label label3;
     }
 }

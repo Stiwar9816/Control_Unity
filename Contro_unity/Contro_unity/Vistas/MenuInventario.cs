@@ -89,7 +89,7 @@ namespace Contro_unity
             var fecha = System.DateTime.Now.ToShortDateString();
             var hora = System.DateTime.Now.ToShortTimeString();
             var implemento = new Clases.implemento();
-            implemento.Editar(Convert.ToInt32(txtID.Text), txtCod_Serie.Text, txtNombre.Text,fecha+" "+hora,Convert.ToInt32(txtStock.Value), txtMarca.Text, txtDescripcion.Text);
+            implemento.Editar(Convert.ToInt32(txtID.Text), txtCod_Serie.Text, txtNombre.Text,fecha+" "+hora,Convert.ToInt32(txtStock.Value),txtMarca.Text, txtDescripcion.Text);
             implementsTableAdapter.Fill(this.control_unityDataSet.implements);
             MessageBox.Show("Actualizado Correctamente");
             txtID.Text = "";
@@ -168,16 +168,16 @@ namespace Contro_unity
             btnConfirmarAgregar.Visible = false;
         }
 
-        private void txtBuscar_OnValueChanged(object sender, EventArgs e)
-        {
-            var implemento = new Clases.implemento();
-            implemento.Buscar(dataGridView1, txtBuscar.Text.Trim());
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblHora.Text = DateTime.Now.ToString("hh:MM:ss tt");
             lblFecha.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void txtBuscar_OnValueChanged_1(object sender, EventArgs e)
+        {
+            var implemento = new Clases.implemento();
+            implemento.Buscar(dataGridView1, txtBuscar.Text.Trim());
         }
     }
 }
