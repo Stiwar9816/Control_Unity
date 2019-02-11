@@ -94,6 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Conexion.cs" />
+    <Compile Include="Clases\Encriptar.cs" />
     <Compile Include="Clases\Funciones.cs" />
     <Compile Include="Clases\implemento.cs" />
     <Compile Include="Clases\login.cs" />
