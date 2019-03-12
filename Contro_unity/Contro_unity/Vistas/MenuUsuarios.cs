@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Contro_unity.Vistas;
+using Contro_unity.Clases;
 
 namespace Contro_unity
 {
@@ -35,6 +36,7 @@ namespace Contro_unity
         }
         private void Ingresar_Usuario()
         {
+            
             var fecha = System.DateTime.Now.ToShortDateString();
             var hora = System.DateTime.Now.ToShortTimeString();
             var Usuario = new Clases.user();
@@ -156,7 +158,7 @@ namespace Contro_unity
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            lblHora.Text = DateTime.Now.ToString("hh:MM:ss tt");
+            lblHora.Text = DateTime.Now.ToShortTimeString();
             lblFecha.Text = DateTime.Now.ToLongDateString();
         }
     }

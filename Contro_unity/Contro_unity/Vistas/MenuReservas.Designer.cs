@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtPrograma = new System.Windows.Forms.ComboBox();
             this.txtNombre = new System.Windows.Forms.ComboBox();
@@ -56,9 +61,19 @@
             this.teacherTableAdapter = new Contro_unity.control_unityDataSetTableAdapters.teacherTableAdapter();
             this.salonsTableAdapter = new Contro_unity.control_unityDataSetTableAdapters.salonsTableAdapter();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.CtrlReservas = new System.Windows.Forms.TabPage();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.program = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Implements = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Salons = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datetime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.state = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.action = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.RerservasPro = new System.Windows.Forms.TabPage();
+            this.ReservasUsu = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -70,7 +85,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.salonsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.CtrlReservas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.RerservasPro.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -356,9 +373,9 @@
             this.btnConfirmar.Iconimage_Selected = null;
             this.btnConfirmar.IconMarginLeft = 0;
             this.btnConfirmar.IconMarginRight = 0;
-            this.btnConfirmar.IconRightVisible = true;
+            this.btnConfirmar.IconRightVisible = false;
             this.btnConfirmar.IconRightZoom = 0D;
-            this.btnConfirmar.IconVisible = true;
+            this.btnConfirmar.IconVisible = false;
             this.btnConfirmar.IconZoom = 55D;
             this.btnConfirmar.IsTab = false;
             this.btnConfirmar.Location = new System.Drawing.Point(409, 378);
@@ -368,7 +385,7 @@
             this.btnConfirmar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
             this.btnConfirmar.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnConfirmar.selected = false;
-            this.btnConfirmar.Size = new System.Drawing.Size(140, 50);
+            this.btnConfirmar.Size = new System.Drawing.Size(140, 49);
             this.btnConfirmar.TabIndex = 18;
             this.btnConfirmar.Text = "RESERVAR";
             this.btnConfirmar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -396,46 +413,193 @@
             this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.CtrlReservas);
+            this.tabControl1.Controls.Add(this.RerservasPro);
+            this.tabControl1.Controls.Add(this.ReservasUsu);
             this.tabControl1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(-4, 26);
+            this.tabControl1.Location = new System.Drawing.Point(-3, 31);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1037, 610);
+            this.tabControl1.Size = new System.Drawing.Size(1037, 586);
             this.tabControl1.TabIndex = 19;
             // 
-            // tabPage1
+            // CtrlReservas
             // 
-            this.tabPage1.BackColor = System.Drawing.SystemColors.Menu;
-            this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Controls.Add(this.groupBox2);
-            this.tabPage1.Controls.Add(this.btnConfirmar);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1029, 581);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Reservas Profesores";
+            this.CtrlReservas.BackColor = System.Drawing.SystemColors.Menu;
+            this.CtrlReservas.Controls.Add(this.dataGridView2);
+            this.CtrlReservas.Location = new System.Drawing.Point(4, 25);
+            this.CtrlReservas.Name = "CtrlReservas";
+            this.CtrlReservas.Size = new System.Drawing.Size(1029, 557);
+            this.CtrlReservas.TabIndex = 2;
+            this.CtrlReservas.Text = "Control Reservas";
             // 
-            // tabPage2
+            // dataGridView2
             // 
-            this.tabPage2.BackColor = System.Drawing.SystemColors.Menu;
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1029, 581);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Reservas Usuarios";
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.Menu;
+            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView2.ColumnHeadersHeight = 37;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.name,
+            this.program,
+            this.Implements,
+            this.Salons,
+            this.datetime,
+            this.state,
+            this.action});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView2.EnableHeadersVisualStyles = false;
+            this.dataGridView2.GridColor = System.Drawing.SystemColors.Menu;
+            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView2.RowHeadersVisible = false;
+            this.dataGridView2.RowHeadersWidth = 10;
+            this.dataGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView2.Size = new System.Drawing.Size(1024, 522);
+            this.dataGridView2.StandardTab = true;
+            this.dataGridView2.TabIndex = 22;
+            // 
+            // name
+            // 
+            this.name.DataPropertyName = "name";
+            this.name.HeaderText = "Nombre Completo";
+            this.name.Name = "name";
+            this.name.Width = 133;
+            // 
+            // program
+            // 
+            this.program.HeaderText = "Programa";
+            this.program.Name = "program";
+            this.program.Width = 91;
+            // 
+            // Implements
+            // 
+            this.Implements.HeaderText = "Implementos";
+            this.Implements.Name = "Implements";
+            this.Implements.Width = 111;
+            // 
+            // Salons
+            // 
+            this.Salons.HeaderText = "Salon";
+            this.Salons.Name = "Salons";
+            this.Salons.Width = 62;
+            // 
+            // datetime
+            // 
+            this.datetime.HeaderText = "Fecha de Reserva";
+            this.datetime.Name = "datetime";
+            this.datetime.Width = 125;
+            // 
+            // state
+            // 
+            this.state.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.state.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.state.HeaderText = "Estado de Reservas";
+            this.state.Items.AddRange(new object[] {
+            "No Confirmado",
+            "Confirmado",
+            "Cancelado"});
+            this.state.Name = "state";
+            this.state.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.state.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.state.Width = 132;
+            // 
+            // action
+            // 
+            this.action.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.action.HeaderText = "Acción";
+            this.action.Name = "action";
+            this.action.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.action.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.action.Text = "Confirmar";
+            this.action.ToolTipText = "Confirmar Estado";
+            this.action.UseColumnTextForButtonValue = true;
+            this.action.Width = 74;
+            // 
+            // RerservasPro
+            // 
+            this.RerservasPro.BackColor = System.Drawing.SystemColors.Menu;
+            this.RerservasPro.Controls.Add(this.groupBox1);
+            this.RerservasPro.Controls.Add(this.groupBox2);
+            this.RerservasPro.Controls.Add(this.btnConfirmar);
+            this.RerservasPro.Location = new System.Drawing.Point(4, 25);
+            this.RerservasPro.Name = "RerservasPro";
+            this.RerservasPro.Padding = new System.Windows.Forms.Padding(3);
+            this.RerservasPro.Size = new System.Drawing.Size(1029, 557);
+            this.RerservasPro.TabIndex = 0;
+            this.RerservasPro.Text = "Reservas Profesores";
+            // 
+            // ReservasUsu
+            // 
+            this.ReservasUsu.BackColor = System.Drawing.SystemColors.Menu;
+            this.ReservasUsu.Location = new System.Drawing.Point(4, 25);
+            this.ReservasUsu.Name = "ReservasUsu";
+            this.ReservasUsu.Padding = new System.Windows.Forms.Padding(3);
+            this.ReservasUsu.Size = new System.Drawing.Size(1029, 557);
+            this.ReservasUsu.TabIndex = 1;
+            this.ReservasUsu.Text = "Reservas Usuarios";
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1024, 25);
+            this.panel1.Size = new System.Drawing.Size(1024, 31);
             this.panel1.TabIndex = 20;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(2, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(136, 19);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "MENÚ RESERVAS";
             // 
             // lblHora
             // 
@@ -504,8 +668,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.salonsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.CtrlReservas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.RerservasPro.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -541,12 +708,22 @@
         private System.Windows.Forms.BindingSource salonsBindingSource;
         private control_unityDataSetTableAdapters.salonsTableAdapter salonsTableAdapter;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage RerservasPro;
+        private System.Windows.Forms.TabPage ReservasUsu;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TabPage CtrlReservas;
+        public System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn program;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Implements;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Salons;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datetime;
+        private System.Windows.Forms.DataGridViewComboBoxColumn state;
+        private System.Windows.Forms.DataGridViewButtonColumn action;
+        private System.Windows.Forms.Label label1;
     }
 }
