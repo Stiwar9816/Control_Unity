@@ -35,6 +35,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.txtPrograma = new System.Windows.Forms.ComboBox();
             this.txtNombre = new System.Windows.Forms.ComboBox();
             this.teacherBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -63,21 +65,28 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.CtrlReservas = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.program = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Implements = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Salons = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datetime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.state = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.idbookingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ccuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.programuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roluserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reserveimplementsuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reservesalonuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datetimeinuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deliveredbyuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datetimeoutuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.receivedbyuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookingstateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.action = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.RerservasPro = new System.Windows.Forms.TabPage();
-            this.ReservasUsu = new System.Windows.Forms.TabPage();
+            this.bookinguserBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Rerservas = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.booking_userTableAdapter = new Contro_unity.control_unityDataSetTableAdapters.booking_userTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.teacherBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.control_unityDataSet)).BeginInit();
@@ -87,13 +96,16 @@
             this.tabControl1.SuspendLayout();
             this.CtrlReservas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.RerservasPro.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bookinguserBindingSource)).BeginInit();
+            this.Rerservas.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtPrograma);
             this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Controls.Add(this.label3);
@@ -102,10 +114,38 @@
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 37);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(381, 128);
+            this.groupBox1.Size = new System.Drawing.Size(381, 168);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS PERSONALES";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "",
+            "Profesor",
+            "Estudiante",
+            "Otro"});
+            this.comboBox1.Location = new System.Drawing.Point(94, 121);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(254, 26);
+            this.comboBox1.TabIndex = 21;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(7, 126);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(32, 16);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Rol:";
             // 
             // txtPrograma
             // 
@@ -158,7 +198,7 @@
             this.label3.AutoSize = true;
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 85);
+            this.label3.Location = new System.Drawing.Point(6, 80);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 16);
             this.label3.TabIndex = 1;
@@ -177,6 +217,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.txtSalon);
             this.groupBox2.Controls.Add(this.bunifuDatepicker1);
             this.groupBox2.Controls.Add(this.checkBox6);
@@ -385,7 +426,7 @@
             this.btnConfirmar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
             this.btnConfirmar.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnConfirmar.selected = false;
-            this.btnConfirmar.Size = new System.Drawing.Size(140, 49);
+            this.btnConfirmar.Size = new System.Drawing.Size(132, 49);
             this.btnConfirmar.TabIndex = 18;
             this.btnConfirmar.Text = "RESERVAR";
             this.btnConfirmar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -414,8 +455,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.CtrlReservas);
-            this.tabControl1.Controls.Add(this.RerservasPro);
-            this.tabControl1.Controls.Add(this.ReservasUsu);
+            this.tabControl1.Controls.Add(this.Rerservas);
             this.tabControl1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(-3, 31);
             this.tabControl1.Name = "tabControl1";
@@ -441,12 +481,16 @@
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -458,13 +502,20 @@
             this.dataGridView2.ColumnHeadersHeight = 37;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.name,
-            this.program,
-            this.Implements,
-            this.Salons,
-            this.datetime,
-            this.state,
+            this.idbookingDataGridViewTextBoxColumn,
+            this.ccuserDataGridViewTextBoxColumn,
+            this.nomuserDataGridViewTextBoxColumn,
+            this.programuserDataGridViewTextBoxColumn,
+            this.roluserDataGridViewTextBoxColumn,
+            this.reserveimplementsuserDataGridViewTextBoxColumn,
+            this.reservesalonuserDataGridViewTextBoxColumn,
+            this.datetimeinuserDataGridViewTextBoxColumn,
+            this.deliveredbyuserDataGridViewTextBoxColumn,
+            this.datetimeoutuserDataGridViewTextBoxColumn,
+            this.receivedbyuserDataGridViewTextBoxColumn,
+            this.bookingstateDataGridViewTextBoxColumn,
             this.action});
+            this.dataGridView2.DataSource = this.bookinguserBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Menu;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -497,54 +548,103 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(1024, 522);
+            this.dataGridView2.Size = new System.Drawing.Size(1020, 522);
             this.dataGridView2.StandardTab = true;
             this.dataGridView2.TabIndex = 22;
             // 
-            // name
+            // idbookingDataGridViewTextBoxColumn
             // 
-            this.name.DataPropertyName = "name";
-            this.name.HeaderText = "Nombre Completo";
-            this.name.Name = "name";
-            this.name.Width = 133;
+            this.idbookingDataGridViewTextBoxColumn.DataPropertyName = "id_booking";
+            this.idbookingDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idbookingDataGridViewTextBoxColumn.Name = "idbookingDataGridViewTextBoxColumn";
+            this.idbookingDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idbookingDataGridViewTextBoxColumn.Visible = false;
+            this.idbookingDataGridViewTextBoxColumn.Width = 45;
             // 
-            // program
+            // ccuserDataGridViewTextBoxColumn
             // 
-            this.program.HeaderText = "Programa";
-            this.program.Name = "program";
-            this.program.Width = 91;
+            this.ccuserDataGridViewTextBoxColumn.DataPropertyName = "cc_user";
+            this.ccuserDataGridViewTextBoxColumn.HeaderText = "C.C";
+            this.ccuserDataGridViewTextBoxColumn.Name = "ccuserDataGridViewTextBoxColumn";
+            this.ccuserDataGridViewTextBoxColumn.Width = 55;
             // 
-            // Implements
+            // nomuserDataGridViewTextBoxColumn
             // 
-            this.Implements.HeaderText = "Implementos";
-            this.Implements.Name = "Implements";
-            this.Implements.Width = 111;
+            this.nomuserDataGridViewTextBoxColumn.DataPropertyName = "nom_user";
+            this.nomuserDataGridViewTextBoxColumn.HeaderText = "Nombre Completo";
+            this.nomuserDataGridViewTextBoxColumn.Name = "nomuserDataGridViewTextBoxColumn";
+            this.nomuserDataGridViewTextBoxColumn.Width = 134;
             // 
-            // Salons
+            // programuserDataGridViewTextBoxColumn
             // 
-            this.Salons.HeaderText = "Salon";
-            this.Salons.Name = "Salons";
-            this.Salons.Width = 62;
+            this.programuserDataGridViewTextBoxColumn.DataPropertyName = "program_user";
+            this.programuserDataGridViewTextBoxColumn.HeaderText = "Programa";
+            this.programuserDataGridViewTextBoxColumn.Name = "programuserDataGridViewTextBoxColumn";
+            this.programuserDataGridViewTextBoxColumn.Width = 92;
             // 
-            // datetime
+            // roluserDataGridViewTextBoxColumn
             // 
-            this.datetime.HeaderText = "Fecha de Reserva";
-            this.datetime.Name = "datetime";
-            this.datetime.Width = 125;
+            this.roluserDataGridViewTextBoxColumn.DataPropertyName = "rol_user";
+            this.roluserDataGridViewTextBoxColumn.HeaderText = "Rol";
+            this.roluserDataGridViewTextBoxColumn.Name = "roluserDataGridViewTextBoxColumn";
+            this.roluserDataGridViewTextBoxColumn.Width = 49;
             // 
-            // state
+            // reserveimplementsuserDataGridViewTextBoxColumn
             // 
-            this.state.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.state.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.state.HeaderText = "Estado de Reservas";
-            this.state.Items.AddRange(new object[] {
+            this.reserveimplementsuserDataGridViewTextBoxColumn.DataPropertyName = "reserve_implements_user";
+            this.reserveimplementsuserDataGridViewTextBoxColumn.HeaderText = "Implementos";
+            this.reserveimplementsuserDataGridViewTextBoxColumn.Name = "reserveimplementsuserDataGridViewTextBoxColumn";
+            this.reserveimplementsuserDataGridViewTextBoxColumn.Width = 112;
+            // 
+            // reservesalonuserDataGridViewTextBoxColumn
+            // 
+            this.reservesalonuserDataGridViewTextBoxColumn.DataPropertyName = "reserve_salon_user";
+            this.reservesalonuserDataGridViewTextBoxColumn.HeaderText = "Salón";
+            this.reservesalonuserDataGridViewTextBoxColumn.Name = "reservesalonuserDataGridViewTextBoxColumn";
+            this.reservesalonuserDataGridViewTextBoxColumn.Width = 63;
+            // 
+            // datetimeinuserDataGridViewTextBoxColumn
+            // 
+            this.datetimeinuserDataGridViewTextBoxColumn.DataPropertyName = "datetime_in_user";
+            this.datetimeinuserDataGridViewTextBoxColumn.HeaderText = "Fecha de Entrega";
+            this.datetimeinuserDataGridViewTextBoxColumn.Name = "datetimeinuserDataGridViewTextBoxColumn";
+            this.datetimeinuserDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // deliveredbyuserDataGridViewTextBoxColumn
+            // 
+            this.deliveredbyuserDataGridViewTextBoxColumn.DataPropertyName = "delivered_by_user";
+            this.deliveredbyuserDataGridViewTextBoxColumn.HeaderText = "Entregado Por";
+            this.deliveredbyuserDataGridViewTextBoxColumn.Name = "deliveredbyuserDataGridViewTextBoxColumn";
+            this.deliveredbyuserDataGridViewTextBoxColumn.Width = 106;
+            // 
+            // datetimeoutuserDataGridViewTextBoxColumn
+            // 
+            this.datetimeoutuserDataGridViewTextBoxColumn.DataPropertyName = "datetime_out_user";
+            this.datetimeoutuserDataGridViewTextBoxColumn.HeaderText = "Fecha de Devolución";
+            this.datetimeoutuserDataGridViewTextBoxColumn.Name = "datetimeoutuserDataGridViewTextBoxColumn";
+            this.datetimeoutuserDataGridViewTextBoxColumn.Width = 144;
+            // 
+            // receivedbyuserDataGridViewTextBoxColumn
+            // 
+            this.receivedbyuserDataGridViewTextBoxColumn.DataPropertyName = "received_by_user";
+            this.receivedbyuserDataGridViewTextBoxColumn.HeaderText = "Recibido Por";
+            this.receivedbyuserDataGridViewTextBoxColumn.Name = "receivedbyuserDataGridViewTextBoxColumn";
+            this.receivedbyuserDataGridViewTextBoxColumn.Width = 98;
+            // 
+            // bookingstateDataGridViewTextBoxColumn
+            // 
+            this.bookingstateDataGridViewTextBoxColumn.DataPropertyName = "booking_state";
+            this.bookingstateDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.bookingstateDataGridViewTextBoxColumn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bookingstateDataGridViewTextBoxColumn.HeaderText = "Estado de Reserva";
+            this.bookingstateDataGridViewTextBoxColumn.Items.AddRange(new object[] {
             "No Confirmado",
             "Confirmado",
             "Cancelado"});
-            this.state.Name = "state";
-            this.state.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.state.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.state.Width = 132;
+            this.bookingstateDataGridViewTextBoxColumn.Name = "bookingstateDataGridViewTextBoxColumn";
+            this.bookingstateDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.bookingstateDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.bookingstateDataGridViewTextBoxColumn.Width = 129;
             // 
             // action
             // 
@@ -553,33 +653,28 @@
             this.action.Name = "action";
             this.action.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.action.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.action.Text = "Confirmar";
-            this.action.ToolTipText = "Confirmar Estado";
+            this.action.Text = "Aceptar";
+            this.action.ToolTipText = "Confirmar Reserva";
             this.action.UseColumnTextForButtonValue = true;
-            this.action.Width = 74;
+            this.action.Width = 75;
             // 
-            // RerservasPro
+            // bookinguserBindingSource
             // 
-            this.RerservasPro.BackColor = System.Drawing.SystemColors.Menu;
-            this.RerservasPro.Controls.Add(this.groupBox1);
-            this.RerservasPro.Controls.Add(this.groupBox2);
-            this.RerservasPro.Controls.Add(this.btnConfirmar);
-            this.RerservasPro.Location = new System.Drawing.Point(4, 25);
-            this.RerservasPro.Name = "RerservasPro";
-            this.RerservasPro.Padding = new System.Windows.Forms.Padding(3);
-            this.RerservasPro.Size = new System.Drawing.Size(1029, 557);
-            this.RerservasPro.TabIndex = 0;
-            this.RerservasPro.Text = "Reservas Profesores";
+            this.bookinguserBindingSource.DataMember = "booking_user";
+            this.bookinguserBindingSource.DataSource = this.control_unityDataSet;
             // 
-            // ReservasUsu
+            // Rerservas
             // 
-            this.ReservasUsu.BackColor = System.Drawing.SystemColors.Menu;
-            this.ReservasUsu.Location = new System.Drawing.Point(4, 25);
-            this.ReservasUsu.Name = "ReservasUsu";
-            this.ReservasUsu.Padding = new System.Windows.Forms.Padding(3);
-            this.ReservasUsu.Size = new System.Drawing.Size(1029, 557);
-            this.ReservasUsu.TabIndex = 1;
-            this.ReservasUsu.Text = "Reservas Usuarios";
+            this.Rerservas.BackColor = System.Drawing.SystemColors.Menu;
+            this.Rerservas.Controls.Add(this.groupBox1);
+            this.Rerservas.Controls.Add(this.groupBox2);
+            this.Rerservas.Controls.Add(this.btnConfirmar);
+            this.Rerservas.Location = new System.Drawing.Point(4, 25);
+            this.Rerservas.Name = "Rerservas";
+            this.Rerservas.Padding = new System.Windows.Forms.Padding(3);
+            this.Rerservas.Size = new System.Drawing.Size(1029, 557);
+            this.Rerservas.TabIndex = 0;
+            this.Rerservas.Text = "Reservas Profesores";
             // 
             // panel1
             // 
@@ -645,6 +740,10 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // booking_userTableAdapter
+            // 
+            this.booking_userTableAdapter.ClearBeforeFill = true;
+            // 
             // ReservasProfesores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -670,7 +769,8 @@
             this.tabControl1.ResumeLayout(false);
             this.CtrlReservas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.RerservasPro.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bookinguserBindingSource)).EndInit();
+            this.Rerservas.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -708,8 +808,7 @@
         private System.Windows.Forms.BindingSource salonsBindingSource;
         private control_unityDataSetTableAdapters.salonsTableAdapter salonsTableAdapter;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage RerservasPro;
-        private System.Windows.Forms.TabPage ReservasUsu;
+        private System.Windows.Forms.TabPage Rerservas;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Label lblFecha;
@@ -717,13 +816,23 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TabPage CtrlReservas;
         public System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn program;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Implements;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Salons;
-        private System.Windows.Forms.DataGridViewTextBoxColumn datetime;
-        private System.Windows.Forms.DataGridViewComboBoxColumn state;
-        private System.Windows.Forms.DataGridViewButtonColumn action;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.BindingSource bookinguserBindingSource;
+        private control_unityDataSetTableAdapters.booking_userTableAdapter booking_userTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idbookingDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ccuserDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomuserDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn programuserDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roluserDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn reserveimplementsuserDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn reservesalonuserDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datetimeinuserDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn deliveredbyuserDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datetimeoutuserDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn receivedbyuserDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn bookingstateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn action;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label7;
     }
 }

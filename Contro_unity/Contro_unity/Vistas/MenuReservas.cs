@@ -24,6 +24,8 @@ namespace Contro_unity
 
         private void ReservasProfesores_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'control_unityDataSet.booking_user' Puede moverla o quitarla según sea necesario.
+            this.booking_userTableAdapter.Fill(this.control_unityDataSet.booking_user);
             // TODO: esta línea de código carga datos en la tabla 'control_unityDataSet.salons' Puede moverla o quitarla según sea necesario.
             this.salonsTableAdapter.Fill(this.control_unityDataSet.salons);
             // TODO: esta línea de código carga datos en la tabla 'control_unityDataSet.teacher' Puede moverla o quitarla según sea necesario.
